@@ -1,11 +1,13 @@
 {
   "name": "screentogif.website",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
+  "homepage": "https://github.com/NickeManarin/ScreenToGif-Website-Alpha",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages -m \"Deploy to gh-pages.\""
   },
   "dependencies": {
     "buefy": "^0.8.17",
@@ -31,6 +33,7 @@
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.0.5",
+    "vue-gh-pages": "^1.19.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
