@@ -1,0 +1,27 @@
+
+
+//Override default colors.
+$primary: #5cadd5;
+//$primary: #427a8a;
+$primary-invert: findColorInvert($primary);
+$white: #f8f9fa;
+$black: findColorInvert($white);
+
+//Create your own colors.
+$download: #155591;
+$download-inverted: findColorInvert($download);
+$download-light: #1c7ed6;
+$download-light-inverted: findColorInvert($download-light);
+
+$donation: #158091;//911515;
+$donation-inverted: findColorInvert($donation);
+$donation-light: #1cbcd6; //d61c1c;
+$donation-light-inverted: findColorInvert($donation-light);
+
+$screenshots: #158091;//911515;
+$screenshots-inverted: findColorInvert($screenshots);
+$screenshots-light: #1cbcd6; //d61c1c;
+$screenshots-light-inverted: findColorInvert($screenshots-light);
+
+$dark-15: rgba(0, 0,0, 0.15);
+$dark-15-inverted: findColorInvert($dark-15);
