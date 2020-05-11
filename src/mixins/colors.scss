@@ -1,5 +1,3 @@
-
-
 //Override default colors.
 $primary: #5cadd5;
 //$primary: #427a8a;
@@ -23,5 +21,7 @@ $screenshots-inverted: findColorInvert($screenshots);
 $screenshots-light: #1cbcd6; //d61c1c;
 $screenshots-light-inverted: findColorInvert($screenshots-light);
 
+$grey-95: hsl(0, 0%, 95%);
+$grey-95-inverted: findColorInvert($grey-95);
 $dark-15: rgba(0, 0,0, 0.15);
 $dark-15-inverted: findColorInvert($dark-15);

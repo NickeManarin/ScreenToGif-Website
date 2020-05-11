@@ -41,7 +41,8 @@
                                     <transition name="slow-in-400ms">
                                         <b-button v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($release) ? '_self' : '_blank'" width="100%"
-                                                  :href="!isEmpty($release) ? $release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'">
+                                                  :href="!isEmpty($release) ? $release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
+                                                  @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             Installer
                                         </b-button>
                                     </transition>
@@ -71,7 +72,8 @@
                                     <transition name="slow-in-600ms">
                                         <b-button v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($release) ? '_self' : '_blank'" width="100%"
-                                                  :href="!isEmpty($release) ? $release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'">
+                                                  :href="!isEmpty($release) ? $release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
+                                                  @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             Portable
                                         </b-button>
                                     </transition>
@@ -92,7 +94,9 @@
                         </div>
 
                         <transition name="slow-in-700ms">
-                            <b-collapse v-if="showElements" class="has-text-light has-text-centered" :open="false" position="is-top" animation="slide" aria-id="expander">
+                            <b-collapse v-if="showElements" class="has-text-light has-text-centered" :open.sync="isExpanderOpen" position="is-top" animation="slide" aria-id="expander"
+                                @open="$gtag.event('More downloads', {'event_category': 'Clicks', 'event_label': 'Open'})"
+                                @close="$gtag.event('More downloads', {'event_category': 'Clicks', 'event_label': 'Close'})">
                                 <a slot="trigger" slot-scope="props" aria-controls="expander" class="has-text-light is-unselectable">
                                     <b-icon pack="unicon" :icon="!props.open ? 'uil-angle-down' : 'uil-angle-up'"></b-icon>
 
@@ -113,7 +117,8 @@
 
                                     <div class="column is-narrow has-text-centered">
                                         <b-button type="is-primary" size="is-large" icon-left="shopping-bag" inverted
-                                                tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g">
+                                            tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g"
+                                            @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Microsoft Store'})">
                                             Microsoft Store
                                         </b-button>
                                     </div>
@@ -184,57 +189,73 @@
                     <p class="subtitle is-size-5 is-unselectable">Here are some of supporters of this project</p>
 
                     <div class="columns is-centered">
-                        <b-button class="column is-one-third is-light" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" style="height: 100%">
-                            <figure class="image">
-                                <imageLoader :src="require('@/assets/Bluepoint.png')" width="150px" height="44px"></imageLoader>
-                            </figure>
+                        <div class="column is-one-third">
+                            <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
+                                <figure class="image">
+                                    <imageLoader :src="require('@/assets/Bluepoint.png')" width="150px" height="44px"></imageLoader>
+                                </figure>
 
-                            <p>Bluepoint Games</p>
-                        </b-button>
+                                <p class="is-size-6 has-text-grey has-text-weight-semibold">Bluepoint Games</p>
+                            </b-button>
+                        </div>
                     </div>
 
                     <div class="columns is-centered is-multiline is-mobile">
-                        <b-button class="column is-half-mobile is-light" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" style="height: 100%">
-                            <figure class="image">
-                                <imageLoader :src="require('@/assets/Jetbrains.svg')" width="44px" height="44px"></imageLoader>
-                            </figure>
+                        <div class="column is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
+                                <figure class="image">
+                                    <imageLoader :src="require('@/assets/Jetbrains.svg')" width="44px" height="44px"></imageLoader>
+                                </figure>
 
-                            <p>Jetbrains</p>
-                        </b-button>
+                                <p class="is-size-6 has-text-grey">Jetbrains</p>
+                            </b-button>
+                        </div>
 
-                        <b-button class="column is-half-mobile is-light" tag="a" href="https://www.linkedin.com/in/eirikbirkeland" target="_blank" style="height: 100%">
-                            <figure class="image">
-                                <b-icon class="has-text-info" pack="unicon" icon="uil-user" style="width: 44px; height: 44px; font-size: 39pt"></b-icon>
-                            </figure>
+                        <div class="column is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.linkedin.com/in/eirikbirkeland" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Eirik'})">
+                                <figure class="image">
+                                    <b-icon class="has-text-info" pack="unicon" icon="uil-user" style="width: 44px; height: 44px; font-size: 39pt"></b-icon>
+                                </figure>
 
-                            <p>Eirik</p>
-                        </b-button>
+                                <p class="is-size-6 has-text-grey">Eirik</p>
+                            </b-button>
+                        </div>
 
-                        <b-button class="column is-half-mobile is-light" tag="a" href="https://loam.net" target="_blank" style="height: 100%">
-                            <figure class="image">
-                                <imageLoader :src="require('@/assets/Loam.png')" width="44px" height="44px"></imageLoader>
-                            </figure>
+                        <div class="column is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://loam.net" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
+                                <figure class="image">
+                                    <imageLoader :src="require('@/assets/Loam.png')" width="44px" height="44px"></imageLoader>
+                                </figure>
 
-                            <p>Loam</p>
-                        </b-button>
+                                <p class="is-size-6 has-text-grey">Loam</p>
+                            </b-button>
+                        </div>
 
-                        <b-button class="column is-half-mobile is-light" tag="a" href="https://www.webhostingsecretrevealed.net" target="_blank" style="height: 100%">
-                            <b-tooltip label="Web Hosting Secret Revealed">
+                        <div class="column is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
                                     <imageLoader :src="require('@/assets/Whsr.png')" width="44px" height="44px"></imageLoader>
                                 </figure>
-                            </b-tooltip>
 
-                            <p>WHSR</p>
-                        </b-button>
+                                <p class="is-size-6 has-text-grey">WHSR</p>
+                            </b-button>
+                        </div>
 
-                        <b-button class="column is-half-mobile is-light" tag="a" href="http://elmah.io" target="_blank" style="height: 100%">
-                            <figure class="image">
-                                <imageLoader :src="require('@/assets/Elmah.png')" width="60px" height="44px"></imageLoader>
-                            </figure>
+                        <div class="column is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="http://elmah.io" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
+                                <figure class="image">
+                                    <imageLoader :src="require('@/assets/Elmah.png')" width="60px" height="44px"></imageLoader>
+                                </figure>
 
-                            <p>Elmah</p>
-                        </b-button>
+                                <p class="is-size-6 has-text-grey">Elmah</p>
+                            </b-button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -278,7 +299,8 @@
                 showElements: false,
                 isLoading: true,
                 trials: 0,
-                trialsFoss: 0
+                trialsFoss: 0,
+                isExpanderOpen: false
             };
         },
 
@@ -307,8 +329,8 @@
                             this.downloadDetailsFallback(() => { this.download(); });
                         }
                         else {
-                            throw new Error("It was not possible to download the release details.");
                             this.isLoading = false;
+                            throw new Error("It was not possible to download the release details.");
                         }
 
                         return;
@@ -320,11 +342,15 @@
                         position: "is-bottom",
                         type: "is-danger"
                     });
+
+                    this.$gtag.exception({'description': e, 'fatal': false});
                 }
 
                 this.isLoading = false;
             },
             copyChoco() {
+                this.$gtag.event('Copy', {'event_category': 'Clicks', 'event_label': 'Chocolatey'});
+
                 this.$copyText('choco install screentogif').then((e) => {
                     this.$buefy.toast.open({
                         duration: 5000,
@@ -341,6 +367,8 @@
                         position: 'is-bottom',
                         type: 'is-danger'
                     });
+
+                    this.$gtag.exception({'description': e, 'fatal': false});
                 });
             }
         }
@@ -496,8 +524,21 @@
         font-size: 34pt;
     }
 
-    //Increases the border radius.
+    //Fills up the space.
     .column {
-        border-radius: 10px;
+        height: 100%;
+        padding: 0.75rem 0.5rem;
+    }
+
+    //Makes the buttons inside the columns more rounded and expanded.
+    .column .button {
+        white-space: normal;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .column .padded {
+        padding: 0.75rem;
     }
 </style>

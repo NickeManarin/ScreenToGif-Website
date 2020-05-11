@@ -16,7 +16,8 @@
                         <div class="column is-4 has-text-centered">
                             <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
                                 <b-button type="is-info" size="is-large" icon-left="compact-disc" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
-                                    :href="!isEmpty($release) ? $release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading">
+                                    :href="!isEmpty($release) ? $release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
+                                    @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                     Installer
                                 </b-button>
                             </b-tooltip>
@@ -33,7 +34,8 @@
                         <div class="column is-4 has-text-centered">
                             <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
                                 <b-button type="is-info" size="is-large" icon-left="archive-alt" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"
-                                    :href="!isEmpty($release) ? $release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading">
+                                    :href="!isEmpty($release) ? $release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
+                                    @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                     Portable
                                 </b-button>
                             </b-tooltip>
@@ -56,27 +58,29 @@
                 <div class="container">
                     <h3 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">Requirements</h3>
                     <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">This app requires some software and hardware minimum configurations in order to run</p>
-                    <br />
+                    <br>
 
                     <div class="columns is-centered">
                         <div class="column is-4 has-text-centered">
-                            <figure class="image is-64x64 is-inline-block">
-                                <ImageLoader :src="require('@/assets/Windows.svg')" width="64px" height="64px" alt="Windows logo." border-radius="0"/>
-                            </figure>
+                            <b-button class="is-grey-95" tag="a" href="https://www.microsoft.com/windows/" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'Windows'})">
+                                <figure class="image is-64x64 is-inline-block">
+                                    <ImageLoader :src="require('@/assets/Windows.svg')" width="64px" height="64px" alt="Windows logo." border-radius="0"/>
+                                </figure>
 
-                            <div>
-                                <a href="https://www.microsoft.com/windows/" class="is-unselectable">Windows 7 SP1 or newer</a>
-                            </div>
+                                <p class="is-size-6 has-text-grey has-text-weight-semibold">Windows 7 SP1 or newer</p>
+                            </b-button>
                         </div>
 
                         <div class="column is-4 has-text-centered">
-                            <figure class="image is-64x64 is-inline-block">
-                                <ImageLoader :src="require('@/assets/Net.png')" width="64px" height="64px" alt="Net Framework logo." border-radius="0"/>
-                            </figure>
+                            <b-button class="is-grey-95" tag="a" href="http://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
+                                <figure class="image is-64x64 is-inline-block">
+                                    <ImageLoader :src="require('@/assets/Net.png')" width="64px" height="64px" alt="Net Framework logo." border-radius="0"/>
+                                </figure>
 
-                            <div>
-                                <a href="http://go.microsoft.com/fwlink/?LinkId=2085155" class="is-unselectable">.Net Framework 4.8 or newer</a>
-                            </div>
+                                <p class="is-size-6 has-text-grey has-text-weight-semibold">.Net Framework 4.8 or newer</p>
+                            </b-button>
                         </div>
                     </div>
                 </div>
@@ -272,7 +276,10 @@
                 return -1;
             },
             load() {
-                if (this.$releaseList.length > 0 && this.$fetchDate) {
+                console.log(this.$releaseList);
+                console.log(this.$$fetchDate);
+
+                if (this.$releaseList.length > 0 && this.$fetchDate && new Date().getTime() - this.$fetchDate > 300) { //300s, 5 minutes.
                     this.isLoading = false;
                     return;
                 }
@@ -285,6 +292,7 @@
 
                         this.fallbackLoad();
 
+                        this.$gtag.exception({'description': error, 'fatal': false});
                         throw error;
                     })
                     .catch(e => {
@@ -292,6 +300,7 @@
 
                         this.fallbackLoad();
 
+                        this.$gtag.exception({'description': e, 'fatal': false});
                         throw e;
                     });
             },
@@ -308,6 +317,8 @@
                         this.totalDays = 0;
 
                         this.loadFromFosshub();
+
+                        this.$gtag.exception({'description': error, 'fatal': true});
                         throw error;
                     })
                     .catch(e => {
@@ -319,6 +330,8 @@
                         this.totalDays = 0;
 
                         this.loadFromFosshub();
+
+                        this.$gtag.exception({'description': e, 'fatal': true});
                         throw e;
                     });
             },
@@ -336,7 +349,7 @@
                         this.aux.date_time_since = this.since(updatedAt, new Date());
 
                         this.$release = this.aux;
-                        this.$fetchDate = new Date();
+                        this.$fetchDate = new Date().getTime() / 1000; //Seconds.
                         this.isLoading = false;
                     }, error => {
                         console.log("Exception in getting latest release from Fosshub.", error);
@@ -393,7 +406,7 @@
 
                 this.$releaseList = this.downloads;
                 this.$release = this.downloads[0];
-                this.$fetchDate = new Date();
+                this.$fetchDate = new Date().getTime() / 1000; //Seconds.
                 this.isLoading = false;
             },
             treatDataFallback(data) {
@@ -443,14 +456,16 @@
 
                 this.$releaseList = this.downloads;
                 this.$release = this.downloads[0];
-                this.$fetchDate = new Date();
+                this.$fetchDate = new Date().getTime() / 1000; //Seconds.
                 this.isLoading = false;
             },
-            imageLoaded(row) {
+            imageLoaded(row) { //Delete later.
                 row.is_picture_loaded = true;
             },
             toggle(row) {
-                this.$refs.table.toggleDetails(row)
+                this.$refs.table.toggleDetails(row);
+                
+                this.$gtag.event('Expand version details', {'event_category': 'Clicks', 'event_label': 'Row ' + row.version});
             },
             versionType(prerelease) {
                 return prerelease ? "is-warning" : "is-info";
@@ -481,6 +496,21 @@
         background-image: linear-gradient($download, $download-light);
     }
     
+    //Fills up the space.
+    .column {
+        height: 100%;
+        padding: 0.75rem 0.5rem;
+    }
+
+    //Makes the buttons inside the columns more rounded and expanded.
+    .column .button {
+        white-space: normal;
+        border-radius: 5px;
+        padding: 0.75rem;
+        width: 100%;
+        height: 100%;
+    }
+
     .has-side-padding {
         padding-left: 1.5rem;
         padding-right: 1.5rem;

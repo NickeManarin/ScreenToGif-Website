@@ -5,6 +5,7 @@ import VueResource from "vue-resource";
 import Buefy from "buefy";
 import VueShowdown from 'vue-showdown';
 import VueClipboard from 'vue-clipboard2'
+import VueGtag from "vue-gtag";
 
 import CustomColors from './mixins/colors.scss';
 
@@ -22,6 +23,9 @@ Vue.use(VueShowdown, {
 });
 Vue.use(VueClipboard);
 Vue.use(CustomColors);
+Vue.use(VueGtag, {
+  config: { id: "UA-87410077-2" }
+},router);
 
 Vue.prototype.$release = {};
 Vue.prototype.$releaseList = [];

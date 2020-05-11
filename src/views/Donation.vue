@@ -34,7 +34,7 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/issues" target="_blank" rel="noopener">
+                            <b-button class="is-grey-95" tag="a" href="https://github.com/NickeManarin/ScreenToGif/issues" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-feedback"/>
@@ -49,7 +49,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light is-large" tag="a" href="" target="_blank" rel="noopener">
+                            <b-button class="is-grey-95" tag="a" href="" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-share"/>
@@ -64,7 +64,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/wiki/Localization" target="_blank" rel="noopener">
+                            <b-button class="is-grey-95" tag="a" href="https://github.com/NickeManarin/ScreenToGif/wiki/Localization" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-feedback"/>
@@ -79,7 +79,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light" @click="scrollToDonation()">
+                            <b-button class="is-grey-95" @click="scrollToDonation()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-money-stack"/>
@@ -132,51 +132,6 @@
                                     </div>
                                 </article>
                             </b-button>
-                        </div>
-
-                        <div class="column" v-if="false">
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                <input type="hidden" name="cmd" value="_xclick">
-                                <input type="hidden" name="business" value="nicke@outlook.com.br">
-                                <input type="hidden" name="lc" value="US">
-                                <input type="hidden" name="item_name" value="ScreenToGif Donation">
-                                <input type="hidden" name="item_number" value="ScreenToGif">
-                                <input type="hidden" name="button_subtype" value="services">
-                                <!--<input type="hidden" name="currency_code" value="USD">-->
-
-                                <b-field>
-                                    <b-select name="currency_code" class="is-medium" placeholder="Select your currency" icon="dollar-alt">
-                                        <option value="USD" selected="">US Dollar &nbsp; $</option>
-                                        <option value="EUR">Euro &nbsp; €</option>
-                                        <option value="AUD">Australian Dollar &nbsp; $</option>
-                                        <option value="BRL">Brazilian Real &nbsp; R$</option>
-                                        <option value="CAD">Canadian Dollar &nbsp; $</option>
-                                        <option value="CHF">Swiss Franc &nbsp; CHF</option>
-                                        <option value="CZK">Czech Koruna &nbsp; Kč</option>
-                                        <option value="DKK">Danish Krone &nbsp; kr</option>
-                                        <option value="GBP">Pound Sterling &nbsp; £</option>
-                                        <option value="HKD">Hong Kong Dollar &nbsp; $</option>
-                                        <option value="HUF">Hungarian Forint &nbsp; Ft</option>
-                                        <option value="ILS">Israeli New Sheqel &nbsp; ₪</option>
-                                        <option value="JPY">Japanese Yen &nbsp; ¥</option>
-                                        <option value="MXN">Mexican Peso &nbsp; $</option>
-                                        <option value="NOK">Norwegian Krone &nbsp; kr</option>
-                                        <option value="NZD">New Zeland Dollar &nbsp; $</option>
-                                        <option value="PHP">Philippine Peso &nbsp; ₱</option>
-                                        <option value="PLN">Polish Zloty &nbsp; zł</option>
-                                        <option value="RUB">Russian Ruble &nbsp; ₽</option>
-                                        <option value="SGD">Singapore Dollar &nbsp; $‏</option>
-                                        <option value="SEK">Swedish Krona &nbsp; kr</option>
-                                        <option value="THB">Thai Baht &nbsp; ฿</option>
-                                        <option value="TWD">Taiwan New Dollar &nbsp; NT$</option>
-                                    </b-select>
-
-                                    <p class="control">
-                                        <input type="hidden" name="bn" value="PP-BuyNowBF:btn_buynowCC_LG.gif:NonHosted">
-                                        <b-button id="s_paypal2" type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" class="button is-primary">Donate</b-button>                                        
-                                    </p>
-                                </b-field>
-                            </form>
                         </div>
                     </div>
 
@@ -243,7 +198,7 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light " @click="visitPatreon()">
+                            <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <imageLoader :src="require('@/assets/Flattr.svg')" width="40px" height="40px"></imageLoader>
@@ -258,7 +213,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light " @click="visitPatreon()">
+                            <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <imageLoader :src="require('@/assets/Ko-fi.svg')" width="40px" height="40px"></imageLoader>
@@ -273,7 +228,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light " @click="visitPatreon()">
+                            <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <imageLoader :src="require('@/assets/Buymeacoffee.svg')" width="40px" height="40px"></imageLoader>
@@ -290,7 +245,7 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light " @click="visitPatreon()">
+                            <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <imageLoader :src="require('@/assets/Steam.svg')" width="40px" height="40px"></imageLoader>
@@ -305,7 +260,7 @@
                         </div>
                         
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light " @click="visitPatreon()">
+                            <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <imageLoader :src="require('@/assets/Gog.svg')" width="40px" height="40px"></imageLoader>
@@ -320,7 +275,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light " @click="visitPatreon()">
+                            <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <imageLoader :src="require('@/assets/Amazon.svg')" width="40px" height="40px"></imageLoader>
@@ -350,7 +305,7 @@
                         <template slot-scope="props">
                             <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
                                 field="version" label="Patron" :custom-sort="sortName" sortable>
-                                <b-tooltip v-if="props.row.url != null" :label="props.row.urlPretty" position="is-right" type="is-info">
+                                <b-tooltip v-if="props.row.url != null" :label="props.row.urlPretty" position="is-right" type="is-link">
                                     {{ props.row.name }}
 
                                     <b-icon class="has-text-link is-size-7" pack="unicon" icon="uil-external-link-alt"></b-icon>
@@ -611,7 +566,7 @@
     //Makes the buttons inside the columns more rounded and expanded.
     .column .button {
         white-space: normal;
-        border-radius: 8px;
+        border-radius: 5px;
         padding: 0.75rem;
         width: 100%;
         height: 100%;

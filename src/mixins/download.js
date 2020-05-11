@@ -47,12 +47,16 @@ export default {
                 error => {
                     console.log("It was not possible to download the latest release details.", error);
 
+                    this.$gtag.exception({'description': error, 'fatal': false});
+
                     //Calls the action that should be executed after the download.
                     if (action != undefined)
                         action();
                 })
                 .catch(e => {
                     console.log("It was not possible to download the latest release details [G].", e);
+
+                    this.$gtag.exception({'description': e, 'fatal': false});
 
                     //Calls the action that should be executed after the download.
                     if (action != undefined)
@@ -83,11 +87,15 @@ export default {
                 }, error => {
                     console.log("Exception in getting latest release from Fosshub.", error);
 
+                    this.$gtag.exception({'description': error, 'fatal': false});
+
                     if (action != undefined)
                         action();
                 })
                 .catch(e => {
                     console.log("Exception in getting latest release from Fosshub.", e);
+
+                    this.$gtag.exception({'description': e, 'fatal': false});
 
                     if (action != undefined)
                         action();

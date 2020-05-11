@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss">
-  // Import Bulma's core
+  //Import Bulma's core
   @import "~bulma/sass/utilities/_all";
   @import "@/mixins/colors.scss";
 
@@ -78,6 +78,8 @@ export default {
     "donation-light": ($donation-light, $donation-light-inverted),
     "screenshots": ($screenshots, $screenshots-inverted),
     "screenshots-light": ($screenshots-light, $screenshots-light-inverted),
+    
+    "grey-95": ($grey-95, $grey-95-inverted),
     "dark-15": ($dark-15, $dark-15-inverted),
   );
 
