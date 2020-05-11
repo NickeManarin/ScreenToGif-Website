@@ -55,10 +55,11 @@ export default {
 <style lang="scss">
   // Import Bulma's core
   @import "~bulma/sass/utilities/_all";
-
   @import "@/mixins/colors.scss";
 
-  // Setup $colors to use as bulma classes (e.g. 'is-twitter')
+  $table-row-hover-background-color: hsl(0, 0%, 95.5%);
+
+  //Setup $colors to use as bulma classes (e.g. 'is-twitter')
   $colors: (
     "white": ($white, $black),
     "black": ($black, $white),
@@ -66,6 +67,7 @@ export default {
     "dark": ($dark, $dark-invert),
     "primary": ($primary, $primary-invert),
     "info": ($info, $info-invert),
+    "link": ($link, $link-invert),
     "success": ($success, $success-invert),
     "warning": ($warning, $warning-invert),
     "danger": ($danger, $danger-invert),
