@@ -30,13 +30,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "Downloads" */ "@/views/Downloads.vue")
   },
   {
-    path: ["/download", "/releases"],
+    path: "/download",
     redirect: "/downloads"
   },
-  // {
-  //   path: "/releases",
-  //   redirect: "/downloads"
-  // },
+  {
+    path: "/releases",
+    redirect: "/downloads"
+  },
   {
     path: "/donation",
     name: "Donation",
