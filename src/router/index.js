@@ -8,14 +8,20 @@ const routes = [
   {
     path: "/404",
     name: "404",
-    alias: "*",
     component: () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue")
+  },
+  {
+    path: "*",
+    redirect: "/404"
   },
   {
     path: "/",
     name: "Home",
-    alias: "/home", //The URL remains '/' when trying to visit '/home'.
     component: Home
+  },
+  {
+    path: "/home",
+    redirect: "/"
   },
   {
     path: "/downloads",
