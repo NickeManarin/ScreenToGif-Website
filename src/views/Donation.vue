@@ -13,15 +13,37 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h2 class="title is-size-3 is-unselectable has-arrow-cursor">Why help ScreenToGif?</h2>
-                    <!-- <p class="subtitle is-unselectable has-arrow-cursor">If you wish to help the project, here's how</p> -->
+                    <p class="subtitle is-unselectable has-arrow-cursor">The project would benefit from your help</p>
 
-                    <p class="content">
-                        <span>Because it's a free and open-source app. No ads, nothing shady or obscure. If you have any doubt, feel free to ask or browse the source code.</span>
-                        <br>
-                        <span>Speaking of donations, they are the only source of income of ScreenToGif. If you would like to support this project then please consider donating.</span>
-                        <br>
-                        <span>There's 3 ways to donate, via monthly subscription (Patreon, Flattr), one time donation (Paypal, Ko-fi, ButMeACofee, Steam credits), or game gifts (Steam, GOG).</span>
-                    </p>
+                    <div class="columns is-centered is-multiline is-mobile">
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold">Free</p>
+                            <p class="subtitle is-6 has-text-grey-light">Open Source on <strong class="has-text-grey">Github</strong></p>
+
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-github-alt"></b-icon>
+                        </div>
+
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold">No ads</p>
+                            <p class="subtitle is-6 has-text-grey-light">Not even in the <strong class="has-text-grey">installer</strong></p>
+
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-image-slash"></b-icon>
+                        </div>
+
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold">Committed</p>
+                            <p class="subtitle is-6 has-text-grey-light">Made with love by a <strong class="has-text-grey">committed</strong> developer</p>
+
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-laptop"></b-icon>
+                        </div>
+
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold">Made for you</p>
+                            <p class="subtitle is-6 has-text-grey-light"><strong class="has-text-grey">Feedback driven</strong> development</p>
+
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-chat-bubble-user"></b-icon>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -140,18 +162,28 @@
                             <h2 class="title">Donate with PayPal</h2>
                             <p class="subtitle">Select your currency before continuing</p>
 
-                            <br>
-                            <p>PayPal has a fee based on value donated (6.4%) + a fixed value based on the currency selected (0.1 to 0.5 cents of dollar).</p>
-                            <br>
-                            <p>
-                                <span>20.00 EUR becomes 18.37 EUR</span><br>
-                                <span>10.00 EUR becomes 9.01 EUR</span><br>
-                                <span>5.00 EUR becomes 4.33 EUR</span><br>
-                                <span>10.00 USD becomes 9.06 USD</span><br>
-                                <span>5.00 USD becomes 4.38 USD</span><br>
-                            </p>
-                            <br>
+                            <b-collapse class="has-text-grey has-text-centered" :open.sync="isPaypalExpanderOpen" position="is-top" animation="slide" aria-id="expander"
+                                @open="$gtag.event('Paypal fee explanation', {'event_category': 'Clicks', 'event_label': 'Open'})"
+                                @close="$gtag.event('Paypal fee explanation', {'event_category': 'Clicks', 'event_label': 'Close'})">
+                                <a slot="trigger" slot-scope="props" aria-controls="expander" class="has-text-info is-unselectable">
+                                    <b-icon pack="unicon" :icon="!props.open ? 'uil-angle-down' : 'uil-angle-up'"></b-icon>
+
+                                    {{ !props.open ? 'Show PayPal fee explanation' : 'Hide PayPal fee explanation' }}
+                                </a>
+
+                                <p>PayPal has a fee based on the value donated (6.4%) + a fixed value based on the currency selected (0.1 to 0.5 cents of dollar).</p>
+                                <br>
+                                <p>
+                                    <span>20.00 EUR becomes 18.37 EUR</span><br>
+                                    <span>10.00 EUR becomes 9.01 EUR</span><br>
+                                    <span>5.00 EUR becomes 4.33 EUR</span><br>
+                                    <span>10.00 USD becomes 9.06 USD</span><br>
+                                    <span>5.00 USD becomes 4.38 USD</span><br>
+                                </p>
+                            </b-collapse>
                             
+                            <br>
+
                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
                                 <input type="hidden" name="cmd" value="_xclick">
                                 <input type="hidden" name="business" value="nicke@outlook.com.br">
@@ -221,7 +253,7 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Ko-fi</h5>
-                                        <p class="is-size-5 has-text-grey">Buy a coffee for me</p>
+                                        <p class="is-size-5 has-text-grey">Buy a coffee for the developer</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -236,7 +268,7 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Buy Me a Coffee</h5>
-                                        <p class="is-size-5 has-text-grey">Buy a coffee for me</p>
+                                        <p class="is-size-5 has-text-grey">Buy a coffee for the developer</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -283,7 +315,7 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Amazon Wishlist</h5>
-                                        <p class="is-size-5 has-text-grey">Help me get new parts for my computer</p>
+                                        <p class="is-size-5 has-text-grey">Help get new parts for my computer</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -379,6 +411,7 @@
         data() {
             return {
                 isPaypalModalActive: false,
+                isPaypalExpanderOpen: false,
                 paypalCurrency: "USD",
                 patrons: [
                     {

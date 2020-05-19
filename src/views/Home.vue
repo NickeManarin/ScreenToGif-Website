@@ -13,9 +13,7 @@
                         <h1 v-if="showElements" class="title is-size-1 is-spaced">ScreenToGif</h1>
                     </transition>
                     <transition name="slide-up-200ms">
-                        <h2 v-if="showElements" class="subtitle">
-                            <strong>Screen</strong>, <strong>webcam</strong> and <strong>sketchboard</strong> recorder with an integrated <strong>editor</strong>.
-                        </h2>
+                        <h2 v-if="showElements" class="subtitle" v-html="$t('home.subtitle')"/>
                     </transition>
                 </div>
             </div>
@@ -27,7 +25,7 @@
                             <transition name="slow-in-300ms">
                                 <div v-if="showElements">
                                     <p v-if="!isLoading" class="is-unselectable">
-                                        Version {{$release.version}}
+                                        Version {{$store.release.version}}
                                     </p>
 
                                     <b-skeleton v-if="isLoading" width="65px" height="1em"></b-skeleton>
@@ -40,8 +38,8 @@
                                 <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-400ms">
                                         <b-button v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($release) ? '_self' : '_blank'" width="100%"
-                                                  :href="!isEmpty($release) ? $release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
+                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" width="100%"
+                                                  :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             Installer
                                         </b-button>
@@ -50,10 +48,10 @@
 
                                 <transition name="slow-in-400ms">
                                     <div v-if="showElements">
-                                        <p v-if="!isLoading && !isEmpty($release)" class="is-unselectable">
-                                            <small>{{ !isEmpty($release) ? $release.size_inst : "..." }}</small>
+                                        <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
+                                            <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
                                             •
-                                            <small>{{ !isEmpty($release) ? $release.download_count_inst.toLocaleString() : "..." }} downloads</small> 
+                                            <small>{{ !isEmpty($store.release) ? $store.release.download_count_inst.toLocaleString() : "..." }} downloads</small> 
                                         </p>
 
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -71,8 +69,8 @@
                                 <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-600ms">
                                         <b-button v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($release) ? '_self' : '_blank'" width="100%"
-                                                  :href="!isEmpty($release) ? $release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
+                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" width="100%"
+                                                  :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             Portable
                                         </b-button>
@@ -81,10 +79,10 @@
                                 
                                 <transition name="slow-in-600ms">
                                     <div v-if="showElements">
-                                        <p v-if="!isLoading && !isEmpty($release)" class="is-unselectable">
-                                            <small>{{ !isEmpty($release) ? $release.size_port : "..." }}</small>
+                                        <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
+                                            <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
                                             •
-                                            <small>{{ !isEmpty($release) ? $release.download_count_port.toLocaleString() : "..." }} downloads</small>
+                                            <small>{{ !isEmpty($store.release) ? $store.release.download_count_port.toLocaleString() : "..." }} downloads</small>
                                         </p>
 
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -105,10 +103,10 @@
 
                                 <div class="columns is-vcentered is-centered is-multiline is-mobile has-top-margin">
                                     <div class="column is-narrow has-text-centered">
-                                        <pre class="choco">
+                                        <div class="choco">
                                             <code><span class="is-unselectable">></span> choco install screentogif</code>
                                             <b-button type="is-primary" inverted @click="copyChoco()">Copy</b-button>
-                                        </pre>
+                                        </div>
                                     </div>
 
                                     <div class="column is-12-mobile is-12-tablet is-1-desktop has-text-centered">
@@ -138,28 +136,28 @@
                             <p class="title is-4 has-text-weight-semibold">Free</p>
                             <p class="subtitle is-6 has-text-grey-light">Open Source on <strong class="has-text-grey">Github</strong></p>
 
-                            <b-icon class="has-text-success" pack="unicon" icon="uil-github-alt"></b-icon>
+                            <b-icon class="has-text-success is-size-2" pack="unicon" icon="uil-github-alt"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold">Compact</p>
                             <p class="subtitle is-6 has-text-grey-light">As little as <strong class="has-text-grey">3.0 MiB</strong></p>
 
-                            <b-icon class="has-text-warning" pack="unicon" icon="uil-box"></b-icon>
+                            <b-icon class="has-text-warning is-size-2" pack="unicon" icon="uil-box"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold">Powerful</p>
                             <p class="subtitle is-6 has-text-grey-light">Record, edit and <strong class="has-text-grey">export it!</strong></p>
 
-                            <b-icon class="has-text-danger" pack="unicon" icon="uil-dashboard"></b-icon>
+                            <b-icon class="has-text-danger is-size-2" pack="unicon" icon="uil-dashboard"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold">Customizable</p>
                             <p class="subtitle is-6 has-text-grey-light">Use it <strong class="has-text-grey">the way you like</strong></p>
 
-                            <b-icon class="has-text-info" pack="unicon" icon="uil-setting"></b-icon>
+                            <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-setting"></b-icon>
                         </div>
                     </div>
                 </div>
@@ -169,15 +167,12 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <!-- <b-carousel v-model="carouselIndex" :animated="'slide'" :has-drag="true" :autoplay="true" :pause-hover="true" :pause-info="false"
-                                :interval="5000" :repeat="true" :icon-size="'is-large'">
-                        <b-carousel-item v-for="(carousel, i) in images" :key="i">             
-                            <a @click="expandImage(i)" class="image is-16by9">
-                                <img :src="displayImage(i)">
-                            </a>
-                        </b-carousel-item>
-                    </b-carousel> -->
+                    <h4 class="title is-size-4 is-unselectable">Media</h4>
+                    <p class="subtitle is-size-5 is-unselectable">Screenshots and gifs</p>
 
+                    <Gallery></Gallery>
+ 
+                    <b-button type="is-primary">View more screenshots and examples</b-button>
                 </div>
             </div>
         </section>
@@ -260,24 +255,6 @@
                 </div>
             </div>
         </section>
-
-        <section class="hero">
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    <h4 class="title is-size-4 is-unselectable">Media</h4>
-                    <p class="subtitle is-size-5 is-unselectable">Screenshots and gifs</p>
-
-                    <!-- <b-carousel v-model="carouselIndex" :animated="'slide'" :has-drag="true" :autoplay="true" :pause-hover="true" :pause-info="false"
-                                :interval="5000" :repeat="true" :icon-size="'is-large'">
-                        <b-carousel-item v-for="(carousel, i) in images" :key="i">             
-                            <a @click="expandImage(i)" class="image is-16by9">
-                                <img :src="displayImage(i)">
-                            </a>
-                        </b-carousel-item>
-                    </b-carousel> -->
-                </div>
-            </div>
-        </section>
     </div>
 </template>
 
@@ -286,12 +263,14 @@
     import helpers from "@/mixins/helpers";
     import downloader from "@/mixins/download";
     import ImageLoader from "@/components/ImageLoader.vue";
+    import Gallery from "@/components/Gallery.vue";
 
     export default {
         name: "Home",
         mixins: [helpers, downloader],
         components: {
-            ImageLoader
+            ImageLoader,
+            Gallery
         },
 
         data() {
@@ -318,7 +297,7 @@
                     this.isLoading = true;
 
                     //If the release details were not downloaded yet, it must be downloaded.
-                    if (this.isEmpty(this.$release) || this.$release.fromFoss) {
+                    if (this.isEmpty(this.$store.release) || this.$store.release.fromFoss) {
 
                         if (this.trials < 2) {
                             this.trials++;
@@ -502,6 +481,18 @@
         line-height: 1.5rem;
         border-radius: 4px;
         align-items: center;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        white-space: pre;
+        word-wrap: normal;
+    }
+
+    //Makes the code inside the div.choco blend in.
+    .choco code {
+        background-color: transparent;
+        color: currentColor;
+        font-size: 1em;
+        padding: 0;
     }
 
     .choco button {
@@ -510,18 +501,12 @@
         margin: 0 0 0 1rem;
     }
 
-    //
     div .has-smaller-padding {
         padding-top: 1.5rem;
     }
 
     div .has-top-margin {
         margin-top: 1rem;
-    }
-
-    //Increase the size of the icons for the 'Why use ScreenToGif' section. 
-    .why-use .icon {
-        font-size: 34pt;
     }
 
     //Fills up the space.

@@ -6,7 +6,7 @@
                     <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">Latest Version</h2>
                     <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">
                         <span v-if="!isLoading">
-                            Version {{ !isEmpty($release) ? $release.version : "..." }}
+                            Version {{ !isEmpty($store.release) ? $store.release.version : "..." }}
                         </span>
 
                         <b-skeleton v-if="isLoading" class="is-inline-block" height="20px" width="180px" animated></b-skeleton>
@@ -16,16 +16,16 @@
                         <div class="column is-4 has-text-centered">
                             <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
                                 <b-button type="is-info" size="is-large" icon-left="compact-disc" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
-                                    :href="!isEmpty($release) ? $release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
+                                    :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
                                     @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                     Installer
                                 </b-button>
                             </b-tooltip>
                             
-                            <p v-if="!isLoading && !isEmpty($release) && !$release.fromFoss" class="is-unselectable has-arrow-cursor">
-                                <small>{{ !isEmpty($release) ? $release.size_inst : "..." }}</small>
+                            <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
+                                <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
                                 •
-                                <small>{{ !isEmpty($release) ? $release.download_count_inst.toLocaleString() : "..." }} downloads</small> 
+                                <small>{{ !isEmpty($store.release) ? $store.release.download_count_inst.toLocaleString() : "..." }} downloads</small> 
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -34,16 +34,16 @@
                         <div class="column is-4 has-text-centered">
                             <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
                                 <b-button type="is-info" size="is-large" icon-left="archive-alt" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"
-                                    :href="!isEmpty($release) ? $release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
+                                    :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
                                     @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                     Portable
                                 </b-button>
                             </b-tooltip>
 
-                            <p v-if="!isLoading && !isEmpty($release) && !$release.fromFoss" class="is-unselectable has-arrow-cursor">
-                                <small>{{ !isEmpty($release) ? $release.size_port : "..." }}</small>
+                            <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
+                                <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
                                 •
-                                <small>{{ !isEmpty($release) ? $release.download_count_port.toLocaleString() : "..." }} downloads</small>
+                                <small>{{ !isEmpty($store.release) ? $store.release.download_count_port.toLocaleString() : "..." }} downloads</small>
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -60,7 +60,7 @@
                     <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">This app requires some software and hardware minimum configurations in order to run</p>
                     <br>
 
-                    <div class="columns is-centered">
+                    <div class="requirements columns is-centered">
                         <div class="column is-4 has-text-centered">
                             <b-button class="is-grey-95" tag="a" href="https://www.microsoft.com/windows/" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'Windows'})">
@@ -68,7 +68,7 @@
                                     <ImageLoader :src="require('@/assets/Windows.svg')" width="64px" height="64px" alt="Windows logo." border-radius="0"/>
                                 </figure>
 
-                                <p class="is-size-6 has-text-grey has-text-weight-semibold">Windows 7 SP1 or newer</p>
+                                <p class="subtitle is-size-6 has-text-grey"><strong>Windows 7 SP1</strong> or newer</p>
                             </b-button>
                         </div>
 
@@ -79,7 +79,7 @@
                                     <ImageLoader :src="require('@/assets/Net.png')" width="64px" height="64px" alt="Net Framework logo." border-radius="0"/>
                                 </figure>
 
-                                <p class="is-size-6 has-text-grey has-text-weight-semibold">.Net Framework 4.8 or newer</p>
+                                <p class="subtitle is-size-6 has-text-grey"><strong>.Net Framework 4.8</strong> or newer</p>
                             </b-button>
                         </div>
                     </div>
@@ -93,7 +93,7 @@
                     <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">All Releases</h2>
                     <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">Expand to see the release details</p>
 
-                    <b-table :data="$releaseList" ref="table" :loading="isLoading" hoverable detailed detail-key="version" selectable @select="toggle"
+                    <b-table :data="$store.releaseList" ref="table" :loading="isLoading" hoverable detailed detail-key="version" selectable @select="toggle"
                         paginated :per-page="perPage" :current-page.sync="currentPage" :scrollable="false"
                         aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page" 
                         :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
@@ -276,10 +276,7 @@
                 return -1;
             },
             load() {
-                console.log(this.$releaseList);
-                console.log(this.$$fetchDate);
-
-                if (this.$releaseList.length > 0 && this.$fetchDate && new Date().getTime() - this.$fetchDate > 300) { //300s, 5 minutes.
+                if (this.$store.releaseList.length > 0 && this.$store.previousDate && new Date().getTime() - this.$store.previousDate > 300) { //300s, 5 minutes.
                     this.isLoading = false;
                     return;
                 }
@@ -348,8 +345,8 @@
                         this.aux.release_date = e.published_at;
                         this.aux.date_time_since = this.since(updatedAt, new Date());
 
-                        this.$release = this.aux;
-                        this.$fetchDate = new Date().getTime() / 1000; //Seconds.
+                        this.$store.release = this.aux;
+                        this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
                         this.isLoading = false;
                     }, error => {
                         console.log("Exception in getting latest release from Fosshub.", error);
@@ -404,9 +401,9 @@
                     previousUpdatedAt = releaseDate;
                 });
 
-                this.$releaseList = this.downloads;
-                this.$release = this.downloads[0];
-                this.$fetchDate = new Date().getTime() / 1000; //Seconds.
+                this.$store.releaseList = this.downloads;
+                this.$store.release = this.downloads[0];
+                this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
                 this.isLoading = false;
             },
             treatDataFallback(data) {
@@ -454,9 +451,9 @@
                     previousUpdatedAt = updatedAt;
                 });
 
-                this.$releaseList = this.downloads;
-                this.$release = this.downloads[0];
-                this.$fetchDate = new Date().getTime() / 1000; //Seconds.
+                this.$store.releaseList = this.downloads;
+                this.$store.release = this.downloads[0];
+                this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
                 this.isLoading = false;
             },
             imageLoaded(row) { //Delete later.
@@ -503,7 +500,7 @@
     }
 
     //Makes the buttons inside the columns more rounded and expanded.
-    .column .button {
+    .requirements .column .button {
         white-space: normal;
         border-radius: 5px;
         padding: 0.75rem;

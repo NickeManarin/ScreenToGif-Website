@@ -38,7 +38,7 @@ export default {
                     aux.size_inst = inst != undefined ? this.humanizeSize(inst.size, false) : undefined;
 
                     //Makes sure that the object is full created before setting to the global variable.
-                    this.$release = aux;
+                    this.$store.release = aux;
 
                     //Calls the action that should be executed after the download.
                     if (action != undefined)
@@ -80,7 +80,7 @@ export default {
                     this.aux.date_time_since = this.since(updatedAt, new Date());
 
                     //Makes sure that the object is full created before setting to the global variable.
-                    this.$release = aux;
+                    this.$store.release = aux;
 
                     if (action != undefined)
                         action();

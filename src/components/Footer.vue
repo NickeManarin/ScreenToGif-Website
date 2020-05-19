@@ -7,19 +7,20 @@
         <br />
         2013-{{ year }}
       </p>
+
     </div>
   </footer>
 </template>
 
 <script>
-export default {
-  name: "Footer",
-  computed: {
-    year() {
-      return new Date().getFullYear();
-    }
-  }
-};
+  export default {
+      name: "Footer",
+      computed: {
+          year() {
+              return new Date().getFullYear();
+          }
+      }
+  };
 </script>
 
 <style scoped></style>
