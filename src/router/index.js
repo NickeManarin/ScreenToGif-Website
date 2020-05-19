@@ -7,6 +7,11 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "*",
+    name: "404",
+    component: () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue")
+  },
+  {
+    path: "/",
     name: "Home",
     alias: "/home", //The URL remains '/' when trying to visit '/home'.
     component: Home
