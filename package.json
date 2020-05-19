@@ -7,6 +7,7 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "deploy": "node ./node_modules/vue-gh-pages/index.js --branch gh-pages -m \"Deploy to gh-pages.\"",
+    "gh-pages-deploy": "node scripts/gh-pages-deploy.js",
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
@@ -32,10 +33,14 @@
     "@vue/cli-service": "^4.3.1",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
+    "chalk": "^4.0.0",
     "eslint": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.3",
     "eslint-plugin-vue": "^6.2.2",
+    "execa": "^4.0.0",
+    "node-emoji": "^1.10.0",
     "prettier": "^2.0.5",
+    "vue-cli-plugin-gh-pages-auto-deploy": "~0.3.0",
     "vue-cli-plugin-i18n": "~1.0.1",
     "vue-template-compiler": "^2.6.11"
   },
