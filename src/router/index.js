@@ -26,10 +26,17 @@ const routes = [
   {
     path: "/downloads",
     name: "Downloads",
-    alias: ['/download', '/releases'], 
     // Route level code-splitting: this generates a separate chunk (downloads.[hash].js) for this route which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "Downloads" */ "@/views/Downloads.vue")
   },
+  {
+    path: ["/download", "/releases"],
+    redirect: "/downloads"
+  },
+  // {
+  //   path: "/releases",
+  //   redirect: "/downloads"
+  // },
   {
     path: "/donation",
     name: "Donation",
