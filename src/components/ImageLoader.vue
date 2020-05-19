@@ -92,14 +92,14 @@
             },
             styles: function () {
                 let styles = {
-                    'border-radius': this.borderRadius,
-                }
+                    'border-radius': this.borderRadius
+                };
 
                 if (this.width)
-                    styles.width = this.width
+                    styles.width = this.width;
 
                 if (this.height)
-                    styles.height = this.height
+                    styles.height = this.height;
 
                 return styles;
             },

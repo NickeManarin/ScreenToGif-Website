@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
-    <div class="column is-centered">
-      <div class="column has-text-centered">
+    <div class="columns is-centered">
+      <div class="column is-one-third has-text-centered is-narrow">
         <div class="is-inline-flex">
           <ImageLoader :src="require('@/assets/logo.png')" width="34px" height="34px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
 
@@ -13,11 +13,13 @@
         </p>
       </div>
       
-      <div class="column">
+      <div class="column is-one-third is-narrow">
         <!-- Links to all pages -->
+        <p>aaa</p>
       </div>
 
-      <div class="column">
+      <div class="column is-one-third is-narrow">
+        <p>aaa</p>
         <!-- Share on social media -->
         <!-- Contribute on Github -->
       </div> 
@@ -47,12 +49,12 @@
     </div>
 
     <div class="content has-text-centered">
-      <p>
-        <strong>ScreenToGif</strong> is licensed under
+      <p class="is-6 has-text-grey-light">
+        <strong class="has-text-grey">ScreenToGif</strong> is licensed under
         <a href="https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt" target="_blank" rel="noopener">MS-PL</a>
         <br/>
 
-        <strong>This website</strong> is licensed under
+        <strong class="has-text-grey">This website</strong> is licensed under
         <a href="https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE" target="_blank" rel="noopener">GPL-3.0</a>
         <br/>
         <br/>
