@@ -6,8 +6,9 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "*",
+    path: "/404",
     name: "404",
+    alias: "*",
     component: () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue")
   },
   {
