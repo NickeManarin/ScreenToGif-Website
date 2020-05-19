@@ -172,7 +172,7 @@
 
                     <Gallery></Gallery>
  
-                    <b-button type="is-primary">View more screenshots and examples</b-button>
+                    <b-button tag="router-link" to="/screenshots" type="is-link" class="has-top-margin is-medium">View more screenshots and examples</b-button>
                 </div>
             </div>
         </section>
@@ -252,6 +252,8 @@
                             </b-button>
                         </div>
                     </div>
+
+                    <b-button tag="router-link" to="/donation" type="is-link" class="has-top-margin is-medium">Become a sponsor</b-button>
                 </div>
             </div>
         </section>

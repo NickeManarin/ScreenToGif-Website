@@ -1,13 +1,16 @@
 <template>
   <footer class="footer">
     <div class="column is-centered">
-      <div class="column">
-        <!-- Logo + Name -->
-        <!-- By X with love from Z -->
+      <div class="column has-text-centered">
+        <div class="is-inline-flex">
+          <ImageLoader :src="require('@/assets/logo.png')" width="34px" height="34px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
 
-        <!-- ScreenToGif is licensed under X -->
-        <!-- This website is licensed under T -->
-        <!-- 2013 - Year -->
+          <p class="subtitle is-5 has-text-grey is-unselectable is-vcentered has-spacing">ScreenToGif</p>
+        </div>
+
+        <p class="subtitle is-6 has-text-grey-light is-unselectable">
+          By <a class="has-text-weight-semibold" href="https://twitter.com/NickeManarin" target="_blank" rel="noopener">Nicke Manarin</a>,<br> made with<b-icon class="has-text-red" title="love" pack="unicons" icon="heart"></b-icon>from <strong class="has-text-rainbow">Brazil</strong> 🇧🇷
+        </p>
       </div>
       
       <div class="column">
@@ -45,20 +48,30 @@
 
     <div class="content has-text-centered">
       <p>
-        <strong>ScreenToGif</strong> by
-        <a href="https://www.twitter.com/NickeManarin">Nicke Manarin</a>
-        <br />
-        2013-{{ year }}
+        <strong>ScreenToGif</strong> is licensed under
+        <a href="https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt" target="_blank" rel="noopener">MS-PL</a>
+        <br/>
+
+        <strong>This website</strong> is licensed under
+        <a href="https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE" target="_blank" rel="noopener">GPL-3.0</a>
+        <br/>
+        <br/>
+
+        2013 - {{ year }}
       </p>
     </div>
   </footer>
 </template>
 
 <script>
-  import { languages } from '@/locales';
+    import ImageLoader from "@/components/ImageLoader.vue";
+    import { languages } from '@/locales';
 
   export default {
       name: "Footer",
+        components: {
+            ImageLoader
+        },
 
       data() {
             return {
@@ -74,4 +87,24 @@
   };
 </script>
 
-<style scoped></style>
+<style scoped>
+  .has-spacing {
+    padding-left: 0.75rem;
+  }
+
+  .is-vcentered {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .has-text-red {
+    color: red;
+  }
+
+  .has-text-rainbow {
+    background-image: linear-gradient(to left, blue, rgb(112, 112, 0), green);
+    background-clip: text;
+    color: transparent;
+  }
+</style>

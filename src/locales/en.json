@@ -18,6 +18,9 @@
   "screenshots": {
 
   },
+  "gallery":{
+    "editor": "This is the editor, where you can edit your recordings and export it to gif or video."
+  },
   "share": {
 
   },

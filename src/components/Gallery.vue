@@ -1,11 +1,15 @@
 <template>
     <b-carousel v-model="selected" icon-size="is-medium" :autoplay="false" :indicator-inside="false" :overlay="gallery">
         <b-carousel-item v-for="(item, i) in images" :key="i">
-            <div class="columns is-centered">
+            <div class="columns is-mobile is-centered">
                 <div class="column is-narrow">
-                    <a @click="switchGallery(true)" class="image auto-size">
-                        <img class="auto-size" :src="item">
-                    </a>
+                    <figure>
+                        <a @click="switchGallery(true)" class="image auto-size">
+                            <img class="auto-size" :src="item.src">
+                        </a>
+
+                        <figcaption>{{ $t(item.sub) }}</figcaption>
+                    </figure>
                 </div>
             </div>
         </b-carousel-item>
@@ -30,9 +34,9 @@
                 gallery: false,
                 selected: 0,
                 images: [
-                    "./screenshots/Recorder.png",
-                    "./screenshots/Editor-Empty.png",
-                    "./screenshots/Editor.gif",
+                    { src: "./screenshots/Editor.gif", sub: "gallery.editor" },
+                    { src: "./screenshots/Recorder.png", sub: "gallery.editor" },
+                    { src: "./screenshots/Editor-Empty.png", sub: "gallery.editor" },
                 ]
             }
         },
@@ -85,8 +89,8 @@
 
     //Makes the images to grow and shrink.
     .auto-size {
-        max-width: 100vw;
-        max-height: 100vh;
+        max-width: 82vw;
+        max-height: 82vh;
         height: auto !important;
         width: auto !important; 
     }
@@ -94,5 +98,19 @@
     //Size of the side arrows.
     .icon {
         font-size: 14pt;
+    }
+
+    figure {
+        display: table;
+        width: auto;
+        height: auto;
+        max-width: 90vw;
+        max-height: 100vh;
+    }
+
+    figcaption {
+        max-width: 100%;
+        display: table-caption;
+        caption-side: bottom;
     }
 </style>

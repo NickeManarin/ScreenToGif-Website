@@ -99,7 +99,13 @@ const routes = [
 const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
+  scrollBehavior () {
+    //When the route changes, the page should scroll back to the top.
+    document.getElementById('app').scrollIntoView({
+      behavior: 'smooth'
+    });
+  }
 });
 
 export default router;
