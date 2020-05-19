@@ -6,15 +6,6 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/404",
-    name: "404",
-    component: () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue")
-  },
-  {
-    path: "*",
-    redirect: "/404"
-  },
-  {
     path: "/",
     name: "Home",
     component: Home
@@ -23,6 +14,7 @@ const routes = [
     path: "/home",
     redirect: "/"
   },
+
   {
     path: "/downloads",
     name: "Downloads",
@@ -37,35 +29,70 @@ const routes = [
     path: "/releases",
     redirect: "/downloads"
   },
+
   {
     path: "/donation",
     name: "Donation",
-    alias: '/donate', 
     component: () => import(/* webpackChunkName: "Donation" */ "@/views/Donation.vue")
   },
   {
+    path: "/donate",
+    redirect: "/donation"
+  },
+
+  {
     path: "/screenshots",
     name: "Screenshots",
-    alias: ['/screenshot', '/images'], 
     component: () => import(/* webpackChunkName: "Screenshots" */ "@/views/Screenshots.vue")
   },
   {
+    path: "/screenshot",
+    redirect: "/screenshots"
+  },
+  {
+    path: "/images",
+    redirect: "/screenshots"
+  },
+
+  {
     path: "/documentation",
     name: "Documentation",
-    alias: "/docs", 
     component: () => import(/* webpackChunkName: "Documentation" */ "@/views/Documentation.vue")
   },
   {
+    path: "/docs",
+    redirect: "/documentation"
+  },
+
+  {
     path: "/contact",
     name: "Contact",
-    alias: "/about", 
     component: () => import(/* webpackChunkName: "Contact" */ "@/views/Contact.vue")
   },
   {
+    path: "/about",
+    redirect: "/contact"
+  },
+
+
+  {
     path: "/source",
     name: "Source",
-    alias: "/src", 
     component: () => import(/* webpackChunkName: "Source" */ "@/views/Source.vue")
+  },
+  {
+    path: "/src",
+    redirect: "/source"
+  },
+
+  {
+    path: "/404",
+    name: "404",
+    component: () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue")
+  },
+  {
+    path: "*", //Everything else will result in a 404 page.
+    redirect: "/404"
   }
 ];
 
