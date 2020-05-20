@@ -320,6 +320,7 @@
         box-shadow: 0px 1px 0px hsla(0, 0%, 100%, 0.2);
     }
 
+
     .has-side-padding {
         padding-left: 1.5rem;
         padding-right: 1.5rem;

@@ -128,7 +128,7 @@
             </div>
         </section>
 
-        <section class="hero why-use is-unselectable">
+        <section class="hero is-lighter why-use is-unselectable">
             <div class="hero-body">
                 <div class="container">
                     <div class="columns is-centered is-multiline is-mobile">
@@ -168,20 +168,20 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-4 is-unselectable">Media</h4>
-                    <p class="subtitle is-size-5 is-unselectable">Screenshots and gifs</p>
+                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">Screenshots and gifs</p>
 
                     <Gallery></Gallery>
  
-                    <b-button tag="router-link" to="/screenshots" type="is-link" class="has-top-margin is-medium">View more screenshots and examples</b-button>
+                    <b-button tag="router-link" to="/screenshots" type="is-link" class="has-top-margin is-medium">See more screenshots</b-button>
                 </div>
             </div>
         </section>
 
-        <section class="hero is-light">
+        <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-4 is-unselectable">Special thanks</h4>
-                    <p class="subtitle is-size-5 is-unselectable">Here are some of supporters of this project</p>
+                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">Here are some of supporters of this project</p>
 
                     <div class="columns is-centered">
                         <div class="column is-one-third">
@@ -254,6 +254,19 @@
                     </div>
 
                     <b-button tag="router-link" to="/donation" type="is-link" class="has-top-margin is-medium">Become a sponsor</b-button>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h4 class="title is-size-4 is-unselectable">How to use?</h4>
+                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">Record and edit your content in no time</p>
+
+                    
+ 
+                    <b-button tag="router-link" to="/documentation" type="is-link" class="has-top-margin is-medium">Learn how to use</b-button>
                 </div>
             </div>
         </section>

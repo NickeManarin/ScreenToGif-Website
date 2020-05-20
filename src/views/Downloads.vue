@@ -3,8 +3,8 @@
         <section class="hero is-download">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">Latest Version</h2>
-                    <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">Latest Version</h2>
+                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">
                         <span v-if="!isLoading">
                             Version {{ !isEmpty($store.release) ? $store.release.version : "..." }}
                         </span>
@@ -53,16 +53,15 @@
             </div>
         </section>
 
-        <section class="hero is-light">
+        <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container">
-                    <h3 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">Requirements</h3>
-                    <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">This app requires some software and hardware minimum configurations in order to run</p>
-                    <br>
+                    <h3 class="title is-size-3 has-text-centered is-unselectable">Requirements</h3>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">This app requires some software and hardware minimum configurations in order to run</p>
 
                     <div class="requirements columns is-centered">
                         <div class="column is-4 has-text-centered">
-                            <b-button class="is-grey-95" tag="a" href="https://www.microsoft.com/windows/" target="_blank" rel="noopener"
+                            <b-button class="is-light" tag="a" href="https://www.microsoft.com/windows/" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'Windows'})">
                                 <figure class="image is-64x64 is-inline-block">
                                     <ImageLoader :src="require('@/assets/Windows.svg')" width="64px" height="64px" alt="Windows logo." border-radius="0"/>
@@ -73,7 +72,7 @@
                         </div>
 
                         <div class="column is-4 has-text-centered">
-                            <b-button class="is-grey-95" tag="a" href="http://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank" rel="noopener"
+                            <b-button class="is-light" tag="a" href="http://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
                                 <figure class="image is-64x64 is-inline-block">
                                     <ImageLoader :src="require('@/assets/Net.png')" width="64px" height="64px" alt="Net Framework logo." border-radius="0"/>
@@ -90,11 +89,11 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">All Releases</h2>
-                    <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">Expand to see the release details</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">All Releases</h2>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">Expand to see the release details</p>
 
-                    <b-table :data="$store.releaseList" ref="table" :loading="isLoading" hoverable detailed detail-key="version" selectable @select="toggle"
-                        paginated :per-page="perPage" :current-page.sync="currentPage" :scrollable="false"
+                    <b-table :data="$store.releaseList" ref="table" :loading="isLoading" hoverable detailed detail-key="version" 
+                        selectable @select="toggle" paginated :per-page="perPage" :current-page.sync="currentPage" :scrollable="false"
                         aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page" 
                         :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
                     
@@ -302,7 +301,7 @@
                     });
             },
             fallbackLoad(){
-                this.$http.get(`https://api.github.com/repos/NickeManarin/ScreenToGif/releasesA?per_page=50`)
+                this.$http.get(`https://api.github.com/repos/NickeManarin/ScreenToGif/releases?per_page=70`)
                     .then(async res => {
                         this.treatDataFallback(await res.json());
                     }, error => {
@@ -489,7 +488,7 @@
     @import "@/mixins/colors.scss";
 
     //Background of the hero panel.
-    section.hero.is-download {
+    .hero.is-download {
         background-image: linear-gradient($download, $download-light);
     }
     
@@ -531,5 +530,12 @@
 
     hr {
         margin: 1rem 0;
+    }
+</style>
+
+<style lang="scss">
+    //Removes the hover effect on the detail of the row.
+    .table.is-hoverable tbody tr.detail:not(.is-selected):hover {
+        background-color: hsl(0, 0, 98%);
     }
 </style>

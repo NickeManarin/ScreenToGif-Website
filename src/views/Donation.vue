@@ -3,43 +3,43 @@
         <section class="hero is-donation">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">Did you like ScreenToGif?</h2>
-                    <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">And you want to help it somehow?</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">Did you like ScreenToGif?</h2>
+                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">And you want to help it somehow?</p>
                 </div>
             </div>
         </section>
 
-        <section class="hero">
+        <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h2 class="title is-size-3 is-unselectable has-arrow-cursor">Why help ScreenToGif?</h2>
-                    <p class="subtitle is-unselectable has-arrow-cursor">The project would benefit from your help</p>
+                    <h2 class="title is-size-3 is-unselectable">Why help ScreenToGif?</h2>
+                    <p class="subtitle is-unselectable has-text-grey-71">The project would benefit from your help</p>
 
                     <div class="columns is-centered is-multiline is-mobile">
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">Free</p>
-                            <p class="subtitle is-6 has-text-grey-light">Open Source on <strong class="has-text-grey">Github</strong></p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">Free</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable">Open Source on <strong class="has-text-grey">Github</strong></p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-github-alt"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">No ads</p>
-                            <p class="subtitle is-6 has-text-grey-light">Not even in the <strong class="has-text-grey">installer</strong></p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">No ads</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable">Not even in the <strong class="has-text-grey">installer</strong></p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-image-slash"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">Committed</p>
-                            <p class="subtitle is-6 has-text-grey-light">Made with love by a <strong class="has-text-grey">committed</strong> developer</p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">Committed</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable">Made with love by a <strong class="has-text-grey">committed</strong> developer</p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-laptop"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">Made for you</p>
-                            <p class="subtitle is-6 has-text-grey-light"><strong class="has-text-grey">Feedback driven</strong> development</p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">Made for you</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable"><strong class="has-text-grey">Feedback driven</strong> development</p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-chat-bubble-user"></b-icon>
                         </div>
@@ -48,15 +48,15 @@
             </div>
         </section>
 
-        <section class="hero is-light">
+        <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">How can I help?</h2>
-                    <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">If you wish to help the project, here's how</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">How can I help?</h2>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">If you wish to help the project, here's how</p>
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-grey-95" tag="a" href="https://github.com/NickeManarin/ScreenToGif/issues" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/issues" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-feedback"/>
@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-grey-95" tag="a" href="" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-share"/>
@@ -86,10 +86,11 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-grey-95" tag="a" href="https://github.com/NickeManarin/ScreenToGif/wiki/Localization" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/wiki/Localization" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-feedback"/>
+                                        <!-- <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-feedback"/> -->
+                                        <b-icon class="has-text-info is-size-2 has-icon-large" pack="icon" icon="localization"></b-icon>
                                     </figure>
 
                                     <div class="media-content">
@@ -101,7 +102,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-grey-95" @click="scrollToDonation()">
+                            <b-button class="is-light" @click="scrollToDonation()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-money-stack"/>
@@ -119,11 +120,11 @@
             </div>
         </section>
 
-        <section ref="donationMethods" class="hero">
+        <section ref="donationMethods" class="hero is-lighter">
             <div class="hero-body">
                 <div class="container">
                     <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">How can I donate?</h2>
-                    <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">Here are some ways to donate</p>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable has-arrow-cursor">Here are some ways to donate</p>
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
@@ -329,7 +330,7 @@
             <div class="hero-body">
                 <div class="container">
                     <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">Patron list</h2>
-                    <p class="subtitle has-text-centered is-unselectable has-arrow-cursor">Here are some of the people or companies who support the project</p>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable has-arrow-cursor">Here are some of the people or companies who support the project</p>
 
                     <b-table :data="patrons" ref="table" :loading="isLoading" hoverable selectable @select="openLink" :scrollable="false"
                          :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
@@ -386,7 +387,7 @@
                         </template>
 
                         <template slot="footer">
-                            <p class="has-text-centered">
+                            <p class="has-text-centered is-unselectable">
                                 <span>Would you like to have your name listed here after a donation?</span>
                                 <router-link to="/contact" tag="a">
                                     Contact me :)
@@ -566,6 +567,9 @@
                 //document.getElementById('donation-methods').scrollIntoView({ block: 'start',  behavior: 'smooth' });
                 this.$refs.donationMethods.scrollIntoView({ block: 'start',  behavior: 'smooth' });
             },
+            visitPatreon(){
+                
+            },
             openPaypalDialog(){
                 this.isPaypalModalActive = true;
             },
@@ -620,5 +624,12 @@
     //Adds a pointer cursor.
     .has-pointer-cursor {
         cursor: pointer;
+    }
+</style>
+
+<style lang="scss">
+        //Increase the size of the custom icon.
+    .has-icon-large .icon {
+        mask-size: 3.5rem;
     }
 </style>

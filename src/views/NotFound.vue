@@ -1,11 +1,16 @@
 <template>
-  <div class="container">
-    <p class="is-size-2">404</p>
+  <div class="hero">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <p class="is-size-2">Page not found...</p>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+  export default {};
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

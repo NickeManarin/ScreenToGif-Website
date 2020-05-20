@@ -5,7 +5,17 @@ $primary-invert: findColorInvert($primary);
 $white: #f8f9fa;
 $black: findColorInvert($white);
 
+
 //Create your own colors.
+$twitter: #4099FF;
+$twitter-invert: findColorInvert($twitter);
+$facebook: #4267b2;
+$facebook-invert: findColorInvert($facebook);
+$linkedin: #2867B2;
+$linkedin-invert: findColorInvert($linkedin);
+$reddit: #FF4500;
+$reddit-invert: findColorInvert($reddit);
+
 $download: #155591;
 $download-inverted: findColorInvert($download);
 $download-light: #1c7ed6;
@@ -21,7 +31,15 @@ $screenshots-inverted: findColorInvert($screenshots);
 $screenshots-light: #1cbcd6; //d61c1c;
 $screenshots-light-inverted: findColorInvert($screenshots-light);
 
-$grey-95: hsl(0, 0%, 95%);
-$grey-95-inverted: findColorInvert($grey-95);
 $dark-15: rgba(0, 0,0, 0.15);
 $dark-15-inverted: findColorInvert($dark-15);
+$grey-71: hsl(0, 0%, 71%);
+$grey-71-inverted: findColorInvert($grey-71);
+$grey-80: hsl(0, 0%, 80%);
+$grey-80-inverted: findColorInvert($grey-80);
+$grey-95: hsl(0, 0%, 95%);
+$grey-95-inverted: findColorInvert($grey-95);
+$grey-98: hsl(0, 0%, 98%);
+$grey-98-inverted: findColorInvert($grey-98);
+$grey-99: hsl(0, 0%, 99%);
+$grey-99-inverted: findColorInvert($grey-99);

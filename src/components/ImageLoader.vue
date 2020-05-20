@@ -1,5 +1,5 @@
 <template>
-    <span class="box-image" :style="styles">
+    <span class="box-image is-unselectable" :style="styles">
         <b-skeleton v-if="skeleton && !hideSkeleton" :width="width" :height="height" :animated="animatedSkeleton" :style="skeletonStyles"></b-skeleton>
 
         <transition name="fade" v-if="placeholder">
