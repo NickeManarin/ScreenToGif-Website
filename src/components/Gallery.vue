@@ -112,5 +112,6 @@
         max-width: 100%;
         display: table-caption;
         caption-side: bottom;
+        background: white;
     }
 </style>

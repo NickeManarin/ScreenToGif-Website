@@ -98,14 +98,10 @@
                         :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
                     
                         <template slot-scope="props">
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" label="Version" width="70" :custom-sort="sortVersion" sortable>
+                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" label="Version"  :custom-sort="sortVersion" sortable>
                                 <span class="tag" :class="versionType(props.row.is_prerelease)">
                                     {{ props.row.version }}
                                 </span>
-                            </b-table-column>
-
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="download_count" label="Download Count" sortable numeric>
-                                {{ props.row.download_count.toLocaleString() }}
                             </b-table-column>
 
                             <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="release_date" label="Release Date" sortable centered>
@@ -120,6 +116,10 @@
                                 </template>
 
                                 {{ props.row.active_days | round(1)}}
+                            </b-table-column>
+
+                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="download_count" label="Download Count" sortable numeric>
+                                {{ props.row.download_count.toLocaleString() }}
                             </b-table-column>
                         </template>
 
@@ -216,7 +216,45 @@
                         </template>
 
                         <template slot="footer">
-                            <div v-if="!isLoading" class="has-text-right">Total downloads: {{ totalDownloads.toLocaleString() }}</div>
+                            <th class="is-hidden-mobile"></th>
+
+                            <th v-if="!isLoading" class="is-hidden-mobile2">
+                                <div class="th-wrap">
+                                    <p>
+                                        <span class="has-text-grey">{{ $store.releaseList != null ? $store.releaseList.length : 0 }}</span>
+                                        <span> versions released</span>  
+                                    </p> 
+                                </div>
+                            </th>
+
+                            <th v-if="!isLoading" class="is-hidden-mobile2">
+                                <div class="th-wrap is-centered">
+                                    <p>
+                                        <span>Average of </span>  
+                                        <span class="has-text-grey">{{ averagePerMonth.toFixed(2).toLocaleString() }}</span>
+                                        <span> per month</span>
+                                    </p> 
+                                </div>
+                            </th>
+
+                            <th v-if="!isLoading" class="is-hidden-mobile2">
+                                <div class="th-wrap is-numeric">
+                                    <p>
+                                        <span>Active for </span>  
+                                        <span class="has-text-grey">{{ projectAge }} </span>
+                                    </p> 
+                                </div>
+                            </th>
+
+                            <th v-if="!isLoading" class="is-hidden-mobile2">
+                                <div class="th-wrap is-numeric">
+                                    <p>
+                                        <span>Downloaded </span> 
+                                        <span class="has-text-grey">{{ $store.totalDownloads.toLocaleString() }}</span>
+                                        <span> times</span>
+                                    </p> 
+                                </div>
+                            </th>
                         </template>
                     </b-table>
                 </div>
@@ -403,6 +441,8 @@
                 this.$store.releaseList = this.downloads;
                 this.$store.release = this.downloads[0];
                 this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
+                this.$store.totalDownloads = this.totalDownloads;
+                this.$store.totalDays = this.totalDays;
                 this.isLoading = false;
             },
             treatDataFallback(data) {
@@ -453,10 +493,9 @@
                 this.$store.releaseList = this.downloads;
                 this.$store.release = this.downloads[0];
                 this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
+                this.$store.totalDownloads = this.totalDownloads;
+                this.$store.totalDays = this.totalDays;
                 this.isLoading = false;
-            },
-            imageLoaded(row) { //Delete later.
-                row.is_picture_loaded = true;
             },
             toggle(row) {
                 this.$refs.table.toggleDetails(row);
@@ -473,6 +512,74 @@
                     position: 'is-bottom',
                     type: 'is-danger'
                 })
+            }
+        },
+
+        computed: {
+            projectAge() {
+                var end = new Date(new Date().setHours(0, 0, 0, 0));
+                var start = new Date(2012, 10 - 1, 12);
+
+                var years = end.getFullYear() - start.getFullYear();
+                var months = end.getMonth() - start.getMonth();
+                var days = end.getDate() - start.getDate();
+
+                //Work out the difference in months.
+                months += years * 12;
+
+                if (days < 0)
+                    months -= 1;
+                
+                //Now add those months to the date of birth.
+                start.setMonth(start.getMonth() + months);
+                
+                //Calculate the difference in milliseconds.
+                var diff = end - start;
+                
+                //Divide that by 86400 to get the number of days.
+                var days = Math.round(diff / 86400 / 1000);
+                
+                //Now convert months back to years and months.
+                years = parseInt(months / 12);
+                months -= (years * 12);
+
+                //Format age as "xx years, yy months, zz days".
+                var text = "";
+
+                if (years)
+                    text = years + (years > 1 ? " years" : " year");
+                
+                if (months) {
+                    if (text.length)
+                        text = text + ", ";
+                    
+                    text = text + months + (months > 1 ? " months" : " month")
+                }
+
+                if (days) {
+                    if (text.length)
+                        text = text + ", ";
+                    
+                    text = text + days + (days > 1 ? " days" : " day")
+                }
+                               
+                return text;
+            },
+            averagePerMonth() {
+                var end = new Date(new Date().setHours(0, 0, 0, 0));
+                var start = new Date(2012, 10 - 1, 12);
+
+                var years = end.getFullYear() - start.getFullYear();
+                var months = end.getMonth() - start.getMonth();
+                var days = end.getDate() - start.getDate();
+
+                //Work out the difference in months.
+                months += years * 12;
+
+                if (days < 0)
+                    months -= 1; 
+
+                return (this.downloads.length > 0 ? this.downloads.length : this.$store.releaseList.length) / months;
             }
         },
 

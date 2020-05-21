@@ -33,7 +33,9 @@ Vue.config.productionTip = false;
 Vue.prototype.$store = {
   release: {},
   releaseList: [],
-  previousDate: null
+  previousDate: null,
+  totalDownloads: 0,
+  totalDays: 0
 };
 
 new Vue({
