@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="container">           
             <div class="columns is-mobile is-centered">
-                <div class="column is-one-third has-text-centered">
+                <div class="column has-text-centered">
                     <div class="is-inline-flex">
                         <ImageLoader :src="require('@/assets/logo.png')" width="34px" height="34px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
 
@@ -216,7 +216,7 @@
     }
 
     .has-text-rainbow {
-        background-image: linear-gradient(to left, blue, rgb(112, 112, 0), green);
+        background-image: linear-gradient(to left, blue, rgb(167, 167, 0), green);
         background-clip: text;
         color: transparent;
     }

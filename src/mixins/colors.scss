@@ -31,6 +31,11 @@ $screenshots-inverted: findColorInvert($screenshots);
 $screenshots-light: #1cbcd6; //d61c1c;
 $screenshots-light-inverted: findColorInvert($screenshots-light);
 
+$contact: #155591;
+$contact-inverted: findColorInvert($contact);
+$contact-light: #1c7ed6;
+$contact-light-inverted: findColorInvert($contact-light);
+
 $dark-15: rgba(0, 0,0, 0.15);
 $dark-15-inverted: findColorInvert($dark-15);
 $grey-71: hsl(0, 0%, 71%);

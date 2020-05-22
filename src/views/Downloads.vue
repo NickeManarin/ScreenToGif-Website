@@ -218,7 +218,7 @@
                         <template slot="footer">
                             <th class="is-hidden-mobile"></th>
 
-                            <th v-if="!isLoading" class="is-hidden-mobile2">
+                            <th v-if="!isLoading">
                                 <div class="th-wrap">
                                     <p>
                                         <span class="has-text-grey">{{ $store.releaseList != null ? $store.releaseList.length : 0 }}</span>
@@ -227,8 +227,8 @@
                                 </div>
                             </th>
 
-                            <th v-if="!isLoading" class="is-hidden-mobile2">
-                                <div class="th-wrap is-centered">
+                            <th v-if="!isLoading">
+                                <div class="th-wrap is-centered-desktop">
                                     <p>
                                         <span>Average of </span>  
                                         <span class="has-text-grey">{{ averagePerMonth.toFixed(2).toLocaleString() }}</span>
@@ -237,8 +237,8 @@
                                 </div>
                             </th>
 
-                            <th v-if="!isLoading" class="is-hidden-mobile2">
-                                <div class="th-wrap is-numeric">
+                            <th v-if="!isLoading">
+                                <div class="th-wrap is-numeric-desktop">
                                     <p>
                                         <span>Active for </span>  
                                         <span class="has-text-grey">{{ projectAge }} </span>
@@ -246,8 +246,8 @@
                                 </div>
                             </th>
 
-                            <th v-if="!isLoading" class="is-hidden-mobile2">
-                                <div class="th-wrap is-numeric">
+                            <th v-if="!isLoading">
+                                <div class="th-wrap is-numeric-desktop">
                                     <p>
                                         <span>Downloaded </span> 
                                         <span class="has-text-grey">{{ $store.totalDownloads.toLocaleString() }}</span>
@@ -605,7 +605,7 @@
         padding: 0.75rem 0.5rem;
     }
 
-    //Makes the buttons inside the columns more rounded and expanded.
+    //Makes the buttons inside the columns more rounded and expanded. Avoid aplying to the others.
     .requirements .column .button {
         white-space: normal;
         border-radius: 5px;

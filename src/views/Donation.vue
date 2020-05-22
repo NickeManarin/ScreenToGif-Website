@@ -590,7 +590,7 @@
     @import "@/mixins/colors.scss";
 
     //Background of the hero panel.
-    section.hero.is-donation {
+    .hero.is-donation {
         background-image: linear-gradient($donation, $donation-light);
     }
 
@@ -628,8 +628,13 @@
 </style>
 
 <style lang="scss">
-        //Increase the size of the custom icon.
+    //Increase the size of the custom icon.
     .has-icon-large .icon {
         mask-size: 3.5rem;
+    }
+
+    //Makes inner element of the buttons ocupy the whole space.
+    a > span {
+        width: 100%;
     }
 </style>

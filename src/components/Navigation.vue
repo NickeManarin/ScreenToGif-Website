@@ -181,6 +181,10 @@
                         return "is-download";
                     case "/donation":
                         return "is-donation";
+                    case "/screenshots":
+                        return "is-screenshots";
+                    case "/contact":
+                        return "is-contact";
                     default:
                         return "is-light";
                 }
@@ -190,6 +194,8 @@
                     case "/":
                     case "/downloads":
                     case "/donation":
+                    case "/screenshots":
+                    case "/contact":
                         return "has-text-light";
                     default:
                         return "has-text-dark";
@@ -198,17 +204,15 @@
             buttonColor() {
                 switch (this.$route.path) {
                     case "/":
-                        return this.isLoading
-                            ? "is-light"
-                            : "is-primary is-inverted";
+                        return this.isLoading ? "is-light" : "is-primary is-inverted";
                     case "/downloads":
-                        return this.isLoading
-                            ? "is-light"
-                            : "is-download is-inverted";
+                        return this.isLoading ? "is-light" : "is-download is-inverted";
                     case "/donation":
-                        return this.isLoading
-                            ? "is-light"
-                            : "is-donation is-inverted";
+                        return this.isLoading ? "is-light" : "is-donation is-inverted";
+                    case "/screenshots":
+                        return this.isLoading ? "is-light" : "is-screenshots is-inverted";                    
+                    case "/contact":
+                        return this.isLoading ? "is-light" : "is-contact is-inverted";
                     default:
                         return "is-primary";
                 }

@@ -1,5 +1,5 @@
 <template>
-    <span class="box-image is-unselectable" :style="styles">
+    <div class="box-image is-unselectable" :style="styles">
         <b-skeleton v-if="skeleton && !hideSkeleton" :width="width" :height="height" :animated="animatedSkeleton" :style="skeletonStyles"></b-skeleton>
 
         <transition name="fade" v-if="placeholder">
@@ -9,7 +9,7 @@
         <transition name="fade">
             <img v-show="loaded" v-on:load="onLoaded" :src="src" :style="styles">
         </transition>
-    </span>
+    </div>
 </template>
 
 <script>
@@ -20,12 +20,12 @@
             width: {
                 type: [String, Number],
                 default: 0,
-                required: true
+                required: false
             },
             height:  {
                 type: [String, Number],
                 default: 0,
-                required: true
+                required: false
             },
             src: {
                 type: String,
@@ -107,7 +107,7 @@
     };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
    .fade-enter-active {
         transition: opacity 700ms ease-in-out;
     }
@@ -125,14 +125,17 @@
         position: relative;
         overflow: hidden;
         border-radius: 4px;
-        position: relative;
+        width: 100%;
+        height: auto;
     }
 
     .box-image img {
-        position: absolute;
+        //position: absolute;
         top: 0;
         left: 0;
         transition: 500ms all ease-in-out;
+        width: 100%;
+        height: auto;
     } 
 
     .blured {

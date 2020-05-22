@@ -79,6 +79,8 @@
         "donation-light": ($donation-light, $donation-light-inverted),
         "screenshots": ($screenshots, $screenshots-inverted),
         "screenshots-light": ($screenshots-light, $screenshots-light-inverted),
+        "contact": ($contact, $contact-inverted),
+        "contact-light": ($contact-light, $contact-light-inverted),
 
         "grey-71": ($grey-71, $grey-71-inverted),
         "grey-80": ($grey-80, $grey-80-inverted),
@@ -157,6 +159,17 @@
             opacity: 1;
             transform: none;
             pointer-events: auto;
+        }
+    }
+
+    //Aligns text only on desktop or bigger.
+    @include from($desktop) {
+        .is-centered-desktop {
+            align-items: center !important;
+        }
+
+        .is-numeric-desktop {
+            align-items: right !important;
         }
     }
 </style>
