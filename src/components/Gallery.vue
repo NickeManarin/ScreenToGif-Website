@@ -34,9 +34,9 @@
                 gallery: false,
                 selected: 0,
                 images: [
-                    { src: "./screenshots/Editor.gif", sub: "gallery.editor" },
-                    { src: "./screenshots/Recorder.png", sub: "gallery.editor" },
-                    { src: "./screenshots/Editor-Empty.png", sub: "gallery.editor" },
+                    { src: "./media/Editor.gif", sub: "gallery.editor" },
+                    { src: "./media/Recorder.png", sub: "gallery.editor" },
+                    { src: "./media/Editor-Empty.png", sub: "gallery.editor" },
                 ]
             }
         },

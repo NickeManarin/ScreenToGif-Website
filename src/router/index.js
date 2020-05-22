@@ -74,6 +74,15 @@ const routes = [
     redirect: "/contact"
   },
 
+  {
+    path: "/share",
+    name: "Share",
+    component: () => import(/* webpackChunkName: "Share" */ "@/views/Share.vue")
+  },
+  {
+    path: "/src",
+    redirect: "/source"
+  },
 
   {
     path: "/source",

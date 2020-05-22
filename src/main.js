@@ -12,44 +12,45 @@ import CustomColors from "./mixins/colors.scss";
 
 Vue.use(VueResource);
 Vue.use(Buefy, {
-  defaultIconPack: "unicons",
+    defaultIconPack: "unicons",
 });
 Vue.use(VueShowdown, {
-  flavor: "github",
-  options: {
-    headerLevelStart: 3,
-    openLinksInNewWindow: true,
-    requireSpaceBeforeHeadingText: true,
-  },
+    flavor: "github",
+    options: {
+        headerLevelStart: 3,
+        openLinksInNewWindow: true,
+        requireSpaceBeforeHeadingText: true,
+    }
 });
 Vue.use(VueClipboard);
 Vue.use(CustomColors);
 Vue.use(VueGtag, { 
-  config: { id: "UA-87410077-2" },
-  enabled: process.env.NODE_ENV === 'production' }, router);
+    config: { id: "UA-87410077-2" },
+    enabled: process.env.NODE_ENV === 'production' 
+}, router);
 
 Vue.config.productionTip = false;
 
 Vue.prototype.$store = {
-  release: {},
-  releaseList: [],
-  previousDate: null,
-  totalDownloads: 0,
-  totalDays: 0
+    release: {},
+    releaseList: [],
+    previousDate: null,
+    totalDownloads: 0,
+    totalDays: 0
 };
 
 new Vue({
-  router,
-  i18n,
-  render: (h) => h(App),
-  created() {
-    //console.log('app version', process.env.VUE_APP_VERSION);
+    router,
+    i18n,
+    render: (h) => h(App),
+    created() {
+        // if (sessionStorage.redirect) {
+        //     console.log('redirect', sessionStorage.redirect);
 
-    if (sessionStorage.redirect) {
-      const redirect = sessionStorage.redirect;
-      //console.log('redirect', redirect);
-      delete sessionStorage.redirect;
-      this.$router.push(redirect);
+        //     const redirect = sessionStorage.redirect;
+        //     delete sessionStorage.redirect;
+
+        //     this.$router.push(redirect);
+        // }
     }
-  }
 }).$mount("#app");

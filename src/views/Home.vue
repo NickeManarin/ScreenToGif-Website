@@ -460,11 +460,12 @@
         transform: scale(1);
     }
 
+    @import "@/mixins/colors.scss";
 
     //Background of the hero panel.
     section.hero.is-primary {
         //background-image: url('../assets/BackgroundHome.svg'), linear-gradient(#5cadd5, #54dec4);
-        background-image: linear-gradient(#5cadd5, #54dec4);
+        background-image: linear-gradient($home, $home-light);
     }
 
     // .hero-background {

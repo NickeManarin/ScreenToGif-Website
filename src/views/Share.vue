@@ -3,8 +3,8 @@
         <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">Source code</h2>
-                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">ScreenToGif is open source</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">Share</h2>
+                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">Sharing is caring</p>
                 </div>
             </div>
         </section>

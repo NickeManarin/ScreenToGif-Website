@@ -1,6 +1,6 @@
 //Override default colors.
-$primary: #5cadd5;
-//$primary: #427a8a;
+//$primary: #3396c7; //5cadd5;
+$primary: #427a8a;
 $primary-invert: findColorInvert($primary);
 $white: #f8f9fa;
 $black: findColorInvert($white);
@@ -16,24 +16,29 @@ $linkedin-invert: findColorInvert($linkedin);
 $reddit: #FF4500;
 $reddit-invert: findColorInvert($reddit);
 
+$home: #3396c7; //5cadd5;
+$home-inverted: findColorInvert($home);
+$home-light: #29d6b5;
+$home-light-inverted: findColorInvert($home-light);
+
 $download: #155591;
 $download-inverted: findColorInvert($download);
 $download-light: #1c7ed6;
 $download-light-inverted: findColorInvert($download-light);
 
-$donation: #158091;//911515;
+$donation: #6d3fb8; //#667db6; //#3d74b8;
 $donation-inverted: findColorInvert($donation);
-$donation-light: #1cbcd6; //d61c1c;
+$donation-light: rgb(157, 120, 216); //#0082c8;//#799ECC;
 $donation-light-inverted: findColorInvert($donation-light);
 
-$screenshots: #158091;//911515;
+$screenshots: #116611; //rgb(41, 58, 75);//911515;
 $screenshots-inverted: findColorInvert($screenshots);
-$screenshots-light: #1cbcd6; //d61c1c;
+$screenshots-light: #708770; //rgba(90,92,106,1); //d61c1c;
 $screenshots-light-inverted: findColorInvert($screenshots-light);
 
-$contact: #155591;
+$contact: rgb(1, 121, 161);
 $contact-inverted: findColorInvert($contact);
-$contact-light: #1c7ed6;
+$contact-light: #00B4DB;
 $contact-light-inverted: findColorInvert($contact-light);
 
 $dark-15: rgba(0, 0,0, 0.15);

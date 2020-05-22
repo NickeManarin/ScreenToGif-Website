@@ -59,6 +59,18 @@ export default {
 
             return bytes.toFixed(1) + " " + units[u];
         },
+        trimLeft(text, charlist) {
+            if (charlist === undefined)
+                charlist = "\s";
+        
+            return text.replace(new RegExp("^[" + charlist + "]+"), "");
+        },
+        trimRight(text, charlist) {
+            if (charlist === undefined)
+                charlist = "\s";
+        
+            return text.replace(new RegExp("[" + charlist + "]+$"), "");
+        }
     },
     // filters:{ }
 };

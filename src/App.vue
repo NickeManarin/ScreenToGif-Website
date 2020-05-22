@@ -38,10 +38,12 @@
 
     export default {
         name: "app",
+        
         components: {
             Navigation,
             Footer
         },
+
         created() {
             this.$buefy.config.setOptions(customIconConfig);
         }
@@ -73,6 +75,9 @@
         "facebook": ($facebook, $facebook-invert),
         "linkedin": ($linkedin, $linkedin-invert),
         "reddit": ($reddit, $reddit-invert),
+
+        "home": ($home, $home-inverted),
+        "home-light": ($home-light, $home-light-inverted),
         "download": ($download, $download-inverted),
         "download-light": ($download-light, $download-light-inverted),
         "donation": ($donation, $donation-inverted),

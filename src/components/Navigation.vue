@@ -38,6 +38,11 @@
                     <p class="is-unselectable">Documentation</p>
                 </b-navbar-item>
 
+                <b-navbar-item tag="router-link" to="/share" :active="$route.path === '/share'">
+                    <b-icon pack="unicon" icon="uil-share" class="is-hidden-touch"></b-icon>
+                    <p class="is-unselectable">Share</p>
+                </b-navbar-item>
+
                 <b-navbar-item tag="router-link" to="/source" :active="$route.path === '/source'">
                     <b-icon pack="unicon" icon="uil-github-alt" class="is-hidden-touch"></b-icon>
                     <p class="is-unselectable">Source</p>
@@ -174,9 +179,9 @@
 
         methods: {
             navigationColor() {
-                switch (this.$route.path) {
-                    case "/":
-                        return "is-primary";
+                switch (this.trimRight(this.$route.path, '/')) {
+                    case "":
+                        return "is-home";
                     case "/downloads":
                         return "is-download";
                     case "/donation":
@@ -190,8 +195,8 @@
                 }
             },
             textColor(){
-                switch (this.$route.path) {
-                    case "/":
+                switch (this.trimRight(this.$route.path, '/')) {
+                    case "":
                     case "/downloads":
                     case "/donation":
                     case "/screenshots":
@@ -202,9 +207,9 @@
                 }
             },
             buttonColor() {
-                switch (this.$route.path) {
-                    case "/":
-                        return this.isLoading ? "is-light" : "is-primary is-inverted";
+                switch (this.trimRight(this.$route.path, '/')) {
+                    case "":
+                        return this.isLoading ? "is-light" : "is-home is-inverted";
                     case "/downloads":
                         return this.isLoading ? "is-light" : "is-download is-inverted";
                     case "/donation":
@@ -218,10 +223,12 @@
                 }
             },
             tooltipBackground() {
-                switch (this.$route.path) {
+                switch (this.trimRight(this.$route.path, '/')) {
                     case "/":
                     case "/downloads":
                     case "/donation":
+                    case "/screenshots":
+                    case "/contact":
                         return "is-light";
                     default:
                         return "is-info";

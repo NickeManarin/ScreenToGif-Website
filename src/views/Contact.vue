@@ -148,7 +148,7 @@
 
     //Background of the hero panel.
     .hero.is-contact {
-        background-image: linear-gradient($download, $download-light);
+        background-image: linear-gradient($contact, $contact-light);
     }
     
     //Fills up the space.
