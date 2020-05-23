@@ -44,13 +44,13 @@ new Vue({
     i18n,
     render: (h) => h(App),
     created() {
-        // if (sessionStorage.redirect) {
-        //     console.log('redirect', sessionStorage.redirect);
+        if (sessionStorage.redirect) {
+            //console.log('redirect', sessionStorage.redirect);
 
-        //     const redirect = sessionStorage.redirect;
-        //     delete sessionStorage.redirect;
+            const redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
 
-        //     this.$router.push(redirect);
-        // }
+            this.$router.push(redirect);
+        }
     }
 }).$mount("#app");
