@@ -6,7 +6,7 @@
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <figure class="is-inline-block image is-144x144">
-                        <ImageLoader :src="require('@/assets/logo.png')" width="144px" height="144px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
+                        <ResponsiveImage :src="require('@/assets/logo.png')" maxWidth="144px" maxHeight="144px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
                     </figure>
 
                     <transition name="slide-down">
@@ -188,7 +188,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
                                 <figure class="image">
-                                    <imageLoader :src="require('@/assets/Bluepoint.png')" width="150px" height="44px"></imageLoader>
+                                    <ResponsiveImage :src="require('@/assets/Bluepoint.png')" maxWidth="150px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey has-text-weight-semibold">Bluepoint Games</p>
@@ -201,7 +201,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
                                 <figure class="image">
-                                    <imageLoader :src="require('@/assets/Jetbrains.svg')" width="44px" height="44px"></imageLoader>
+                                    <ResponsiveImage :src="require('@/assets/Jetbrains.svg')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Jetbrains</p>
@@ -223,7 +223,7 @@
                             <b-button class="is-light padded" tag="a" href="https://loam.net" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">
-                                    <imageLoader :src="require('@/assets/Loam.png')" width="44px" height="44px"></imageLoader>
+                                    <ResponsiveImage :src="require('@/assets/Loam.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Loam</p>
@@ -234,7 +234,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
-                                    <imageLoader :src="require('@/assets/Whsr.png')" width="44px" height="44px"></imageLoader>
+                                    <ResponsiveImage :src="require('@/assets/Whsr.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">WHSR</p>
@@ -245,7 +245,7 @@
                             <b-button class="is-light padded" tag="a" href="http://elmah.io" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
                                 <figure class="image">
-                                    <imageLoader :src="require('@/assets/Elmah.png')" width="60px" height="44px"></imageLoader>
+                                    <ResponsiveImage :src="require('@/assets/Elmah.png')" maxWidth="60px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Elmah</p>
@@ -266,7 +266,7 @@
 
                     
  
-                    <b-button tag="router-link" to="/documentation" type="is-link" class="has-top-margin is-medium">Learn how to use</b-button>
+                    <b-button tag="router-link" to="/how-to-use" type="is-link" class="has-top-margin is-medium">Learn how to use</b-button>
                 </div>
             </div>
         </section>
@@ -277,14 +277,14 @@
     //@ is an alias to /src
     import helpers from "@/mixins/helpers";
     import downloader from "@/mixins/download";
-    import ImageLoader from "@/components/ImageLoader.vue";
+    import ResponsiveImage from "@/components/ResponsiveImage.vue";
     import Gallery from "@/components/Gallery.vue";
 
     export default {
         name: "Home",
         mixins: [helpers, downloader],
         components: {
-            ImageLoader,
+            ResponsiveImage,
             Gallery
         },
 

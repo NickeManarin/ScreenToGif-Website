@@ -71,7 +71,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light" tag="a" href="" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="router-link" to="/share">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-share"/>
@@ -131,7 +131,7 @@
                             <b-button class="is-light " @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Patreon.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Patreon.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -146,7 +146,7 @@
                             <b-button class="is-light" @click="openPaypalDialog()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Paypal.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Paypal.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -234,7 +234,7 @@
                             <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Flattr.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Flattr.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -249,7 +249,7 @@
                             <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Ko-fi.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Ko-fi.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -264,7 +264,7 @@
                             <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Buymeacoffee.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Buymeacoffee.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -281,7 +281,7 @@
                             <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Steam.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Steam.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -296,7 +296,7 @@
                             <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Gog.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Gog.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -311,7 +311,7 @@
                             <b-button class="is-light" @click="visitPatreon()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <imageLoader :src="require('@/assets/Amazon.svg')" width="40px" height="40px"></imageLoader>
+                                        <ResponsiveImage :src="require('@/assets/Amazon.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -402,11 +402,11 @@
 </template>
 
 <script>
-    import ImageLoader from "@/components/ImageLoader.vue";
+    import ResponsiveImage from "@/components/ResponsiveImage.vue";
 
     export default {
         components: {
-            ImageLoader
+            ResponsiveImage
         },
 
         data() {

@@ -55,13 +55,17 @@ const routes = [
   },
 
   {
-    path: "/documentation",
-    name: "Documentation",
-    component: () => import(/* webpackChunkName: "Documentation" */ "@/views/Documentation.vue")
+    path: "/how-to-use",
+    name: "HowToUse",
+    component: () => import(/* webpackChunkName: "HowToUse" */ "@/views/HowToUse.vue")
   },
   {
     path: "/docs",
-    redirect: "/documentation"
+    redirect: "/how-to-use"
+  },
+  {
+    path: "/help",
+    redirect: "/how-to-use"
   },
 
   {

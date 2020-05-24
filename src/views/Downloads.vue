@@ -64,7 +64,7 @@
                             <b-button class="is-light" tag="a" href="https://www.microsoft.com/windows/" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'Windows'})">
                                 <figure class="image is-64x64 is-inline-block">
-                                    <ImageLoader :src="require('@/assets/Windows.svg')" width="64px" height="64px" alt="Windows logo." border-radius="0"/>
+                                    <ResponsiveImage :src="require('@/assets/Windows.svg')" maxWidth="64px" maxHeight="64px" alt="Windows logo." border-radius="0"/>
                                 </figure>
 
                                 <p class="subtitle is-size-6 has-text-grey"><strong>Windows 7 SP1</strong> or newer</p>
@@ -75,7 +75,7 @@
                             <b-button class="is-light" tag="a" href="http://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
                                 <figure class="image is-64x64 is-inline-block">
-                                    <ImageLoader :src="require('@/assets/Net.png')" width="64px" height="64px" alt="Net Framework logo." border-radius="0"/>
+                                    <ResponsiveImage :src="require('@/assets/Net.png')" maxWidth="64px" maxHeight="64px" alt="Net Framework logo." border-radius="0"/>
                                 </figure>
 
                                 <p class="subtitle is-size-6 has-text-grey"><strong>.Net Framework 4.8</strong> or newer</p>
@@ -152,7 +152,7 @@
                                         <!-- <img v-if="props.row.is_picture_loaded" :src="props.row.author_picture" alt="Author avatar" @load="imageLoaded(props.row)"> -->
                                         <!-- <b-skeleton v-if="!props.row.is_picture_loaded" width="64px" height="64px" animated></b-skeleton> -->
 
-                                        <ImageLoader :src="props.row.author_picture + '&s=128'" width="64px" height="64px" skeleton/>
+                                        <ResponsiveImage :src="props.row.author_picture + '&s=128'" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
                                     </p>
                                 </figure>
 
@@ -264,12 +264,12 @@
 </template>
 
 <script>
-    import ImageLoader from "@/components/ImageLoader.vue";
+    import ResponsiveImage from "@/components/ResponsiveImage.vue";
     import helpers from '../mixins/helpers';
 
     export default {
         components: {
-            ImageLoader
+            ResponsiveImage
         },
         mixins: [
             helpers,

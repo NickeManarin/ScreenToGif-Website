@@ -38,7 +38,7 @@
 
     export default {
         name: "app",
-        
+
         components: {
             Navigation,
             Footer

@@ -27,8 +27,12 @@
 <script>
     export default {
         mounted() {
-            window.addEventListener('keyup', () => this.keyUp(event));
+            window.addEventListener('keyup', this.keyUp);
         },
+        destroyed() {
+            window.removeEventListener('keyup', this.keyUp);
+        },
+
         data() {
             return {
                 gallery: false,
@@ -40,6 +44,7 @@
                 ]
             }
         },
+
         methods: {
             switchGallery(value) {
                 this.gallery = value;
@@ -49,7 +54,7 @@
                 
                 return document.documentElement.classList.remove('is-clipped');
             },
-            keyUp(event) {
+            keyUp() {
                 switch (event.keyCode){
                     case 39: //Next. 
                         if (this.selected == this.images.length - 1)
@@ -110,8 +115,11 @@
 
     figcaption {
         max-width: 100%;
+        width: auto;
         display: table-caption;
         caption-side: bottom;
         background: white;
+        margin: 1rem;
+        border-radius: 5px;
     }
 </style>

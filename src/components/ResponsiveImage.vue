@@ -1,7 +1,5 @@
 <template>
-    <div class="box-image is-unselectable" :style="styles">
-        <b-skeleton v-if="skeleton && !hideSkeleton" :width="width" :height="height" :animated="animatedSkeleton" :style="skeletonStyles"></b-skeleton>
-
+    <div class="image-box is-unselectable" :class="{ 'has-skeleton' : skeleton && !hideSkeleton, 'has-skeleton-animated' : animatedSkeleton }" :style="styles">
         <transition name="fade" v-if="placeholder">
             <img v-show="loadedPlaceholder" v-on:load="onLoadedPlaceholder" :src="placeholder" :style="styles" :class="{ 'blured' : blured }">
         </transition>
@@ -14,17 +12,26 @@
 
 <script>
     export default {
-        name: "ImageLoader",
+        name: "ResponsiveImage",
 
         props: {
             width: {
                 type: [String, Number],
-                default: 0,
                 required: false
             },
             height:  {
                 type: [String, Number],
-                default: 0,
+                default: "auto",
+                required: false
+            },
+            maxWidth: {
+                type: [String, Number],
+                default: "90vw",
+                required: false
+            },
+            maxHeight:  {
+                type: [String, Number],
+                default: "90vh",
                 required: false
             },
             src: {
@@ -39,7 +46,7 @@
             },
             borderRadius: {
                 type: [String, Number],
-                default: '4px',
+                default: '0px',
                 required: false
             },
             blured: {
@@ -58,7 +65,7 @@
                 required: false
             }
         },
-       
+
         data () {
             return {
                 loaded: false,
@@ -72,43 +79,47 @@
                 this.loaded = true;
 
                 if (this.skeleton && !this.hideSkeleton)
-                    setTimeout(() => { this.hideSkeleton = true }, 2000);
+                    setTimeout(() => { this.hideSkeleton = true }, 500);
             },
             onLoadedPlaceholder () {
                 this.loadedPlaceholder = true
 
                 if (this.skeleton && !this.hideSkeleton)
-                    setTimeout(() => { this.hideSkeleton = true }, 2000);
+                    setTimeout(() => { this.hideSkeleton = true }, 500);
             }
         },
 
         computed: {
-            skeletonStyles() {
-                let styles = {
-                    'border-radius': this.borderRadius,
-                }
-
-                return styles;
-            },
             styles: function () {
                 let styles = {
                     'border-radius': this.borderRadius
                 };
 
-                if (this.width)
-                    styles.width = this.width;
+                //Enables the responsiveness of the image.
+                if (!this.loaded)
+                {
+                    if (this.width)
+                        styles.width = this.width;
 
-                if (this.height)
-                    styles.height = this.height;
+                    if (this.height)
+                        styles.height = this.height;
+                }
+
+                if (this.maxWidth)
+                    styles.maxWidth = this.maxWidth;
+
+                if (this.maxHeight)
+                    styles.maxHeight = this.maxHeight;
 
                 return styles;
             },
         },
-    };
+    }
 </script>
 
 <style lang="scss" scoped>
-   .fade-enter-active {
+    //Transitions.
+    .fade-enter-active {
         transition: opacity 700ms ease-in-out;
     }
 
@@ -120,23 +131,15 @@
         opacity: 0;
     }
 
-    .box-image {
-        display: inline-block;
-        position: relative;
-        overflow: hidden;
-        border-radius: 4px;
-        width: 100%;
-        height: auto;
+    //Skeleton.
+    .has-skeleton {
+        background: linear-gradient(90deg, #dbdbdb 25%, rgba(219, 219, 219, 0.5) 50%, #dbdbdb 75%);
+        background-size: 400% 100%;
     }
 
-    .box-image img {
-        //position: absolute;
-        top: 0;
-        left: 0;
-        transition: 500ms all ease-in-out;
-        width: 100%;
-        height: auto;
-    } 
+    .has-skeleton-animated {
+        animation: skeleton-loading 1.5s infinite;
+    }
 
     .blured {
         filter: blur(25px);
@@ -146,11 +149,13 @@
         -ms-filter: blur(25px);
     }
 
-    .b-skeleton {
-        height: 100%;
+    .image-box {
+        display: inline-block;
+        overflow: hidden;
     }
 
-    .b-skeleton-item {
-        line-height: 2 !important;
+    //Animates the resize of the image.
+    .image-box > img {
+        transition: 250ms all ease-in-out;
     }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <footer class="footer">
         <div class="container">           
-            <div class="columns is-mobile is-centered">
+            <!-- <div class="columns is-mobile is-centered">
                 <div class="column has-text-centered">
                     <div class="is-inline-flex">
                         <ImageLoader :src="require('@/assets/logo.png')" width="34px" height="34px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
@@ -13,7 +13,7 @@
                         Made by <a class="has-text-weight-semibold" href="https://twitter.com/NickeManarin" target="_blank" rel="noopener">Nicke Manarin</a>,<br> with<b-icon class="has-text-red" title="love" pack="unicons" icon="heart"></b-icon>from <strong class="has-text-rainbow">Brazil</strong> 🇧🇷
                     </p>
                 </div>
-            </div>
+            </div> -->
 
             <div class="columns is-centered">
                 <div class="column is-one-third has-text-centered">
@@ -51,7 +51,7 @@
                     <div class="is-inline">
                         <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable">Language</h4>
 
-                        <b-dropdown class="" v-model="$i18n.locale" aria-role="list">
+                        <b-dropdown v-model="$i18n.locale" aria-role="list">
                             <button class="button" type="button" slot="trigger">
                                 <template>
                                     <b-icon pack="icon" icon="localization"></b-icon>
@@ -105,7 +105,7 @@
 
                 <div class="column is-one-half is-narrow">
                     <router-link to="/share" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Share</router-link>
-                    <router-link to="/documentation" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Documentation</router-link>
+                    <router-link to="/how-to-use" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">How to use</router-link>
                     <router-link to="/source" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Source</router-link>
                     
                     <router-link to="/privacy" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Privacy</router-link>
@@ -114,6 +114,14 @@
             </div>
 
             <div class="content has-text-centered">
+                <p class="subtitle is-6 has-text-grey-light is-unselectable">
+                    Made by <a class="has-text-weight-semibold" href="https://twitter.com/NickeManarin" target="_blank" rel="noopener">Nicke Manarin</a>,<br> with<b-icon class="has-text-red" title="love" pack="unicons" icon="heart"></b-icon>from <strong class="has-text-rainbow">Brazil</strong> 🇧🇷
+                </p>
+
+                <p class="subtitle is-6 has-text-grey-light is-unselectable">
+                    Icons by <strong class="has-text-grey"><a href="https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE" target="_blank" rel="noopener">Unicons</a></strong>
+                </p>
+
                 <p class="is-6 has-text-grey-light">
                     <strong class="has-text-grey">ScreenToGif</strong> is licensed under
                     <a href="https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt" target="_blank" rel="noopener">MS-PL</a>
@@ -121,11 +129,9 @@
 
                     <strong class="has-text-grey">This website</strong> is licensed under
                     <a href="https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE" target="_blank" rel="noopener">GPL-3.0</a>
-                    <br/>
-                    <br/>
-
-                    2013 - {{ year }}
                 </p>
+
+                <p class="subtitle is-6 has-text-grey-light is-unselectable">2013 - {{ year }}</p>
             </div>
         </div>
     </footer>

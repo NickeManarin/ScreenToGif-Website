@@ -18,7 +18,7 @@
                     <div class="columns is-centered">
                         <div class="column is-narrow has-text-centered">
                             <figure class="image">
-                                <ImageLoader :src="require('@/assets/Profile.jpg')" width="200px" height="200px" borderRadius="100px" skeleton></ImageLoader>
+                                <ResponsiveImage :src="require('@/assets/Profile.jpg')" maxWidth="200px" maxHeight="200px" borderRadius="100px" skeleton></ResponsiveImage>
                             </figure>
                         </div>
 
@@ -54,7 +54,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light">
+                            <b-button class="is-light" @click="openEmailDialog()">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-envelope"/>
@@ -69,7 +69,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light">
+                            <b-button class="is-light" tag="a" href="https://discord.gg/XgEqDHX" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2 has-icon-large" pack="icon" icon="discord"/>
@@ -84,7 +84,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light">
+                            <b-button class="is-light" tag="a" href="https://www.reddit.com/r/ScreenToGif" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2 has-icon-large" pack="unicon" icon="uil-reddit-alien-alt"/>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light">
+                            <b-button class="is-light" tag="a" href="https://www.facebook.com/ScreenToGif" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2 has-icon-large" pack="unicon" icon="uil-facebook-f"/>
@@ -113,6 +113,23 @@
                             </b-button>
                         </div>
                     </div>
+
+                    <b-modal :active.sync="isEmailModalActive" trap-focus aria-role="dialog" aria-modal :width="500" scroll="keep">
+                        <div class="box has-text-centered content" style="padding: 40px">
+                            <h2 class="title">Here's my email</h2>
+                            <p class="subtitle">Please, don't send spam :)</p>
+                           
+                            <br>
+                            <p>By spam, I mean things unrelated to the app like services and products offerings.</p>
+                            <p>I'll be happy to try to help you out with the app, as I have always.</p>
+                            <br>
+                            
+                            <div class="has-email">
+                                <code>nicke@outlook.com.br</code>
+                                <b-button type="is-primary" inverted @click="copyEmail()">Copy</b-button>
+                            </div>
+                        </div>
+                    </b-modal>
                 </div>
             </div>
         </section>
@@ -122,8 +139,8 @@
                 <div class="container">
                     <div class="columns is-centered">
                         <div class="column is-narrow has-text-centered">
-                            <figure class="image is-responsive">
-                                <ImageLoader :src="require('@/assets/Horizon.jpg')" borderRadius="10px" skeleton></ImageLoader>
+                            <figure class="image">
+                                <ResponsiveImage :src="require('@/assets/Horizon.jpg')" borderRadius="10px" skeleton></ResponsiveImage>
                             </figure>
                         </div>
                     </div>  
@@ -134,11 +151,46 @@
 </template>
 
 <script>
-    import ImageLoader from "@/components/ImageLoader.vue";
+    import ResponsiveImage from "@/components/ResponsiveImage.vue";
 
     export default {
         components: {
-            ImageLoader
+            ResponsiveImage
+        },
+
+        data() {
+            return {
+                isEmailModalActive: false
+            }
+        },
+
+        methods: {
+            openEmailDialog() {
+                this.isEmailModalActive = true;
+            },
+            copyEmail() {
+                this.$gtag.event('Copy', {'event_category': 'Clicks', 'event_label': 'Email'});
+
+                this.$copyText('nicke@outlook.com.br').then((e) => {
+                    this.$buefy.toast.open({
+                        duration: 5000,
+                        message: `Email copied!`,
+                        position: 'is-bottom',
+                        type: 'is-success'
+                    });
+                }, (e) => {
+                    console.log('It was not possible to copy the email.', e);
+
+                    this.$buefy.toast.open({
+                        duration: 5000,
+                        message: `It was not possible to copy the email.`,
+                        position: 'is-bottom',
+                        type: 'is-danger'
+                    });
+
+                    this.$gtag.exception({'description': e, 'fatal': false});
+                });
+            }
         },
     };
 </script>
@@ -175,6 +227,36 @@
         margin-left: 0px !important;
         margin-right: 0px !important;
     }
+
+    //Email block and button to copy.
+    .has-email {
+        display: inline-flex;
+        font-size: 1.1em;
+        color: white;
+        background: #5cadd5;
+        padding: calc(0.75rem - 1px); 
+        line-height: 1.5rem;
+        border-radius: 4px;
+        align-items: center;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        white-space: pre;
+        word-wrap: normal;
+    }
+
+    //Makes the code inside the div.has-email blend in.
+    .has-email code {
+        background-color: transparent;
+        color: currentColor;
+        font-size: 1em;
+        padding: 0 0 0 0.75rem;
+    }
+
+    .has-email button {
+        font-family: inherit;
+        line-height: 1.5rem;
+        margin: 0 0 0 1rem;
+    }
 </style>
 
 <style lang="scss">
@@ -186,19 +268,5 @@
     //Makes inner element of the buttons ocupy the whole space.
     button > span, a > span {
         width: 100%;
-    }
-
-    .box-image {
-        height: auto;
-        width: 100%;
-        max-width: 80vw !important;
-        max-height: 80vh !important;
-    }
-
-    .box-image > img {
-        height: auto;
-        width: 100%;
-        max-width: 80vw !important;
-        max-height: 80vh !important;
     }
 </style>

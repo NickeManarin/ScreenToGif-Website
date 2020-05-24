@@ -3,7 +3,7 @@
         <template slot="brand">
             <b-navbar-item tag="router-link" to="/" :active="$route.path === '/'">
                 <!-- <img class="is-unselectable" src="../assets/logo.png" alt="Screen, webcam and sketchboard recorder with an integrated editor."/> -->
-                <ImageLoader :src="require('@/assets/logo.png')" width="1.75rem" height="1.75rem" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
+                <ResponsiveImage :src="require('@/assets/logo.png')" maxWidth="1.75rem" maxHeight="1.75rem" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
                 
                 <transition name="slide-left">
                     <p v-if="$route.path !== '/'" class="subtitle is-5 is-unselectable has-spacing no-wrap" :class="textColor()">ScreenToGif</p>
@@ -33,9 +33,9 @@
             </b-navbar-item>
 
             <b-navbar-dropdown label="More">
-                <b-navbar-item tag="router-link" to="/docs" :active="$route.path === '/docs'">
+                <b-navbar-item tag="router-link" to="/how-to-use" :active="$route.path === '/how-to-use'">
                     <b-icon pack="unicon" icon="uil-books" class="is-hidden-touch"></b-icon>
-                    <p class="is-unselectable">Documentation</p>
+                    <p class="is-unselectable">How to use</p>
                 </b-navbar-item>
 
                 <b-navbar-item tag="router-link" to="/share" :active="$route.path === '/share'">
@@ -88,7 +88,7 @@
                         <figure class="media-left">
                             <p class="image is-64x64">
                                 <!-- <img :src="$store.release.author_picture" alt="Author avatar"> -->
-                                <ImageLoader :src="$store.release.author_picture + '&s=128'" alt="Author avatar" width="64px" height="64px" skeleton :animatedSkeleton="false"/>
+                                <ResponsiveImage :src="$store.release.author_picture + '&s=128'" alt="Author avatar" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
                             </p>
                         </figure>
 
@@ -154,7 +154,7 @@
 </template>
 
 <script>
-    import ImageLoader from "@/components/ImageLoader.vue";
+    import ResponsiveImage from "@/components/ResponsiveImage.vue";
     import helpers from "../mixins/helpers";
     import downloader from "../mixins/download";
     import { languages } from '@/locales';
@@ -162,7 +162,7 @@
     export default {
         name: "Navigation",
         components: {
-            ImageLoader
+            ResponsiveImage
         },
         mixins: [helpers, downloader],
 
@@ -224,7 +224,7 @@
             },
             tooltipBackground() {
                 switch (this.trimRight(this.$route.path, '/')) {
-                    case "/":
+                    case "":
                     case "/downloads":
                     case "/donation":
                     case "/screenshots":
@@ -364,5 +364,11 @@
     //Just makes the separation line more spaced.
     hr {
         margin: 1rem 0;
+    }
+</style>
+
+<style lang="scss">
+    .dropdown-trigger > .button > .icon {
+        margin-left: -1px !important;
     }
 </style>
