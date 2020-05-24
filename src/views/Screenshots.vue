@@ -37,12 +37,10 @@
 </template>
 
 <script>
-    import ImageLoader from "@/components/ImageLoader.vue";
     import ResponsiveImage from "@/components/ResponsiveImage.vue";
 
     export default {
         components: {
-            ImageLoader,
             ResponsiveImage,
         },
 

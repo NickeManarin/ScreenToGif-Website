@@ -4,7 +4,7 @@
             <!-- <div class="columns is-mobile is-centered">
                 <div class="column has-text-centered">
                     <div class="is-inline-flex">
-                        <ImageLoader :src="require('@/assets/logo.png')" width="34px" height="34px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
+                        <ResponsiveImage :src="require('@/assets/logo.png')" width="34px" height="34px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
 
                         <p class="subtitle is-5 has-text-grey is-unselectable is-vcentered has-spacing">ScreenToGif</p>
                     </div>
@@ -138,13 +138,13 @@
 </template>
 
 <script>
-    import ImageLoader from "@/components/ImageLoader.vue";
+    import ResponsiveImage from "@/components/ResponsiveImage.vue";
     import { languages } from '@/locales';
 
     export default {
         name: "Footer",
         components: {
-            ImageLoader
+            ResponsiveImage
         },
 
         data() {
