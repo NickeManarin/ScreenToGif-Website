@@ -2,8 +2,7 @@
     <b-navbar class="is-spaced has-shadow" :class="navigationColor()" wrapper-class="container is-widescreen">
         <template slot="brand">
             <b-navbar-item tag="router-link" to="/" :active="$route.path === '/'">
-                <!-- <img class="is-unselectable" src="../assets/logo.png" alt="Screen, webcam and sketchboard recorder with an integrated editor."/> -->
-                <ResponsiveImage :src="require('@/assets/logo.png')" maxWidth="1.75rem" maxHeight="1.75rem" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
+                <ResponsiveImage :src="require('@/assets/logo.png')" maxWidth="1.75rem" maxHeight="1.75rem"/>
                 
                 <transition name="slide-left">
                     <p v-if="$route.path !== '/'" class="subtitle is-5 is-unselectable has-spacing no-wrap" :class="textColor()">ScreenToGif</p>
@@ -14,38 +13,38 @@
         <template slot="start">
             <b-navbar-item tag="router-link" to="/downloads" :active="$route.path === '/downloads'">
                 <b-icon pack="unicon" icon="uil-download-alt" class="is-hidden-touch"></b-icon>
-                <p class="is-unselectable">Downloads</p>
+                <p class="is-unselectable">{{ $t('navigation.downloads') }}</p>
             </b-navbar-item>
 
             <b-navbar-item tag="router-link" to="/donation" :active="$route.path === '/donation'">
                 <b-icon pack="unicon" icon="uil-heart" class="is-hidden-touch"></b-icon>
-                <p class="is-unselectable">Donate</p>
+                <p class="is-unselectable">{{ $t('navigation.donate') }}</p>
             </b-navbar-item>
 
             <b-navbar-item tag="router-link" to="/screenshots" :active="$route.path === '/screenshots'">
                 <b-icon pack="unicon" icon="uil-scenery" class="is-hidden-touch"></b-icon>
-                <p class="is-unselectable">Screenshots</p>
+                <p class="is-unselectable">{{ $t('navigation.screenshots') }}</p>
             </b-navbar-item>
 
             <b-navbar-item tag="router-link" to="/contact" :active="$route.path === '/contact'">
                 <b-icon pack="unicon" icon="uil-envelope-alt" class="is-hidden-touch"></b-icon>
-                <p class="is-unselectable">Contact</p>
+                <p class="is-unselectable">{{ $t('navigation.contact') }}</p>
             </b-navbar-item>
 
-            <b-navbar-dropdown label="More">
+            <b-navbar-dropdown :label="$t('navigation.more')">
                 <b-navbar-item tag="router-link" to="/how-to-use" :active="$route.path === '/how-to-use'">
                     <b-icon pack="unicon" icon="uil-books" class="is-hidden-touch"></b-icon>
-                    <p class="is-unselectable">How to use</p>
+                    <p class="is-unselectable">{{ $t('navigation.how-to-use') }}</p>
                 </b-navbar-item>
 
                 <b-navbar-item tag="router-link" to="/share" :active="$route.path === '/share'">
                     <b-icon pack="unicon" icon="uil-share" class="is-hidden-touch"></b-icon>
-                    <p class="is-unselectable">Share</p>
+                    <p class="is-unselectable">{{ $t('navigation.share') }}</p>
                 </b-navbar-item>
 
                 <b-navbar-item tag="router-link" to="/source" :active="$route.path === '/source'">
                     <b-icon pack="unicon" icon="uil-github-alt" class="is-hidden-touch"></b-icon>
-                    <p class="is-unselectable">Source</p>
+                    <p class="is-unselectable">{{ $t('navigation.source') }}</p>
                 </b-navbar-item>
             </b-navbar-dropdown>
         </template>
@@ -55,8 +54,8 @@
                 <b-dropdown v-model="$i18n.locale" aria-role="list">
                     <button class="button" :class="navigationColor()" type="button" slot="trigger">
                         <template>
-                            <b-icon pack="icon" icon="localization"></b-icon>
-                            <span>{{$i18n.locale}}</span>                                           
+                            <b-icon class="left-icon" pack="icon" icon="localization"></b-icon>
+                            <span class="has">{{$i18n.locale}}</span>                                           
                         </template>
 
                         <b-icon pack="unicon" icon="uil-angle-down"></b-icon>
@@ -74,9 +73,9 @@
 
             <b-navbar-item tag="div" class="is-hidden-touch">
                 <div class="buttons">
-                    <b-tooltip label="Downloads the latest release" size="is-small" :type="tooltipBackground()" position="is-bottom" animated multilined>
+                    <b-tooltip :label="$t('navigation.download.info')" size="is-small" :type="tooltipBackground()" position="is-bottom" animated multilined>
                         <b-button class="button" :class="buttonColor()" :loading="isLoading" @click="download">
-                            <strong>Download</strong>
+                            <strong>{{ $t('navigation.download.download') }}</strong>
                         </b-button>
                     </b-tooltip>
                 </div>
@@ -87,8 +86,7 @@
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-64x64">
-                                <!-- <img :src="$store.release.author_picture" alt="Author avatar"> -->
-                                <ResponsiveImage :src="$store.release.author_picture + '&s=128'" alt="Author avatar" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
+                                <ResponsiveImage :src="$store.release.author_picture + '&s=128'" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
                             </p>
                         </figure>
 
@@ -99,13 +97,13 @@
                                         <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ $store.release.version }}</span>  
                                     </a>
                                     <p class="level-item is-vcentered">
-                                        <small>by <a :href="$store.release.author_url">@{{ $store.release.author_login }}</a></small>  
+                                        <small>{{ $t('navigation.download.by') }} <a :href="$store.release.author_url">@{{ $store.release.author_login }}</a></small>  
                                     </p>
                                 </div>
 
                                 <div class="level-right">
                                     <p class="level-item">
-                                        <small>{{ $store.release.date_time_since }}</small>
+                                        <small>{{ isEmpty($store.release) ? "" : since($store.release.release_date_obj, new Date()) }}</small>
                                     </p>
                                 </div>
                             </nav>
@@ -124,10 +122,10 @@
                                     <div>
                                         <b-button type="is-info" size="is-medium" icon-left="compact-disc"
                                                 tag="a" :href="$store.release.download_link_inst">
-                                            Installer
+                                            {{ $t('home.installer') }}
                                         </b-button>
 
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $store.release.download_count_inst.toLocaleString() }} downloads</p>
+                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString()) }}</p>
                                         <p class="is-size-7 is-unselectable has-arrow-cursor">{{ $store.release.size_inst }}</p>
                                     </div>
                                 </div>
@@ -136,10 +134,10 @@
                                     <div>
                                         <b-button type="is-info" size="is-medium" icon-size="is-medium" icon-left="archive-alt"
                                                 tag="a" :href="$store.release.download_link_port">
-                                            Portable
+                                            {{ $t('home.portable') }}
                                         </b-button>
 
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $store.release.download_count_port.toLocaleString() }} downloads</p>
+                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString()) }}</p>
                                         <p class="is-size-7 is-unselectable has-arrow-cursor">{{ $store.release.size_port }}</p>
                                     </div>
                                 </div>
@@ -368,7 +366,7 @@
 </style>
 
 <style lang="scss">
-    .dropdown-trigger > .button > .icon {
-        margin-left: -1px !important;
+    .dropdown-trigger > .button > .left-icon {
+        margin-left: 1px !important;
     }
 </style>

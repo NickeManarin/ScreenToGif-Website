@@ -380,7 +380,8 @@
                         this.aux.download_link_port = e.items.filter((e) => { return e.type.endsWith('(Zip)'); })[0].link;
                         this.aux.download_link_inst = e.items.filter((e) => { return e.type.endsWith('(MSI)'); })[0].link;
                         this.aux.release_date = e.published_at;
-                        this.aux.date_time_since = this.since(updatedAt, new Date());
+                        this.aux.release_date_obj = updatedAt;
+                        //this.aux.date_time_since = this.since(updatedAt, new Date());
 
                         this.$store.release = this.aux;
                         this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
@@ -411,6 +412,7 @@
                     this.aux = {};
                     this.aux.version = e.version;
                     this.aux.release_date = releaseDate;
+                    this.aux.release_date_obj = releaseDate;
                     this.aux.download_count = e.downloadCount;
                     this.aux.is_prerelease = e.isPreRelease;
                     this.aux.active_days = this.dateDiff(previousUpdatedAt, releaseDate);
@@ -422,7 +424,7 @@
                     this.aux.author_url = e.authorUrl;
                     this.aux.url = e.url;
                     this.aux.description = e.description;
-                    this.aux.date_time_since = this.since(releaseDate, new Date());
+                    //this.aux.date_time_since = this.since(releaseDate, new Date());
 
                     this.aux.download_count_port = e.downloadCountPortable;
                     this.aux.download_link_port = e.portableUrl;
@@ -463,6 +465,7 @@
                     this.aux = {};
                     this.aux.version = e.tag_name;
                     this.aux.release_date = updatedAt;
+                    this.aux.release_date_obj = updatedAt;
                     this.aux.download_count = port.download_count + (inst != undefined ? inst.download_count : 0);
                     this.aux.is_prerelease = e.prerelease;
                     this.aux.active_days = this.dateDiff(previousUpdatedAt, updatedAt);
@@ -474,7 +477,7 @@
                     this.aux.author_url = e.author.url;
                     this.aux.url = e.html_url;
                     this.aux.description = e.body;
-                    this.aux.date_time_since = this.since(updatedAt, new Date());
+                    //this.aux.date_time_since = this.since(updatedAt, new Date());
 
                     this.aux.download_count_port = port.download_count;
                     this.aux.download_link_port = port.browser_download_url;

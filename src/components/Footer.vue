@@ -54,7 +54,7 @@
                         <b-dropdown v-model="$i18n.locale" aria-role="list">
                             <button class="button" type="button" slot="trigger">
                                 <template>
-                                    <b-icon pack="icon" icon="localization"></b-icon>
+                                    <b-icon class="left-icon" pack="icon" icon="localization"></b-icon>
                                     <span>{{$i18n.locale}}</span>                                           
                                 </template>
 

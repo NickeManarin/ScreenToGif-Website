@@ -109,6 +109,11 @@
         -moz-osx-font-smoothing: grayscale;
     }
 
+    //Makes the <b> tag to have the same font-weight as the <strong> tag.
+    b {
+        font-weight: 600;
+    }
+
     .table {
         background-color: $grey-99;
     }

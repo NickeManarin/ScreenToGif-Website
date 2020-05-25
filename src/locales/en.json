@@ -3,28 +3,111 @@
     "code": "en",
     "lang": "English"
   },
+
   "navigation": {
-    
+    "home": "Home",
+    "downloads": "Downloads",
+    "donate": "Donate",
+    "screenshots": "Screenshots",
+    "contact": "Contact",
+    "more": "More",
+    "how-to-use": "How to use",
+    "share": "Share",
+    "source": "Source",
+    "download": {
+      "download": "Download",
+      "info": "Lets you download the latest release",
+      "by": "by",
+      "dates": {
+        "years": "{0} years ago",
+        "year": "an year ago",
+        "months": "{0} months ago",
+        "month": "a month ago",
+        "weeks": "{0} weeks ago",
+        "week": "a week ago",
+        "days": "{0} days ago",
+        "day": "a day ago",
+        "hours": "{0} hours ago",
+        "hour": "an hour ago",
+        "minutes": "{0} minutes ago",
+        "minute": "a minute ago",
+        "now": "just now"
+      }
+    }
   },
+
   "home":{
-    "subtitle": "<strong>Screen</strong>, <strong>webcam</strong> and <strong>sketchboard</strong> recorder with an integrated <strong>editor</strong>"
+    "subtitle": "<strong>Screen</strong>, <b>webcam</b> and <b>sketchboard</b> recorder with an integrated <b>editor</b>",
+    "version": "Version {0}",
+    "installer" : "Installer",
+    "or": "or",
+    "portable" : "Portable",
+    "downloads" : "{0} downloads",
+    "more-releases" : "More download options",
+    "fewer-releases" : "Fewer download options",
+    "copy" : "Copy",
+
+    "why": {
+      "free": "Free",
+      "free-info": "Open source on <b>GitHub</b>",
+      "compact": "Compact",
+      "compact-info": "As little as <b>{0}</b>",
+      "powerful": "Powerful",
+      "powerful-info": "Record, edit and <b>export it!</b>",
+      "customizable": "Customizable",
+      "customizable-info": "Use it the way <b>you like it</b>"
+    },
+  
+    "media": {
+      "title": "Media",
+      "subtitle": "Screenshots and gifs",
+      "more": "See more screenshots"
+    },
+
+    "supporters": {
+      "title": "Special thanks",
+      "subtitle": "Here are some of the supporters of this project",
+      "become": "Become a sponsor"
+    },
+
+    "usage": {
+      "title": "How to use?",
+      "subtitle": "Record and edit your content in no time",
+      "startup": "When the app starts, click on the <b>Recorder</b> button.",
+      "record": "A punctured window will appear, line up to what you want to record and click on <b>Record</b>. When finished, click on the <b>Stop</b> button.",
+      "edit-remove": "Remove unwanted frames by selecting them with <b>Shift-Click</b> and pressing <b>Delete</b>.",
+      "edit-transition": "Add a transition to the last frame, so the animation loops more <i>smoothly</i>.",
+      "edit-save": "After your touch ups, click on <b>Save As</b> to export the animation to your format of choice.",
+      "final-gif": "Here's the result Gif, around <b>80.6 KB</b>.",
+      "learn": "Learn how to use"
+    }
   },
+
   "downloads": {
 
   },
+
   "donation": {
 
   },
+
   "screenshots": {
 
   },
+
   "gallery":{
     "editor": "This is the editor, where you can edit your recordings and export it to gif or video."
   },
+
   "share": {
     "text": "ScreenToGif is a screen, webcam and sketchboard recorder with an integrated editor."
   },
-  "Footer": {
 
+  "footer": {
+
+  },
+
+  "not-found": {
+    
   }
 }

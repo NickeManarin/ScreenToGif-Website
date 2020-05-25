@@ -567,11 +567,9 @@
                 //document.getElementById('donation-methods').scrollIntoView({ block: 'start',  behavior: 'smooth' });
                 this.$refs.donationMethods.scrollIntoView({ block: 'start',  behavior: 'smooth' });
             },
-            visitPatreon(){
-                
-            },
             openPaypalDialog(){
                 this.isPaypalModalActive = true;
+                
             },
             sortName(a, b, isAsc){
                 return ('' + a.name).localeCompare(b.name) * (isAsc ? -1 : 1);
@@ -580,6 +578,9 @@
                 return (a.valueInUsd > b.valueInUsd ? 1 : -1) * (isAsc ? 1 : -1);
             },
             openLink(row){
+                if (row.url === null)
+                    return;
+
                 window.open(row.url, '_blank', 'noopener');
             }
         }

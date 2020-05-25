@@ -3,28 +3,111 @@
     "code": "pt",
     "lang": "Português"
   },
+  
   "navigation": {
-    
+    "home": "Início",
+    "downloads": "Downloads",
+    "donate": "Faça uma Doação",
+    "screenshots": "Capturas de Tela",
+    "contact": "Contato",
+    "more": "Mais",
+    "how-to-use": "Como Utilizar",
+    "share": "Compartilhe",
+    "source": "Código Fonte",
+    "download": {
+      "download": "Download",
+      "info": "Permite a você baixar a versão mais recente",
+      "by": "por",
+      "dates": {
+        "years": "{0} anos atrás",
+        "year": "um ano atrás",
+        "months": "{0} meses atrás",
+        "month": "um mês atrás",
+        "weeks": "{0} semanas atrás",
+        "week": "uma semana atrás",
+        "days": "{0} dias atrás",
+        "day": "um dia atrás",
+        "hours": "{0} horas atrás",
+        "hour": "uma hora atrás",
+        "minutes": "{0} minutos atrás",
+        "minute": "um minuto atrás",
+        "now": "agora pouco"
+      }
+    }
   },
+
   "home":{
-    "subtitle": "Gravador de <strong>tela</strong>, <strong>webcam</strong> e <strong>quadro virtual</strong> com um <strong>editor</strong> integrado."
+    "subtitle": "Gravador de <b>tela</b>, <b>webcam</b> e <b>quadro virtual</b> com um <b>editor</b> integrado.",
+    "version": "Versão {0}",
+    "installer" : "Instalador",
+    "or": "ou",
+    "portable" : "Portátil",
+    "downloads" : "{0} downloads",
+    "more-releases" : "Mais opções de download",
+    "fewer-releases" : "Menos opções de download",
+    "copy" : "Copiar",
+
+    "why": {
+      "free": "Gratuito",
+      "free-info": "Código aberto no <b>GitHub</b>",
+      "compact": "Compacto",
+      "compact-info": "Tão pequeno quanto <b>{0}</b>",
+      "powerful": "Potente",
+      "powerful-info": "Grave, edite e <b>exporte!</b>",
+      "customizable": "Personalizável",
+      "customizable-info": "Use da maneira que <b>você gostar</b>"
+    },
+
+    "media": {
+      "title": "Mídia",
+      "subtitle": "Capturas de tela e gifs",
+      "more": "Veja mais capturas de tela"
+    },
+
+    "supporters": {
+      "title": "Um obrigado especial",
+      "subtitle": "Aqui estão alguns das empresas ou pessoas que patrocinam esse projeto",
+      "become": "Torne-se um patrocinador"
+    },
+
+    "usage": {
+      "title": "Como utilizar?",
+      "subtitle": "Grave e edite seu conteúdo de maneira rápida e fácil",
+      "startup": "Quando o aplicativo iniciar, clique no botão <b>Gravador</b>.",
+      "record": "Uma janela vazada irá aparecer, alinhe com o conteúdo que você deseja gravar e clique no botão <b>Gravar</b>. Quando quiser parar, clique no botão <b>Parar</b>.",
+      "edit-remove": "Remova quadros não desejados selecionando eles com <b>Shift-Click</b> e depois pressionando a tecla <b>Delete</b>.",
+      "edit-transition": "Adicione uma transição no último quadro, para que a animação tenha um loop mais <i>suave</i>.",
+      "edit-save": "Após retocar a animação, clique no botão <b>Salvar Como</b> para exportar a animação para o seu formato de escolha.",
+      "final-gif": "Aqui está o Gif exportado, com um tamanho de <b>80.6 KB</b>.",
+      "learn": "Saiba como utilizar"
+    }
   },
+  
   "downloads": {
 
   },
+  
   "donation": {
 
   },
+  
   "screenshots": {
 
   },
+  
   "gallery":{
     "editor": "Este é o editor, onde você pode editar suas animações e exportar como gif ou vídeo."
   },
+  
   "share": {
     "text": "ScreenToGif é um gravador de tela, webcam e quadro virtual com um editor integrado."
   },
-  "Footer": {
 
+  "footer": {
+
+  },
+
+  "not-found": {
+    
   }
 }

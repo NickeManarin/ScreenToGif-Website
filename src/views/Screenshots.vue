@@ -64,14 +64,6 @@
         background-image: linear-gradient($screenshots, $screenshots-light);
     }
 
-    //Makes the images to grow and shrink.
-    .auto-size {
-        max-width: 82vw;
-        max-height: 82vh;
-        height: auto !important;
-        width: auto !important; 
-    }
-
      figure {
          display: table;
      }

@@ -17,30 +17,36 @@ export default {
             var years = newer.getFullYear() - older.getFullYear();
 
             if (years > 0)
-                return years == 1 ? "an year ago" : `${years} years ago`;
+                return years == 1 ? this.$t('navigation.download.dates.year') : this.$t('navigation.download.dates.years').replace('{0}', years);
 
             //Months.
             var months = newer.getMonth() - older.getMonth();
 
             if (months > 0)
-                return months == 1 ? "a month ago" : `${months} months ago`;
+                return months == 1 ? this.$t('navigation.download.dates.month') : this.$t('navigation.download.dates.months').replace('{0}', months);
 
             //Days and weeks.
             var days = newer.getDate() - older.getDate();
             var weeks = (days / 7).toFixed(0);
 
             if (weeks > 0)
-                return weeks == 1 ? "a week ago" : `${weeks} weeks ago`;
+                return weeks == 1 ? this.$t('navigation.download.dates.week') : this.$t('navigation.download.dates.weeks').replace('{0}', weeks);
 
-            if (days > 0) return days == 1 ? "a day ago" : `${days} days ago`;
+            if (days > 0) return days == 1 ? this.$t('navigation.download.dates.day') : this.$t('navigation.download.dates.days').replace('{0}', days);
+
+            //Hours.
+            var hours = newer.getHours() - older.getHours();
+            
+            if (hours > 0)
+                return hours == 1 ? this.$t('navigation.download.dates.hour') : this.$t('navigation.download.dates.hours').replace('{0}', hours);
 
             //Minutes.
             var minutes = newer.getMinutes() - older.getMinutes();
 
             if (minutes > 0)
-                return minutes == 1 ? "a minute ago" : `${minutes} minutes ago`;
+                return minutes == 1 ? this.$t('navigation.download.dates.minute') : this.$t('navigation.download.dates.minutes').replace('{0}', minutes);
 
-            return "Just now";
+            return this.$t('navigation.download.dates.now');
         },
         humanizeSize(bytes, si) {
             var thresh = si ? 1000 : 1024;

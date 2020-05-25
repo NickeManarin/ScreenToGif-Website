@@ -25,7 +25,7 @@
                             <transition name="slow-in-300ms">
                                 <div v-if="showElements">
                                     <p v-if="!isLoading" class="is-unselectable">
-                                        Version {{$store.release.version}}
+                                        {{$t('home.version').replace('{0}', $store.release.version)}}
                                     </p>
 
                                     <b-skeleton v-if="isLoading" width="65px" height="1em"></b-skeleton>
@@ -41,7 +41,7 @@
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" width="100%"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
-                                            Installer
+                                            {{ $t('home.installer') }}
                                         </b-button>
                                     </transition>
                                 </b-tooltip>
@@ -51,7 +51,7 @@
                                         <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
                                             <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
                                             •
-                                            <small>{{ !isEmpty($store.release) ? $store.release.download_count_inst.toLocaleString() : "..." }} downloads</small> 
+                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString()) : "..." }}</small> 
                                         </p>
 
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -61,7 +61,7 @@
 
                             <div class="column is-12-mobile is-1-tablet has-text-centered">
                                 <transition name="slow-in-500ms">
-                                    <p v-if="showElements" class="has-text-light is-unselectable">or</p>
+                                    <p v-if="showElements" class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
                                 </transition>
                             </div>
 
@@ -72,7 +72,7 @@
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" width="100%"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
-                                            Portable
+                                            {{ $t('home.portable') }}
                                         </b-button>
                                     </transition>
                                 </b-tooltip>
@@ -82,7 +82,7 @@
                                         <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
                                             <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
                                             •
-                                            <small>{{ !isEmpty($store.release) ? $store.release.download_count_port.toLocaleString() : "..." }} downloads</small>
+                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString()) : "..." }}</small>
                                         </p>
 
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -98,19 +98,19 @@
                                 <a slot="trigger" slot-scope="props" aria-controls="expander" class="has-text-light is-unselectable">
                                     <b-icon pack="unicon" :icon="!props.open ? 'uil-angle-down' : 'uil-angle-up'"></b-icon>
 
-                                    {{ !props.open ? 'More download options' : 'Fewer download options' }}
+                                    {{ !props.open ? $t('home.more-releases') : $t('home.fewer-releases') }}
                                 </a>
 
                                 <div class="columns is-vcentered is-centered is-multiline is-mobile has-top-margin">
                                     <div class="column is-narrow has-text-centered">
                                         <div class="choco">
                                             <code><span class="is-unselectable">></span> choco install screentogif</code>
-                                            <b-button type="is-primary" inverted @click="copyChoco()">Copy</b-button>
+                                            <b-button type="is-primary" inverted @click="copyChoco()">{{ $t('home.copy') }}</b-button>
                                         </div>
                                     </div>
 
                                     <div class="column is-12-mobile is-12-tablet is-1-desktop has-text-centered">
-                                        <p class="has-text-light is-unselectable">or</p>
+                                        <p class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
                                     </div>
 
                                     <div class="column is-narrow has-text-centered">
@@ -133,29 +133,29 @@
                 <div class="container">
                     <div class="columns is-centered is-multiline is-mobile">
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">Free</p>
-                            <p class="subtitle is-6 has-text-grey-light">Open Source on <strong class="has-text-grey">Github</strong></p>
+                            <p class="title is-4 has-text-weight-semibold">{{ $t('home.why.free') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light" v-html="$t('home.why.free-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
                             <b-icon class="has-text-success is-size-2" pack="unicon" icon="uil-github-alt"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">Compact</p>
-                            <p class="subtitle is-6 has-text-grey-light">As little as <strong class="has-text-grey">3.0 MiB</strong></p>
+                            <p class="title is-4 has-text-weight-semibold">{{ $t('home.why.compact') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light" v-html="$t('home.why.compact-info').replace('<b>', '<b class=has-text-grey>').replace('{0}', !isEmpty($store.release) ? $store.release.size_inst : '3.1 MiB')"></p>
 
                             <b-icon class="has-text-warning is-size-2" pack="unicon" icon="uil-box"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">Powerful</p>
-                            <p class="subtitle is-6 has-text-grey-light">Record, edit and <strong class="has-text-grey">export it!</strong></p>
+                            <p class="title is-4 has-text-weight-semibold">{{ $t('home.why.powerful') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light" v-html="$t('home.why.powerful-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
                             <b-icon class="has-text-danger is-size-2" pack="unicon" icon="uil-dashboard"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold">Customizable</p>
-                            <p class="subtitle is-6 has-text-grey-light">Use it <strong class="has-text-grey">the way you like</strong></p>
+                            <p class="title is-4 has-text-weight-semibold">{{ $t('home.why.customizable') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light" v-html="$t('home.why.customizable-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
                             <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-setting"></b-icon>
                         </div>
@@ -167,12 +167,12 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h4 class="title is-size-4 is-unselectable">Media</h4>
-                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">Screenshots and gifs</p>
+                    <h4 class="title is-size-4 is-unselectable">{{ $t('home.media.title') }}</h4>
+                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.media.subtitle') }}</p>
 
                     <Gallery></Gallery>
  
-                    <b-button tag="router-link" to="/screenshots" type="is-link" class="has-top-margin is-medium">See more screenshots</b-button>
+                    <b-button tag="router-link" to="/screenshots" type="is-link" class="has-top-margin is-medium">{{ $t('home.media.more') }}</b-button>
                 </div>
             </div>
         </section>
@@ -180,8 +180,8 @@
         <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h4 class="title is-size-4 is-unselectable">Special thanks</h4>
-                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">Here are some of supporters of this project</p>
+                    <h4 class="title is-size-4 is-unselectable">{{ $t('home.supporters.title') }}</h4>
+                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.supporters.subtitle') }}</p>
 
                     <div class="columns is-centered">
                         <div class="column is-one-third">
@@ -253,7 +253,7 @@
                         </div>
                     </div>
 
-                    <b-button tag="router-link" to="/donation" type="is-link" class="has-top-margin is-medium">Become a sponsor</b-button>
+                    <b-button tag="router-link" to="/donation" type="is-link" class="has-top-margin is-medium">{{ $t('home.supporters.become') }}</b-button>
                 </div>
             </div>
         </section>
@@ -261,12 +261,22 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h4 class="title is-size-4 is-unselectable">How to use?</h4>
-                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">Record and edit your content in no time</p>
+                    <h4 class="title is-size-4 is-unselectable">{{ $t('home.usage.title') }}</h4>
+                    <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.usage.subtitle') }}</p>
 
-                    
+                    <div v-for="(item, i) in usageImages" :key="i">
+                        <div class="columns is-mobile has-text-centered is-centered">
+                            <div class="column is-narrow">
+                                <figure class="has-captions">
+                                    <ResponsiveImage class="image" :width="item.width" :height="item.height" :src="item.src" skeleton></ResponsiveImage>
+
+                                    <figcaption v-html="$t(item.sub)"></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
  
-                    <b-button tag="router-link" to="/how-to-use" type="is-link" class="has-top-margin is-medium">Learn how to use</b-button>
+                    <b-button tag="router-link" to="/how-to-use" type="is-link" class="has-top-margin is-medium">{{ $t('home.usage.learn') }}</b-button>
                 </div>
             </div>
         </section>
@@ -294,7 +304,15 @@
                 isLoading: true,
                 trials: 0,
                 trialsFoss: 0,
-                isExpanderOpen: false
+                isExpanderOpen: false,
+                usageImages: [
+                    { src: require('@/assets/media/home/usage/1-Startup.png'), width: "486px", height: "213px", sub: "home.usage.startup" },
+                    { src: require('@/assets/media/home/usage/2-Recording.gif'), width: "587px", height: "401px", sub: "home.usage.record" },
+                    { src: require('@/assets/media/home/usage/3-Editor-Removing-Frames.gif'), width: "742px", height: "649px", sub: "home.usage.edit-remove" },
+                    { src: require('@/assets/media/home/usage/4-Editor-Adding-Transition.gif'), width: "742px", height: "649px", sub: "home.usage.edit-transition" },
+                    { src: require('@/assets/media/home/usage/5-Editor-Saving.gif'), width: "742px", height: "649px", sub: "home.usage.edit-save" },
+                    { src: require('@/assets/media/home/usage/6-Final-Gif.gif'), width: "544px", height: "362px", sub: "home.usage.final-gif" },
+                ]
             };
         },
 
@@ -541,5 +559,20 @@
 
     .column .padded {
         padding: 0.75rem;
+    }
+
+    //Makes the figure captions resize to the image.
+    .has-captions {
+        display: table;
+    }
+
+    figcaption {
+        max-width: 100%;
+        width: auto;
+        display: table-caption;
+        caption-side: bottom;
+        background: white;
+        margin: 0.25rem 0 1rem 0;
+        border-radius: 5px;
     }
 </style>

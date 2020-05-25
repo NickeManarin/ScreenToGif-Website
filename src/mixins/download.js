@@ -18,6 +18,7 @@ export default {
                     var aux = {};
                     aux.version = e.tag_name;
                     aux.release_date = e.published_at;
+                    aux.release_date_obj = updatedAt; //As Date object.
                     aux.download_count = port.download_count + (inst != undefined ? inst.download_count : 0);
                     aux.is_prerelease = e.prerelease;
                     aux.active_days = this.dateDiff(updatedAt, new Date());
@@ -28,7 +29,7 @@ export default {
                     aux.author_url = e.author.url;
                     aux.url = e.html_url;
                     aux.description = e.body;
-                    aux.date_time_since = this.since(updatedAt, new Date());
+                    //aux.date_time_since = this.since(updatedAt, new Date());
 
                     aux.download_count_port = port.download_count;
                     aux.download_link_port = port.browser_download_url;
@@ -71,14 +72,15 @@ export default {
                     var updatedAt = new Date(e.published_at);
 
                     //TODO: Test this later.
-                    this.aux = {};
-                    this.aux.fromFoss = true;
-                    this.aux.version = e.items[0].version;
-                    this.aux.download_link_port = e.items.filter((e) => { return e.type.endsWith('(Zip)'); })[0].link;
-                    this.aux.download_link_inst = e.items.filter((e) => { return e.type.endsWith('(MSI)'); })[0].link;
-                    this.aux.release_date = e.published_at;
-                    this.aux.date_time_since = this.since(updatedAt, new Date());
-
+                    var aux = {};
+                    aux.fromFoss = true;
+                    aux.version = e.items[0].version;
+                    aux.download_link_port = e.items.filter((e) => { return e.type.endsWith('(Zip)'); })[0].link;
+                    aux.download_link_inst = e.items.filter((e) => { return e.type.endsWith('(MSI)'); })[0].link;
+                    aux.release_date = e.published_at;
+                    aux.release_date_obj = updatedAt; //As Date object.
+                    //aux.date_time_since = this.since(updatedAt, new Date());
+                    
                     //Makes sure that the object is full created before setting to the global variable.
                     this.$store.release = aux;
 
