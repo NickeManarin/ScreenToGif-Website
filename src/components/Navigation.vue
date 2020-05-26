@@ -1,5 +1,5 @@
 <template>
-    <b-navbar class="is-spaced has-shadow" :class="navigationColor()" wrapper-class="container is-widescreen">
+    <b-navbar ref="navbar" class="is-spaced has-shadow" :class="navigationColor()" wrapper-class="container is-widescreen">
         <template slot="brand">
             <b-navbar-item tag="router-link" to="/" :active="$route.path === '/'">
                 <ResponsiveImage :src="require('@/assets/logo.png')" maxWidth="1.75rem" maxHeight="1.75rem"/>
@@ -26,12 +26,17 @@
                 <p class="is-unselectable">{{ $t('navigation.screenshots') }}</p>
             </b-navbar-item>
 
-            <b-navbar-item tag="router-link" to="/contact" :active="$route.path === '/contact'">
+            <b-navbar-item v-show="!collapseContact" tag="router-link" to="/contact" :active="$route.path === '/contact'">
                 <b-icon pack="unicon" icon="uil-envelope-alt" class="is-hidden-touch"></b-icon>
                 <p class="is-unselectable">{{ $t('navigation.contact') }}</p>
             </b-navbar-item>
 
             <b-navbar-dropdown :label="$t('navigation.more')">
+                <b-navbar-item v-show="collapseContact" tag="router-link" to="/contact" :active="$route.path === '/contact'">
+                    <b-icon pack="unicon" icon="uil-envelope-alt" class="is-hidden-touch"></b-icon>
+                    <p class="is-unselectable">{{ $t('navigation.contact') }}</p>
+                </b-navbar-item>
+
                 <b-navbar-item tag="router-link" to="/how-to-use" :active="$route.path === '/how-to-use'">
                     <b-icon pack="unicon" icon="uil-books" class="is-hidden-touch"></b-icon>
                     <p class="is-unselectable">{{ $t('navigation.how-to-use') }}</p>
@@ -171,10 +176,23 @@
                 trials: 0,
                 trialsFoss: 0,
                 isModalActive: false,
-                languageArray: languages
+                languageArray: languages,
+
+                collapseContact: false,
+                showAfter: undefined,
             };
         },
 
+        mounted() {
+            window.addEventListener('resize', this.handleWindowResize);
+
+            this.handleWindowResize();
+        },
+
+        beforeDestroy() {
+            window.removeEventListener('resize', this.handleWindowResize)
+        },
+  
         methods: {
             navigationColor() {
                 switch (this.trimRight(this.$route.path, '/')) {
@@ -266,8 +284,61 @@
             },
             promptDownload() {
                 this.isModalActive = true;
+            },
+
+            handleWindowResize() {
+                if (document.documentElement.clientWidth < 1024) {
+                    this.expandContact = true;
+                    return;
+                }
+
+                //TODO:
+                //Execute this method when: Navigating to route, changing localization.
+
+                //Calculates the size of the children of the navbar.
+                var navWidth = this.$refs.navbar.$children.reduce((total, item) => total + (item.$el.clientWidth ? item.$el.clientWidth : 0), 0);
+                var viewWidth = window.innerWidth; //document.documentElement.clientWidth
+
+                //Get the size of the elements by a hack:
+                var biggestOffset = 0;
+                var sizeOfMostRight = 0;
+                this.$refs.navbar.$children.forEach(element => {
+                     if (element.$el.offsetLeft > biggestOffset) {
+                        biggestOffset = element.$el.offsetLeft
+                        sizeOfMostRight = element.$el.clientWidth;
+                    }
+                });
+
+                //Getting the offset of the element to the right + it's size and some margin will give me the size of the navbar.
+                navWidth = biggestOffset + sizeOfMostRight + 50;
+
+                // console.log(this.$refs.navbar);
+
+                // this.$refs.navbar.$children.forEach(element => {
+                //      console.log(element);
+                // });
+
+                //console.log("Navbar: " + navWidth);
+                //console.log("Window: " + viewWidth);
+
+                //If the navbar is bigger than the viewport, collapse the 'Contact' menu item.
+                if (navWidth > viewWidth) {
+                    this.collapseContact = true;
+                    this.showAfter = navWidth;
+                    return;
+                }
+
+                //If the viewport width is larger than the navbar last size, un-collpse the menu item.
+                if (this.showAfter === undefined || this.showAfter < viewWidth)
+                {
+                    var check = this.collapseContact;
+                    this.collapseContact = false;
+
+                    if (check)
+                        this.handleWindowResize();
+                }
             }
-        }
+        },
     };
 </script>
 
@@ -366,6 +437,7 @@
 </style>
 
 <style lang="scss">
+    //Ads a bit or margin to the language selector.
     .dropdown-trigger > .button > .left-icon {
         margin-left: 1px !important;
     }

@@ -37,8 +37,9 @@
                             <div class="column is-narrow has-text-centered">
                                 <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-400ms">
-                                        <b-button v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" width="100%"
+                                        <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
+                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" 
+                                                  :style="{ 'min-width': getMinWidthInstaller() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             {{ $t('home.installer') }}
@@ -68,8 +69,9 @@
                             <div class="column is-narrow has-text-centered">
                                 <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-600ms">
-                                        <b-button v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" width="100%"
+                                        <b-button ref="portableButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
+                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" 
+                                                  :style="{ 'min-width': getMinWidthPortable() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             {{ $t('home.portable') }}
@@ -325,6 +327,33 @@
         },
 
         methods: {
+            getMinWidthInstaller() {
+                var size = this.$refs.portableButton !== undefined ? (this.$refs.portableButton.$el.clientWidth + 2) + "px" : 0;
+
+                this.$nextTick().then(() => {
+                    this.$refs.installerButton.$el.style.minWidth = 0 + "px";
+
+                    this.$nextTick().then(() => {
+                        this.$refs.installerButton.$el.style.minWidth = (this.$refs.portableButton.$el.clientWidth + 2) + "px";
+                    });
+                });
+
+                return size;
+            },
+            getMinWidthPortable() {
+                var size = this.$refs.installerButton !== undefined ? (this.$refs.installerButton.$el.clientWidth + 2) + "px" : 0;
+
+                this.$nextTick().then(() => {
+                    this.$refs.portableButton.$el.style.minWidth = 0 + "px";
+
+                    this.$nextTick().then(() => {
+                        this.$refs.portableButton.$el.style.minWidth = (this.$refs.installerButton.$el.clientWidth + 2) + "px";
+                    });
+                });
+
+                return size;
+            },
+
             download() {
                 try {
                     this.isLoading = true;
@@ -383,6 +412,19 @@
                     this.$gtag.exception({'description': e, 'fatal': false});
                 });
             }
+        },
+
+        computed: {
+            minWidthInstaller2 (){
+                console.log('Installer button: ' + this.$refs.installerButton );
+                console.log('Installer width: ' + (this.$refs.installerButton !== undefined ? this.$refs.installerButton.$el.clientWidth : "none"));
+                return this.$refs.installerButton !== undefined ? this.$refs.installerButton.$el.clientWidth + 'px' : 0 + 'px';
+            },
+
+            minWidthPortable2 (){
+                console.log('Portable width: ' + (this.$refs.portableButton !== undefined ? this.$refs.portableButton.$el.clientWidth : "none"));
+                return this.$refs.portableButton !== undefined ? this.$refs.portableButton.$el.clientWidth + 'px' : 0 + 'px';
+            },
         }
     };
 </script>
