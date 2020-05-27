@@ -102,7 +102,8 @@
                                         <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ $store.release.version }}</span>  
                                     </a>
                                     <p class="level-item is-vcentered">
-                                        <small>{{ $t('navigation.download.by') }} <a :href="$store.release.author_url">@{{ $store.release.author_login }}</a></small>  
+                                        <!-- <small>{{ $t('navigation.download.by') }} <a :href="$store.release.author_url">@{{ $store.release.author_login }}</a></small>   -->
+                                        <small v-html="$t('navigation.download.by').replace('{0}', '<a href={0} target=_blank rel=noopener>@{1}</a>').replace('{0}', $store.release.author_url).replace('{1}', $store.release.author_login)"></small>  
                                     </p>
                                 </div>
 

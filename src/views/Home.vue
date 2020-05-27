@@ -25,7 +25,7 @@
                             <transition name="slow-in-300ms">
                                 <div v-if="showElements">
                                     <p v-if="!isLoading" class="is-unselectable">
-                                        {{$t('home.version').replace('{0}', $store.release.version)}}
+                                        {{ !isEmpty($store.release) ? $t('home.version').replace('{0}', $store.release.version) : '...' }}
                                     </p>
 
                                     <b-skeleton v-if="isLoading" width="65px" height="1em"></b-skeleton>
@@ -38,7 +38,7 @@
                                 <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-400ms">
                                         <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" 
+                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" rel="noopener"
                                                   :style="{ 'min-width': getMinWidthInstaller() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
@@ -70,7 +70,7 @@
                                 <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-600ms">
                                         <b-button ref="portableButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" 
+                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'"  rel="noopener"
                                                   :style="{ 'min-width': getMinWidthPortable() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">

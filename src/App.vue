@@ -140,6 +140,31 @@
         background-color: $white;
     }
 
+    //Turns the headers light inside a light text content section.
+    .has-text-light .content h3, .has-text-light .content h4, .has-text-light .content h5, .has-text-light .content h6 {
+        color: $light !important;
+    }
+
+    //Turns the links light inside a light text content section.
+    .has-text-light .content a {
+        color: $white-ter;
+
+        &:hover, &:focus {
+            color: $grey-lighter;   
+        }
+        &:active {
+            color: $grey-light;
+        }
+    }
+
+    //Makes the skeleton to center of the block.
+    .b-skeleton {
+        display: block;
+    }
+
+    .b-skeleton > .b-skeleton-item {
+        display: inline-block;
+    }
 
     //Hover and active states for is-dark-15 buttons.
     .button.is-dark-15:hover, .button.is-dark-15.is-hovered { 
@@ -175,11 +200,11 @@
     //Aligns text only on desktop or bigger.
     @include from($desktop) {
         .is-centered-desktop {
-            align-items: center !important;
+            justify-content: center;
         }
 
         .is-numeric-desktop {
-            align-items: right !important;
+            float: right !important;
         }
     }
 </style>

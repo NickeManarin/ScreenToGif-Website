@@ -3,29 +3,30 @@
         <section class="hero is-download">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">Latest Version</h2>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('downloads.latest') }}</h2>
                     <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">
                         <span v-if="!isLoading">
-                            Version {{ !isEmpty($store.release) ? $store.release.version : "..." }}
+                            {{ !isEmpty($store.release) ? $t('home.version').replace('{0}', $store.release.version) : '...' }}
                         </span>
 
-                        <b-skeleton v-if="isLoading" class="is-inline-block" height="20px" width="180px" animated></b-skeleton>
+                        <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                     </p>
 
                     <div class="columns is-centered">
                         <div class="column is-4 has-text-centered">
                             <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
-                                <b-button type="is-info" size="is-large" icon-left="compact-disc" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
+                                <b-button ref="installerButton" type="is-info" size="is-large" icon-left="compact-disc" 
+                                    :style="{ 'min-width': getMinWidthPortable() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
                                     :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
                                     @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
-                                    Installer
+                                    {{ $t('home.installer') }}
                                 </b-button>
                             </b-tooltip>
                             
                             <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
                                 <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
                                 •
-                                <small>{{ !isEmpty($store.release) ? $store.release.download_count_inst.toLocaleString() : "..." }} downloads</small> 
+                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString()) : "..." }}</small> 
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -33,22 +34,47 @@
 
                         <div class="column is-4 has-text-centered">
                             <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
-                                <b-button type="is-info" size="is-large" icon-left="archive-alt" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"
+                                <b-button ref="portableButton" type="is-info" size="is-large" icon-left="archive-alt" 
+                                    :style="{ 'min-width': getMinWidthInstaller() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"
                                     :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
                                     @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
-                                    Portable
+                                     {{ $t('home.portable') }}
                                 </b-button>
                             </b-tooltip>
 
                             <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
                                 <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
                                 •
-                                <small>{{ !isEmpty($store.release) ? $store.release.download_count_port.toLocaleString() : "..." }} downloads</small>
+                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString()) : "..." }}</small>
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                         </div>
                     </div>
+
+                    <b-collapse v-if="!isLoading" class="has-text-light has-text-centered" 
+                                :open.sync="isExpanderOpen" position="is-top" animation="slide" aria-id="expander"
+                                @open="$gtag.event('Latest release details', {'event_category': 'Clicks', 'event_label': 'Open'})"
+                                @close="$gtag.event('Latest release details', {'event_category': 'Clicks', 'event_label': 'Close'})">
+                                
+                        <a slot="trigger" slot-scope="props" aria-controls="expander" class="has-text-light is-unselectable">
+                            <b-icon pack="unicon" :icon="!props.open ? 'uil-angle-down' : 'uil-angle-up'"></b-icon>
+
+                            {{ !props.open ? $t('downloads.show-release-notes') : $t('downloads.hide-release-notes') }}
+                        </a>
+
+                        <div class="columns is-centered has-top-margin">
+                            <div class="column is-three-quarters-tablet is-half-desktop">
+                                <p class="content has-text-light has-text-justified is-unselectable">
+                                    <VueShowdown :markdown="!isEmpty($store.release) ? $store.release.description : ''" tag="span"></VueShowdown> 
+                                </p>
+                            </div>
+                        </div>
+                    </b-collapse>
+
+                    <p class="has-text-centered">
+                        <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
+                    </p>
                 </div>
             </div>
         </section>
@@ -56,8 +82,8 @@
         <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container">
-                    <h3 class="title is-size-3 has-text-centered is-unselectable">Requirements</h3>
-                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">This app requires some software and hardware minimum configurations in order to run</p>
+                    <h3 class="title is-size-3 has-text-centered is-unselectable">{{ $t('downloads.requirements.title') }}</h3>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('downloads.requirements.subtitle') }}</p>
 
                     <div class="requirements columns is-centered">
                         <div class="column is-4 has-text-centered">
@@ -67,7 +93,7 @@
                                     <ResponsiveImage :src="require('@/assets/Windows.svg')" maxWidth="64px" maxHeight="64px" alt="Windows logo." border-radius="0"/>
                                 </figure>
 
-                                <p class="subtitle is-size-6 has-text-grey"><strong>Windows 7 SP1</strong> or newer</p>
+                                <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.windows')"></p>
                             </b-button>
                         </div>
 
@@ -78,7 +104,7 @@
                                     <ResponsiveImage :src="require('@/assets/Net.png')" maxWidth="64px" maxHeight="64px" alt="Net Framework logo." border-radius="0"/>
                                 </figure>
 
-                                <p class="subtitle is-size-6 has-text-grey"><strong>.Net Framework 4.8</strong> or newer</p>
+                                <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.framework')"></p>
                             </b-button>
                         </div>
                     </div>
@@ -89,8 +115,8 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">All Releases</h2>
-                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">Expand to see the release details</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('downloads.releases.title') }}</h2>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('downloads.releases.subtitle') }}</p>
 
                     <b-table :data="$store.releaseList" ref="table" :loading="isLoading" hoverable detailed detail-key="version" 
                         selectable @select="toggle" paginated :per-page="perPage" :current-page.sync="currentPage" :scrollable="false"
@@ -98,19 +124,19 @@
                         :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
                     
                         <template slot-scope="props">
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" label="Version"  :custom-sort="sortVersion" sortable>
+                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" :label="$t('downloads.releases.table.version')" :custom-sort="sortVersion" sortable>
                                 <span class="tag" :class="versionType(props.row.is_prerelease)">
                                     {{ props.row.version }}
                                 </span>
                             </b-table-column>
 
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="release_date" label="Release Date" sortable centered>
+                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="release_date" :label="$t('downloads.releases.table.date')" sortable centered>
                                 {{props.row.release_date ? new Date(props.row.release_date).toLocaleDateString() : "unknown"}}
                             </b-table-column>
 
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="active_days" label="Active Days" sortable numeric>
+                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="active_days" :label="$t('downloads.releases.table.days')" sortable numeric>
                                 <template slot="header" slot-scope="{ column }">
-                                    <b-tooltip :label="'Ammount of days being the most recent release'" type="is-info" size="is-small" animated dashed multilined>
+                                    <b-tooltip :label="$t('downloads.releases.table.days-info')" type="is-info" size="is-small" animated dashed multilined>
                                         {{ column.label }}
                                     </b-tooltip>
                                 </template>
@@ -118,7 +144,7 @@
                                 {{ props.row.active_days | round(1)}}
                             </b-table-column>
 
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="download_count" label="Download Count" sortable numeric>
+                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="download_count" :label="$t('downloads.releases.table.count')" sortable numeric>
                                 {{ props.row.download_count.toLocaleString() }}
                             </b-table-column>
                         </template>
@@ -130,7 +156,7 @@
                                         <b-icon icon="frown" size="is-large"></b-icon>
                                     </p>
 
-                                    <p>Looks like it was not possible to load the releases.</p>
+                                    <p>{{ $t('downloads.releases.table.not-possible') }}</p>
                                 </div>
                             </section>
 
@@ -149,9 +175,6 @@
                             <article class="media">
                                 <figure class="media-left">
                                     <p class="image is-64x64">
-                                        <!-- <img v-if="props.row.is_picture_loaded" :src="props.row.author_picture" alt="Author avatar" @load="imageLoaded(props.row)"> -->
-                                        <!-- <b-skeleton v-if="!props.row.is_picture_loaded" width="64px" height="64px" animated></b-skeleton> -->
-
                                         <ResponsiveImage :src="props.row.author_picture + '&s=128'" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
                                     </p>
                                 </figure>
@@ -159,11 +182,11 @@
                                 <div class="media-content">
                                     <nav class="level is-marginless">
                                         <div class="level-left">
-                                            <a class="level-item" :href="props.row.url">
+                                            <a class="level-item" :href="props.row.url" target="_blank" rel="noopener">
                                                 <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ props.row.version }}</span>  
                                             </a>
                                             <p class="level-item is-vcentered">
-                                                <small>by <a :href="props.row.author_url">@{{ props.row.author_login }}</a></small>  
+                                                <small v-html="$t('navigation.download.by').replace('{0}', '<a href={0} target=_blank rel=noopener>@{1}</a>').replace('{0}', props.row.author_url).replace('{1}', props.row.author_login)"></small>  
                                             </p>
                                         </div>
 
@@ -188,11 +211,11 @@
                                                 <div>
                                                     <b-button type="is-info" size="is-medium" icon-left="compact-disc"
                                                             tag="a" :href="props.row.download_link_inst">
-                                                        Installer
+                                                        {{ $t('home.installer') }}
                                                     </b-button>
 
-                                                    <p class="is-size-7 is-unselectable has-arrow-cursor">{{ props.row.download_count_inst.toLocaleString() }} downloads</p>
-                                                    <p class="is-size-7 is-unselectable has-arrow-cursor">{{ props.row.size_inst }}</p>
+                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString()) : "..." }}</p>
+                                                    <p class="is-size-7 is-unselectable">{{ props.row.size_inst }}</p>
                                                 </div>
                                             </div>
 
@@ -201,12 +224,12 @@
                                             <div class="level-item has-text-centered">
                                                 <div>
                                                     <b-button type="is-info" size="is-medium" icon-size="is-medium" icon-left="archive-alt"
-                                                                tag="a" :href="props.row.download_link_port" :disabled="props.row.download_link_port === null">
-                                                        Portable
+                                                            tag="a" :href="props.row.download_link_port" :disabled="props.row.download_link_port === null">
+                                                        {{ $t('home.portable') }}
                                                     </b-button>
 
-                                                    <p class="is-size-7 is-unselectable has-arrow-cursor">{{ props.row.download_count_port.toLocaleString() }} downloads</p>
-                                                    <p class="is-size-7 is-unselectable has-arrow-cursor">{{ props.row.size_port }}</p>
+                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString()) : "..." }}</p>
+                                                    <p class="is-size-7 is-unselectable">{{ props.row.size_port }}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -220,39 +243,39 @@
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap">
-                                    <p>
-                                        <span class="has-text-grey">{{ $store.releaseList != null ? $store.releaseList.length : 0 }}</span>
-                                        <span> versions released</span>  
+                                    <p v-html="$t('downloads.releases.table.versions-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', $store.releaseList != null ? $store.releaseList.length : 0)">
+                                        <!-- <span class="has-text-grey">{{ $store.releaseList != null ? $store.releaseList.length : 0 }}</span>
+                                        <span> versions released</span>   -->
                                     </p> 
                                 </div>
                             </th>
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-centered-desktop">
-                                    <p>
-                                        <span>Average of </span>  
+                                    <p v-html="$t('downloads.releases.table.average-month').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', averagePerMonth.toFixed(2).toLocaleString())">
+                                        <!-- <span>Average of </span>  
                                         <span class="has-text-grey">{{ averagePerMonth.toFixed(2).toLocaleString() }}</span>
-                                        <span> per month</span>
-                                    </p> 
+                                        <span> per month</span> -->
+                                    </p>
                                 </div>
                             </th>
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-numeric-desktop">
-                                    <p>
-                                        <span>Active for </span>  
-                                        <span class="has-text-grey">{{ projectAge }} </span>
-                                    </p> 
+                                    <p v-html="$t('downloads.releases.table.active-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', projectAge)">
+                                        <!-- <span>Active for </span>  
+                                        <span class="has-text-grey">{{ projectAge }} </span> -->
+                                    </p>
                                 </div>
                             </th>
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-numeric-desktop">
-                                    <p>
-                                        <span>Downloaded </span> 
+                                    <p v-html="$t('downloads.releases.table.downloads-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', $store.totalDownloads.toLocaleString())">
+                                        <!-- <span>Downloaded </span> 
                                         <span class="has-text-grey">{{ $store.totalDownloads.toLocaleString() }}</span>
-                                        <span> times</span>
-                                    </p> 
+                                        <span> times</span> -->
+                                    </p>
                                 </div>
                             </th>
                         </template>
@@ -280,6 +303,7 @@
                 downloads: [],
                 aux: {},
                 isLoading: true,
+                isExpanderOpen: false,
                 totalDownloads: 0,
                 totalDays: 0,
                 sortField: "version",
@@ -295,6 +319,33 @@
         },
 
         methods: {
+            getMinWidthInstaller() {
+                var size = this.$refs.portableButton !== undefined ? (this.$refs.portableButton.$el.clientWidth + 2) + "px" : 0;
+
+                this.$nextTick().then(() => {
+                    this.$refs.installerButton.$el.style.minWidth = 0 + "px";
+
+                    this.$nextTick().then(() => {
+                        this.$refs.installerButton.$el.style.minWidth = (this.$refs.portableButton.$el.clientWidth + 2) + "px";
+                    });
+                });
+
+                return size;
+            },
+            getMinWidthPortable() {
+                var size = this.$refs.installerButton !== undefined ? (this.$refs.installerButton.$el.clientWidth + 2) + "px" : 0;
+
+                this.$nextTick().then(() => {
+                    this.$refs.portableButton.$el.style.minWidth = 0 + "px";
+
+                    this.$nextTick().then(() => {
+                        this.$refs.portableButton.$el.style.minWidth = (this.$refs.installerButton.$el.clientWidth + 2) + "px";
+                    });
+                });
+
+                return size;
+            },
+
             sortVersion(a, b, isAsc){
                 return this.compareVersion(a.version, b.version) * (isAsc ? 1 : -1);
             },
@@ -624,6 +675,10 @@
 
     .has-side-margin {
         margin-left: 1.5rem;
+    }
+
+    div .has-top-margin {
+        margin-top: 1rem;
     }
 
     .has-pointer-cursor {

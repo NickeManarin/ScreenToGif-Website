@@ -17,7 +17,7 @@
     "download": {
       "download": "Download",
       "info": "Permite a você baixar a versão mais recente",
-      "by": "por",
+      "by": "por {0}",
       "dates": {
         "years": "{0} anos atrás",
         "year": "um ano atrás",
@@ -84,7 +84,34 @@
   },
   
   "downloads": {
+    "latest": "Versão Mais Recente",
+    "show-release-notes": "Exibir detalhes da versão",
+    "hide-release-notes": "Esconder detalhes da versão",
+    
+    "requirements":{
+      "title": "Requerimentos",
+      "subtitle": "Este aplicativo requer um mínimo de configurações de software e hardware para funcionar",
+      "windows": "<b>Windows 7 SP1</b> ou mais recente",
+      "framework": "<b>.Net Framework 4.8</b> ou mais recente"
+    },
 
+    "releases":{
+      "title": "Todas as Versões",
+      "subtitle": "Expanda para ver os detalhes de cada versão",
+      
+      "table": {
+        "version": "Versão",
+        "date": "Data de Lançamento",
+        "days": "Dias Ativos",
+        "days-info": "Quantidade de dias sendo a versão mais recente",
+        "count": "Quantidade de Downloads",
+        "not-possible": "Não foi possível carregar todas as versões",
+        "versions-total": "{0} versões lançadas",
+        "average-month": "Média de {0} por mês",
+        "active-total": "Ativo por {0}",
+        "downloads-total": "Baixado {0} vezes"
+      }
+    }
   },
   
   "donation": {

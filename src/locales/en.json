@@ -17,7 +17,7 @@
     "download": {
       "download": "Download",
       "info": "Lets you download the latest release",
-      "by": "by",
+      "by": "by {0}",
       "dates": {
         "years": "{0} years ago",
         "year": "an year ago",
@@ -84,7 +84,34 @@
   },
 
   "downloads": {
+    "latest": "Latest Version",
+    "show-release-notes": "Show release notes",
+    "hide-release-notes": "Hide release notes",
+    
+    "requirements":{
+      "title": "Requirements",
+      "subtitle": "This app requires some software and hardware minimum configurations in order to run",
+      "windows": "<b>Windows 7 SP1</b> or newer",
+      "framework": "<b>.Net Framework 4.8</b> or newer"
+    },
 
+    "releases":{
+      "title": "All Releases",
+      "subtitle": "Expand to see the release details",
+      
+      "table": {
+        "version": "Version",
+        "date": "Release Date",
+        "days": "Active Days",
+        "days-info": "Ammount of days being the most recent release",
+        "count": "Download Count",
+        "not-possible": "It was not possible to load all the releases",
+        "versions-total": "{0} versions released",
+        "average-month": "Average of {0} per month",
+        "active-total": "Active for {0}",
+        "downloads-total": "Downloaded {0} times"
+      }
+    }
   },
 
   "donation": {
