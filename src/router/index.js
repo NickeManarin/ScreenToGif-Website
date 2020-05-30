@@ -99,6 +99,30 @@ const routes = [
   },
 
   {
+    path: "/privacy-terms",
+    name: "PrivacyAndTerms",
+    component: () => import(/* webpackChunkName: "PrivacyAndTerms" */ "@/views/PrivacyAndTerms.vue")
+  },
+  {
+    path: "/privacy",
+    redirect: "/privacy-terms"
+  },
+  {
+    path: "/terms",
+    redirect: "/privacy-terms"
+  },
+  {
+    path: "/vpat",
+    redirect: "/privacy-terms"
+  },
+
+  {
+    path: "/🙀",
+    name: "🙀",
+    component: () => import(/* webpackChunkName: "🙀" */ "@/views/🙀.vue")
+  },
+
+  {
     path: "/404",
     name: "404",
     component: () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue")

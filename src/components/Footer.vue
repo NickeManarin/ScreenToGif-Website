@@ -1,55 +1,41 @@
 <template>
     <footer class="footer">
         <div class="container">           
-            <!-- <div class="columns is-mobile is-centered">
-                <div class="column has-text-centered">
-                    <div class="is-inline-flex">
-                        <ResponsiveImage :src="require('@/assets/logo.png')" width="34px" height="34px" alt="Screen, webcam and sketchboard recorder with an integrated editor."/>
-
-                        <p class="subtitle is-5 has-text-grey is-unselectable is-vcentered has-spacing">ScreenToGif</p>
-                    </div>
-
-                    <p class="subtitle is-6 has-text-grey-light is-unselectable">
-                        Made by <a class="has-text-weight-semibold" href="https://twitter.com/NickeManarin" target="_blank" rel="noopener">Nicke Manarin</a>,<br> with<b-icon class="has-text-red" title="love" pack="unicons" icon="heart"></b-icon>from <strong class="has-text-rainbow">Brazil</strong> 🇧🇷
-                    </p>
-                </div>
-            </div> -->
-
             <div class="columns is-centered">
                 <div class="column is-one-third has-text-centered">
-                    <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable"><strong class="has-text-grey">Share</strong> on social media</h4>
+                    <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable" v-html="$t('footer.share.title').replace('<b>', '<b class=has-text-grey>')"></h4>
 
                     <div class="buttons is-centered">
                         <b-button type="is-twitter" icon-left="twitter-alt" tag="a" target="_blank" :href="getTweetUrl()"
                                 @click="$gtag.event('Share', {'event_category': 'Clicks', 'event_label': 'Tweet'})">
-                            Tweet
+                            {{ $t('footer.share.tweet') }}
                         </b-button>
 
                         <b-button type="is-facebook" icon-left="facebook-f" tag="a" target="_blank" :href="getFacebookUrl()"
                                 @click="$gtag.event('Share', {'event_category': 'Clicks', 'event_label': 'Share on Facebook'})">
-                            Share
+                            {{ $t('footer.share.share') }}
                         </b-button>
 
                         <b-button type="is-facebook" icon-left="facebook-f" tag="a" target="_blank" href="https://www.facebook.com/ScreenToGif"
                                 @click="$gtag.event('Share', {'event_category': 'Clicks', 'event_label': 'Like on Facebook'})">
-                            Like
+                            {{ $t('footer.share.like') }}
                         </b-button>
                                     
                         <b-button type="is-linkedin" icon-left="linkedin-alt" tag="a" target="_blank" :href="getLinkedInUrl()"
                                 @click="$gtag.event('Share', {'event_category': 'Clicks', 'event_label': 'Share on LinkedIn'})">
-                            Share
+                            {{ $t('footer.share.share') }}
                         </b-button>
 
                         <b-button type="is-reddit" icon-left="reddit-alien-alt" tag="a" target="_blank" :href="getRedditUrl()"
                                 @click="$gtag.event('Share', {'event_category': 'Clicks', 'event_label': 'Share on Reddit'})">
-                            Share
+                            {{ $t('footer.share.share') }}
                         </b-button>
                     </div>
                 </div>
 
                 <div class="column has-text-centered">
                     <div class="is-inline">
-                        <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable">Language</h4>
+                        <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable">{{ $t('footer.language') }}</h4>
 
                         <b-dropdown v-model="$i18n.locale" aria-role="list">
                             <button class="button" type="button" slot="trigger">
@@ -73,7 +59,7 @@
                 </div>
 
                 <div class="column is-one-third has-text-centered">
-                    <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable"><strong class="has-text-grey">Follow</strong> the project</h4>
+                    <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable" v-html="$t('footer.follow').replace('<b>', '<b class=has-text-grey>')"></h4>
 
                     <div class="buttons is-centered">
                         <b-button type="is-twitter" icon-left="twitter-alt" tag="a" target="_blank" href="https://twitter.com/NickeManarin"
@@ -88,7 +74,7 @@
                                     
                         <b-button type="is-dark" icon-left="github-alt" tag="a" target="_blank" href="https://github.com/NickeManarin/ScreenToGif/"
                                 @click="$gtag.event('Follow', {'event_category': 'Clicks', 'event_label': 'ScreenToGif GitHub'})">
-                            Watch
+                            {{ $t('footer.watch') }}
                         </b-button>
                     </div>
                 </div>
@@ -96,42 +82,46 @@
 
             <div class="columns is-mobile is-centered">
                 <div class="column is-one-half is-narrow">
-                    <router-link to="/" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Home</router-link>
-                    <router-link to="/downloads" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Downloads</router-link>
-                    <router-link to="/donation" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Donation</router-link>
-                    <router-link to="/screenshots" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Screenshots</router-link>
-                    <router-link to="/contact" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Contact</router-link>
+                    <router-link to="/" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.home') }}</router-link>
+                    <router-link to="/downloads" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.downloads') }}</router-link>
+                    <router-link to="/donation" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.donate') }}</router-link>
+                    <router-link to="/screenshots" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.screenshots') }}</router-link>
+                    <router-link to="/contact" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.contact') }}</router-link>
                 </div>
 
                 <div class="column is-one-half is-narrow">
-                    <router-link to="/share" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Share</router-link>
-                    <router-link to="/how-to-use" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">How to use</router-link>
-                    <router-link to="/source" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Source</router-link>
+                    <router-link to="/share" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.share') }}</router-link>
+                    <router-link to="/how-to-use" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.how-to-use') }}</router-link>
+                    <router-link to="/source" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.source') }}</router-link>
                     
-                    <router-link to="/privacy" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">Privacy</router-link>
-                    <router-link to="/vpat" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">VPAT</router-link>
+                    <router-link to="/privacy" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.privacy-terms') }}</router-link>
+                    <router-link to="/🙀" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">🙀</router-link>
                 </div>
             </div>
 
             <div class="content has-text-centered">
-                <p class="subtitle is-6 has-text-grey-light is-unselectable">
-                    Made by <a class="has-text-weight-semibold" href="https://twitter.com/NickeManarin" target="_blank" rel="noopener">Nicke Manarin</a>,<br> with<b-icon class="has-text-red" title="love" pack="unicons" icon="heart"></b-icon>from <strong class="has-text-rainbow">Brazil</strong> 🇧🇷
+                <p class="subtitle is-6 has-text-grey-light is-unselectable" 
+                    v-html="$t('footer.made-by').replace('{0}', '<a class=has-text-weight-semibold href=https://twitter.com/NickeManarin target=_blank rel=noopener>Nicke Manarin</a>')
+                    .replace('<b>', '<b class=has-text-rainbow>')">
                 </p>
 
-                <p class="subtitle is-6 has-text-grey-light is-unselectable">
-                    Icons by <strong class="has-text-grey"><a href="https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE" target="_blank" rel="noopener">Unicons</a></strong>
+                <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('footer.icons-by')
+                    .replace('{0}', '<b class=has-text-grey><a href=https://iconscout.com/unicons target=_blank rel=noopener>Unicons</a></b>')">
                 </p>
 
                 <p class="is-6 has-text-grey-light">
-                    <strong class="has-text-grey">ScreenToGif</strong> is licensed under
-                    <a href="https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt" target="_blank" rel="noopener">MS-PL</a>
+                    <span v-html="$t('footer.license-app').replace('<b>', '<b class=has-text-grey>')
+                        .replace('{0}', '<b><a href=https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt target=_blank rel=noopener>MS-PL</a></b>')">
+                    </span>
+
                     <br/>
 
-                    <strong class="has-text-grey">This website</strong> is licensed under
-                    <a href="https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE" target="_blank" rel="noopener">GPL-3.0</a>
+                    <span v-html="$t('footer.license-web').replace('<b>', '<b class=has-text-grey>')
+                        .replace('{0}', '<b><a href=https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE.txt target=_blank rel=noopener>GPL-3.0</a></b>')">
+                    </span>
                 </p>
 
-                <p class="subtitle is-6 has-text-grey-light is-unselectable">2013 - {{ year }}</p>
+                <p class="subtitle is-6 has-text-grey-light is-unselectable">2013 — {{ year }}</p>
             </div>
         </div>
     </footer>
@@ -221,13 +211,15 @@
         color: red;
     }
 
+    .has-small-padding {
+        padding: 0.25rem 0.5rem;
+    }
+</style>
+
+<style lang="scss">
     .has-text-rainbow {
         background-image: linear-gradient(to left, blue, rgb(167, 167, 0), green);
         background-clip: text;
         color: transparent;
-    }
-
-    .has-small-padding {
-        padding: 0.25rem 0.5rem;
     }
 </style>

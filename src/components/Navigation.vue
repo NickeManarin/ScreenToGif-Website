@@ -11,45 +11,74 @@
         </template>
 
         <template slot="start">
-            <b-navbar-item tag="router-link" to="/downloads" :active="$route.path === '/downloads'">
-                <b-icon pack="unicon" icon="uil-download-alt" class="is-hidden-touch"></b-icon>
+            <b-navbar-item class="is-flex" tag="router-link" to="/downloads" :active="$route.path === '/downloads'">
+                <b-icon pack="unicon" icon="uil-download-alt"></b-icon>
                 <p class="is-unselectable">{{ $t('navigation.downloads') }}</p>
             </b-navbar-item>
 
-            <b-navbar-item tag="router-link" to="/donation" :active="$route.path === '/donation'">
-                <b-icon pack="unicon" icon="uil-heart" class="is-hidden-touch"></b-icon>
+            <b-navbar-item class="is-flex" tag="router-link" to="/donation" :active="$route.path === '/donation'">
+                <b-icon pack="unicon" icon="uil-heart"></b-icon>
                 <p class="is-unselectable">{{ $t('navigation.donate') }}</p>
             </b-navbar-item>
 
-            <b-navbar-item tag="router-link" to="/screenshots" :active="$route.path === '/screenshots'">
-                <b-icon pack="unicon" icon="uil-scenery" class="is-hidden-touch"></b-icon>
+            <b-navbar-item class="is-flex" tag="router-link" to="/screenshots" :active="$route.path === '/screenshots'">
+                <b-icon pack="unicon" icon="uil-scenery"></b-icon>
                 <p class="is-unselectable">{{ $t('navigation.screenshots') }}</p>
             </b-navbar-item>
 
-            <b-navbar-item v-show="!collapseContact" tag="router-link" to="/contact" :active="$route.path === '/contact'">
-                <b-icon pack="unicon" icon="uil-envelope-alt" class="is-hidden-touch"></b-icon>
+            <b-navbar-item class="is-flex" v-if="!collapseContact" tag="router-link" to="/contact" :active="$route.path === '/contact'">
+                <b-icon pack="unicon" icon="uil-envelope-alt"></b-icon>
                 <p class="is-unselectable">{{ $t('navigation.contact') }}</p>
             </b-navbar-item>
 
-            <b-navbar-dropdown :label="$t('navigation.more')">
+
+            <!-- Hidden on desktop and up -->
+            <b-navbar-item class="is-hidden-desktop is-flex" tag="router-link" to="/how-to-use" :active="$route.path === '/how-to-use'">
+                <b-icon pack="unicon" icon="uil-books"></b-icon>
+                <p class="is-unselectable">{{ $t('navigation.how-to-use') }}</p>
+            </b-navbar-item>
+
+            <b-navbar-item class="is-hidden-desktop is-flex" tag="router-link" to="/share" :active="$route.path === '/share'">
+                <b-icon pack="unicon" icon="uil-share"></b-icon>
+                <p class="is-unselectable">{{ $t('navigation.share') }}</p>
+            </b-navbar-item>
+
+            <b-navbar-item class="is-hidden-desktop is-flex" tag="router-link" to="/source" :active="$route.path === '/source'">
+                <b-icon pack="unicon" icon="uil-github-alt"></b-icon>
+                <p class="is-unselectable">{{ $t('navigation.source') }}</p>
+            </b-navbar-item>
+
+            <b-navbar-item class="is-hidden-desktop is-flex" tag="router-link" to="/privacy-terms" :active="$route.path === '/privacy-terms'">
+                <b-icon pack="unicon" icon="uil-file-shield-alt"></b-icon>
+                <p class="is-unselectable">{{ $t('navigation.privacy-terms') }}</p>
+            </b-navbar-item>
+
+
+            <!-- Hidden on touch -->
+            <b-navbar-dropdown class="is-hidden-touch" :label="$t('navigation.more')">
                 <b-navbar-item v-show="collapseContact" tag="router-link" to="/contact" :active="$route.path === '/contact'">
-                    <b-icon pack="unicon" icon="uil-envelope-alt" class="is-hidden-touch"></b-icon>
+                    <b-icon pack="unicon" icon="uil-envelope-alt"></b-icon>
                     <p class="is-unselectable">{{ $t('navigation.contact') }}</p>
                 </b-navbar-item>
 
                 <b-navbar-item tag="router-link" to="/how-to-use" :active="$route.path === '/how-to-use'">
-                    <b-icon pack="unicon" icon="uil-books" class="is-hidden-touch"></b-icon>
+                    <b-icon pack="unicon" icon="uil-books"></b-icon>
                     <p class="is-unselectable">{{ $t('navigation.how-to-use') }}</p>
                 </b-navbar-item>
 
                 <b-navbar-item tag="router-link" to="/share" :active="$route.path === '/share'">
-                    <b-icon pack="unicon" icon="uil-share" class="is-hidden-touch"></b-icon>
+                    <b-icon pack="unicon" icon="uil-share"></b-icon>
                     <p class="is-unselectable">{{ $t('navigation.share') }}</p>
                 </b-navbar-item>
 
                 <b-navbar-item tag="router-link" to="/source" :active="$route.path === '/source'">
-                    <b-icon pack="unicon" icon="uil-github-alt" class="is-hidden-touch"></b-icon>
+                    <b-icon pack="unicon" icon="uil-github-alt"></b-icon>
                     <p class="is-unselectable">{{ $t('navigation.source') }}</p>
+                </b-navbar-item>
+
+                <b-navbar-item tag="router-link" to="/privacy-terms" :active="$route.path === '/privacy-terms'">
+                    <b-icon pack="unicon" icon="uil-file-shield-alt"></b-icon>
+                    <p class="is-unselectable">{{ $t('navigation.privacy-terms') }}</p>
                 </b-navbar-item>
             </b-navbar-dropdown>
         </template>
@@ -236,7 +265,7 @@
                     case "/contact":
                         return this.isLoading ? "is-light" : "is-contact is-inverted";
                     default:
-                        return "is-primary";
+                        return "is-link";
                 }
             },
             tooltipBackground() {

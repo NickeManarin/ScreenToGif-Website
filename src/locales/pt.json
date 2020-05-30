@@ -14,6 +14,8 @@
     "how-to-use": "Como Utilizar",
     "share": "Compartilhe",
     "source": "Código Fonte",
+    "privacy-terms": "Termos de Privacidade",
+
     "download": {
       "download": "Download",
       "info": "Permite a você baixar a versão mais recente",
@@ -46,6 +48,8 @@
     "more-releases" : "Mais opções de download",
     "fewer-releases" : "Menos opções de download",
     "copy" : "Copiar",
+    "copied" : "Comando copiado!",
+    "not-copied" : "Não foi possível copiar o comando.",
 
     "why": {
       "free": "Gratuito",
@@ -73,18 +77,26 @@
     "usage": {
       "title": "Como utilizar?",
       "subtitle": "Grave e edite seu conteúdo de maneira rápida e fácil",
-      "startup": "Quando o aplicativo iniciar, clique no botão <b>Gravador</b>.",
-      "record": "Uma janela vazada irá aparecer, alinhe com o conteúdo que você deseja gravar e clique no botão <b>Gravar</b>. Quando quiser parar, clique no botão <b>Parar</b>.",
-      "edit-remove": "Remova quadros não desejados selecionando eles com <b>Shift-Click</b> e depois pressionando a tecla <b>Delete</b>.",
-      "edit-transition": "Adicione uma transição no último quadro, para que a animação tenha um loop mais <i>suave</i>.",
-      "edit-save": "Após retocar a animação, clique no botão <b>Salvar Como</b> para exportar a animação para o seu formato de escolha.",
-      "final-gif": "Aqui está o Gif exportado, com um tamanho de <b>80.6 KB</b>.",
+      "capture": "Capture",
+      "capture-info": "Captura de <b>tela</b>, <b>webcam</b> ou <b>quadro virtual</b>",
+      "edit": "Edite",
+      "edit-info": "Edite sua <b>captura</b> ou <b>outra mídia</b>",
+      "export": "Exporte",
+      "export-info": "Exporte para <b>Gif</b>, <b>Apng</b>, <b>Video</b>, <b>Images</b>, <b>Project</b> ou <b>PSD</b>",
+      "share": "Compartilhe",
+      "share-info": "Compartilhe para o <b>Imgur</b>, <b>Gfycat</b> ou outros",
       "learn": "Saiba como utilizar"
+    },
+
+    "share": {
+      "title": "O que os usuários estão comentando",
+      "subtitle": "Veja os pensamentos felizes de pessoas no Twitter",
+      "share": "Compartilhe sua experiência"
     }
   },
   
   "downloads": {
-    "latest": "Versão Mais Recente",
+    "latest": "Versão mais recente",
     "show-release-notes": "Exibir detalhes da versão",
     "hide-release-notes": "Esconder detalhes da versão",
     
@@ -96,7 +108,7 @@
     },
 
     "releases":{
-      "title": "Todas as Versões",
+      "title": "Todas as versões",
       "subtitle": "Expanda para ver os detalhes de cada versão",
       
       "table": {
@@ -110,31 +122,142 @@
         "average-month": "Média de {0} por mês",
         "active-total": "Ativo por {0}",
         "downloads-total": "Baixado {0} vezes"
+      },
+
+      "dates": {
+        "years": "{0} anos",
+        "year": "{0} ano",
+        "months": "{0} meses",
+        "month": "{0} mês",
+        "days": "{0} dias",
+        "day": "{0} dia"
       }
     }
   },
   
   "donation": {
+    "title": "Você gostou do ScreenToGif?",
+    "subtitle": "E está pensando em ajudar a ferramenta de alguma forma?",
 
+    "why": {
+      "title": "Por que ajudar ScreenToGif?",
+      "subtitle": "O projeto beneficiaria de sua ajuda",
+      "free": "Gratuíto",
+      "free-info": "Código aberto no <b>GitHub<b>",
+      "no-ads": "Sem propagandas",
+      "no-ads-info": "Nem no <b>instalador</b>",
+      "committed": "Empenho",
+      "committed-info": "Feito com carinho por um desenvolvedor empenhado",
+      "for-you": "Feito para você",
+      "for-you-info": "Desenvolvimento <b>promovido por opiniões</b>"
+    },
+
+    "how-help": {
+      "title": "Como eu posso ajudar?",
+      "subtitle": "Se você deseja ajudar o projeto, aqui está como você pode fazer",
+      "feedback": "Opinião",
+      "feedback-info": "Reporte erros e providencie opiniões sobre a experiência de usuário",
+      "share": "Compartilhe",
+      "share-info": "Compartilhe com o seus amigos ou crie um comentário",
+      "localization": "Tradução",
+      "localization-info": "Mantenha as traduções em dia ou adicione uma que está faltando",
+      "donate": "Doar",
+      "donate-info": "Doação também são bem-vindas 😊"
+    },
+
+    "how-donate": {
+      "title": "Como eu posso doar?",
+      "subtitle": "Aqui estão algumas maneiras de se doar para o projeto",
+      "patreon-info": "Se inscreva para doar mensalmente via Patreon",
+      "paypal-info": "Doação única via PayPal",
+      "flattr-info": "Se inscreva para doar mensalmente via Flattr",
+      "coffee-info": "Compre um café para o desenvolvedor",
+      "steam-info": "Dê jogos ou créditos de presente via Steam",
+      "gog-info": "Dê jogos de presente via GOG",
+      "amazon": "Lista de Desejos na Amazon",
+      "amazon-info": "Me ajude a conseguir peças para o meu computador",
+
+      "paypal": {
+        "title": "Doe com o PayPal",
+        "subtitle": "Selecione sua moeda antes de continuar",
+        "show-fee": "Exiba a explicação de taxa do PayPal",
+        "hide-fee": "Esconda a explicação de taxa do PayPal",
+        "explanation": "PayPal possui uma taxa baseada no valor doado (6,4%) + um valor fixo baseado na moeda selecionada (de 0,1 a 0,5 centavos de dólar).",
+        "becomes": "{0} se torna {1}",
+        "donate": "Fazer Doação"
+      }
+    },
+
+    "list": {
+      "title": "Lista de patrocinadores",
+      "subtitle": "Aqui estão algumas das pessoas ou empresas que doaram para o projeto",
+      "patron": "Patrocinador",
+      "ammount": "Valor doado",
+      "ammount-info": "Ordenação é feita pelo valor em dólares americanos.",
+      "from": "Fonte",
+      "not-possible": "Não foi possível carregar a lista de patrocinadores.",
+      "list-name": "Você gostaria de ter o seu nome ou da sua empresa listado aqui após uma doação?",
+      "contact": "Entre em contato :)"
+    }
   },
   
   "screenshots": {
+    "title": "Capturas de tela e examplos",
+    "subtitle": "Veja o que você pode fazer com ScreenToGif",
 
+    "gallery":{
+      "editor": "Este é o editor, onde você pode editar suas animações e exportar como gif ou vídeo."
+    }
   },
   
-  "gallery":{
-    "editor": "Este é o editor, onde você pode editar suas animações e exportar como gif ou vídeo."
+  "how-to-use": {
+    "title": "",
+    "subtitle": "",
+
+    "list": {
+      "startup": "Quando o aplicativo iniciar, clique no botão <b>Gravador</b>.",
+      "record": "Uma janela vazada irá aparecer, alinhe com o conteúdo que você deseja gravar e clique no botão <b>Gravar</b>. Quando quiser parar, clique no botão <b>Parar</b>.",
+      "edit-remove": "Remova quadros não desejados selecionando eles com <b>Shift-Click</b> e depois pressionando a tecla <b>Delete</b>.",
+      "edit-transition": "Adicione uma transição no último quadro, para que a animação tenha um loop mais <i>suave</i>.",
+      "edit-save": "Após retocar a animação, clique no botão <b>Salvar Como</b> para exportar a animação para o seu formato de escolha.",
+      "final-gif": "Aqui está o Gif exportado, com um tamanho de <b>80.6 KB</b>."
+    }
   },
-  
+
   "share": {
     "text": "ScreenToGif é um gravador de tela, webcam e quadro virtual com um editor integrado."
   },
 
-  "footer": {
+  "source": {
+    
+  },
 
+  "privacy-terms": {
+    
+  },
+
+  "footer": {
+    "share": {
+      "title": "<b>Compartilhe</b> nas redes sociais",
+      "tweet": "Tweet",
+      "share": "Compartilhe",
+      "like": "Curta"
+    },
+
+    "language": "Idioma",
+    "follow": "<b>Siga</b> o projeto",
+    "watch": "Vigiar",
+    "made-by": "Feito por {0}, do <b>Brasil</b> 🇧🇷",
+    "icons-by": "Ícones por {0}",
+    "license-app": "<b>ScreenToGif</b> é licensiado sob {0}",
+    "license-web": "<b>Este site</b> é licensiado sob {0}"
   },
 
   "not-found": {
     
+  },
+
+  "🙀": {
+
   }
 }

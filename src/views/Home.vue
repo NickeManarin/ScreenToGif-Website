@@ -103,6 +103,16 @@
                                     {{ !props.open ? $t('home.more-releases') : $t('home.fewer-releases') }}
                                 </a>
 
+                                <div class="columns is-vcentered is-centered is-mobile has-top-margin">
+                                    <div class="column is-narrow has-text-centered">
+                                        <b-button type="is-primary" size="is-large" icon-left="shopping-bag" inverted
+                                            tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g"
+                                            @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Microsoft Store'})">
+                                            Microsoft Store
+                                        </b-button>
+                                    </div>
+                                </div>
+
                                 <div class="columns is-vcentered is-centered is-multiline is-mobile has-top-margin">
                                     <div class="column is-narrow has-text-centered">
                                         <div class="choco">
@@ -116,11 +126,10 @@
                                     </div>
 
                                     <div class="column is-narrow has-text-centered">
-                                        <b-button type="is-primary" size="is-large" icon-left="shopping-bag" inverted
-                                            tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g"
-                                            @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Microsoft Store'})">
-                                            Microsoft Store
-                                        </b-button>
+                                        <div class="choco">
+                                            <code><span class="is-unselectable">></span> winget install screentogif</code>
+                                            <b-button type="is-primary" inverted @click="copyWinget()">{{ $t('home.copy') }}</b-button>
+                                        </div>
                                     </div>
                                 </div>
                             </b-collapse>
@@ -169,7 +178,7 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h4 class="title is-size-4 is-unselectable">{{ $t('home.media.title') }}</h4>
+                    <h4 class="title is-size-3 is-unselectable">{{ $t('home.media.title') }}</h4>
                     <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.media.subtitle') }}</p>
 
                     <Gallery></Gallery>
@@ -182,7 +191,7 @@
         <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h4 class="title is-size-4 is-unselectable">{{ $t('home.supporters.title') }}</h4>
+                    <h4 class="title is-size-3 is-unselectable">{{ $t('home.supporters.title') }}</h4>
                     <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.supporters.subtitle') }}</p>
 
                     <div class="columns is-centered">
@@ -263,22 +272,53 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h4 class="title is-size-4 is-unselectable">{{ $t('home.usage.title') }}</h4>
+                    <h4 class="title is-size-3 is-unselectable">{{ $t('home.usage.title') }}</h4>
                     <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.usage.subtitle') }}</p>
 
-                    <div v-for="(item, i) in usageImages" :key="i">
-                        <div class="columns is-mobile has-text-centered is-centered">
-                            <div class="column is-narrow">
-                                <figure class="has-captions">
-                                    <ResponsiveImage class="image" :width="item.width" :height="item.height" :src="item.src" skeleton></ResponsiveImage>
+                    <div class="columns is-centered is-multiline is-mobile">
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.capture') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.capture-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
 
-                                    <figcaption v-html="$t(item.sub)"></figcaption>
-                                </figure>
-                            </div>
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-capture"></b-icon>
+                        </div>
+
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.edit') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.edit-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
+
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-image-edit"></b-icon>
+                        </div>
+
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.export') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.export-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
+
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-film"></b-icon>
+                        </div>
+
+                        <div class="column is-half-mobile has-text-centered">
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.share') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.share-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
+
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-share"></b-icon>
                         </div>
                     </div>
  
                     <b-button tag="router-link" to="/how-to-use" type="is-link" class="has-top-margin is-medium">{{ $t('home.usage.learn') }}</b-button>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero is-primary">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h4 class="title is-size-3 is-unselectable">{{ $t('home.share.title') }}</h4>
+                    <p class="subtitle is-size-5 is-unselectable">{{ $t('home.share.subtitle') }}</p>
+
+                    <TweetList></TweetList>
+
+                    <b-button tag="router-link" to="/share" type="is-link" class="has-top-margin is-medium">{{ $t('home.share.share') }}</b-button>
                 </div>
             </div>
         </section>
@@ -291,13 +331,15 @@
     import downloader from "@/mixins/download";
     import ResponsiveImage from "@/components/ResponsiveImage.vue";
     import Gallery from "@/components/Gallery.vue";
+    import TweetList from "@/components/TweetList.vue";
 
     export default {
         name: "Home",
         mixins: [helpers, downloader],
         components: {
             ResponsiveImage,
-            Gallery
+            Gallery,
+            TweetList
         },
 
         data() {
@@ -307,14 +349,6 @@
                 trials: 0,
                 trialsFoss: 0,
                 isExpanderOpen: false,
-                usageImages: [
-                    { src: require('@/assets/media/home/usage/1-Startup.png'), width: "486px", height: "213px", sub: "home.usage.startup" },
-                    { src: require('@/assets/media/home/usage/2-Recording.gif'), width: "587px", height: "401px", sub: "home.usage.record" },
-                    { src: require('@/assets/media/home/usage/3-Editor-Removing-Frames.gif'), width: "742px", height: "649px", sub: "home.usage.edit-remove" },
-                    { src: require('@/assets/media/home/usage/4-Editor-Adding-Transition.gif'), width: "742px", height: "649px", sub: "home.usage.edit-transition" },
-                    { src: require('@/assets/media/home/usage/5-Editor-Saving.gif'), width: "742px", height: "649px", sub: "home.usage.edit-save" },
-                    { src: require('@/assets/media/home/usage/6-Final-Gif.gif'), width: "544px", height: "362px", sub: "home.usage.final-gif" },
-                ]
             };
         },
 
@@ -395,7 +429,7 @@
                 this.$copyText('choco install screentogif').then((e) => {
                     this.$buefy.toast.open({
                         duration: 5000,
-                        message: `Text copied!`,
+                        message: this.$t('home.copied'),
                         position: 'is-bottom',
                         type: 'is-success'
                     });
@@ -404,7 +438,30 @@
 
                     this.$buefy.toast.open({
                         duration: 5000,
-                        message: `It was not possible to copy the text.`,
+                        message:  this.$t('home.not-copied'),
+                        position: 'is-bottom',
+                        type: 'is-danger'
+                    });
+
+                    this.$gtag.exception({'description': e, 'fatal': false});
+                });
+            },
+            copyWinget() {
+                this.$gtag.event('Copy', {'event_category': 'Clicks', 'event_label': 'Winget'});
+
+                this.$copyText('winget install screentogif').then((e) => {
+                    this.$buefy.toast.open({
+                        duration: 5000,
+                        message: this.$t('home.copied'),
+                        position: 'is-bottom',
+                        type: 'is-success'
+                    });
+                }, (e) => {
+                    console.log('It was not possible to copy the winget command.', e);
+
+                    this.$buefy.toast.open({
+                        duration: 5000,
+                        message: this.$t('home.not-copied'),
                         position: 'is-bottom',
                         type: 'is-danger'
                     });
@@ -412,19 +469,6 @@
                     this.$gtag.exception({'description': e, 'fatal': false});
                 });
             }
-        },
-
-        computed: {
-            minWidthInstaller2 (){
-                console.log('Installer button: ' + this.$refs.installerButton );
-                console.log('Installer width: ' + (this.$refs.installerButton !== undefined ? this.$refs.installerButton.$el.clientWidth : "none"));
-                return this.$refs.installerButton !== undefined ? this.$refs.installerButton.$el.clientWidth + 'px' : 0 + 'px';
-            },
-
-            minWidthPortable2 (){
-                console.log('Portable width: ' + (this.$refs.portableButton !== undefined ? this.$refs.portableButton.$el.clientWidth : "none"));
-                return this.$refs.portableButton !== undefined ? this.$refs.portableButton.$el.clientWidth + 'px' : 0 + 'px';
-            },
         }
     };
 </script>
@@ -616,5 +660,30 @@
         background: white;
         margin: 0.25rem 0 1rem 0;
         border-radius: 5px;
+    }
+
+    .has-cards {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .twitter-card {
+        margin: 0.75rem !important;
+        max-width: none !important;
+        height: 100%;
+    }
+</style>
+
+<style lang="scss">
+    .tweeter-tweet {
+        background-color: #FFFFFF;
+        border-radius: 10px;
+        max-width: none !important;
+        height: 100%;
+    }
+
+    iframe {
+        //height: 100% !important;
+        width: 100% !important;
     }
 </style>

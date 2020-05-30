@@ -192,7 +192,7 @@
 
                                         <div class="level-right">
                                             <p class="level-item">
-                                                <small>{{ props.row.date_time_since }}</small>
+                                                <small>{{ since(props.row.release_date_obj, new Date()) }}</small>
                                             </p>
                                         </div>
                                     </nav>
@@ -252,7 +252,7 @@
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-centered-desktop">
-                                    <p v-html="$t('downloads.releases.table.average-month').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', averagePerMonth.toFixed(2).toLocaleString())">
+                                    <p v-html="$t('downloads.releases.table.average-month').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed(averagePerMonth, 2))">
                                         <!-- <span>Average of </span>  
                                         <span class="has-text-grey">{{ averagePerMonth.toFixed(2).toLocaleString() }}</span>
                                         <span> per month</span> -->
@@ -271,7 +271,7 @@
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-numeric-desktop">
-                                    <p v-html="$t('downloads.releases.table.downloads-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', $store.totalDownloads.toLocaleString())">
+                                    <p v-html="$t('downloads.releases.table.downloads-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed($store.totalDownloads, 0))">
                                         <!-- <span>Downloaded </span> 
                                         <span class="has-text-grey">{{ $store.totalDownloads.toLocaleString() }}</span>
                                         <span> times</span> -->
@@ -566,13 +566,16 @@
                     position: 'is-bottom',
                     type: 'is-danger'
                 })
+            },
+            daysInMonth(date) {
+                return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
             }
         },
 
         computed: {
             projectAge() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = new Date(2012, 10 - 1, 12);
+                var start = new Date(2013, 10 - 1, 12);
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();
@@ -601,27 +604,27 @@
                 var text = "";
 
                 if (years)
-                    text = years + (years > 1 ? " years" : " year");
+                    text = this.$t('downloads.releases.dates.year' + (years == 1 ? '' : 's')).replace('{0}', years);
                 
                 if (months) {
                     if (text.length)
                         text = text + ", ";
                     
-                    text = text + months + (months > 1 ? " months" : " month")
+                    text += this.$t('downloads.releases.dates.month' + (months == 1 ? '' : 's')).replace('{0}', months);
                 }
 
                 if (days) {
                     if (text.length)
                         text = text + ", ";
                     
-                    text = text + days + (days > 1 ? " days" : " day")
+                    text += this.$t('downloads.releases.dates.day' + (days == 1 ? '' : 's')).replace('{0}', days);
                 }
                                
                 return text;
             },
             averagePerMonth() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = new Date(2012, 10 - 1, 12);
+                var start = new Date(2013, 10 - 1, 12);
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();
@@ -629,9 +632,10 @@
 
                 //Work out the difference in months.
                 months += years * 12;
+                months += days / this.daysInMonth(end);
 
-                if (days < 0)
-                    months -= 1; 
+                //if (days < 0)
+                //    months -= 1; 
 
                 return (this.downloads.length > 0 ? this.downloads.length : this.$store.releaseList.length) / months;
             }
@@ -641,7 +645,7 @@
             round(value, length) {
                 return value.toFixed(length);
             }
-        },
+        }
     };
 </script>
 

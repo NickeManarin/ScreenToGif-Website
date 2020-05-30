@@ -2,17 +2,15 @@
     Implement:
         Home/Screenshots:
             Create screenshots and examples, select the best ones for the home.
-        Home/Downloads:
-            Expand to see the release notes.
         Donations:
             Set the links.
         How to use
         Share
         Source
-        Privacy
-        VPAT
+        Privacy and terms (VPAT?)
         Not found page.
         Ask to save cookie when selecting other language.
+            Show snackbar, add new to privacy and terms with query params 'l=en_en', with the language selected, in another tab.
 
     Gtag:
         Donation.
@@ -20,11 +18,9 @@
         ?
 
     Translate:
-        Downloads
-        Donation
         Screenshots
         Contact
         How to use
         Share
         Source
-        Footer
+        Privacy/Terms

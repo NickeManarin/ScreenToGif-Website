@@ -3,8 +3,8 @@
         <section class="hero is-donation">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">Did you like ScreenToGif?</h2>
-                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">And you want to help it somehow?</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('donation.title') }}</h2>
+                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">{{ $t('donation.subtitle') }}</p>
                 </div>
             </div>
         </section>
@@ -12,34 +12,34 @@
         <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container has-text-centered">
-                    <h2 class="title is-size-3 is-unselectable">Why help ScreenToGif?</h2>
-                    <p class="subtitle is-unselectable has-text-grey-71">The project would benefit from your help</p>
+                    <h2 class="title is-size-3 is-unselectable">{{ $t('donation.why.title') }}</h2>
+                    <p class="subtitle is-unselectable has-text-grey-71">{{ $t('donation.why.subtitle') }}</p>
 
                     <div class="columns is-centered is-multiline is-mobile">
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold is-unselectable">Free</p>
-                            <p class="subtitle is-6 has-text-grey-light is-unselectable">Open Source on <strong class="has-text-grey">Github</strong></p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('donation.why.free') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('donation.why.free-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-github-alt"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold is-unselectable">No ads</p>
-                            <p class="subtitle is-6 has-text-grey-light is-unselectable">Not even in the <strong class="has-text-grey">installer</strong></p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('donation.why.no-ads') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('donation.why.no-ads-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-image-slash"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold is-unselectable">Committed</p>
-                            <p class="subtitle is-6 has-text-grey-light is-unselectable">Made with love by a <strong class="has-text-grey">committed</strong> developer</p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('donation.why.committed') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('donation.why.committed-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-laptop"></b-icon>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
-                            <p class="title is-4 has-text-weight-semibold is-unselectable">Made for you</p>
-                            <p class="subtitle is-6 has-text-grey-light is-unselectable"><strong class="has-text-grey">Feedback driven</strong> development</p>
+                            <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('donation.why.for-you') }}</p>
+                            <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('donation.why.for-you-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
                             <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-chat-bubble-user"></b-icon>
                         </div>
@@ -51,8 +51,8 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">How can I help?</h2>
-                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">If you wish to help the project, here's how</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('donation.how-help.title') }}</h2>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('donation.how-help.subtitle') }}</p>
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-quarter-desktop">
@@ -63,8 +63,8 @@
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Feedback</h5>
-                                        <p class="is-size-5 has-text-grey">Report bugs and provide feedback about the user experience</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">{{ $t('donation.how-help.feedback') }}</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-help.feedback-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -78,8 +78,8 @@
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Share</h5>
-                                        <p class="is-size-5 has-text-grey">Share with your friends or create a review</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">{{ $t('donation.how-help.share') }}</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-help.share-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -94,8 +94,8 @@
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Localization</h5>
-                                        <p class="is-size-5 has-text-grey">Keep the localizations up to date or add one that is missing</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">{{ $t('donation.how-help.localization') }}</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-help.localization-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -109,8 +109,8 @@
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Donate</h5>
-                                        <p class="is-size-5 has-text-grey">Donations are also welcome 😊</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">{{ $t('donation.how-help.donate') }}</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-help.donate-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -123,12 +123,12 @@
         <section ref="donationMethods" class="hero is-lighter">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">How can I donate?</h2>
-                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable has-arrow-cursor">Here are some ways to donate</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">{{ $t('donation.how-donate.title') }}</h2>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable has-arrow-cursor">{{ $t('donation.how-donate.subtitle') }}</p>
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light " @click="visitPatreon()">
+                            <b-button class="is-light" tag="a" href="https://www.patreon.com/bePatron?u=3706208" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/Patreon.svg')" maxWidth="40px" maxHeight="40px"/>
@@ -136,7 +136,7 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Patreon</h5>
-                                        <p class="is-size-5 has-text-grey">Subscribe to donate monthly via Patreon</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.patreon-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -151,7 +151,7 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Paypal</h5>
-                                        <p class="is-size-5 has-text-grey">Single time donation via Paypal</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.paypal-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -160,26 +160,29 @@
 
                     <b-modal :active.sync="isPaypalModalActive" trap-focus aria-role="dialog" aria-modal :width="500" scroll="keep">
                         <div class="box has-text-centered content" style="padding: 40px">
-                            <h2 class="title">Donate with PayPal</h2>
-                            <p class="subtitle">Select your currency before continuing</p>
+                            <h2 class="title">{{ $t('donation.how-donate.paypal.title') }}</h2>
+                            <p class="subtitle">{{ $t('donation.how-donate.paypal.subtitle') }}</p>
 
-                            <b-collapse class="has-text-grey has-text-centered" :open.sync="isPaypalExpanderOpen" position="is-top" animation="slide" aria-id="expander"
+                            <b-collapse class="has-top-margin has-text-grey has-text-centered" 
+                                :open.sync="isPaypalExpanderOpen" position="is-top" animation="slide" aria-id="expander"
                                 @open="$gtag.event('Paypal fee explanation', {'event_category': 'Clicks', 'event_label': 'Open'})"
                                 @close="$gtag.event('Paypal fee explanation', {'event_category': 'Clicks', 'event_label': 'Close'})">
+                                
                                 <a slot="trigger" slot-scope="props" aria-controls="expander" class="has-text-info is-unselectable">
                                     <b-icon pack="unicon" :icon="!props.open ? 'uil-angle-down' : 'uil-angle-up'"></b-icon>
 
-                                    {{ !props.open ? 'Show PayPal fee explanation' : 'Hide PayPal fee explanation' }}
+                                    {{ !props.open ? $t('donation.how-donate.paypal.show-fee') : $t('donation.how-donate.paypal.hide-fee') }}
                                 </a>
 
-                                <p>PayPal has a fee based on the value donated (6.4%) + a fixed value based on the currency selected (0.1 to 0.5 cents of dollar).</p>
-                                <br>
+                                <p>{{ $t('donation.how-donate.paypal.explanation') }}</p>
+                                
                                 <p>
-                                    <span>20.00 EUR becomes 18.37 EUR</span><br>
-                                    <span>10.00 EUR becomes 9.01 EUR</span><br>
-                                    <span>5.00 EUR becomes 4.33 EUR</span><br>
-                                    <span>10.00 USD becomes 9.06 USD</span><br>
-                                    <span>5.00 USD becomes 4.38 USD</span><br>
+                                    <span>{{ feeConversion(20.0, 18.37, 'EUR €') }}</span><br>
+                                    <span>{{ feeConversion(10.0, 9.01, 'EUR €') }}</span><br>
+                                    <span>{{ feeConversion(5.0, 4.33, 'EUR €') }}</span><br>
+                                    
+                                    <span>{{ feeConversion(10.0, 9.06, 'USD $') }}</span><br>
+                                    <span>{{ feeConversion(5.0, 4.38, 'USD $') }}</span><br>
                                 </p>
                             </b-collapse>
                             
@@ -222,7 +225,7 @@
                                     </b-select>
 
                                     <p class="control">
-                                        <button id="s_paypal2" type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" class="button is-link">Donate</button>                                        
+                                        <button id="s_paypal2" type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" class="button is-link">{{ $t('donation.how-donate.paypal.donate') }}</button>                                        
                                     </p>
                                 </b-field>
                             </form> 
@@ -231,7 +234,7 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" @click="visitPatreon()">
+                            <b-button class="is-light" tag="a" href="https://flattr.com/@NickeManarin/domain/screentogif.com" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/Flattr.svg')" maxWidth="40px" maxHeight="40px"/>
@@ -239,14 +242,14 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Flattr</h5>
-                                        <p class="is-size-5 has-text-grey">Subscribe to donate monthly via Flattr</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.flattr-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" @click="visitPatreon()">
+                            <b-button class="is-light" tag="a" href="https://ko-fi.com/nickemanarin" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/Ko-fi.svg')" maxWidth="40px" maxHeight="40px"/>
@@ -254,14 +257,14 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Ko-fi</h5>
-                                        <p class="is-size-5 has-text-grey">Buy a coffee for the developer</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.coffee-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" @click="visitPatreon()">
+                            <b-button class="is-light" tag="a" href="https://www.buymeacoffee.com/NickeManarin" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/Buymeacoffee.svg')" maxWidth="40px" maxHeight="40px"/>
@@ -269,7 +272,7 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Buy Me a Coffee</h5>
-                                        <p class="is-size-5 has-text-grey">Buy a coffee for the developer</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.coffee-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -278,7 +281,7 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" @click="visitPatreon()">
+                            <b-button class="is-light" tag="a" href="http://steamcommunity.com/id/nickesm/wishlist" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/Steam.svg')" maxWidth="40px" maxHeight="40px"/>
@@ -286,14 +289,14 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Steam</h5>
-                                        <p class="is-size-5 has-text-grey">Gift games or credits via Steam</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.steam-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
                         </div>
                         
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" @click="visitPatreon()">
+                            <b-button class="is-light" tag="a" href="http://www.gog.com/u/Nickesm/wishlist" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/Gog.svg')" maxWidth="40px" maxHeight="40px"/>
@@ -301,22 +304,22 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">GOG</h5>
-                                        <p class="is-size-5 has-text-grey">Gift games via GOG</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.gog-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" @click="visitPatreon()">
+                            <b-button class="is-light" tag="a" href="https://www.amazon.com/hz/wishlist/ls/2S54SRWY2K8KF?ref_=wl_share" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/Amazon.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Amazon Wishlist</h5>
-                                        <p class="is-size-5 has-text-grey">Help get new parts for my computer</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">{{ $t('donation.how-donate.amazon') }}</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.amazon-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -329,15 +332,15 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">Patron list</h2>
-                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable has-arrow-cursor">Here are some of the people or companies who support the project</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable has-arrow-cursor">{{ $t('donation.list.title') }}</h2>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable has-arrow-cursor">{{ $t('donation.list.subtitle') }}</p>
 
                     <b-table :data="patrons" ref="table" :loading="isLoading" hoverable selectable @select="openLink" :scrollable="false"
                          :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
                     
                         <template slot-scope="props">
                             <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
-                                field="version" label="Patron" :custom-sort="sortName" sortable>
+                                field="version" :label="$t('donation.list.patron')" :custom-sort="sortName" sortable>
                                 <b-tooltip v-if="props.row.url != null" :label="props.row.urlPretty" position="is-right" type="is-link">
                                     {{ props.row.name }}
 
@@ -348,9 +351,9 @@
                             </b-table-column>
 
                             <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
-                                field="value" label="Donation ammount" :custom-sort="sortValue" sortable numeric>
+                                field="value" :label="$t('donation.list.ammount')" :custom-sort="sortValue" sortable numeric>
                                 <template slot="header" slot-scope="{ column }">
-                                    <b-tooltip :label="'The ordering is done via the value in U$D.'" type="is-info" size="is-small" animated dashed multilined>
+                                    <b-tooltip :label="$t('donation.list.ammount-info')" type="is-info" size="is-small" animated dashed multilined>
                                         {{ column.label }}
                                     </b-tooltip>
                                 </template>
@@ -363,11 +366,9 @@
                             </b-table-column> -->
 
                             <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
-                                field="platform" label="From" sortable numeric>
+                                field="platform" :label="$t('donation.list.from')" sortable numeric>
                                 <template slot="header" slot-scope="{ column }">
-                                    <b-tooltip :label="'Ammount of days being the most recent release'" type="is-info" size="is-small" animated dashed multilined>
-                                        {{ column.label }}
-                                    </b-tooltip>
+                                    {{ column.label }}
                                 </template>
 
                                 {{ props.row.platform }}
@@ -381,16 +382,18 @@
                                         <b-icon icon="frown" size="is-large"></b-icon>
                                     </p>
 
-                                    <p>Looks like it was not possible to load the patron list.</p>
+                                    <p>{{ $t('donation.list.not-possible') }}</p>
                                 </div>
                             </section>
                         </template>
 
                         <template slot="footer">
                             <p class="has-text-centered is-unselectable">
-                                <span>Would you like to have your name listed here after a donation?</span>
+                                <span>
+                                    {{ $t('donation.list.list-name') }}
+                                </span>
                                 <router-link to="/contact" tag="a">
-                                    Contact me :)
+                                    {{ $t('donation.list.contact') }}
                                 </router-link>
                             </p>
                         </template>
@@ -571,6 +574,11 @@
                 this.isPaypalModalActive = true;
                 
             },
+            feeConversion(start, end, currency){
+                return this.$t('donation.how-donate.paypal.becomes')
+                    .replace('{0}', start.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + currency)
+                    .replace('{1}', end.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + currency)
+            },
             sortName(a, b, isAsc){
                 return ('' + a.name).localeCompare(b.name) * (isAsc ? -1 : 1);
             },
@@ -637,5 +645,10 @@
     //Makes inner element of the buttons ocupy the whole space.
     a > span {
         width: 100%;
+    }
+
+    //Adds a bit of margin to the expander content.
+    .has-top-margin .collapse-content {
+        margin-top: 0.5rem;
     }
 </style>
