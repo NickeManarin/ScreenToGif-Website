@@ -2,8 +2,6 @@
     Implement:
         Home/Screenshots:
             Create screenshots and examples, select the best ones for the home.
-        Donations:
-            Set the links.
         How to use
         Share
         Source

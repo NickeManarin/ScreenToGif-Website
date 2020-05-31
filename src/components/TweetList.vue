@@ -37,5 +37,24 @@
 </script>
 
 <style lang="scss" scoped>
+    .twitter-card {
+        margin: 0.75rem !important;
+        max-width: none !important;
+        height: 100%;
+    }
+</style>
 
+<style lang="scss">
+    .twitter-tweet {
+        //background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 5px;
+        height: 100%;
+        max-width: none !important;
+        width: unset !important;
+    }
+
+    iframe {
+        height: 100% !important;
+        width: 100% !important;
+    }
 </style>

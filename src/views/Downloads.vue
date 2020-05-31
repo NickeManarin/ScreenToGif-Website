@@ -12,8 +12,8 @@
                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                     </p>
 
-                    <div class="columns is-centered">
-                        <div class="column is-4 has-text-centered">
+                    <div class="columns is-centered is-vcentered is-multiline is-mobile">
+                        <div class="column is-narrow has-text-centered">
                             <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
                                 <b-button ref="installerButton" type="is-info" size="is-large" icon-left="compact-disc" 
                                     :style="{ 'min-width': getMinWidthPortable() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
@@ -32,7 +32,11 @@
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                         </div>
 
-                        <div class="column is-4 has-text-centered">
+                        <div class="column is-12-mobile is-1-tablet has-text-centered">
+                            <p class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
+                        </div>
+
+                        <div class="column is-narrow has-text-centered">
                             <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
                                 <b-button ref="portableButton" type="is-info" size="is-large" icon-left="archive-alt" 
                                     :style="{ 'min-width': getMinWidthInstaller() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"

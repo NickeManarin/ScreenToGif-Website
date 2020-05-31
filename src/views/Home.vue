@@ -661,29 +661,8 @@
         margin: 0.25rem 0 1rem 0;
         border-radius: 5px;
     }
-
-    .has-cards {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .twitter-card {
-        margin: 0.75rem !important;
-        max-width: none !important;
-        height: 100%;
-    }
 </style>
 
 <style lang="scss">
-    .tweeter-tweet {
-        background-color: #FFFFFF;
-        border-radius: 10px;
-        max-width: none !important;
-        height: 100%;
-    }
-
-    iframe {
-        //height: 100% !important;
-        width: 100% !important;
-    }
+    
 </style>
