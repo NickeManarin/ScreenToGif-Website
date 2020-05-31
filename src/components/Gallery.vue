@@ -38,9 +38,9 @@
                 gallery: false,
                 selected: 0,
                 images: [
-                    { src: "./media/Editor.gif", sub: "screenshots.gallery.editor" },
-                    { src: "./media/Recorder.png", sub: "screenshots.gallery.editor" },
-                    { src: "./media/Editor-Empty.png", sub: "screenshots.gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Editor.gif"), sub: "screenshots.gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Recorder.png"), sub: "screenshots.gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Editor-Empty.png"), sub: "screenshots.gallery.editor" },
                 ]
             }
         },

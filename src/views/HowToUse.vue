@@ -42,12 +42,12 @@
         data() {
             return {
                 usageImages: [
-                    { src: require('@/assets/media/home/usage/1-Startup.png'), width: "486px", height: "213px", sub: "how-to-use.list.startup" },
-                    { src: require('@/assets/media/home/usage/2-Recording.gif'), width: "587px", height: "401px", sub: "how-to-use.list.record" },
-                    { src: require('@/assets/media/home/usage/3-Editor-Removing-Frames.gif'), width: "742px", height: "649px", sub: "how-to-use.list.edit-remove" },
-                    { src: require('@/assets/media/home/usage/4-Editor-Adding-Transition.gif'), width: "742px", height: "649px", sub: "how-to-use.list.edit-transition" },
-                    { src: require('@/assets/media/home/usage/5-Editor-Saving.gif'), width: "742px", height: "649px", sub: "how-to-use.list.edit-save" },
-                    { src: require('@/assets/media/home/usage/6-Final-Gif.gif'), width: "544px", height: "362px", sub: "how-to-use.list.final-gif" },
+                    { src: require('@/assets/media/usage/1-Startup.png'), width: "486px", height: "213px", sub: "how-to-use.list.startup" },
+                    { src: require('@/assets/media/usage/2-Recording.gif'), width: "587px", height: "401px", sub: "how-to-use.list.record" },
+                    { src: require('@/assets/media/usage/3-Editor-Removing-Frames.gif'), width: "742px", height: "649px", sub: "how-to-use.list.edit-remove" },
+                    { src: require('@/assets/media/usage/4-Editor-Adding-Transition.gif'), width: "742px", height: "649px", sub: "how-to-use.list.edit-transition" },
+                    { src: require('@/assets/media/usage/5-Editor-Saving.gif'), width: "742px", height: "649px", sub: "how-to-use.list.edit-save" },
+                    { src: require('@/assets/media/usage/6-Final-Gif.gif'), width: "544px", height: "362px", sub: "how-to-use.list.final-gif" },
                 ]
             }
         }

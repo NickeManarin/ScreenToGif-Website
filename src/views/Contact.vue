@@ -18,7 +18,7 @@
                     <div class="columns is-centered">
                         <div class="column is-narrow has-text-centered">
                             <figure class="image">
-                                <ResponsiveImage :src="require('@/assets/Profile.jpg')" maxWidth="200px" maxHeight="200px" borderRadius="100px" skeleton></ResponsiveImage>
+                                <ResponsiveImage :src="require('@/assets/media/contact/Profile.jpg')" maxWidth="200px" maxHeight="200px" borderRadius="100px" skeleton></ResponsiveImage>
                             </figure>
                         </div>
 
@@ -140,7 +140,7 @@
                     <div class="columns is-centered">
                         <div class="column is-narrow has-text-centered">
                             <figure class="image">
-                                <ResponsiveImage :src="require('@/assets/Horizon.jpg')" borderRadius="10px" skeleton></ResponsiveImage>
+                                <ResponsiveImage :src="require('@/assets/media/contact/Horizon.jpg')" borderRadius="10px" skeleton></ResponsiveImage>
                             </figure>
                         </div>
                     </div>  

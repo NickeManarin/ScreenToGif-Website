@@ -131,7 +131,7 @@
                             <b-button class="is-light" tag="a" href="https://www.patreon.com/bePatron?u=3706208" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Patreon.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Patreon.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -146,7 +146,7 @@
                             <b-button class="is-light" @click="openPaypalDialog()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Paypal.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Paypal.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -237,7 +237,7 @@
                             <b-button class="is-light" tag="a" href="https://flattr.com/@NickeManarin/domain/screentogif.com" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Flattr.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Flattr.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -252,7 +252,7 @@
                             <b-button class="is-light" tag="a" href="https://ko-fi.com/nickemanarin" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Ko-fi.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Ko-fi.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -267,7 +267,7 @@
                             <b-button class="is-light" tag="a" href="https://www.buymeacoffee.com/NickeManarin" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Buymeacoffee.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Buymeacoffee.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -284,7 +284,7 @@
                             <b-button class="is-light" tag="a" href="http://steamcommunity.com/id/nickesm/wishlist" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Steam.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Steam.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -299,7 +299,7 @@
                             <b-button class="is-light" tag="a" href="http://www.gog.com/u/Nickesm/wishlist" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Gog.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Gog.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -314,7 +314,7 @@
                             <b-button class="is-light" tag="a" href="https://www.amazon.com/hz/wishlist/ls/2S54SRWY2K8KF?ref_=wl_share" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/Amazon.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Amazon.svg')" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">

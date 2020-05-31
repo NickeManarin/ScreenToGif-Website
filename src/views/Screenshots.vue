@@ -47,9 +47,9 @@
         data() {
             return {
                 images: [
-                    { src: "./media/Editor.gif", width: "769px", height: "650px", sub: "gallery.editor" },
-                    { src: "./media/Recorder.png", width: "516px", height: "246px", sub: "gallery.editor" },
-                    { src: "./media/Editor-Empty.png", width: "769px", height: "518px", sub: "gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Editor.gif"), width: "769px", height: "650px", sub: "gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Recorder.png"), width: "516px", height: "246px", sub: "gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Editor-Empty.png"), width: "769px", height: "518px", sub: "gallery.editor" },
                 ]
             }
         },

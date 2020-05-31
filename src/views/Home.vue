@@ -199,7 +199,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/Bluepoint.png')" maxWidth="150px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Bluepoint.png')" maxWidth="150px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey has-text-weight-semibold">Bluepoint Games</p>
@@ -212,7 +212,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/Jetbrains.svg')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Jetbrains</p>
@@ -234,7 +234,7 @@
                             <b-button class="is-light padded" tag="a" href="https://loam.net" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/Loam.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Loam.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Loam</p>
@@ -245,7 +245,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/Whsr.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Whsr.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">WHSR</p>
@@ -256,7 +256,7 @@
                             <b-button class="is-light padded" tag="a" href="http://elmah.io" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/Elmah.png')" maxWidth="60px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Elmah.png')" maxWidth="60px" maxHeight="44px"></ResponsiveImage>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Elmah</p>
@@ -568,7 +568,7 @@
 
     //Background of the hero panel.
     section.hero.is-primary {
-        //background-image: url('../assets/BackgroundHome.svg'), linear-gradient(#5cadd5, #54dec4);
+        //background-image: url('../assets/BackgroundHome.svg'), linear-gradient($home, $home-light);
         background-image: linear-gradient($home, $home-light);
     }
 

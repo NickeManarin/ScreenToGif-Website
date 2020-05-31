@@ -7,7 +7,6 @@ import Buefy from "buefy";
 import VueShowdown from "vue-showdown";
 import VueClipboard from "vue-clipboard2";
 import VueGtag from "vue-gtag";
-
 import CustomColors from "./mixins/colors.scss";
 
 Vue.use(VueResource);

@@ -90,7 +90,7 @@
                             <b-button class="is-light" tag="a" href="https://www.microsoft.com/windows/" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'Windows'})">
                                 <figure class="image is-64x64 is-inline-block">
-                                    <ResponsiveImage :src="require('@/assets/Windows.svg')" maxWidth="64px" maxHeight="64px" alt="Windows logo." border-radius="0"/>
+                                    <ResponsiveImage :src="require('@/assets/media/downloads/Windows.svg')" maxWidth="64px" maxHeight="64px" alt="Windows logo." border-radius="0"/>
                                 </figure>
 
                                 <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.windows')"></p>
@@ -101,7 +101,7 @@
                             <b-button class="is-light" tag="a" href="http://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
                                 <figure class="image is-64x64 is-inline-block">
-                                    <ResponsiveImage :src="require('@/assets/Net.png')" maxWidth="64px" maxHeight="64px" alt="Net Framework logo." border-radius="0"/>
+                                    <ResponsiveImage :src="require('@/assets/media/downloads/Net.png')" maxWidth="64px" maxHeight="64px" alt="Net Framework logo." border-radius="0"/>
                                 </figure>
 
                                 <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.framework')"></p>
