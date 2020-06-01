@@ -47,9 +47,16 @@
         data() {
             return {
                 images: [
-                    { src: require("@/assets/media/screenshots/Editor.gif"), width: "769px", height: "650px", sub: "gallery.editor" },
-                    { src: require("@/assets/media/screenshots/Recorder.png"), width: "516px", height: "246px", sub: "gallery.editor" },
-                    { src: require("@/assets/media/screenshots/Editor-Empty.png"), width: "769px", height: "518px", sub: "gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Startup.png"), width: "486px", height: "213px", sub: "screenshots.gallery.startup" },
+                    { src: require("@/assets/media/screenshots/Recorder.png"), width: "516px", height: "246px", sub: "screenshots.gallery.recorder" },
+                    { src: require("@/assets/media/screenshots/Recorder-Old.gif"), width: "574px", height: "465px", sub: "screenshots.gallery.recorder-use" },
+                    { src: require("@/assets/media/screenshots/Recorder-New.gif"), width: "408px", height: "369px", sub: "screenshots.gallery.recorder-new" },
+                    { src: require("@/assets/media/screenshots/Editor-Empty.png"), width: "769px", height: "518px", sub: "screenshots.gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Editor.gif"), width: "743px", height: "521px", sub: "screenshots.gallery.editor" },
+                    { src: require("@/assets/media/screenshots/Webcam.png"), width: "629px", height: "369px", sub: "screenshots.gallery.webcam" },
+                    { src: require("@/assets/media/screenshots/Board.png"), width: "516px", height: "277px", sub: "screenshots.gallery.board" },
+                    { src: require("@/assets/media/screenshots/Board-Example.gif"), width: "367px", height: "287px", sub: "screenshots.gallery.board-example" },
+                    { src: require("@/assets/media/screenshots/Options.gif"), width: "740px", height: "623px", sub: "screenshots.gallery.options" },
                 ]
             }
         },
