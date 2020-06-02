@@ -206,13 +206,21 @@
     "subtitle": "Veja o que você pode fazer com ScreenToGif",
 
     "gallery":{
-      "editor": "Este é o editor, onde você pode editar suas animações e exportar como gif ou vídeo."
+      "startup": "Este é o ponto de entrada padrão do aplicativo.<br>Você pode escolher abrir diretamente um dos <b>gravadores de tela ou o editor</b> também.",
+      "recorder": "Este é o gravador de tela (utilizando a interface antiga). Você simplesmente deve mover esta janela em cima do conteúdo que deseja gravar.",
+      "recorder-use": "Se você clicar e arrastar o botão de mira, o gravador vai se ajustar na área selecionada.",
+      "recorder-new": "Este é a <b>nova interface</b> do gravador de tela, que permite você clicar e arrastar para selecionar uma área da tela.<br>Você também pode trocar para o modo de seleção de janela ou tela.",
+      "editor": "Este é o editor, onde você pode editar suas animações e exportar como <b>gif</b>, <b>apng</b>, <b>vídeo</b>, <b>projeto</b>, <b>imagens</b> e <b>psd</b>.",
+      "webcam": "Este é o gravador de câmera.",
+      "board": "O gravador de quadro virtual permite a você capturar seus desenhos automaticamente enquanto.",
+      "board-example": "Este é um exemplo de gravação de desenho.",
+      "options": "ScreenToGif tem <b>muitas</b> opções!"
     }
   },
   
   "how-to-use": {
-    "title": "",
-    "subtitle": "",
+    "title": "Documentação",
+    "subtitle": "Aprenda a como utilizar o ScreenToGif",
 
     "list": {
       "startup": "Quando o aplicativo iniciar, clique no botão <b>Gravador</b>.",

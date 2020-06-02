@@ -1,8 +1,10 @@
 # Things to implement:
     Implement:
-        Home/Screenshots:
-            Create screenshots and examples, select the best ones for the home.
         How to use
+            Basic capture and editing.
+            Reducing file size.
+            ?
+
         Share
         Source
         Privacy and terms (VPAT?)
@@ -16,7 +18,6 @@
         ?
 
     Translate:
-        Screenshots
         Contact
         How to use
         Share

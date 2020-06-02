@@ -18,7 +18,7 @@
                                 <figure>
                                     <ResponsiveImage class="image" :width="item.width" :height="item.height" :src="item.src" skeleton></ResponsiveImage>
 
-                                    <figcaption>{{ $t(item.sub) }}</figcaption>
+                                    <figcaption v-html="$t(item.sub)"></figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -51,7 +51,6 @@
                     { src: require("@/assets/media/screenshots/Recorder.png"), width: "516px", height: "246px", sub: "screenshots.gallery.recorder" },
                     { src: require("@/assets/media/screenshots/Recorder-Old.gif"), width: "574px", height: "465px", sub: "screenshots.gallery.recorder-use" },
                     { src: require("@/assets/media/screenshots/Recorder-New.gif"), width: "408px", height: "369px", sub: "screenshots.gallery.recorder-new" },
-                    { src: require("@/assets/media/screenshots/Editor-Empty.png"), width: "769px", height: "518px", sub: "screenshots.gallery.editor" },
                     { src: require("@/assets/media/screenshots/Editor.gif"), width: "743px", height: "521px", sub: "screenshots.gallery.editor" },
                     { src: require("@/assets/media/screenshots/Webcam.png"), width: "629px", height: "369px", sub: "screenshots.gallery.webcam" },
                     { src: require("@/assets/media/screenshots/Board.png"), width: "516px", height: "277px", sub: "screenshots.gallery.board" },

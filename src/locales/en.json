@@ -206,13 +206,21 @@
     "subtitle": "Checkout what you can do with ScreenToGif",
 
     "gallery":{
-      "editor": "This is the editor, where you can edit your recordings and export it to gif or video."
+      "startup": "This is the default entry point of the app.<br>You can set the app to open directly into the <b>recorders and editor</b> instead.",
+      "recorder": "This is the default screen recorder UI. You simply move this window on top of the content that you want to record.",
+      "recorder-use": "If you click and drag the crosshair icon to a window, the recorder will adjust itself to the bounds.",
+      "recorder-new": "This is the <b>new recorder UI</b>, which lets you click and drag to select an area of your screen.<br>You can also switch to the window and screen modes.",
+      "editor": "This is the editor, where you can edit your recordings and export it to <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> and <b>psd</b>.",
+      "webcam": "This is the webcam recorder.",
+      "board": "The board recorder lets you capture your drawings automatically as you draw them.",
+      "board-example": "Here's an example of drawing recorded.",
+      "options": "ScreenToGif has <b>lots</b> of options!"
     }
   },
 
   "how-to-use": {
-    "title": "",
-    "subtitle": "",
+    "title": "Documentation",
+    "subtitle": "Learn how to use ScreenToGif",
 
     "list": {
       "startup": "When the app starts, click on the <b>Recorder</b> button.",

@@ -8,7 +8,7 @@
                             <img class="auto-size" :src="item.src">
                         </a>
 
-                        <figcaption>{{ $t(item.sub) }}</figcaption>
+                        <figcaption v-html="$t(item.sub)"></figcaption>
                     </figure>
                 </div>
             </div>

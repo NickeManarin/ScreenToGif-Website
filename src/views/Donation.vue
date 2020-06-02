@@ -281,7 +281,7 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="http://steamcommunity.com/id/nickesm/wishlist" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://steamcommunity.com/id/nickesm/wishlist" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/media/donation/Steam.svg')" maxWidth="40px" maxHeight="40px"/>
@@ -296,7 +296,7 @@
                         </div>
                         
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="http://www.gog.com/u/Nickesm/wishlist" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.gog.com/u/Nickesm/wishlist" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
                                         <ResponsiveImage :src="require('@/assets/media/donation/Gog.svg')" maxWidth="40px" maxHeight="40px"/>
