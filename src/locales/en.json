@@ -12,6 +12,7 @@
     "contact": "Contact",
     "more": "More",
     "how-to-use": "How to use",
+    "features": "Features",
     "share": "Share",
     "source": "Source",
     "privacy-terms": "Privacy and Terms",
@@ -59,7 +60,8 @@
       "powerful": "Powerful",
       "powerful-info": "Record, edit and <b>export it!</b>",
       "customizable": "Customizable",
-      "customizable-info": "Use it the way <b>you like it</b>"
+      "customizable-info": "Use it the way <b>you like it</b>",
+      "features": "Discover all features"
     },
   
     "media": {
@@ -280,6 +282,11 @@
       "edit-save": "After your touch ups, click on <b>Save As</b> to export the animation to your format of choice.",
       "final-gif": "Here's the result Gif, around <b>80.6 KB</b>."
     }
+  },
+
+  "features": {
+    "title": "",
+    "subtitle": ""
   },
 
   "share": {

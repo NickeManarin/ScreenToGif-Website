@@ -61,6 +61,11 @@
                     <p class="is-unselectable">{{ $t('navigation.contact') }}</p>
                 </b-navbar-item>
 
+                <b-navbar-item tag="router-link" to="/features" :active="$route.path === '/features'">
+                    <b-icon icon="bolt"></b-icon>
+                    <p class="is-unselectable">{{ $t('navigation.features') }}</p>
+                </b-navbar-item>
+
                 <b-navbar-item tag="router-link" to="/how-to-use" :active="$route.path === '/how-to-use'">
                     <b-icon pack="unicon" icon="uil-books"></b-icon>
                     <p class="is-unselectable">{{ $t('navigation.how-to-use') }}</p>

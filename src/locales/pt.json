@@ -12,6 +12,7 @@
     "contact": "Contato",
     "more": "Mais",
     "how-to-use": "Como Utilizar",
+    "features": "Funcionalidades",
     "share": "Compartilhe",
     "source": "Código Fonte",
     "privacy-terms": "Termos de Privacidade",
@@ -59,7 +60,8 @@
       "powerful": "Potente",
       "powerful-info": "Grave, edite e <b>exporte!</b>",
       "customizable": "Personalizável",
-      "customizable-info": "Use da maneira que <b>você gostar</b>"
+      "customizable-info": "Use da maneira que <b>você gostar</b>",
+      "features": "Descubra todas as funcionalidades"
     },
 
     "media": {
@@ -282,6 +284,11 @@
     }
   },
 
+  "features": {
+    "title": "",
+    "subtitle": ""
+  },
+  
   "share": {
     "text": "ScreenToGif é um gravador de tela, webcam e quadro virtual com um editor integrado."
   },

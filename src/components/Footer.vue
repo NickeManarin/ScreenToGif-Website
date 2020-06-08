@@ -90,12 +90,13 @@
                 </div>
 
                 <div class="column is-one-half is-narrow">
+                    <router-link to="/features" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.features') }}</router-link>
                     <router-link to="/share" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.share') }}</router-link>
                     <router-link to="/how-to-use" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.how-to-use') }}</router-link>
                     <router-link to="/source" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.source') }}</router-link>
                     
                     <router-link to="/privacy" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.privacy-terms') }}</router-link>
-                    <router-link to="/🙀" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">🙀</router-link>
+                    <!-- <router-link to="/🙀" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">🙀</router-link> -->
                 </div>
             </div>
 

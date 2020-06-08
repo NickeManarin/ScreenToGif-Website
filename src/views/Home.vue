@@ -153,7 +153,7 @@
 
         <section class="hero is-lighter why-use is-unselectable">
             <div class="hero-body">
-                <div class="container">
+                <div class="container has-text-centered">
                     <div class="columns is-centered is-multiline is-mobile">
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold">{{ $t('home.why.free') }}</p>
@@ -183,6 +183,8 @@
                             <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-setting"></b-icon>
                         </div>
                     </div>
+
+                    <b-button tag="router-link" to="/features" type="is-link" class="has-top-margin is-medium">{{ $t('home.why.features') }}</b-button>
                 </div>
             </div>
         </section>
@@ -217,6 +219,7 @@
                                 <p class="is-size-6 has-text-grey has-text-weight-semibold">FossHub</p>
                             </b-button>
                         </div>
+
                         <div class="column is-half-tablet is-one-third-desktop">
                             <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">

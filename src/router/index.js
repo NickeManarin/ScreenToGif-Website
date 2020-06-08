@@ -121,6 +121,23 @@ const routes = [
   },
 
   {
+    path: "/features",
+    name: "Features",
+    component: () => import(/* webpackChunkName: "Features" */ "@/views/Features.vue"),
+    meta: {
+      title: 'ScreenToGif - Features',
+      metaTags: [
+        { name: 'description', content: 'Discover all ScreenToGif features.' },
+        { property: 'og:description', content: 'Discover all ScreenToGif features.' }
+      ]
+    }
+  },
+  {
+    path: "/discover",
+    redirect: "/features"
+  },
+
+  {
     path: "/share",
     name: "Share",
     component: () => import(/* webpackChunkName: "Share" */ "@/views/Share.vue"),
