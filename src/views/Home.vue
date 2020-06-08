@@ -39,7 +39,7 @@
                                     <transition name="slow-in-400ms">
                                         <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" rel="noopener"
-                                                  :style="{ 'min-width': getMinWidthInstaller() }"
+                                                  class="has-text-expanded" :style="{ 'min-width': getMinWidthInstaller() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             {{ $t('home.installer') }}
@@ -71,7 +71,7 @@
                                     <transition name="slow-in-600ms">
                                         <b-button ref="portableButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'"  rel="noopener"
-                                                  :style="{ 'min-width': getMinWidthPortable() }"
+                                                  class="has-text-expanded" :style="{ 'min-width': getMinWidthPortable() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
                                                   @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             {{ $t('home.portable') }}
@@ -103,12 +103,24 @@
                                     {{ !props.open ? $t('home.more-releases') : $t('home.fewer-releases') }}
                                 </a>
 
-                                <div class="columns is-vcentered is-centered is-mobile has-top-margin">
+                                <div class="columns is-vcentered is-centered is-mobile is-multiline has-top-margin">
                                     <div class="column is-narrow has-text-centered">
-                                        <b-button type="is-primary" size="is-large" icon-left="shopping-bag" inverted
+                                        <b-button class="has-text-expanded" type="is-primary" size="is-large" icon-left="shopping-bag" inverted style="width: 231px;"
                                             tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g"
                                             @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Microsoft Store'})">
                                             Microsoft Store
+                                        </b-button>
+                                    </div>
+
+                                    <div class="column is-12-mobile is-1-tablet has-text-centered">
+                                        <p class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
+                                    </div>
+
+                                    <div class="column is-narrow has-text-centered">
+                                        <b-button class="has-text-expanded" type="is-primary" size="is-large" icon-left="circle" inverted style="width: 231px;"
+                                            tag="a" target="_blank" width="100%" href="https://www.fosshub.com/ScreenToGif.html"
+                                            @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
+                                            FossHub
                                         </b-button>
                                     </div>
                                 </div>
@@ -116,7 +128,7 @@
                                 <div class="columns is-vcentered is-centered is-multiline is-mobile has-top-margin">
                                     <div class="column is-narrow has-text-centered">
                                         <div class="choco">
-                                            <code><span class="is-unselectable">></span> choco install screentogif</code>
+                                            <code><span class="is-unselectable">></span> choco install screentogif </code>
                                             <b-button type="is-primary" inverted @click="copyChoco()">{{ $t('home.copy') }}</b-button>
                                         </div>
                                     </div>
@@ -195,7 +207,17 @@
                     <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.supporters.subtitle') }}</p>
 
                     <div class="columns is-centered">
-                        <div class="column is-one-third">
+                        <div class="column is-half-tablet is-one-third-desktop">
+                            <b-button class="is-light padded" tag="a" href="https://www.fosshub.com?from=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/Fosshub.svg')" maxWidth="150px" maxHeight="42.92px"></ResponsiveImage>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey has-text-weight-semibold">FossHub</p>
+                            </b-button>
+                        </div>
+                        <div class="column is-half-tablet is-one-third-desktop">
                             <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
                                 <figure class="image">
@@ -231,7 +253,7 @@
                         </div>
 
                         <div class="column is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://loam.net" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://loam.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Loam.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
@@ -242,7 +264,7 @@
                         </div>
 
                         <div class="column is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Whsr.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
@@ -253,7 +275,7 @@
                         </div>
 
                         <div class="column is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="http://elmah.io" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://elmah.io?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Elmah.png')" maxWidth="60px" maxHeight="44px"></ResponsiveImage>
@@ -664,5 +686,8 @@
 </style>
 
 <style lang="scss">
-    
+    //Makes the text of the button to ocupy all the space left.
+    .has-text-expanded > span:not(icon) {
+        width: 100%;
+    }
 </style>

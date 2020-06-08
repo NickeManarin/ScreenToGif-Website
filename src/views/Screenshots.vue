@@ -3,8 +3,8 @@
         <section class="hero is-screenshots">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">Screenshots and examples</h2>
-                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">Checkout what you can do with ScreenToGif</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('screenshots.title') }}</h2>
+                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">{{ $t('screenshots.subtitle') }}</p>
                 </div>
             </div>
         </section>
@@ -26,8 +26,8 @@
 
                     <div class="has-margin">
                         <p class="subtitle is-size-6 has-text-weight-semibold has-text-centered is-unselectable">
-                            <span>Would you like to add your gif to this page? </span>
-                            <router-link to="/contact" tag="a">Send me a message :)</router-link>
+                            <span>{{ $t('screenshots.add') }}</span>&nbsp;
+                            <router-link to="/contact" tag="a">{{ $t('screenshots.send') }}</router-link>
                         </p>
                     </div>
                 </div>

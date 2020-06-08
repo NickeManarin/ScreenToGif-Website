@@ -68,7 +68,7 @@
                         </a>
 
                         <div class="columns is-centered has-top-margin">
-                            <div class="column is-three-quarters-tablet is-half-desktop">
+                            <div class="column is-10-tablet is-9-desktop is-8-widescreen is-7-fullhd">
                                 <p class="content has-text-light has-text-justified is-unselectable">
                                     <VueShowdown :markdown="!isEmpty($store.release) ? $store.release.description : ''" tag="span"></VueShowdown> 
                                 </p>
@@ -122,7 +122,7 @@
                     <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('downloads.releases.title') }}</h2>
                     <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('downloads.releases.subtitle') }}</p>
 
-                    <b-table :data="$store.releaseList" ref="table" :loading="isLoading" hoverable detailed detail-key="version" 
+                    <b-table ref="table" :data="$store.releaseList" :loading="isLoading" hoverable detailed detail-key="version" 
                         selectable @select="toggle" paginated :per-page="perPage" :current-page.sync="currentPage" :scrollable="false"
                         aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page" 
                         :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">

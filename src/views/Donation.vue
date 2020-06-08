@@ -509,6 +509,15 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "Jako7000",
+                        url: null,
+                        urlPretty: null,
+                        value: 20,
+                        valueInUsd: 22.57,
+                        currency: "EUR €",
+                        platform: "Paypal"
+                    },
+                    {
                         name: "Guard.io",
                         url: 'https://guard.io?from=ScreenToGif',
                         urlPretty: 'guard.io',

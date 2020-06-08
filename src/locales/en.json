@@ -204,6 +204,8 @@
   "screenshots": {
     "title": "Screenshots and examples",
     "subtitle": "Checkout what you can do with ScreenToGif",
+    "add": "Would you like to add your gif to this page?",
+    "send": "Send me a message :)",
 
     "gallery":{
       "startup": "This is the default entry point of the app.<br>You can set the app to open directly into the <b>recorders and editor</b> instead.",
@@ -215,6 +217,54 @@
       "board": "The board recorder lets you capture your drawings automatically as you draw them.",
       "board-example": "Here's an example of drawing recorded.",
       "options": "ScreenToGif has <b>lots</b> of options!"
+    }
+  },
+  
+  "contact": {
+    "title": "Here's how to contact me",
+    "subtitle": "Also a bit of details about me and the app",
+
+    "who": {
+      "title": "Who am I?",
+      "subtitle": "The creator of ScreenToGif",
+      "part1": "Hi, I'm Nicke Manarin, a {0}-year-old Brazilian developer.",
+      "part2": "I have been developing software since 2012, starting as a way to practice the skills taught in Computer Science classes.",
+      "part3": "After my graduation, that happened back in 2016, I kept learning new skills, which were directly put to use in my projects.",
+      "part4": "I'm keen to try my best to develop software that is purposeful and easy to use."
+    },
+
+    "why":{
+      "title": "Why ScreenToGif exists?",
+      "subtitle": "The history behind the app",
+      "part1": "This project was born way back in October, 2013 as a way to help me learn how to code, while being useful to my needs.",
+      "part2": "I was learning how to design GUIs (and I was having issues with it), so I thought it would be nice to have some screen recordings so I could ask for help in forums.",
+      "part3": "While some apps already existed, they didn't provide the specific feature that I needed, which prompted me to build my own solution (not realizing it would require a lot of work).",
+      "part4": "The name 'ScreenToGif' is as simple as I guessed the tool would be: a screen recorder that exported as gif. It was supposed to be an easy to remember name.",
+      "part5": "But I had no foreshadowing powers: The only part of the name that stays relevant is the middle 'To', as the app can now capture more than the screen and export to other formats.",
+      "part6": "This project had a complete restart in 2016, after some months having issues with the old platform, I ended up switching to a new one.",
+      "part7": "This transition allowed me to develop more features, with easier to understand user interfaces.",
+      "part8": "Although I'm the creator and maintainer of this project, other users also contribute with bug reports, feature requests and translations. Feel free to leave your comment. :)"
+    },
+
+    "methods": {
+      "title": "Methods of contact",
+      "subtitle": "Usually I answer more quickly via Twitter and Discord",
+      "twitter-info": "Follow me <b>@NickeManarin</b>",
+      "email": "Email",
+      "email-info": "Click here to reveal",
+      "discord-info": "Join the channel",
+      "reddit-info": "Join the sub <b>r/ScreenToGif</b>",
+      "facebook-info": "Like the page",
+      "linkedin-info": "Follow the page",
+
+      "reveal": {
+        "title": "Here's my email",
+        "subtitle": "Please, don't send spam :)",
+        "spam": "By <b>spam</b>, I mean things unrelated to the app like services and products offerings.",
+        "help": "I'll be happy to try to help you out with the app, as I have always.",
+        "copied": "Email copied!",
+        "copied-error": "It was not possible to copy the email."
+      }
     }
   },
 

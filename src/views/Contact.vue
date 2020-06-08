@@ -3,8 +3,8 @@
         <section class="hero is-contact">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">Here's how to contact me</h2>
-                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">Also a bit of details about me</p>
+                    <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('contact.title') }}</h2>
+                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">{{ $t('contact.subtitle') }}</p>
                 </div>
             </div>
         </section>
@@ -12,19 +12,26 @@
         <section class="hero is-lighter">
             <div class="hero-body">
                 <div class="container">
-                    <h3 class="title is-size-3 has-text-centered is-unselectable">Who am I?</h3>
-                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">The creator of ScreenToGif</p>
+                    <h3 class="title is-size-3 has-text-centered is-unselectable">{{ $t('contact.who.title') }}</h3>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('contact.who.subtitle') }}</p>
 
                     <div class="columns is-centered">
-                        <div class="column is-narrow has-text-centered">
+                        <div class="column is-3 has-text-centered">
                             <figure class="image">
                                 <ResponsiveImage :src="require('@/assets/media/contact/Profile.jpg')" maxWidth="200px" maxHeight="200px" borderRadius="100px" skeleton></ResponsiveImage>
                             </figure>
                         </div>
 
-                        <div class="column is-narrow has-text-centered is-vcentered">
-                            <p>Hi, I'm Nicke Manarin.</p>
-                            <p>I'm a 26 years old Brazillian</p>
+                        <div class="column is-8-tablet has-text-identation is-size-5-5 is-vertical-centered">
+                            <p>
+                                <span>{{ $t('contact.who.part1').replace('{0}', age) }}</span>&nbsp;
+                                <span>{{ $t('contact.who.part2') }}</span>
+                            </p>
+                            <br>
+                            <p>
+                                <span>{{ $t('contact.who.part3') }}</span>&nbsp;
+                                <span>{{ $t('contact.who.part4') }}</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -34,8 +41,45 @@
         <section class="hero">
             <div class="hero-body">
                 <div class="container">
-                    <h3 class="title is-size-3 has-text-centered is-unselectable">Methods of contact</h3>
-                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">Usually I answer more quickly via Twitter and Discord</p>
+                    <h3 class="title is-size-3 has-text-centered is-unselectable">{{ $t('contact.why.title') }}</h3>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('contact.why.subtitle') }}</p>
+
+                    <div class="columns is-centered">
+                        <div class="column is-3 has-text-centered is-vertical-centered">
+                            <figure class="image">
+                                <ResponsiveImage :src="require('@/assets/logo.png')" maxWidth="190px" maxHeight="190px" skeleton></ResponsiveImage>
+                            </figure>
+                        </div>
+
+                        <div class="column is-8-tablet has-text-identation is-size-5-5">
+                            <p>
+                                <span>{{ $t('contact.why.part1') }}</span>&nbsp;
+                                <span>{{ $t('contact.why.part2') }}</span>&nbsp;
+                            </p>
+                            <br>
+                            <p>
+                                <span>{{ $t('contact.why.part3') }}</span>&nbsp;
+                                <span>{{ $t('contact.why.part4') }}</span>&nbsp;
+                                <span>{{ $t('contact.why.part5') }}</span>&nbsp;
+                            </p>
+                            <br>
+                            <p>
+                                <span>{{ $t('contact.why.part6') }}</span>&nbsp;
+                                <span>{{ $t('contact.why.part7') }}</span>&nbsp;
+                            </p>
+                            <br>
+                            <p>{{ $t('contact.why.part8') }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="hero is-lighter">
+            <div class="hero-body">
+                <div class="container">
+                    <h3 class="title is-size-3 has-text-centered is-unselectable">{{ $t('contact.methods.title') }}</h3>
+                    <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('contact.methods.subtitle') }}</p>
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
@@ -46,8 +90,8 @@
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Twittter</h5>
-                                        <p class="is-size-5 has-text-grey">Follow me @NickeManarin</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">Twitter</h5>
+                                        <p class="is-size-5 has-text-grey" v-html="$t('contact.methods.twitter-info')"/>
                                     </div>
                                 </article>
                             </b-button>
@@ -57,12 +101,12 @@
                             <b-button class="is-light" @click="openEmailDialog()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-envelope"/>
+                                        <b-icon class="has-text-info is-size-2" icon="envelope"/>
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Email</h5>
-                                        <p class="is-size-5 has-text-grey">Click here to reveal</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">{{ $t('contact.methods.email') }}</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('contact.methods.email-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -77,7 +121,7 @@
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Discord</h5>
-                                        <p class="is-size-5 has-text-grey">Join the channel</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('contact.methods.discord-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -87,12 +131,12 @@
                             <b-button class="is-light" tag="a" href="https://www.reddit.com/r/ScreenToGif" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <b-icon class="has-text-info is-size-2 has-icon-large" pack="unicon" icon="uil-reddit-alien-alt"/>
+                                        <b-icon class="has-text-info is-size-2 has-icon-large" icon="reddit-alien-alt"/>
                                     </figure>
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Reddit</h5>
-                                        <p class="is-size-5 has-text-grey">Join the sub r/ScreenToGif</p>
+                                        <p class="is-size-5 has-text-grey" v-html="$t('contact.methods.reddit-info')"/>
                                     </div>
                                 </article>
                             </b-button>
@@ -102,12 +146,27 @@
                             <b-button class="is-light" tag="a" href="https://www.facebook.com/ScreenToGif" target="_blank" rel="noopener">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <b-icon class="has-text-info is-size-2 has-icon-large" pack="unicon" icon="uil-facebook-f"/>
+                                        <b-icon class="has-text-info is-size-2 has-icon-large" icon="facebook-f"/>
                                     </figure>
 
                                     <div class="media-content">
                                         <h5 class="is-size-4 has-text-weight-semibold">Facebook</h5>
-                                        <p class="is-size-5 has-text-grey">Like the Facebook page</p>
+                                        <p class="is-size-5 has-text-grey">{{ $t('contact.methods.facebook-info') }}</p>
+                                    </div>
+                                </article>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-half-tablet is-one-third-desktop">
+                            <b-button class="is-light" tag="a" href="https://www.linkedin.com/company/screentogif" target="_blank" rel="noopener">
+                                <article class="media">
+                                    <figure class="media-left">
+                                        <b-icon class="has-text-info is-size-2 has-icon-large" icon="linkedin-alt"/>
+                                    </figure>
+
+                                    <div class="media-content">
+                                        <h5 class="is-size-4 has-text-weight-semibold">LinkedIn</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('contact.methods.linkedin-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -116,17 +175,17 @@
 
                     <b-modal :active.sync="isEmailModalActive" trap-focus aria-role="dialog" aria-modal :width="500" scroll="keep">
                         <div class="box has-text-centered content" style="padding: 40px">
-                            <h2 class="title">Here's my email</h2>
-                            <p class="subtitle">Please, don't send spam :)</p>
+                            <h2 class="title">{{ $t('contact.methods.reveal.title') }}</h2>
+                            <p class="subtitle">{{ $t('contact.methods.reveal.subtitle') }}</p>
                            
                             <br>
-                            <p>By spam, I mean things unrelated to the app like services and products offerings.</p>
-                            <p>I'll be happy to try to help you out with the app, as I have always.</p>
+                            <p v-html="$t('contact.methods.reveal.spam')"/>
+                            <p v-html="$t('contact.methods.reveal.help')"/>
                             <br>
                             
                             <div class="has-email">
                                 <code>nicke@outlook.com.br</code>
-                                <b-button type="is-primary" inverted @click="copyEmail()">Copy</b-button>
+                                <b-button type="is-primary" inverted @click="copyEmail()">{{ $t('home.copy') }}</b-button>
                             </div>
                         </div>
                     </b-modal>
@@ -164,6 +223,21 @@
             }
         },
 
+        computed: {
+            age() {
+                var now = new Date();
+                var then = new Date(1993, 9, 1);
+
+                var year = now.getFullYear() - then.getFullYear();
+                var month = now.getMonth() - then.getMonth();
+
+                if (month < 0)
+                    year--;
+
+                return year;
+            }
+        },
+
         methods: {
             openEmailDialog() {
                 this.isEmailModalActive = true;
@@ -174,7 +248,7 @@
                 this.$copyText('nicke@outlook.com.br').then((e) => {
                     this.$buefy.toast.open({
                         duration: 5000,
-                        message: `Email copied!`,
+                        message: this.$t('contact.methods.reveal.copied'),
                         position: 'is-bottom',
                         type: 'is-success'
                     });
@@ -183,7 +257,7 @@
 
                     this.$buefy.toast.open({
                         duration: 5000,
-                        message: `It was not possible to copy the email.`,
+                        message: this.$t('contact.methods.reveal.copied-error'),
                         position: 'is-bottom',
                         type: 'is-danger'
                     });
@@ -226,6 +300,20 @@
     article span.icon {
         margin-left: 0px !important;
         margin-right: 0px !important;
+    }
+
+    //Adds the new paragraph identation.
+    .has-text-identation {
+        text-indent: 2rem;
+    }
+
+    .is-vertical-centered {
+        align-self: center;
+        align-content: center;
+    }
+
+    .is-size-5-5 {
+        font-size: 1.20rem;
     }
 
     //Email block and button to copy.

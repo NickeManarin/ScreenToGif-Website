@@ -202,8 +202,10 @@
   },
   
   "screenshots": {
-    "title": "Capturas de tela e examplos",
-    "subtitle": "Veja o que você pode fazer com ScreenToGif",
+    "title": "Capturas de tela e exemplos",
+    "subtitle": "Veja o que você pode fazer com o ScreenToGif",
+    "add": "Você gostaria de adicionar seu gif nesta página?",
+    "send": "Me envie uma mensagem :)",
 
     "gallery":{
       "startup": "Este é o ponto de entrada padrão do aplicativo.<br>Você pode escolher abrir diretamente um dos <b>gravadores de tela ou o editor</b> também.",
@@ -218,6 +220,54 @@
     }
   },
   
+  "contact": {
+    "title": "Veja como entrar em contato comigo",
+    "subtitle": "E também um pouco de detalhes sobre mim e sobre o aplicativo",
+
+    "who": {
+      "title": "Quem sou eu?",
+      "subtitle": "O criador do ScreenToGif",
+      "part1": "Olá, Eu sou Nicke Manarin, um desenvolvedor brasileiro de {0} anos de idade.",
+      "part2": "Desenvolvo software desde 2012, começando como uma maneira de praticar as habilidades ensinadas nas aulas de Ciência da Computação.",
+      "part3": "Após minha graduação, que aconteceu em 2016, continuei aprendendo novas habilidades, que foram colocadas diretamente em uso em meus projetos.",
+      "part4": "Estou empenhado em tentar o meu melhor para desenvolver um software que seja objetivo e fácil de usar."
+    },
+
+    "why":{
+      "title": "Por que o ScreenToGif existe?",
+      "subtitle": "A história por trás do aplicativo",
+      "part1": "Este projeto nasceu em outubro de 2013 como uma maneira de me ajudar a aprender a programar, além de ser útil para minhas necessidades.",
+      "part2": "Eu estava aprendendo a criar interfaces de usuário (e estava tendo problemas com isso), então achei que seria bom ter algumas gravações de tela para poder pedir ajuda nos fóruns.",
+      "part3": "Embora alguns aplicativos já existissem, eles não forneciam o recurso específico que eu precisava, o que me levou a criar minha própria solução (sem perceber que isso exigiria muito trabalho).",
+      "part4": "O nome 'ScreenToGif' é tão simples quanto imaginei que a ferramenta seria: um gravador de tela que exportava gifs. Era para ser um nome fácil de lembrar.",
+      "part5": "Mas eu não tinha poderes de adivinhação: a única parte do nome que permanece relevante é o meio 'To/Para', pois o aplicativo agora pode capturar mais do que a tela e exportar para outros formatos.",
+      "part6": "Este projeto foi recomeçado em 2016, depois de alguns meses tendo problemas com a plataforma antiga, acabei mudando para uma nova.",
+      "part7": "Essa transição me permitiu desenvolver mais recursos, com interfaces de usuário mais fáceis de entender.",
+      "part8": "Embora eu seja o criador e gerenciador deste projeto, outros usuários também contribuem com relatórios de erros, solicitações de recursos e traduções. Sinta-se livre para deixar seu comentário. :)"
+    },
+
+    "methods": {
+      "title": "Métodos de contato",
+      "subtitle": "Normalmente eu respondo mais rapidamente via Twitter e Discord",
+      "twitter-info": "Siga-me <b>@NickeManarin</b>",
+      "email": "E-mail",
+      "email-info": "Clique aqui para exibir",
+      "discord-info": "Entre no canal",
+      "reddit-info": "Junte-se ao sub <b>r/ScreenToGif</b>",
+      "facebook-info": "Curta a página",
+      "linkedin-info": "Siga a página",
+
+      "reveal": {
+        "title": "Aqui está o meu email",
+        "subtitle": "Por favor, não envie spam :)",
+        "spam": "Por <b>spam</b>, quero dizer coisas não relacionadas ao aplicativo, como ofertas de serviços e produtos.",
+        "help": "Ficarei feliz em tentar ajudar você com o aplicativo, como sempre fiz.",
+        "copied": "E-mail copiado!",
+        "copied-error": "Não foi possível copiar o e-mail."
+      }
+    }
+  },
+
   "how-to-use": {
     "title": "Documentação",
     "subtitle": "Aprenda a como utilizar o ScreenToGif",

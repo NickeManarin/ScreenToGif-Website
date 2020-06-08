@@ -79,13 +79,13 @@
                 this.loaded = true;
 
                 if (this.skeleton && !this.hideSkeleton)
-                    setTimeout(() => { this.hideSkeleton = true }, 500);
+                    setTimeout(() => { this.hideSkeleton = true }, 100);
             },
             onLoadedPlaceholder () {
                 this.loadedPlaceholder = true
 
                 if (this.skeleton && !this.hideSkeleton)
-                    setTimeout(() => { this.hideSkeleton = true }, 500);
+                    setTimeout(() => { this.hideSkeleton = true }, 100);
             }
         },
 
