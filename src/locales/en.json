@@ -243,7 +243,7 @@
       "part3": "While some apps already existed, they didn't provide the specific feature that I needed, which prompted me to build my own solution (not realizing it would require a lot of work).",
       "part4": "The name 'ScreenToGif' is as simple as I guessed the tool would be: a screen recorder that exported as gif. It was supposed to be an easy to remember name.",
       "part5": "But I had no foreshadowing powers: The only part of the name that stays relevant is the middle 'To', as the app can now capture more than the screen and export to other formats.",
-      "part6": "This project had a complete restart in 2016, after some months having issues with the old platform, I ended up switching to a new one.",
+      "part6": "This project had a complete restart in 2016, after having issues for some months with the old platform, I ended up switching to a new one.",
       "part7": "This transition allowed me to develop more features, with easier to understand user interfaces.",
       "part8": "Although I'm the creator and maintainer of this project, other users also contribute with bug reports, feature requests and translations. Feel free to leave your comment. :)"
     },
@@ -290,8 +290,13 @@
   },
 
   "share": {
-    "text": "ScreenToGif is a screen, webcam and sketchboard recorder with an integrated editor."
-
+    "title": "Share",
+    "subtitle": "Share your thougths on this tool",
+    "like": "Are you enjoying ScreenToGif?",
+    "mention": "Mention it on Twitter 😊",
+    "tweet": "Tweet @ScreenToGif or @NickeManarin",
+    "text": "ScreenToGif is a screen, webcam and sketch board recorder with an integrated editor.",
+    "disclaimer": "Would you like to not have your tweet linked on this page? Contact me"
   },
 
   "footer": {

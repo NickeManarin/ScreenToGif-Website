@@ -290,7 +290,13 @@
   },
   
   "share": {
-    "text": "ScreenToGif é um gravador de tela, webcam e quadro virtual com um editor integrado."
+    "title": "Compartilhe",
+    "subtitle": "Compartilhe os seus pensamentos sobre esta ferramenta",
+    "like": "Você está gostando do ScreenToGif?",
+    "mention": "Mencione-o no Twitter 😊",
+    "tweet": "Tweet @ScreenToGif ou @NickeManarin",
+    "text": "ScreenToGif é um gravador de tela, webcam e quadro virtual com um editor integrado.",
+    "disclaimer": "Gostaria de não ter seu tweet nesta página? Entre em contato comigo"
   },
 
   "source": {

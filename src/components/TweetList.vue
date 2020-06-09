@@ -23,6 +23,19 @@
         <div class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
             <Tweet widget-class="twitter-card" id="1223660258264068096" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }">Loading Tweet</Tweet>
         </div>
+
+
+        <div v-if="showAll" class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
+            <Tweet widget-class="twitter-card" id="1266162907710013441" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }">Loading Tweet</Tweet>
+        </div>
+
+        <div v-if="showAll" class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
+            <Tweet widget-class="twitter-card" id="1266348932331954176" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }">Loading Tweet</Tweet>
+        </div>
+
+        <div v-if="showAll" class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
+            <Tweet widget-class="twitter-card" id="1268451667009306626" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }">Loading Tweet</Tweet>
+        </div>
     </div>
 </template>
 
@@ -33,6 +46,10 @@
         components: {
             Tweet
         },
+
+        props: {
+            showAll: false
+        }
     }
 </script>
 
