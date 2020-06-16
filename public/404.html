@@ -7,18 +7,13 @@
     <script>
       const segment = 1;
 
-      alert('Any hash?', location.pathname + location.hash);
+      alert('Path + Hash: ' + location.pathname + location.hash);
 
       sessionStorage.redirect = '/' + location.pathname.slice(1).split('/').slice(segment).join('/');
       sessionStorage.hash = location.hash;
 
-      console.log('session redirect', sessionStorage.redirect + location.hash);
-      alert('Redirect? ' + sessionStorage.redirect);
-
       //Forces the navigation back to the main page.
       location.replace(location.pathname.split('/').slice(0, 1 + segment).join('/'));
-
-      alert('Any hash? ' + location.hash);
     </script>
 </head>
 
