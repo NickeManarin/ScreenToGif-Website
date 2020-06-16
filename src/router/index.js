@@ -228,6 +228,8 @@ const routes = [
     }
 ];
 
+var isChanging = false;
+
 const router = new VueRouter({
     mode: "history",
     base: process.env.BASE_URL,
@@ -288,8 +290,8 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to, from) => {
-    if (to.hash)
-         Vue.nextTick().then(() => VueScrollTo.scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }));
+    if (to.hash && to.path != from.path)
+        Vue.nextTick().then(() => VueScrollTo.scrollTo(to.hash, 700));
 });
 
 export default router;

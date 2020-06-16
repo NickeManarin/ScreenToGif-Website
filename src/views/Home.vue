@@ -189,7 +189,7 @@
             </div>
         </section>
 
-        <section id="gallery" class="hero">
+        <section id="media" class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.media.title') }}</h4>
@@ -202,7 +202,7 @@
             </div>
         </section>
 
-        <section id="supporters" class="hero is-lighter">
+        <section id="thanks" class="hero is-lighter">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.supporters.title') }}</h4>
