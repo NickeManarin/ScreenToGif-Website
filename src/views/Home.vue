@@ -189,7 +189,7 @@
             </div>
         </section>
 
-        <section class="hero">
+        <section id="gallery" class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.media.title') }}</h4>
@@ -202,7 +202,7 @@
             </div>
         </section>
 
-        <section class="hero is-lighter">
+        <section id="supporters" class="hero is-lighter">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.supporters.title') }}</h4>
@@ -294,7 +294,7 @@
             </div>
         </section>
 
-        <section class="hero">
+        <section id="usage" class="hero">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.usage.title') }}</h4>
@@ -335,7 +335,7 @@
             </div>
         </section>
 
-        <section class="hero is-primary">
+        <section id="share" class="hero is-primary">
             <div class="hero-body">
                 <div class="container has-text-centered">
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.share.title') }}</h4>

@@ -284,14 +284,6 @@
     export default {
         components: {
             ResponsiveImage
-        },
-
-        mounted() {
-            //console.log('Hash:', location.hash);
-            //console.log('Route:', this.$route);
-
-            //if (location.hash)
-            //    this.$nextTick().then(() => this.$scrollTo(location.hash, 700));
         }
     };
 </script>

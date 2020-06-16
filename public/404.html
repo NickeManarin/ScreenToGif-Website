@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html>
+  <head>
+      <meta charset="utf-8" />
+      <title>404</title>
+      <script>
+        const segment = 1;
+        //Gets the relative path and the hash of the URL.
+        sessionStorage.redirect = '/' + location.pathname.slice(1).split('/').slice(segment).join('/');
+        sessionStorage.hash = location.hash;
 
-<head>
-    <meta charset="utf-8" />
-    <title>404</title>
-    <script>
-      const segment = 1;
+        //Forces the navigation back to the main page, since it's the only entry point that works.
+        location.replace(location.pathname.split('/').slice(0, 1 + segment).join('/'));
+      </script>
+  </head>
 
-      alert('Path + Hash: ' + location.pathname + location.hash);
-
-      sessionStorage.redirect = '/' + location.pathname.slice(1).split('/').slice(segment).join('/');
-      sessionStorage.hash = location.hash;
-
-      //Forces the navigation back to the main page.
-      location.replace(location.pathname.split('/').slice(0, 1 + segment).join('/'));
-    </script>
-</head>
-
-<body>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-</body>
+  <body>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </body>
 </html>

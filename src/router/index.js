@@ -242,7 +242,6 @@ const router = new VueRouter({
         } else {
             //When the route changes, the page should scroll back to the top.
             this.app.$scrollTo('#app', 700);
-            //document.getElementById('app').scrollIntoView({ behavior: 'smooth' });
             return { x: 0, y: 0 }
         }
     }
@@ -289,9 +288,6 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to, from) => {
-    console.log(to);
-    console.log(from);
-
     if (to.hash)
          Vue.nextTick().then(() => VueScrollTo.scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }));
 });
