@@ -55,12 +55,12 @@ new Vue({
             delete sessionStorage.redirect;
             delete sessionStorage.hash;
 
-            this.$router.push(redirect);
+            this.$router.push(redirect + hash);
 
-            if (location.hash)
-                this.$nextTick().then(() => VueScrollTo.scrollTo(location.hash, 700, { easing: 'ease', cancelable: false }));
-            if (hash)
-                this.$nextTick().then(() => VueScrollTo.scrollTo(hash, 700, { easing: 'ease', cancelable: false }));
+            //if (location.hash)
+            //    this.$nextTick().then(() => VueScrollTo.scrollTo(location.hash, 700, { easing: 'ease', cancelable: false }));
+            //if (hash)
+            //    this.$nextTick().then(() => VueScrollTo.scrollTo(hash, 700, { easing: 'ease', cancelable: false }));
         }
     },
 

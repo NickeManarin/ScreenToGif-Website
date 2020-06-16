@@ -287,4 +287,12 @@ router.beforeEach((to, from, next) => {
     next();
 });
 
+router.afterEach((to, from) => {
+    console.log(to);
+    console.log(from);
+
+    if (to.hash)
+        this.$nextTick().then(() => this.$scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }));
+});
+
 export default router;
