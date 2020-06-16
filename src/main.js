@@ -47,11 +47,12 @@ new Vue({
     created() {
         if (sessionStorage.redirect) {
             console.log('redirect', sessionStorage.redirect);
+            console.log('hash', location.hash);
 
             const redirect = sessionStorage.redirect;
             delete sessionStorage.redirect;
 
-            this.$router.push(redirect);
+            this.$router.push(redirect + location.hash);
 
             if (location.hash)
                 this.$nextTick().then(() => VueScrollTo.scrollTo(location.hash, 700, { easing: 'ease', cancelable: false }));
