@@ -292,7 +292,7 @@ router.afterEach((to, from) => {
     console.log(from);
 
     if (to.hash)
-        this.$nextTick().then(() => this.$scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }));
+        this.$scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }); //this.$nextTick().then(() => this.$scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }));
 });
 
 export default router;
