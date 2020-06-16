@@ -273,7 +273,7 @@ router.beforeEach((to, from, next) => {
         const tag = document.createElement('meta');
 
         Object.keys(tagDef).forEach(key => {
-        tag.setAttribute(key, tagDef[key]);
+            tag.setAttribute(key, tagDef[key]);
         });
 
         //We use this to track which meta tags we create, so we don't interfere with other ones.
