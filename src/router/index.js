@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "@/views/Home.vue";
+import VueScrollTo from 'vue-scrollto';
 
 Vue.use(VueRouter);
 
@@ -292,7 +293,7 @@ router.afterEach((to, from) => {
     console.log(from);
 
     if (to.hash)
-        this.app.$scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }); //this.$nextTick().then(() => this.$scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }));
+         Vue.nextTick().then(() => VueScrollTo.scrollTo(to.hash, 700, { easing: 'ease', cancelable: false }));
 });
 
 export default router;
