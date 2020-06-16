@@ -48,6 +48,7 @@ new Vue({
         if (sessionStorage.redirect) {
             console.log('Redirect', sessionStorage.redirect);
             console.log('Hash', location.hash);
+            console.log('Hash 2', sessionStorage.hash);
 
             const redirect = sessionStorage.redirect;
             const hash = sessionStorage.hash;
