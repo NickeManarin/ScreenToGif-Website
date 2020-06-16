@@ -65,10 +65,10 @@
 </script>
 
 <style lang="scss">
-    @import "@/mixins/colors.scss";
+    //@import "@/mixins/colors.scss";
 
     //Background of the hero panel.
-    // .hero.is-screenshots {
-    //     background-image: linear-gradient($screenshots, $screenshots-light);
+    // .hero.is-share {
+    //     background-image: linear-gradient($share, $share-light);
     // }
 </style>

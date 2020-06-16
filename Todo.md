@@ -4,14 +4,7 @@
             Basic capture and editing.
             Reducing file size.
             ?
-        Feature list
-            How to display the data?
-        Source
-            ScreenToGif and website.
-        Privacy and terms 
-            Privacy note.
-            Terms of use (cna be used for free on commercial applications)
-            (VPAT?)
+
         Not found page.
             Looks like you typed a wrong URL.
 
@@ -25,6 +18,8 @@
         Contact.
         Share.
         Footer.
+        Source.
+        Privacy/Terms.
         ?
 
     Translate:
@@ -32,3 +27,10 @@
         Share
         Source
         Privacy/Terms
+        Features
+        Source
+
+    Check compatibility with other browsers.
+        Edge:
+            Menu dropdown not working.
+            Tweet size wrong.

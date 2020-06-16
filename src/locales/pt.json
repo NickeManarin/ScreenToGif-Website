@@ -270,6 +270,12 @@
     }
   },
 
+  "features": {
+    "title": "Funcionalidades",
+    "subtitle": "Descubra o que você pode fazer com o ScreenToGif"
+
+  },
+
   "how-to-use": {
     "title": "Documentação",
     "subtitle": "Aprenda a como utilizar o ScreenToGif",
@@ -282,11 +288,6 @@
       "edit-save": "Após retocar a animação, clique no botão <b>Salvar Como</b> para exportar a animação para o seu formato de escolha.",
       "final-gif": "Aqui está o Gif exportado, com um tamanho de <b>80.6 KB</b>."
     }
-  },
-
-  "features": {
-    "title": "",
-    "subtitle": ""
   },
   
   "share": {
@@ -304,7 +305,13 @@
   },
 
   "privacy-terms": {
-    
+    "title": "Privacidade e termos de uso",
+    "subtitle": "And other technical details about ScreenToGif",
+
+    "privacy": {
+      "title": "Privacy",
+      "paragraph1": ""
+    }
   },
 
   "footer": {

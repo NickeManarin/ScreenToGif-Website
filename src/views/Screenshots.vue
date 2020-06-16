@@ -70,9 +70,9 @@
         background-image: linear-gradient($screenshots, $screenshots-light);
     }
 
-     figure {
-         display: table;
-     }
+    figure {
+        display: table;
+    }
 
     figcaption {
         max-width: 100%;

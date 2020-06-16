@@ -1,6 +1,6 @@
 {
   "name": "screentogif.website",
-  "version": "0.7.0",
+  "version": "0.9.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -22,6 +22,7 @@
     "vue-popperjs": "^2.3.0",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.2.0",
+    "vue-scrollto": "^2.18.1",
     "vue-showdown": "^2.4.1",
     "vue-tweet-embed": "^2.4.0"
   },

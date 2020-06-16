@@ -7,6 +7,7 @@ import Buefy from "buefy";
 import VueShowdown from "vue-showdown";
 import VueClipboard from "vue-clipboard2";
 import VueGtag from "vue-gtag";
+import VueScrollTo from 'vue-scrollto';
 import CustomColors from "./mixins/colors.scss";
 
 Vue.use(VueResource);
@@ -27,6 +28,7 @@ Vue.use(VueGtag, {
     config: { id: "UA-87410077-2" },
     enabled: process.env.NODE_ENV === 'production' 
 }, router);
+Vue.use(VueScrollTo);
 
 Vue.config.productionTip = false;
 
@@ -44,12 +46,23 @@ new Vue({
     render: (h) => h(App),
     created() {
         if (sessionStorage.redirect) {
-            //console.log('redirect', sessionStorage.redirect);
+            console.log('redirect', sessionStorage.redirect);
 
             const redirect = sessionStorage.redirect;
             delete sessionStorage.redirect;
 
             this.$router.push(redirect);
+
+            if (location.hash)
+                this.$nextTick().then(() => VueScrollTo.scrollTo(location.hash, 700, { easing: 'ease', cancelable: false }));
         }
+    },
+
+    mounted() {
+        //console.log('Hash:', location.hash);
+        //console.log('Route:', this.$route);
+
+        //if (location.hash)
+        //    this.$nextTick().then(() => VueScrollTo.scrollTo(location.hash, 700, { easing: 'ease', cancelable: false }));
     }
 }).$mount("#app");

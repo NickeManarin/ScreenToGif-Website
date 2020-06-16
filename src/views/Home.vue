@@ -673,19 +673,19 @@
     }
 
     //Makes the figure captions resize to the image.
-    .has-captions {
-        display: table;
-    }
+    // .has-captions {
+    //     display: table;
+    // }
 
-    figcaption {
-        max-width: 100%;
-        width: auto;
-        display: table-caption;
-        caption-side: bottom;
-        background: white;
-        margin: 0.25rem 0 1rem 0;
-        border-radius: 5px;
-    }
+    // figcaption {
+    //     max-width: 100%;
+    //     width: auto;
+    //     display: table-caption;
+    //     caption-side: bottom;
+    //     background: white;
+    //     margin: 0.25rem 0 1rem 0;
+    //     border-radius: 5px;
+    // }
 </style>
 
 <style lang="scss">

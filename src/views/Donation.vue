@@ -577,7 +577,8 @@
         methods: {
             scrollToDonation(){
                 //document.getElementById('donation-methods').scrollIntoView({ block: 'start',  behavior: 'smooth' });
-                this.$refs.donationMethods.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+                //this.$refs.donationMethods.scrollIntoView({ block: 'start',  behavior: 'smooth' });
+                this.$scrollTo(this.$refs.donationMethods, 700);
             },
             openPaypalDialog(){
                 this.isPaypalModalActive = true;

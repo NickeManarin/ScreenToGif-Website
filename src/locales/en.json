@@ -270,6 +270,48 @@
     }
   },
 
+  "features": {
+    "title": "Features",
+    "subtitle": "See what you can do with ScreenToGif",
+
+    "recorders": {
+      "title": "Recorders",
+      "text1": "Use ScreenToGif to record your <b>screen</b>, your <b>webcam</b> feed or <b>sketch board</b> drawings.",
+
+      "screen": {
+        "title": "Screen",
+        "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
+        "text2": "Select the maximum FPS of the capture.",
+        
+        "older": {
+          "title": "Older UI",
+          "text1": "Drag or resize the window to adjust what you want to capture.",
+          "text2": "Type the exact size of the capture region.",
+          "text3": "Drag the crosshair button and drop it on top of a window to move the recorder to capture that."
+        },
+
+        "newer": {
+          "title": "Newer UI",
+          "text1": "Enter selection mode, which lets you select a <b>region</b>, a <b>window</b> or an <b>entire screen</b> to capture."
+        }
+      },
+
+      "webcam":{
+        "title": "Webcam",
+        "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
+        "text2": "Select the maximum FPS of the capture.",
+        "text3": "Resize the window to adjust the size of the capture."
+      },
+
+      "sketchboard": {
+        "title": "Sketch board",
+        "text1": "Enable the <b>auto-capture</b> or press <b>Ctrl to toggle</b> (<i>pauses</i> or <i>captures</i> it, depending if the auto-capture is enabled or disabled).",
+        "text2": "Select the maximum FPS of the capture.",
+        "text3": "Resize the window to adjust the size of the capture."
+      }
+    }
+  },
+
   "how-to-use": {
     "title": "Documentation",
     "subtitle": "Learn how to use ScreenToGif",
@@ -284,11 +326,6 @@
     }
   },
 
-  "features": {
-    "title": "",
-    "subtitle": ""
-  },
-
   "share": {
     "title": "Share",
     "subtitle": "Share your thougths on this tool",
@@ -297,6 +334,46 @@
     "tweet": "Tweet @ScreenToGif or @NickeManarin",
     "text": "ScreenToGif is a screen, webcam and sketch board recorder with an integrated editor.",
     "disclaimer": "Would you like to not have your tweet linked on this page? Contact me"
+  },
+
+  "source": {
+    "title": "Source code",
+    "subtitle": "ScreenToGif is open source!",
+
+    "links": {
+      "app-info": "The source code of ScreenToGif",
+      "website": "Website",
+      "website-info": "The source code of this website"
+    }
+  },
+
+  "privacy-terms": {
+    "title": "Privacy and terms",
+    "subtitle": "And other technical details about ScreenToGif",
+
+    "privacy": {
+      "title": "Privacy",
+      "software": {
+        "title": "The software",
+        "phrase1": "ScreenToGif, does not collect or transmit any personal (or system related) information without the user consent.",
+        "phrase2": "In fact, the only way that ScreenToGif sends personal or system related data happens when the user sends us a feedback via the Feedback tool.",
+        "phrase3": "The personal information may be provided by the users (such as their name and e-mail).",
+        "phrase4": "The system related information is captured automatically by the Feedback tool in order to facilitate solving possible issues.",
+        "more": "Click here to read more about other possible network connections opened by the software."
+      },
+
+      "website": {
+        "title": "This website",
+        "phrase1": "This website uses Google Analytics services, which collects session data about every pageview.",
+        "phrase2": "The data is used only to understand better the public behavior towards this tool."
+      }
+    },
+
+    "terms": {
+      "title": "Terms",
+      "phrase1": "ScreenToGif is free for use for everyone, even in corporate environments.",
+      "more": "You can read more about here."
+    }
   },
 
   "footer": {
