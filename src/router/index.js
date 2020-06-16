@@ -228,8 +228,6 @@ const routes = [
     }
 ];
 
-var isChanging = false;
-
 const router = new VueRouter({
     mode: "history",
     base: process.env.BASE_URL,
@@ -290,7 +288,8 @@ router.beforeEach((to, from, next) => {
 });
 
 router.afterEach((to, from) => {
-    if (to.hash && to.path != from.path)
+    //If it's the same page, use the scrollBehavior (unless it's on the home page).
+    if (to.hash && (to.path != from.path || to.path == "/"))
         Vue.nextTick().then(() => VueScrollTo.scrollTo(to.hash, 700));
 });
 
