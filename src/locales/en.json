@@ -281,7 +281,7 @@
       "screen": {
         "title": "Screen",
         "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
-        "text2": "Select the maximum FPS of the capture.",
+        "text2": "Select the maximum FPS of the capture (also supports timelapse).",
         
         "older": {
           "title": "Older UI",
@@ -308,6 +308,109 @@
         "text1": "Enable the <b>auto-capture</b> or press <b>Ctrl to toggle</b> (<i>pauses</i> or <i>captures</i> it, depending if the auto-capture is enabled or disabled).",
         "text2": "Select the maximum FPS of the capture.",
         "text3": "Resize the window to adjust the size of the capture."
+      }
+    },
+
+    "editor": {
+      "title": "Editor",
+
+      "file": {
+        "title": "File",
+        "text1": "Start a new recording or open a media (videos or images) or project file.",
+        "text2": "Insert a new recording or media file (videos or images) into an existing project.",
+        "text3": "Open recent projects.",
+        "text4": "Export your project to:",
+        "video": "Video",
+        "image": "Image",
+        "project": "ScreenToGif project"
+      },
+
+      "basic": {
+        "title": "Basic controls",
+        "text1": "Undo, redo or reset your edits.",
+        "text2": "Copy, cut and paste frames.",
+        "text3": "Select multiple frames or browse to a specific frame.",
+        "text4": "Preview the playback of the animation."
+      },
+
+      "frame": {
+        "title": "Frame manipulation",
+        "text1": "Delete selected frames.",
+        "text2": "Remove duplicates.",
+        "text3": "Reduce framerate.",
+        "text4": "Delete all previous or all next frames.",
+        "text5": "Reverse, apply yoyo (forwards and backwards) or move frames around.",
+        "text6": "Alter the delay of the frames (override, increase/decrease or scale).",
+        "text7": "Add title frames.",
+        "text8": "Add transitions (fade or slide effects)."
+      },
+
+      "image": {
+        "title": "Image manipulation",
+        "text1": "Resize, crop or flip/rotate.",
+        "text2": "Add overlays:",
+        "text3": "Captions/text.",
+        "text4": "Drawings or shapes.",
+        "text5": "Key strokes or mouse clicks.",
+        "text6": "Borders, shadows and obfuscation (pixelate).",
+        "text7": "Watermarks (pick your own image).",
+        "text8": "Cinemagraph (select parts of the animation to stay static or move)."
+      }
+    },
+
+    "options": {
+      "title": "Options",
+
+      "app": {
+        "title": "Application",
+        "text1": "Select how the app starts.",
+        "text2": "Choose among 4 color themes (from light to very dark).",
+        "text3": "Alter the system tray icon behavior (clicks to open parts of the app).",
+        "text4": "Decide whether the app should update itself automatically (translation updates too can be toggled)."
+      },
+
+      "recorder": {
+        "title": "Recorder",
+        "text1": "Select if you want the older or newer UI for the screen recorder.",
+        "text2": "Choose which capture mode to use (BitBlt, DirectX, with memory cache or not).",
+        "text3": "Enable snapshot mode (manual capture).",
+        "text4": "Enable cursor following (the recorder will follow your cursor during the recording)."
+      },
+
+      "editor": {
+        "title": "Editor",
+        "text1": "Select the previewer style (color and size of the ackgrund grid).",
+        "text2": "Enable the auto-sizing of the editor window based on the content size and vice-versa.",
+        "text3": "Options to enable confirmation dialogs before important actions.",
+        "text4": "Option to limit the undo/redo stack."
+      },
+
+      "tasks": {
+        "title": "Tasks",
+        "text1": "You can create tasks to apply effects to your recording, so that you don't need to manually apply them every time."
+      },
+
+      "shortcuts": {
+        "title": "Shortcuts",
+        "text1": "Set keyboard shortcuts to open the recorders and editor.",
+        "text2": "You can also set shortcuts to control your recordings (record, pause, stop, and others)."
+      },
+
+      "language": {
+        "title": "Language",
+        "text1": "Select among {0} languages.",
+        "text2": "The app will automatically select a language, based on your current OS settings."
+      },
+
+      "storage": {
+        "title": "Storage",
+        "text1": "Control how the app store its data.",
+        "text2": "Recover used space, by deleting old projects."
+      },
+
+      "extras": {
+        "title": "Extras",
+        "text1": "Download plugins for the app."
       }
     }
   },
@@ -394,6 +497,7 @@
   },
 
   "not-found": {
-    
+    "title": "Page not found...",
+    "subtitle": "Try returning to the home page"
   }
 }

@@ -9,9 +9,9 @@
             </div>
         </section>
 
-        <section class="section">
+        <section id="recorders" class="section">
             <div class="container">
-                <h4 id="recorders" class="title is-4 is-spaced">
+                <h4 class="title is-4 is-spaced">
                     <a class="is-anchor-link" href="#recorders">#</a>
                     <span>{{ $t('features.recorders.title') }}</span>
                 </h4>
@@ -22,8 +22,8 @@
                     </ul>
                 </div>
 
-                <div class="has-padding-left">
-                    <h5 id="screen" class="title is-5 is-spaced">
+                <div id="screen" class="has-padding-left">
+                    <h5 class="title is-5 is-spaced">
                         <a class="is-anchor-link" href="#screen">#</a>
                         <span>{{ $t('features.recorders.screen.title') }}</span>
                     </h5>
@@ -74,8 +74,8 @@
 
                 <hr>
 
-                <div class="has-padding-left">
-                    <h5 id="webcam" class="title is-5 is-spaced">
+                <div id="webcam" class="has-padding-left">
+                    <h5 class="title is-5 is-spaced">
                         <a class="is-anchor-link" href="#webcam">#</a>
                         <span>{{ $t('features.recorders.webcam.title') }}</span>
                     </h5>
@@ -101,8 +101,8 @@
 
                 <hr>
 
-                <div class="has-padding-left">
-                    <h5 id="sketchboard" class="title is-5 is-spaced">
+                <div id="sketchboard" class="has-padding-left">
+                    <h5 class="title is-5 is-spaced">
                         <a class="is-anchor-link" href="#sketchboard">#</a>
                         <span>{{ $t('features.recorders.sketchboard.title') }}</span>
                     </h5>
@@ -128,151 +128,151 @@
             </div>
         </section>
 
-        <section class="section">
+        <section id="editor" class="section">
             <div class="container">
-                <h3 id="editor" class="title is-4 is-spaced">
+                <h3 class="title is-4 is-spaced">
                     <a class="is-anchor-link" href="#editor">#</a>
-                    <span>Editor</span>
+                    <span>{{ $t('features.editor.title') }}</span>
                 </h3>
 
-                    <div class="columns is-mobile is-multiline has-text-centered is-centered">
-                        <div class="column is-narrow">
-                            <figure>
-                                <ResponsiveImage class="image" width="743px" height="521px" :src="require('@/assets/media/screenshots/Editor.gif')" skeleton/>
+                <div class="columns is-mobile is-multiline has-text-centered is-centered">
+                    <div class="column is-narrow">
+                        <figure>
+                            <ResponsiveImage class="image" width="743px" height="521px" :src="require('@/assets/media/screenshots/Editor.gif')" skeleton/>
 
-                                <figcaption v-html="$t('screenshots.gallery.editor')"></figcaption>
-                            </figure>
-                        </div>
+                            <figcaption v-html="$t('screenshots.gallery.editor')"></figcaption>
+                        </figure>
                     </div>
+                </div>
 
-                    <div class="content">
+                <div class="content">
+                    <ul>
+                        <li><b>{{ $t('features.editor.file.title') }}</b></li>
                         <ul>
-                            <li><b>File</b></li>
+                            <li v-html="$t('features.editor.file.text1')"/>
+                            <li v-html="$t('features.editor.file.text2')"/>
+                            <li v-html="$t('features.editor.file.text3')"/>
+                            <li v-html="$t('features.editor.file.text4')"/>
                             <ul>
-                                <li>Start a new recording or open a media (videos or images) or project file.</li>
-                                <li>Insert a new recording or media file (videos or images) into an existing project.</li>
-                                <li>Open recent projects.</li>
-                                <li>Export your project to:</li>
-                                <ul>
-                                    <li>Gif</li>
-                                    <li>Apng</li>
-                                    <li>Video</li>
-                                    <li>Image</li>
-                                    <li>PSD</li>
-                                    <li>ScreenToGif project</li>
-                                </ul>
-                            </ul>
-
-                            <li><b>Basic controls</b></li>
-                            <ul>
-                                <li>Undo, redo or reset your edits.</li>
-                                <li>Copy, cut and paste frames.</li>
-                                <li>Select multiple frames or browse to a specific frame.</li>
-                                <li>Preview the playback of the animation.</li>
-                            </ul>
-
-                            <li><b>Frame manipulation</b></li>
-                            <ul>
-                                <li>Delete selected frames.</li>
-                                <li>Remove duplicates.</li>
-                                <li>Reduce framerate.</li>
-                                <li>Delete all previous or all next frames.</li>
-                                <li>Reverse, apply yoyo (forwards and backwards) or move frames around.</li>
-                                <li>Alter the delay of the frames (override, increase/decrease or scale).</li>
-                                <li>Add title frames.</li>
-                                <li>Add transitions (fade or slide effects).</li>
-                            </ul>
-
-                            <li><b>Image manipulation</b></li>
-                            <ul>
-                                <li>Resize, crop or flip/rotate.</li>
-                                <li>Add overlays:</li>
-                                <ul>
-                                    <li>Captions/text.</li>
-                                    <li>Drawings or shapes.</li>
-                                    <li>Key strokes or mouse clicks.</li>
-                                    <li>Borders, shadows and obfuscation (pixelate).</li>
-                                    <li>Watermarks (pick your own image).</li>
-                                    <li>Cinemagraph (select parts of the animation to stay static or move).</li>
-                                </ul>
+                                <li>Gif</li>
+                                <li>Apng</li>
+                                <li>{{ $t('features.editor.file.video') }}</li>
+                                <li>{{ $t('features.editor.file.image') }}</li>
+                                <li>PSD</li>
+                                <li>{{ $t('features.editor.file.project') }}</li>
                             </ul>
                         </ul>
-                    </div>
+
+                        <li><b>{{ $t('features.editor.basic.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.editor.basic.text1')"/>
+                            <li v-html="$t('features.editor.basic.text2')"/>
+                            <li v-html="$t('features.editor.basic.text3')"/>
+                            <li v-html="$t('features.editor.basic.text4')"/>
+                        </ul>
+
+                        <li><b>{{ $t('features.editor.frame.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.editor.frame.text1')"/>
+                            <li v-html="$t('features.editor.frame.text2')"/>
+                            <li v-html="$t('features.editor.frame.text3')"/>
+                            <li v-html="$t('features.editor.frame.text4')"/>
+                            <li v-html="$t('features.editor.frame.text5')"/>
+                            <li v-html="$t('features.editor.frame.text6')"/>
+                            <li v-html="$t('features.editor.frame.text7')"/>
+                            <li v-html="$t('features.editor.frame.text8')"/>
+                        </ul>
+
+                        <li><b>{{ $t('features.editor.image.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.editor.image.text1')"/>
+                            <li v-html="$t('features.editor.image.text2')"/>
+                            <ul>
+                                <li v-html="$t('features.editor.image.text3')"/>
+                                <li v-html="$t('features.editor.image.text4')"/>
+                                <li v-html="$t('features.editor.image.text5')"/>
+                                <li v-html="$t('features.editor.image.text6')"/>
+                                <li v-html="$t('features.editor.image.text7')"/>
+                                <li v-html="$t('features.editor.image.text8')"/>
+                            </ul>
+                        </ul>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section class="section">
+        <section id="options" class="section">
             <div class="container">
-                <h3 id="options" class="title is-4 is-spaced">
+                <h3 class="title is-4 is-spaced">
                     <a class="is-anchor-link" href="#options">#</a>
-                    <span>Options</span>
+                    <span>{{ $t('features.options.title') }}</span>
                 </h3>
 
-                    <div class="columns is-mobile is-multiline has-text-centered is-centered">
-                        <div class="column is-narrow">
-                            <figure>
-                                <ResponsiveImage class="image" width="740px" height="623px" :src="require('@/assets/media/screenshots/Options.gif')" skeleton/>
+                <div class="columns is-mobile is-multiline has-text-centered is-centered">
+                    <div class="column is-narrow">
+                        <figure>
+                            <ResponsiveImage class="image" width="740px" height="623px" :src="require('@/assets/media/screenshots/Options.gif')" skeleton/>
 
-                                <figcaption v-html="$t('screenshots.gallery.options')"></figcaption>
-                            </figure>
-                        </div>
+                            <figcaption v-html="$t('screenshots.gallery.options')"></figcaption>
+                        </figure>
                     </div>
+                </div>
 
-                    <div class="content">
+                <div class="content">
+                    <ul>
+                        <li><b>{{ $t('features.options.app.title') }}</b></li>
                         <ul>
-                            <li><b>Application</b></li>
-                            <ul>
-                                <li>Select how the app starts.</li>
-                                <li>Choose among 4 color themes (light to very dark).</li>
-                                <li>Alter the system tray icon behavior (clicks to open parts of the app).</li>
-                                <li>Decide wether the app should update itself automatically (translation updates too can be toggled).</li>
-                            </ul>
-
-                            <li><b>Recorder</b></li>
-                            <ul>
-                                <li>Select if you want the older or newer UI for the screen recorder.</li>
-                                <li>Choose which capture mode to use (BitBlt, DirectX, with memory cache or not).</li>
-                                <li>Enable snapshot mode (manual capture).</li>
-                                <li>Enable cursor following (the recorder will follow your cursor during the recording).</li>
-                            </ul>
-
-                            <li><b>Editor</b></li>
-                            <ul>
-                                <li>Select the previewer style (color and size of the ackgrund grid).</li>
-                                <li>Enable the auto-sizing of the editor window based on the content size and vice-versa.</li>
-                                <li>Options to enable confirmation dialogs before important actions.</li>
-                                <li>Option to limit the undo/redo stack.</li>
-                            </ul>
-
-                            <li><b>Tasks</b></li>
-                            <ul>
-                                <li>You can create tasks to apply effects to your recording, so that you don't need to manually apply them every time.</li>
-                            </ul>
-                            
-                            <li><b>Shortcuts</b></li>
-                            <ul>
-                                <li>Set keyboard shortcuts to open the recorders and editor.</li>
-                                <li>You can also set shortcuts to control your recordings (record, pause, stop, etc.).</li>
-                            </ul>
-
-                            <li><b>Language</b></li>
-                            <ul>
-                                <li>Select among 24 languages.</li>
-                                <li>The app will automatically select a language, based on your current OS settings.</li>
-                            </ul>
-
-                            <li><b>Storage</b></li>
-                            <ul>
-                                <li>Control how the app store its data.</li>
-                                <li>Recover used space, by deleting old projects.</li>
-                            </ul>
-
-                            <li><b>Extras</b></li>
-                            <ul>
-                                <li>Download plugins for the app.</li>
-                            </ul>
+                            <li v-html="$t('features.options.app.text1')"/>
+                            <li v-html="$t('features.options.app.text2')"/>
+                            <li v-html="$t('features.options.app.text3')"/>
+                            <li v-html="$t('features.options.app.text4')"/>
                         </ul>
-                    </div>
+
+                        <li><b>{{ $t('features.options.recorder.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.options.recorder.text1')"/>
+                            <li v-html="$t('features.options.recorder.text2')"/>
+                            <li v-html="$t('features.options.recorder.text3')"/>
+                            <li v-html="$t('features.options.recorder.text4')"/>
+                        </ul>
+
+                        <li><b>{{ $t('features.options.editor.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.options.editor.text1')"/>
+                            <li v-html="$t('features.options.editor.text2')"/>
+                            <li v-html="$t('features.options.editor.text3')"/>
+                            <li v-html="$t('features.options.editor.text4')"/>
+                        </ul>
+
+                        <li><b>{{ $t('features.options.tasks.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.options.tasks.text1')"/>
+                        </ul>
+                        
+                        <li><b>{{ $t('features.options.shortcuts.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.options.shortcuts.text1')"/>
+                            <li v-html="$t('features.options.shortcuts.text2')"/>
+                        </ul>
+
+                        <li><b>{{ $t('features.options.language.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.options.language.text1').replace('{0}', '24')"/>
+                            <li v-html="$t('features.options.shortcuts.text2')"/>
+                        </ul>
+
+                        <li><b>{{ $t('features.options.storage.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.options.storage.text1')"/>
+                            <li v-html="$t('features.options.storage.text2')"/>
+                        </ul>
+
+                        <li><b>{{ $t('features.options.extras.title') }}</b></li>
+                        <ul>
+                            <li v-html="$t('features.options.extras.text1')"/>
+                        </ul>
+                    </ul>
+                </div>
             </div>
         </section>
     </div>

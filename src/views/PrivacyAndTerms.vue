@@ -9,9 +9,9 @@
             </div>
         </section>
 
-        <section class="section">
+        <section id="privacy" class="section">
             <div class="container">
-                <h3 id="privacy" class="title is-4 is-spaced">
+                <h3  class="title is-4 is-spaced">
                     <a class="is-anchor-link" href="#privacy">#</a>
                     <span>{{ $t('privacy-terms.privacy.title') }}</span>
                 </h3>
@@ -33,11 +33,9 @@
                         <span>{{ $t('privacy-terms.privacy.website.phrase2') }}</span> &nbsp;
                     </p>
                 </div>
-            </div>
-        </section>
 
-        <section class="section">
-            <div class="container">
+                <hr>
+
                 <h3 id="terms" class="title is-4 is-spaced">
                     <a class="is-anchor-link" href="#terms">#</a>
                     <span>{{ $t('privacy-terms.terms.title') }}</span>
@@ -57,9 +55,7 @@
 </template>
 
 <script>
-    export default {
-        
-    }
+    export default { }
 </script>
 
 <style lang="scss" scoped>

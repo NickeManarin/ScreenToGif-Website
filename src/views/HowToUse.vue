@@ -1,10 +1,10 @@
 <template>
-    <div class="screenshots">
+    <div class="how-to-use">
         <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">
-                    <h2 class="title is-size-3 has-text-centered is-unselectable">Documentation</h2>
-                    <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">Learn how to use ScreenToGif</p>
+                    <h1 class="title is-size-3 has-text-centered is-unselectable">{{ $t('how-to-use.title') }}</h1>
+                    <p class="subtitle has-text-centered has-text-grey is-unselectable">{{ $t('how-to-use.subtitle') }}</p>
                 </div>
             </div>
         </section>
@@ -26,8 +26,6 @@
                 </div>
             </div>
         </section>
-
-        
     </div>
 </template>
 

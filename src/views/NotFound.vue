@@ -1,15 +1,20 @@
 <template>
-  <div class="hero">
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <p class="is-size-2">Page not found...</p>
-      </div>
+    <div class="notfound">
+        <section class="hero is-light">
+            <div class="hero-body">
+                <div class="container">
+                    <h1 class="title is-size-3 has-text-centered is-unselectable">{{ $t('not-found.title') }}</h1>
+                    <p class="subtitle has-text-centered is-unselectable">
+                        <router-link to="/" tag="a">{{ $t('not-found.subtitle') }}</router-link>
+                    </p>
+                </div>
+            </div>
+        </section>
     </div>
-  </div>
 </template>
 
 <script>
-  export default {};
+    export default {};
 </script>
 
 <style scoped>

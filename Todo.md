@@ -5,9 +5,6 @@
             Reducing file size.
             ?
 
-        Not found page.
-            Looks like you typed a wrong URL.
-
         Set language query param.
             ?l=pt
         Ask to save cookie when selecting other language.
@@ -24,11 +21,6 @@
 
     Translate:
         How to use
-        Share
-        Source
-        Privacy/Terms
-        Features
-        Source
 
     Check compatibility with other browsers.
         Edge:

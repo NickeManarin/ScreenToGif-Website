@@ -176,7 +176,7 @@
       "coffee-info": "Compre um café para o desenvolvedor",
       "steam-info": "Dê jogos ou créditos de presente via Steam",
       "gog-info": "Dê jogos de presente via GOG",
-      "amazon": "Lista de Desejos na Amazon",
+      "amazon": "Lista de desejos na Amazon",
       "amazon-info": "Me ajude a conseguir peças para o meu computador",
 
       "paypal": {
@@ -272,8 +272,147 @@
 
   "features": {
     "title": "Funcionalidades",
-    "subtitle": "Descubra o que você pode fazer com o ScreenToGif"
+    "subtitle": "Descubra o que você pode fazer com o ScreenToGif",
 
+    "recorders": {
+      "title": "Gravadores",
+      "text1": "Utilize o ScreenToGif para gravar a sua <b>tela</b>, o video da sua <b>webcam</b> ou desenhos de um <b>quadro virtual</b>.",
+
+      "screen": {
+        "title": "Tela",
+        "text1": "Utilize os botões de <b>gravar</b>, <b>pausar</b>, <b>descartar</b> ou <b>parar</b> para controlar sua captura.",
+        "text2": "Selecione a taxa máxima de captura de quadros (também suporta <i>timelapse</i>).",
+        
+        "older": {
+          "title": "Interface antiga",
+          "text1": "Arraste ou redimensione a janela para ajustar o que você deseja gravar.",
+          "text2": "Digite o tamanho exato da região de captura.",
+          "text3": "Arraste e largue em cima de uma janela o botão de 'mira' para mover a região de captura para aquela parte da tela."
+        },
+
+        "newer": {
+          "title": "Interface nova",
+          "text1": "Entre o modo de seleção, que permite você a selecionar uma <b>área</b>, uma <b>janela</b> ou uma <b>tela cheia</b> para capturar."
+        }
+      },
+
+      "webcam":{
+        "title": "Webcam",
+        "text1": "Utilize os botões de <b>gravar</b>, <b>pausar</b>, <b>descartar</b> ou <b>parar</b> para controlar sua captura.",
+        "text2": "Selecione a taxa máxima de captura de quadros.",
+        "text3": "Redimensione a janela para ajustar o tamanho da captura."
+      },
+
+      "sketchboard": {
+        "title": "Quadro virtual",
+        "text1": "Ative o <b>auto-capturar</b> ou pressione <b>Ctrl para alternar</b> (<i>pausa</i> ou <i>captura</i>, dependendo se o auto-capturar está ativo ou não).",
+        "text2": "Selecione a taxa máxima de captura de quadros.",
+        "text3": "Redimensione a janela para ajustar o tamanho da captura."
+      }
+    },
+
+    "editor": {
+      "title": "Editor",
+
+      "file": {
+        "title": "Arquivo",
+        "text1": "Inicie uma nova gravação ou abra uma mídia (vídeos ou imagens) ou arquivo de projeto.",
+        "text2": "Insira um novo arquivo de gravação ou mídia (vídeos ou imagens) em um projeto existente.",
+        "text3": "Abra projetos recentes.",
+        "text4": "Exporte seu projeto para:",
+        "video": "Vídeo",
+        "image": "Imagem",
+        "project": "Projeto do ScreenToGif"
+      },
+
+      "basic": {
+        "title": "Controles básicos",
+        "text1": "Desfazer, refazer ou redefinir suas edições.",
+        "text2": "Copie, recorte e cole quadros.",
+        "text3": "Selecione vários quadros ou navegue até um quadro específico.",
+        "text4": "Visualize a reprodução da animação."
+      },
+
+      "frame": {
+        "title": "Manipulação de quadros",
+        "text1": "Excluir quadros selecionados.",
+        "text2": "Remova duplicatas.",
+        "text3": "Reduza a taxa de quadros.",
+        "text4": "Exclua todos os quadros anteriores ou todos os próximos.",
+        "text5": "Inverta, aplique efeito de ioiô (para frente e para trás) ou mova os quadros.",
+        "text6": "Altere o atraso dos quadros (substituição, aumento/diminuição ou escala).",
+        "text7": "Adicione quadros de título.",
+        "text8": "Adicione transições (efeitos de fade ou slide)."
+      },
+
+      "image": {
+        "title": "Manipulação de imagem",
+        "text1": "Redimensione, corte ou giro.",
+        "text2": "Adicionar efeitos:",
+        "text3": "Legendas/texto.",
+        "text4": "Desenhos ou formas.",
+        "text5": "Traços das teclas ou cliques do mouse.",
+        "text6": "Borders, sombras e ofuscação (pixelação).",
+        "text7": "Marcas d'água (escolha sua própria imagem).",
+        "text8": "Cinemagraph (selecione partes da animação para permanecer estática ou mover)."
+      }
+    },
+
+    "options": {
+      "title": "Opções",
+
+      "app": {
+        "title": "Aplicação",
+        "text1": "Selecione como o aplicativo inicia.",
+        "text2": "Escolha entre 4 temas de cores (do claro ao muito escuro).",
+        "text3": "Altere o comportamento do ícone da bandeja do sistema (clique para abrir partes do aplicativo).",
+        "text4": "Decida se o aplicativo deve se atualizar automaticamente (as atualizações de tradução também podem ser controladas)."
+      },
+
+      "recorder": {
+        "title": "Gravador",
+        "text1": "Selecione se deseja a interface do usuário mais antiga ou mais nova para o gravador de tela.",
+        "text2": "Escolha qual modo de captura usar (BitBlt, DirectX, com cache de memória ou não).",
+        "text3": "Ative o modo de instantâneo (captura manual).",
+        "text4": "Ative o movimento com o cursor (o gravador seguirá o cursor durante a gravação)."
+      },
+
+      "editor": {
+        "title": "Editor",
+        "text1": "Selecione o estilo do visualizador (cor e tamanho da grade do plano de fundo).",
+        "text2": "Habilite o dimensionamento automático da janela do editor com base no tamanho do conteúdo e vice-versa.",
+        "text3": "Opções para ativar as caixas de diálogo de confirmação antes de ações importantes.",
+        "text4": "Opção para limitar a quantidade de ações na pilha de desfazer/refazer."
+      },
+
+      "tasks": {
+        "title": "Tarefas",
+        "text1": "Você pode criar tarefas para aplicar efeitos à sua gravação, para não precisar aplicá-los manualmente todas as vezes."
+      },
+
+      "shortcuts": {
+        "title": "Atalhos de teclado",
+        "text1": "Defina atalhos do teclado para abrir os gravadores e o editor.",
+        "text2": "Você também pode definir atalhos para controlar suas gravações (gravar, pausar, parar, entre outros)."
+      },
+
+      "language": {
+        "title": "Língua",
+        "text1": "Selecione entre {0} idiomas.",
+        "text2": "O aplicativo selecionará automaticamente um idioma, com base nas configurações atuais do sistema operacional."
+      },
+
+      "storage": {
+        "title": "Armazenamento",
+        "text1": "Controle como o aplicativo armazena seus dados.",
+        "text2": "Recupere o espaço usado, excluindo projetos antigos."
+      },
+
+      "extras": {
+        "title": "Extras",
+        "text1": "Faça o download de plug-ins para o aplicativo."
+      }
+    }
   },
 
   "how-to-use": {
@@ -301,16 +440,42 @@
   },
 
   "source": {
-    
+    "title": "Código fonte",
+    "subtitle": "ScreenToGif tem código aberto!",
+
+    "links": {
+      "app-info": "O código fonte do ScreenToGif",
+      "website": "Site",
+      "website-info": "O código fonte deste site"
+    }
   },
 
   "privacy-terms": {
     "title": "Privacidade e termos de uso",
-    "subtitle": "And other technical details about ScreenToGif",
+    "subtitle": "E outros detalhes técnicos sobre ScreenToGif",
 
     "privacy": {
-      "title": "Privacy",
-      "paragraph1": ""
+      "title": "Privacidade",
+      "software": {
+        "title": "O aplicativo",
+        "phrase1": "ScreenToGif, não coleta ou transmite nenhuma informação pessoal (ou relacionada ao sistema) sem o consentimento do usuário.",
+        "phrase2": "De fato, a única maneira que o ScreenToGif envia dados pessoais ou relacionados ao sistema ocorre quando o usuário nos envia um feedback por meio da ferramenta de comentários.",
+        "phrase3": "As informações pessoais podem ser fornecidas pelos usuários (como nome e email).",
+        "phrase4": "As informações relacionadas ao sistema são capturadas automaticamente pela ferramenta de comentários, para facilitar a solução de possíveis problemas.",
+        "more": "Clique aqui para ler mais sobre outras conexões de rede abertas pelo software."
+      },
+
+      "website": {
+        "title": "Este site",
+        "phrase1": "Este site usa os serviços do Google Analytics, que coletam dados da sessão sobre todas as visualizações de página.",
+        "phrase2": "Os dados são usados apenas para entender melhor o comportamento do público em relação a esta ferramenta."
+      }
+    },
+
+    "terms": {
+      "title": "Termos",
+      "phrase1": "ScreenToGif é gratuito para uso de todos, mesmo em ambientes corporativos.",
+      "more": "Você pode ler mais sobre aqui."
     }
   },
 
@@ -332,10 +497,7 @@
   },
 
   "not-found": {
-    
-  },
-
-  "🙀": {
-
+    "title": "Página não encontrada...",
+    "subtitle": "Tente retornar para a página inicial"
   }
 }

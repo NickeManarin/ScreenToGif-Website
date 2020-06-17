@@ -179,8 +179,8 @@ const routes = [
         meta: {
             title: 'ScreenToGif - Privacy and Terms',
             metaTags: [
-                { name: 'description', content: 'See the details of open source project, ScreenToGif.' },
-                { property: 'og:description', content: 'See the details of open source project, ScreenToGif.' }
+                { name: 'description', content: 'See the privacy and terms.' },
+                { property: 'og:description', content: 'See the privacy and terms.' }
             ]
         }
     },
@@ -198,27 +198,14 @@ const routes = [
     },
 
     {
-        path: "/🙀",
-        name: "🙀",
-        component: () => import(/* webpackChunkName: "🙀" */ "@/views/🙀.vue"),
-        meta: {
-            title: 'ScreenToGif - 🙀',
-            metaTags: [
-                { name: 'description', content: 'Why are you sharing this exact page?' },
-                { property: 'og:description', content: 'Why are you sharing this exact page?' }
-            ]
-        }
-    },
-
-    {
         path: "/404",
         name: "404",
         component: () => import(/* webpackChunkName: "NotFound" */ "@/views/NotFound.vue"),
         meta: {
             title: 'ScreenToGif - 404',
             metaTags: [
-                { name: 'description', content: 'Why are you sharing this exact page? 404' },
-                { property: 'og:description', content: 'Why are you sharing this exact page? 404' }
+                { name: 'description', content: 'Why are you sharing this exact page? It\'s a 404 page' },
+                { property: 'og:description', content: 'Why are you sharing this exact page? It\'s a 404 page' }
             ]
         }
     },
