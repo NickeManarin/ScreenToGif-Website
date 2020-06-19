@@ -8,6 +8,7 @@ import VueShowdown from "vue-showdown";
 import VueClipboard from "vue-clipboard2";
 import VueGtag from "vue-gtag";
 import VueScrollTo from 'vue-scrollto';
+import vueHeadful from 'vue-headful';
 import CustomColors from "./mixins/colors.scss";
 
 Vue.use(VueResource);
@@ -29,6 +30,7 @@ Vue.use(VueGtag, {
     enabled: process.env.NODE_ENV === 'production' 
 }, router);
 Vue.use(VueScrollTo);
+Vue.component('vue-headful', vueHeadful);
 
 Vue.config.productionTip = false;
 

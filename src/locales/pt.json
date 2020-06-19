@@ -40,6 +40,9 @@
   },
 
   "home":{
+    "meta-title": "ScreenToGif - Grave sua tela, faça edições e exporte como gif, vídeo ou outros formatos",
+    "meta-description": "Gravador gratuíto, que permite você gravar, editar e exportar sua animação como gif, vídeo ou outros formatos.",
+
     "subtitle": "Gravador de <b>tela</b>, <b>webcam</b> e <b>quadro virtual</b> com um <b>editor</b> integrado.",
     "version": "Versão {0}",
     "installer" : "Instalador",
@@ -98,6 +101,9 @@
   },
   
   "downloads": {
+    "meta-title": "ScreenToGif - Downloads",
+    "meta-description": "Faça download da versão de instalador ou portátil do ScreenToGif.",
+
     "latest": "Versão mais recente",
     "show-release-notes": "Exibir detalhes da versão",
     "hide-release-notes": "Esconder detalhes da versão",
@@ -138,6 +144,9 @@
   },
   
   "donation": {
+    "meta-title": "ScreenToGif - Faça uma doação",
+    "meta-description": "Ajude o ScreenToGif a crescer, ao fazer uma doação.",
+
     "title": "Você gostou do ScreenToGif?",
     "subtitle": "E está pensando em ajudar a ferramenta de alguma forma?",
 
@@ -204,6 +213,9 @@
   },
   
   "screenshots": {
+    "meta-title": "ScreenToGif - Capturas de tela",
+    "meta-description": "Veja algumas capturas de tela do ScreenToGif.",
+
     "title": "Capturas de tela e exemplos",
     "subtitle": "Veja o que você pode fazer com o ScreenToGif",
     "add": "Você gostaria de adicionar seu gif nesta página?",
@@ -223,6 +235,9 @@
   },
   
   "contact": {
+    "meta-title": "ScreenToGif - Contato",
+    "meta-description": "Entre em contato com o desenvolvedor do ScreenToGif.",
+
     "title": "Veja como entrar em contato comigo",
     "subtitle": "E também um pouco de detalhes sobre mim e sobre o aplicativo",
 
@@ -271,6 +286,9 @@
   },
 
   "features": {
+    "meta-title": "ScreenToGif - Funcionalidades",
+    "meta-description": "Descubra todas as funcionalidades do ScreenToGif.",
+
     "title": "Funcionalidades",
     "subtitle": "Descubra o que você pode fazer com o ScreenToGif",
 
@@ -416,8 +434,12 @@
   },
 
   "how-to-use": {
-    "title": "Documentação",
+    "meta-title": "ScreenToGif - Como utilizar",
+    "meta-description": "Aprenda como utilizar o ScreenToGif.",
+
+    "title": "Como utilizar?",
     "subtitle": "Aprenda a como utilizar o ScreenToGif",
+    "more": "Clique aqui para ler mais a respeito de como utilizar o ScreenToGif",
 
     "list": {
       "startup": "Quando o aplicativo iniciar, clique no botão <b>Gravador</b>.",
@@ -430,6 +452,9 @@
   },
   
   "share": {
+    "meta-title": "ScreenToGif - Compartilhe",
+    "meta-description": "Veja o que pessoas estão falando sobre o ScreenToGif.",
+
     "title": "Compartilhe",
     "subtitle": "Compartilhe os seus pensamentos sobre esta ferramenta",
     "like": "Você está gostando do ScreenToGif?",
@@ -440,6 +465,9 @@
   },
 
   "source": {
+    "meta-title": "ScreenToGif - Código fonte",
+    "meta-description": "Veja os detalhes do projeto de código aberto, ScreenToGif.",
+
     "title": "Código fonte",
     "subtitle": "ScreenToGif tem código aberto!",
 
@@ -451,6 +479,9 @@
   },
 
   "privacy-terms": {
+    "meta-title": "ScreenToGif - Privacidade e termos de uso",
+    "meta-description": "Veja a declaração de privacidade e os termos de uso.",
+
     "title": "Privacidade e termos de uso",
     "subtitle": "E outros detalhes técnicos sobre ScreenToGif",
 

@@ -1,5 +1,7 @@
 <template>
     <div class="downloads">
+        <vue-headful :title="$t('downloads.meta-title')" :description="$t('downloads.meta-description')"/>
+
         <section class="hero is-download">
             <div class="hero-body">
                 <div class="container">

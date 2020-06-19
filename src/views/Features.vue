@@ -1,5 +1,7 @@
 <template>
     <div class="features">
+        <vue-headful :title="$t('features.meta-title')" :description="$t('features.meta-description')"/>
+
         <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">

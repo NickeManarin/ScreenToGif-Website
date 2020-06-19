@@ -1,5 +1,7 @@
 <template>
     <div class="screenshots">
+        <vue-headful :title="$t('screenshots.meta-title')" :description="$t('screenshots.meta-description')"/>
+
         <section class="hero is-screenshots">
             <div class="hero-body">
                 <div class="container">

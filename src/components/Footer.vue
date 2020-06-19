@@ -41,7 +41,7 @@
                             <button class="button" type="button" slot="trigger">
                                 <template>
                                     <b-icon class="left-icon" pack="icon" icon="localization"></b-icon>
-                                    <span>{{$i18n.locale}}</span>                                           
+                                    <span>{{ $i18n.locale }}</span>                                           
                                 </template>
 
                                 <b-icon pack="unicon" icon="uil-angle-down"></b-icon>
@@ -192,6 +192,15 @@
         computed: {
             year() {
                 return new Date().getFullYear();
+            },
+            locale: {
+                get: function() {
+                    return this.$i18n.locale;
+                },
+                set: function(newVal) {
+                    this.$i18n.locale = newVal;
+                    //this.i18n.updateTitle();
+                }
             }
         }
     };

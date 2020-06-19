@@ -1,5 +1,7 @@
 <template>
     <div class="home">
+        <vue-headful :title="$t('home.meta-title')" :description="$t('home.meta-description')"/>
+
         <section class="hero is-primary is-bold is-relative">
             <div class="hero-background"></div>
 

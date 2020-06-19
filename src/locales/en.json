@@ -40,6 +40,9 @@
   },
 
   "home":{
+    "meta-title": "ScreenToGif - Record your screen, edit and save as a gif, video or other formats",
+    "meta-description": "Free screen recorder tool, which lets you record, edit and save as a gif, video or other formats.",
+
     "subtitle": "<strong>Screen</strong>, <b>webcam</b> and <b>sketchboard</b> recorder with an integrated <b>editor</b>",
     "version": "Version {0}",
     "installer" : "Installer",
@@ -98,6 +101,9 @@
   },
 
   "downloads": {
+    "meta-title": "ScreenToGif - Downloads",
+    "meta-description": "Download the installer or portable versions of ScreenToGif now.",
+
     "latest": "Latest version",
     "show-release-notes": "Show release notes",
     "hide-release-notes": "Hide release notes",
@@ -138,6 +144,9 @@
   },
 
   "donation": {
+    "meta-title": "ScreenToGif - Donation",
+    "meta-description": "Help ScreenToGif grow, by helping the project.",
+
     "title": "Did you like ScreenToGif?",
     "subtitle": "And are you thinking about helping it somehow?",
 
@@ -204,6 +213,9 @@
   },
 
   "screenshots": {
+    "meta-title": "ScreenToGif - Screenshots",
+    "meta-description": "View the screenshots of ScreenToGif.",
+
     "title": "Screenshots and examples",
     "subtitle": "Checkout what you can do with ScreenToGif",
     "add": "Would you like to add your gif to this page?",
@@ -223,6 +235,9 @@
   },
   
   "contact": {
+    "meta-title": "ScreenToGif - Contact",
+    "meta-description": "Contact the developer of ScreenToGif.",
+
     "title": "Here's how to contact me",
     "subtitle": "Also a bit of details about me and the app",
 
@@ -271,6 +286,9 @@
   },
 
   "features": {
+    "meta-title": "ScreenToGif - Features",
+    "meta-description": "Discover all ScreenToGif features.",
+    
     "title": "Features",
     "subtitle": "See what you can do with ScreenToGif",
 
@@ -416,8 +434,12 @@
   },
 
   "how-to-use": {
-    "title": "Documentation",
+    "meta-title": "ScreenToGif - How to use",
+    "meta-description": "Learn how to use ScreenToGif.",
+
+    "title": "How to use?",
     "subtitle": "Learn how to use ScreenToGif",
+    "more": "Click here to read more about how to use ScreenToGif",
 
     "list": {
       "startup": "When the app starts, click on the <b>Recorder</b> button.",
@@ -430,6 +452,9 @@
   },
 
   "share": {
+    "meta-title": "ScreenToGif - Share",
+    "meta-description": "See what people are saying about ScreenToGif.",
+
     "title": "Share",
     "subtitle": "Share your thougths on this tool",
     "like": "Are you enjoying ScreenToGif?",
@@ -440,6 +465,9 @@
   },
 
   "source": {
+    "meta-title": "ScreenToGif - Source",
+    "meta-description": "See the details of the open source project, ScreenToGif.",
+
     "title": "Source code",
     "subtitle": "ScreenToGif is open source!",
 
@@ -451,6 +479,9 @@
   },
 
   "privacy-terms": {
+    "meta-title": "ScreenToGif - Privacy and terms",
+    "meta-description": "See the privacy and terms.",
+
     "title": "Privacy and terms",
     "subtitle": "And other technical details about ScreenToGif",
 

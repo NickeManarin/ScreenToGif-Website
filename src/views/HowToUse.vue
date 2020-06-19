@@ -1,5 +1,7 @@
 <template>
     <div class="how-to-use">
+        <vue-headful :title="$t('how-to-use.meta-title')" :description="$t('how-to-use.meta-description')"/>
+
         <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">
@@ -23,6 +25,10 @@
                             </div>
                         </div>
                     </div>
+
+                    <p class="has-text-centered">
+                        <a href="https://github.com/NickeManarin/ScreenToGif/wiki" target="_blank" rel="noopener">{{ $t('how-to-use.more') }}</a>
+                    </p>
                 </div>
             </div>
         </section>

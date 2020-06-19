@@ -1,5 +1,7 @@
 <template>
     <div class="donation">
+        <vue-headful :title="$t('donation.meta-title')" :description="$t('donation.meta-description')"/>
+
         <section class="hero is-donation">
             <div class="hero-body">
                 <div class="container">

@@ -1,5 +1,7 @@
 <template>
-    <div class="notfound">
+    <div class="not-found">
+        <vue-headful title="ScreenToGif - 404" description="Not found..."/>
+
         <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">

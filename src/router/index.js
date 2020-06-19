@@ -11,10 +11,10 @@ const routes = [
         name: "Home",
         component: Home,
         meta: {
-            title: 'ScreenToGif - Record your screen, edit and save as a gif or video',
+            title: 'ScreenToGif - Record your screen, edit and save as a gif, video or other formats',
             metaTags: [
-                { name: 'description', content: 'Free screen recorder tool, which lets you record, edit and save as a gif or video.' },
-                { property: 'og:description', content: 'Free screen recorder tool, which lets you record, edit and save as a gif or video.' }
+                { name: 'description', content: 'Free screen recorder tool, which lets you record, edit and save as a gif, video or other formats.' },
+                { property: 'og:description', content: 'Free screen recorder tool, which lets you record, edit and save as a gif, video or other formats.' }
             ]
         }
     },
@@ -84,27 +84,6 @@ const routes = [
     },
 
     {
-        path: "/how-to-use",
-        name: "HowToUse",
-        component: () => import(/* webpackChunkName: "HowToUse" */ "@/views/HowToUse.vue"),
-        meta: {
-            title: 'ScreenToGif - How To Use',
-            metaTags: [
-                { name: 'description', content: 'Learn how to use ScreenToGif.' },
-                { property: 'og:description', content: 'Learn how to use ScreenToGif.' }
-            ]
-        }
-    },
-    {
-        path: "/docs",
-        redirect: "/how-to-use"
-    },
-    {
-        path: "/help",
-        redirect: "/how-to-use"
-    },
-
-    {
         path: "/contact",
         name: "Contact",
         component: () => import(/* webpackChunkName: "Contact" */ "@/views/Contact.vue"),
@@ -139,6 +118,27 @@ const routes = [
     },
 
     {
+        path: "/how-to-use",
+        name: "HowToUse",
+        component: () => import(/* webpackChunkName: "HowToUse" */ "@/views/HowToUse.vue"),
+        meta: {
+            title: 'ScreenToGif - How to use',
+            metaTags: [
+                { name: 'description', content: 'Learn how to use ScreenToGif.' },
+                { property: 'og:description', content: 'Learn how to use ScreenToGif.' }
+            ]
+        }
+    },
+    {
+        path: "/docs",
+        redirect: "/how-to-use"
+    },
+    {
+        path: "/help",
+        redirect: "/how-to-use"
+    },
+
+    {
         path: "/share",
         name: "Share",
         component: () => import(/* webpackChunkName: "Share" */ "@/views/Share.vue"),
@@ -162,7 +162,7 @@ const routes = [
         meta: {
             title: 'ScreenToGif - Source',
             metaTags: [
-                { name: 'description', content: 'See the details of open source project, ScreenToGif.' },
+                { name: 'description', content: 'See the details of the open source project, ScreenToGif.' },
                 { property: 'og:description', content: 'See the details of open source project, ScreenToGif.' }
             ]
         }
@@ -177,7 +177,7 @@ const routes = [
         name: "PrivacyAndTerms",
         component: () => import(/* webpackChunkName: "PrivacyAndTerms" */ "@/views/PrivacyAndTerms.vue"),
         meta: {
-            title: 'ScreenToGif - Privacy and Terms',
+            title: 'ScreenToGif - Privacy and terms',
             metaTags: [
                 { name: 'description', content: 'See the privacy and terms.' },
                 { property: 'og:description', content: 'See the privacy and terms.' }
@@ -235,7 +235,11 @@ const router = new VueRouter({
 });
 
 //This callback runs before every route change, including on page load.
+//It sets the title and meta-tags for each route change.
 router.beforeEach((to, from, next) => {
+    next(); //Remove this when support for older browsers is needed.
+    return;
+
     //This goes through the matched routes from last to first, finding the closest route with a title.
     //eg. if we have /some/deep/nested/route and /some, /deep, and /nested have titles, nested's will be chosen.
     const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);

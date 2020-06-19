@@ -1,5 +1,7 @@
 <template>
     <div class="terms">
+        <vue-headful :title="$t('privacy-terms.meta-title')" :description="$t('privacy-terms.meta-description')"/>
+
         <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">

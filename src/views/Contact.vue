@@ -18,7 +18,7 @@
                     <div class="columns is-centered">
                         <div class="column is-3 has-text-centered">
                             <figure class="image">
-                                <ResponsiveImage :src="require('@/assets/media/contact/Profile.jpg')" maxWidth="200px" maxHeight="200px" borderRadius="100px" skeleton></ResponsiveImage>
+                                <ResponsiveImage :src="require('@/assets/media/contact/Profile.jpg')" width="200px" height="200px" maxWidth="200px" maxHeight="200px" borderRadius="100px" skeleton/>
                             </figure>
                         </div>
 
@@ -47,7 +47,7 @@
                     <div class="columns is-centered">
                         <div class="column is-3 has-text-centered is-vertical-centered">
                             <figure class="image">
-                                <ResponsiveImage :src="require('@/assets/logo.png')" maxWidth="190px" maxHeight="190px" skeleton></ResponsiveImage>
+                                <ResponsiveImage :src="require('@/assets/logo.png')" width="190px" height="190px" maxWidth="190px" maxHeight="190px" skeleton/>
                             </figure>
                         </div>
 

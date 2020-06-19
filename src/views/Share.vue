@@ -1,5 +1,7 @@
 <template>
-    <div class="screenshots">
+    <div class="share">
+        <vue-headful :title="$t('share.meta-title')" :description="$t('share.meta-description')"/>
+
         <section class="hero is-light">
             <div class="hero-body">
                 <div class="container">
