@@ -16,7 +16,8 @@
                 <div class="container">
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Source', {'event_category': 'Clicks', 'event_label': 'ScreenToGif'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" icon="window"/>
@@ -31,7 +32,8 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif-Website" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif-Website" target="_blank" rel="noopener"
+                                @click="$gtag.event('Source', {'event_category': 'Clicks', 'event_label': 'Website'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" icon="globe"/>
@@ -52,8 +54,7 @@
 </template>
 
 <script>
-    export default {
-    };
+    export default { };
 </script>
 
 <style lang="scss" scoped>

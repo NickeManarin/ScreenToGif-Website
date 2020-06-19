@@ -85,7 +85,8 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.twitter.com/NickeManarin" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.twitter.com/NickeManarin" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-contact', {'event_category': 'Clicks', 'event_label': 'Twitter'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-twitter-alt"/>
@@ -115,7 +116,8 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://discord.gg/XgEqDHX" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://discord.gg/XgEqDHX" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-contact', {'event_category': 'Clicks', 'event_label': 'Discord'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2 has-icon-large" pack="icon" icon="discord"/>
@@ -130,7 +132,8 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.reddit.com/r/ScreenToGif" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.reddit.com/r/ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-contact', {'event_category': 'Clicks', 'event_label': 'Reddit'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2 has-icon-large" icon="reddit-alien-alt"/>
@@ -145,7 +148,8 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.facebook.com/ScreenToGif" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.facebook.com/ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-contact', {'event_category': 'Clicks', 'event_label': 'Facebook'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2 has-icon-large" icon="facebook-f"/>
@@ -160,7 +164,8 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.linkedin.com/company/screentogif" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.linkedin.com/company/screentogif" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-contact', {'event_category': 'Clicks', 'event_label': 'LinkedIn'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2 has-icon-large" icon="linkedin-alt"/>
@@ -175,7 +180,8 @@
                         </div>
                     </div>
 
-                    <b-modal :active.sync="isEmailModalActive" trap-focus aria-role="dialog" aria-modal :width="500" scroll="keep">
+                    <b-modal :active.sync="isEmailModalActive" trap-focus aria-role="dialog" aria-modal :width="500" scroll="keep"
+                        @close="$gtag.event('How-to-contact', {'event_category': 'Clicks', 'event_label': 'Email hide'})">
                         <div class="box has-text-centered content" style="padding: 40px">
                             <h2 class="title">{{ $t('contact.methods.reveal.title') }}</h2>
                             <p class="subtitle">{{ $t('contact.methods.reveal.subtitle') }}</p>
@@ -201,7 +207,7 @@
                     <div class="columns is-centered">
                         <div class="column is-narrow has-text-centered">
                             <figure class="image">
-                                <ResponsiveImage :src="require('@/assets/media/contact/Horizon.jpg')" borderRadius="10px" skeleton></ResponsiveImage>
+                                <ResponsiveImage :src="require('@/assets/media/contact/Horizon.jpg')" width="600px" height="338px" borderRadius="10px" skeleton/>
                             </figure>
                         </div>
                     </div>  
@@ -243,6 +249,7 @@
         methods: {
             openEmailDialog() {
                 this.isEmailModalActive = true;
+                this.$gtag.event('How-to-contact', {'event_category': 'Clicks', 'event_label': 'Email show'});
             },
             copyEmail() {
                 this.$gtag.event('Copy', {'event_category': 'Clicks', 'event_label': 'Email'});

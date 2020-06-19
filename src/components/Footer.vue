@@ -3,7 +3,7 @@
         <div class="container">           
             <div class="columns is-centered">
                 <div class="column is-one-third has-text-centered">
-                    <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable" v-html="$t('footer.share.title').replace('<b>', '<b class=has-text-grey>')"></h4>
+                    <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable" v-html="$t('footer.share.title').replace('<b>', '<b class=has-text-grey>')"/>
 
                     <div class="buttons is-centered">
                         <b-button type="is-twitter" icon-left="twitter-alt" tag="a" target="_blank" :href="getTweetUrl()"
@@ -37,14 +37,15 @@
                     <div class="is-inline">
                         <h4 class="subtitle is-size-5 has-text-grey-71 is-unselectable">{{ $t('footer.language') }}</h4>
 
-                        <b-dropdown v-model="$i18n.locale" aria-role="list">
+                        <b-dropdown v-model="$i18n.locale" aria-role="list" 
+                            @change="$gtag.event('Language', {'event_category': 'Clicks', 'event_label': 'Switch language: ' + $i18n.locale})">
                             <button class="button" type="button" slot="trigger">
                                 <template>
-                                    <b-icon class="left-icon" pack="icon" icon="localization"></b-icon>
+                                    <b-icon class="left-icon" pack="icon" icon="localization"/>
                                     <span>{{ $i18n.locale }}</span>                                           
                                 </template>
 
-                                <b-icon pack="unicon" icon="uil-angle-down"></b-icon>
+                                <b-icon pack="unicon" icon="uil-angle-down"/>
                             </button>
 
                             <b-dropdown-item v-for="(lang, i) in languageArray" :key="`lang${i}`" :value="lang.info.code" aria-role="listitem">
@@ -94,31 +95,33 @@
                     <router-link to="/share" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.share') }}</router-link>
                     <router-link to="/how-to-use" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.how-to-use') }}</router-link>
                     <router-link to="/source" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.source') }}</router-link>
-                    
                     <router-link to="/privacy" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.privacy-terms') }}</router-link>
-                    <!-- <router-link to="/🙀" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">🙀</router-link> -->
                 </div>
             </div>
 
             <div class="content has-text-centered">
                 <p class="subtitle is-6 has-text-grey-light is-unselectable" 
                     v-html="$t('footer.made-by').replace('{0}', '<a class=has-text-weight-semibold href=https://twitter.com/NickeManarin target=_blank rel=noopener>Nicke Manarin</a>')
-                    .replace('<b>', '<b class=has-text-rainbow>')">
+                    .replace('<b>', '<b class=has-text-rainbow>')"
+                    @click="$gtag.event('Other links', {'event_category': 'Clicks', 'event_label': 'Nicke\'s Twitter'})">
                 </p>
 
                 <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('footer.icons-by')
-                    .replace('{0}', '<b class=has-text-grey><a href=https://iconscout.com/unicons target=_blank rel=noopener>Unicons</a></b>')">
+                    .replace('{0}', '<b class=has-text-grey><a href=https://iconscout.com/unicons target=_blank rel=noopener>Unicons</a></b>')"
+                    @click="$gtag.event('Other links', {'event_category': 'Clicks', 'event_label': 'Unicons'})">
                 </p>
 
                 <p class="is-6 has-text-grey-light">
                     <span v-html="$t('footer.license-app').replace('<b>', '<b class=has-text-grey>')
-                        .replace('{0}', '<b><a href=https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt target=_blank rel=noopener>MS-PL</a></b>')">
+                        .replace('{0}', '<b><a href=https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt target=_blank rel=noopener>MS-PL</a></b>')"
+                        @click="$gtag.event('Other links', {'event_category': 'Clicks', 'event_label': 'ScreenToGif license'})">
                     </span>
 
                     <br/>
 
                     <span v-html="$t('footer.license-web').replace('<b>', '<b class=has-text-grey>')
-                        .replace('{0}', '<b><a href=https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE.txt target=_blank rel=noopener>GPL-3.0</a></b>')">
+                        .replace('{0}', '<b><a href=https://github.com/NickeManarin/ScreenToGif-Website-Alpha/blob/master/LICENSE.txt target=_blank rel=noopener>GPL-3.0</a></b>')"
+                        @click="$gtag.event('Other links', {'event_category': 'Clicks', 'event_label': 'Website license'})">
                     </span>
                 </p>
 

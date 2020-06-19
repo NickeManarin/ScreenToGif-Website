@@ -19,8 +19,8 @@
                             <b-tooltip :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="installerButton" type="is-info" size="is-large" icon-left="compact-disc" 
                                     :style="{ 'min-width': getMinWidthPortable() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
-                                    :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
-                                    @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
+                                    :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" 
+                                    :inverted="!isLoading" :outlined="!isLoading" @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                     {{ $t('home.installer') }}
                                 </b-button>
                             </b-tooltip>
@@ -42,8 +42,8 @@
                             <b-tooltip :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="portableButton" type="is-info" size="is-large" icon-left="archive-alt" 
                                     :style="{ 'min-width': getMinWidthInstaller() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"
-                                    :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
-                                    @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
+                                    :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" 
+                                    :inverted="!isLoading" :outlined="!isLoading" @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                      {{ $t('home.portable') }}
                                 </b-button>
                             </b-tooltip>
@@ -94,7 +94,7 @@
                     <div class="requirements columns is-centered">
                         <div class="column is-4 has-text-centered">
                             <b-button class="is-light" tag="a" href="https://www.microsoft.com/windows/" target="_blank" rel="noopener"
-                                @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'Windows'})">
+                                @click="$gtag.event('Requirements links', {'event_category': 'Clicks', 'event_label': 'Windows'})">
                                 <figure class="image is-64x64 is-inline-block">
                                     <ResponsiveImage :src="require('@/assets/media/downloads/Windows.svg')" maxWidth="64px" maxHeight="64px" alt="Windows logo." border-radius="0"/>
                                 </figure>
@@ -105,7 +105,7 @@
 
                         <div class="column is-4 has-text-centered">
                             <b-button class="is-light" tag="a" href="http://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank" rel="noopener"
-                                @click="$gtag.event('Open requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
+                                @click="$gtag.event('Requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
                                 <figure class="image is-64x64 is-inline-block">
                                     <ResponsiveImage :src="require('@/assets/media/downloads/Net.png')" maxWidth="64px" maxHeight="64px" alt="Net Framework logo." border-radius="0"/>
                                 </figure>
@@ -127,7 +127,8 @@
                     <b-table ref="table" :data="$store.releaseList" :loading="isLoading" hoverable detailed detail-key="version" 
                         selectable @select="toggle" paginated :per-page="perPage" :current-page.sync="currentPage" :scrollable="false"
                         aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page" 
-                        :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
+                        :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]"
+                        @details-open="(row, index) => detailsOpen(row)" @details-close="(row, index) => detailsClose(row)">
                     
                         <template slot-scope="props">
                             <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" :label="$t('downloads.releases.table.version')" :custom-sort="sortVersion" sortable>
@@ -181,18 +182,22 @@
                             <article class="media">
                                 <figure class="media-left">
                                     <p class="image is-64x64">
-                                        <ResponsiveImage :src="props.row.author_picture + '&s=128'" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
+                                        <ResponsiveImage :src="props.row.author_picture + '&s=128'" width="64px" height="64px" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
                                     </p>
                                 </figure>
 
                                 <div class="media-content">
                                     <nav class="level is-marginless">
                                         <div class="level-left">
-                                            <a class="level-item" :href="props.row.url" target="_blank" rel="noopener">
+                                            <a class="level-item" :href="props.row.url" target="_blank" rel="noopener"
+                                                @click="$gtag.event('Release links', {'event_category': 'Clicks', 'event_label': 'Release ' + props.row.version })">
                                                 <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ props.row.version }}</span>  
                                             </a>
+
                                             <p class="level-item is-vcentered">
-                                                <small v-html="$t('navigation.download.by').replace('{0}', '<a href={0} target=_blank rel=noopener>@{1}</a>').replace('{0}', props.row.author_url).replace('{1}', props.row.author_login)"></small>  
+                                                <small v-html="$t('navigation.download.by').replace('{0}', '<a href={0} target=_blank rel=noopener>@{1}</a>')
+                                                    .replace('{0}', props.row.author_url).replace('{1}', props.row.author_login)"
+                                                    @click="$gtag.event('Release links', {event_category: 'Clicks', event_label: 'Author ' + props.row.version })"/>
                                             </p>
                                         </div>
 
@@ -204,7 +209,7 @@
                                     </nav>
 
                                     <div class="content has-side-padding">
-                                        <VueShowdown :markdown="props.row.description" tag="span"></VueShowdown>                                                
+                                        <VueShowdown :markdown="props.row.description" tag="span"/>
                                     </div>
 
                                     <hr>
@@ -215,8 +220,8 @@
                                         <div class="level-right">
                                             <div v-if="props.row.download_count_inst > 0" class="level-item has-text-centered">
                                                 <div>
-                                                    <b-button type="is-info" size="is-medium" icon-left="compact-disc"
-                                                            tag="a" :href="props.row.download_link_inst">
+                                                    <b-button type="is-info" size="is-medium" icon-left="compact-disc" tag="a" :href="props.row.download_link_inst" rel="noopener"
+                                                        @click="$gtag.event('Download-Row', {'event_category': 'Clicks', 'event_label': 'Installer ' + props.row.version })">
                                                         {{ $t('home.installer') }}
                                                     </b-button>
 
@@ -229,8 +234,9 @@
 
                                             <div class="level-item has-text-centered">
                                                 <div>
-                                                    <b-button type="is-info" size="is-medium" icon-size="is-medium" icon-left="archive-alt"
-                                                            tag="a" :href="props.row.download_link_port" :disabled="props.row.download_link_port === null">
+                                                    <b-button type="is-info" size="is-medium" icon-left="archive-alt" tag="a" :href="props.row.download_link_port" rel="noopener"
+                                                        :disabled="props.row.download_link_port === null" 
+                                                        @click="$gtag.event('Download-Row', {'event_category': 'Clicks', 'event_label': 'Portable ' + props.row.version })">
                                                         {{ $t('home.portable') }}
                                                     </b-button>
 
@@ -559,8 +565,12 @@
             },
             toggle(row) {
                 this.$refs.table.toggleDetails(row);
-                
-                this.$gtag.event('Expand version details', {'event_category': 'Clicks', 'event_label': 'Row ' + row.version});
+            },
+            detailsOpen(row) {
+                this.$gtag.event('Version details', {'event_category': 'Clicks', 'event_label': 'Expand row ' + row.version});
+            },
+            detailsClose(row) {
+                this.$gtag.event('Version details', {'event_category': 'Clicks', 'event_label': 'Collapse row ' + row.version});
             },
             versionType(prerelease) {
                 return prerelease ? "is-warning" : "is-info";

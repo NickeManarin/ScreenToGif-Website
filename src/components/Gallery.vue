@@ -8,7 +8,7 @@
                             <img class="auto-size" :src="item.src">
                         </a>
 
-                        <figcaption v-html="$t(item.sub)"></figcaption>
+                        <figcaption v-html="$t(item.sub)"/>
                     </figure>
                 </div>
             </div>
@@ -49,9 +49,12 @@
             switchGallery(value) {
                 this.gallery = value;
 
-                if (value)
+                if (value) {
+                    this.$gtag.event('Gallery', {'event_category': 'Clicks', 'event_label': 'Expand gallery'});
                     return document.documentElement.classList.add('is-clipped');
+                }
                 
+                this.$gtag.event('Gallery', {'event_category': 'Clicks', 'event_label': 'Collapse gallery'});
                 return document.documentElement.classList.remove('is-clipped');
             },
             keyUp() {

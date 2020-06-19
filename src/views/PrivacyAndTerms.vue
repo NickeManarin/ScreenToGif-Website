@@ -13,7 +13,7 @@
 
         <section id="privacy" class="section">
             <div class="container">
-                <h3  class="title is-4 is-spaced">
+                <h3 class="title is-4 is-spaced">
                     <a class="is-anchor-link" href="#privacy">#</a>
                     <span>{{ $t('privacy-terms.privacy.title') }}</span>
                 </h3>
@@ -47,7 +47,10 @@
                     <p class="has-text-identation">
                         <span>{{ $t('privacy-terms.terms.phrase1') }}</span> &nbsp;
                         <span>
-                            <a href="https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt" target="_blank" rel="noopener">{{ $t('privacy-terms.terms.more') }}</a>
+                            <a href="https://github.com/NickeManarin/ScreenToGif/blob/master/LICENSE.txt" target="_blank" rel="noopener"
+                                @click="$gtag.event('Privacy-terms', {'event_category': 'Clicks', 'event_label': 'More'})">
+                                {{ $t('privacy-terms.terms.more') }}
+                            </a>
                         </span>
                     </p>
                 </div>

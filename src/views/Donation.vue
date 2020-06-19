@@ -58,7 +58,8 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/issues" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/issues" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-help', {'event_category': 'Clicks', 'event_label': 'Feedback'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-feedback"/>
@@ -73,7 +74,8 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light" tag="router-link" to="/share">
+                            <b-button class="is-light" tag="router-link" to="/share" 
+                                @click="$gtag.event('How-to-help', {'event_category': 'Clicks', 'event_label': 'Share'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-share"/>
@@ -88,7 +90,8 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-quarter-desktop">
-                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/wiki/Localization" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://github.com/NickeManarin/ScreenToGif/wiki/Localization" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-help', {'event_category': 'Clicks', 'event_label': 'Localization'})">
                                 <article class="media">
                                     <figure class="media-left">
                                         <!-- <b-icon class="has-text-info is-size-2" pack="unicon" icon="uil-feedback"/> -->
@@ -130,10 +133,11 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.patreon.com/bePatron?u=3706208" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.patreon.com/bePatron?u=3706208" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Patreon'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Patreon.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Patreon.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -148,7 +152,7 @@
                             <b-button class="is-light" @click="openPaypalDialog()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Paypal.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Paypal.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -160,7 +164,8 @@
                         </div>
                     </div>
 
-                    <b-modal :active.sync="isPaypalModalActive" trap-focus aria-role="dialog" aria-modal :width="500" scroll="keep">
+                    <b-modal :active.sync="isPaypalModalActive" trap-focus aria-role="dialog" aria-modal :width="500" scroll="keep"
+                        @close="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Paypal hide'})">
                         <div class="box has-text-centered content" style="padding: 40px">
                             <h2 class="title">{{ $t('donation.how-donate.paypal.title') }}</h2>
                             <p class="subtitle">{{ $t('donation.how-donate.paypal.subtitle') }}</p>
@@ -227,7 +232,10 @@
                                     </b-select>
 
                                     <p class="control">
-                                        <button id="s_paypal2" type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" class="button is-link">{{ $t('donation.how-donate.paypal.donate') }}</button>                                        
+                                        <button id="s_paypal2" type="submit" name="submit" alt="PayPal - The safer, easier way to pay online!" class="button is-link"
+                                            @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Paypal'})">
+                                            {{ $t('donation.how-donate.paypal.donate') }}
+                                        </button>                                        
                                     </p>
                                 </b-field>
                             </form> 
@@ -236,10 +244,11 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://flattr.com/@NickeManarin/domain/screentogif.com" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://flattr.com/@NickeManarin/domain/screentogif.com" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Flattr'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Flattr.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Flattr.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -251,10 +260,11 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://ko-fi.com/nickemanarin" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://ko-fi.com/nickemanarin" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Kofi'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Ko-fi.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Ko-fi.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -266,10 +276,11 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.buymeacoffee.com/NickeManarin" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.buymeacoffee.com/NickeManarin" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'BuyMeACoffee'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Buymeacoffee.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Buymeacoffee.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -283,10 +294,11 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://steamcommunity.com/id/nickesm/wishlist" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://steamcommunity.com/id/nickesm/wishlist" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Steam'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Steam.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Steam.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -298,10 +310,11 @@
                         </div>
                         
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.gog.com/u/Nickesm/wishlist" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.gog.com/u/Nickesm/wishlist" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'GOG'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Gog.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Gog.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -313,10 +326,11 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://www.amazon.com/hz/wishlist/ls/2S54SRWY2K8KF?ref_=wl_share" target="_blank" rel="noopener">
+                            <b-button class="is-light" tag="a" href="https://www.amazon.com/hz/wishlist/ls/2S54SRWY2K8KF?ref_=wl_share" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Amazon'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Amazon.svg')" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Amazon.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
@@ -346,7 +360,7 @@
                                 <b-tooltip v-if="props.row.url != null" :label="props.row.urlPretty" position="is-right" type="is-link">
                                     {{ props.row.name }}
 
-                                    <b-icon class="has-text-link is-size-7" pack="unicon" icon="uil-external-link-alt"></b-icon>
+                                    <b-icon class="has-text-link is-size-7" pack="unicon" icon="uil-external-link-alt"/>
                                 </b-tooltip>
 
                                 <p v-if="props.row.url == null">{{ props.row.name }}</p>
@@ -381,7 +395,7 @@
                             <section v-if="!isLoading" class="section">
                                 <div class="content has-text-grey has-text-centered">
                                     <p>
-                                        <b-icon icon="frown" size="is-large"></b-icon>
+                                        <b-icon icon="frown" size="is-large"/>
                                     </p>
 
                                     <p>{{ $t('donation.list.not-possible') }}</p>
@@ -581,10 +595,11 @@
                 //document.getElementById('donation-methods').scrollIntoView({ block: 'start',  behavior: 'smooth' });
                 //this.$refs.donationMethods.scrollIntoView({ block: 'start',  behavior: 'smooth' });
                 this.$scrollTo(this.$refs.donationMethods, 700);
+                this.$gtag.event('How-to-help', {'event_category': 'Clicks', 'event_label': 'Donate'});
             },
             openPaypalDialog(){
                 this.isPaypalModalActive = true;
-                
+                this.$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Paypal show'});
             },
             feeConversion(start, end, currency){
                 return this.$t('donation.how-donate.paypal.becomes')
@@ -602,6 +617,7 @@
                     return;
 
                 window.open(row.url, '_blank', 'noopener');
+                this.$gtag.event('Patron table', {'event_category': 'Clicks', 'event_label': 'Installer ' + row.urlPretty });
             }
         }
     };

@@ -90,14 +90,15 @@
 
         <template slot="end">
             <b-navbar-item tag="div" class="has-dropdown is-hidden-touch">
-                <b-dropdown v-model="$i18n.locale" aria-role="list">
+                <b-dropdown v-model="$i18n.locale" aria-role="list" 
+                    @change="$gtag.event('Language', {'event_category': 'Clicks', 'event_label': 'Switch language: ' + $i18n.locale})">
                     <button class="button" :class="navigationColor()" type="button" slot="trigger">
                         <template>
-                            <b-icon class="left-icon" pack="icon" icon="localization"></b-icon>
+                            <b-icon class="left-icon" pack="icon" icon="localization"/>
                             <span class="has">{{$i18n.locale}}</span>                                           
                         </template>
 
-                        <b-icon pack="unicon" icon="uil-angle-down"></b-icon>
+                        <b-icon pack="unicon" icon="uil-angle-down"/>
                     </button>
 
                     <b-dropdown-item v-for="(lang, i) in languageArray" :key="`lang${i}`" :value="lang.info.code" aria-role="listitem">
@@ -120,7 +121,8 @@
                 </div>
             </b-navbar-item>
 
-            <b-modal :active.sync="isModalActive" trap-focus aria-role="dialog" aria-modal :width="720" scroll="keep">
+            <b-modal :active.sync="isModalActive" trap-focus aria-role="dialog" aria-modal :width="720" scroll="keep"
+                @close="$gtag.event('Close modal', {'event_category': 'Clicks', 'event_label': 'Download'});">
                 <div class="box">
                     <article class="media">
                         <figure class="media-left">
@@ -132,14 +134,15 @@
                         <div class="media-content">
                             <nav class="level is-marginless">
                                 <div class="level-left">
-                                    <a class="level-item" :href="$store.release.url" rel="noopener" 
+                                    <a class="level-item" :href="$store.release.url" target="_blank" rel="noopener" 
                                         @click="$gtag.event('Release links', {'event_category': 'Clicks', 'event_label': 'Release'})">
                                         <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ $store.release.version }}</span>  
                                     </a>
+
                                     <p class="level-item is-vcentered">
-                                        <small v-html="$t('navigation.download.by')
-                                        .replace('{0}', '<a href={0} target=_blank rel=noopener @click=$gtag.event(\'Release links\', {\'event_category\': \'Clicks\', \'event_label\': \'Author\'})>@{1}</a>')
-                                        .replace('{0}', $store.release.author_url).replace('{1}', $store.release.author_login)"/>
+                                        <small v-html="$t('navigation.download.by').replace('{0}', '<a href={0} target=_blank rel=noopener>@{1}</a>')
+                                            .replace('{0}', $store.release.author_url).replace('{1}', $store.release.author_login)"
+                                            @click="$gtag.event('Release links', {event_category: 'Clicks', event_label: 'Author'})"/>
                                     </p>
                                 </div>
 
@@ -162,7 +165,7 @@
                             <div class="level-right">
                                 <div v-if="$store.release.download_count_inst > 0" class="level-item has-text-centered">
                                     <div>
-                                        <b-button type="is-info" size="is-medium" icon-left="compact-disc" tag="a" :href="$store.release.download_link_inst"
+                                        <b-button type="is-info" size="is-medium" icon-left="compact-disc" tag="a" :href="$store.release.download_link_inst" rel="noopener"
                                             @click="$gtag.event('Download-Modal', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             {{ $t('home.installer') }}
                                         </b-button>
@@ -174,7 +177,7 @@
 
                                 <div class="level-item has-text-centered has-side-margin">
                                     <div>
-                                        <b-button type="is-info" size="is-medium" icon-size="is-medium" icon-left="archive-alt" tag="a" :href="$store.release.download_link_port" 
+                                        <b-button type="is-info" size="is-medium" icon-left="archive-alt" tag="a" :href="$store.release.download_link_port" rel="noopener"
                                             @click="$gtag.event('Download-Modal', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             {{ $t('home.portable') }}
                                         </b-button>
@@ -304,6 +307,7 @@
                             this.trials = 0;
                             this.trialsFoss = 0;
 
+                            this.$gtag.exception({'description': 'Fallbacking to FossHub.', 'fatal': false});
                             window.open("https://www.fosshub.com/ScreenToGif.html", "_blank", "noopener");
                             this.isLoading = false;
                         }
@@ -311,9 +315,11 @@
                         return;
                     }
 
+                    this.$gtag.event('Open modal', {'event_category': 'Clicks', 'event_label': 'Download'});
                     this.promptDownload();
                 } catch (e) {
                     console.log("It was not possible to get the latest release.", e);
+                    this.$gtag.exception({'description': e, 'fatal': false});
                     this.displayError();
                 }
 

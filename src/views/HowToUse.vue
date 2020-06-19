@@ -18,16 +18,19 @@
                         <div class="columns is-mobile has-text-centered is-centered">
                             <div class="column is-narrow">
                                 <figure class="has-captions">
-                                    <ResponsiveImage class="image" :width="item.width" :height="item.height" :src="item.src" skeleton></ResponsiveImage>
+                                    <ResponsiveImage class="image" :width="item.width" :height="item.height" :src="item.src" skeleton/>
 
-                                    <figcaption v-html="$t(item.sub)"></figcaption>
+                                    <figcaption v-html="$t(item.sub)"/>
                                 </figure>
                             </div>
                         </div>
                     </div>
 
                     <p class="has-text-centered">
-                        <a href="https://github.com/NickeManarin/ScreenToGif/wiki" target="_blank" rel="noopener">{{ $t('how-to-use.more') }}</a>
+                        <a href="https://github.com/NickeManarin/ScreenToGif/wiki" target="_blank" rel="noopener"
+                            @click="$gtag.event('How-to-use', {'event_category': 'Clicks', 'event_label': 'See more'})">
+                            {{ $t('how-to-use.more') }}
+                        </a>
                     </p>
                 </div>
             </div>
