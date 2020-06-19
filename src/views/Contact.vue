@@ -1,5 +1,7 @@
 <template>
     <div class="contact">
+        <vue-headful :title="$t('contact.meta-title')" :description="$t('contact.meta-description')"/>
+
         <section class="hero is-contact">
             <div class="hero-body">
                 <div class="container">

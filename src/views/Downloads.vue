@@ -16,7 +16,7 @@
 
                     <div class="columns is-centered is-vcentered is-multiline is-mobile">
                         <div class="column is-narrow has-text-centered">
-                            <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
+                            <b-tooltip :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="installerButton" type="is-info" size="is-large" icon-left="compact-disc" 
                                     :style="{ 'min-width': getMinWidthPortable() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
                                     :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"
@@ -39,7 +39,7 @@
                         </div>
 
                         <div class="column is-narrow has-text-centered">
-                            <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
+                            <b-tooltip :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="portableButton" type="is-info" size="is-large" icon-left="archive-alt" 
                                     :style="{ 'min-width': getMinWidthInstaller() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"
                                     :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" :inverted="!isLoading" :outlined="!isLoading"

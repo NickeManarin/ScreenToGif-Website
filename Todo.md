@@ -14,3 +14,5 @@
         Edge:
             Menu dropdown not working.
             Tweet size wrong.
+
+    Check wiki image references.

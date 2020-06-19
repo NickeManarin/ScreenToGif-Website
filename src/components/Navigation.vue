@@ -120,24 +120,26 @@
                 </div>
             </b-navbar-item>
 
-            <b-modal :active.sync="isModalActive" trap-focus aria-role="dialog" aria-modal :width="640" scroll="keep">
+            <b-modal :active.sync="isModalActive" trap-focus aria-role="dialog" aria-modal :width="720" scroll="keep">
                 <div class="box">
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-64x64">
-                                <ResponsiveImage :src="$store.release.author_picture + '&s=128'" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
+                                <ResponsiveImage :src="$store.release.author_picture + '&s=128'" width="64px" height="64px" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
                             </p>
                         </figure>
 
                         <div class="media-content">
                             <nav class="level is-marginless">
                                 <div class="level-left">
-                                    <a class="level-item" :href="$store.release.url">
+                                    <a class="level-item" :href="$store.release.url" rel="noopener" 
+                                        @click="$gtag.event('Release links', {'event_category': 'Clicks', 'event_label': 'Release'})">
                                         <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ $store.release.version }}</span>  
                                     </a>
                                     <p class="level-item is-vcentered">
-                                        <!-- <small>{{ $t('navigation.download.by') }} <a :href="$store.release.author_url">@{{ $store.release.author_login }}</a></small>   -->
-                                        <small v-html="$t('navigation.download.by').replace('{0}', '<a href={0} target=_blank rel=noopener>@{1}</a>').replace('{0}', $store.release.author_url).replace('{1}', $store.release.author_login)"></small>  
+                                        <small v-html="$t('navigation.download.by')
+                                        .replace('{0}', '<a href={0} target=_blank rel=noopener @click=$gtag.event(\'Release links\', {\'event_category\': \'Clicks\', \'event_label\': \'Author\'})>@{1}</a>')
+                                        .replace('{0}', $store.release.author_url).replace('{1}', $store.release.author_login)"/>
                                     </p>
                                 </div>
 
@@ -149,7 +151,7 @@
                             </nav>
 
                             <div class="content has-side-padding" v-if="!isEmpty($store.release)">
-                                <VueShowdown :markdown="$store.release.description" tag="span"></VueShowdown>                                                
+                                <VueShowdown :markdown="$store.release.description" tag="span"/>
                             </div>
 
                             <hr>
@@ -160,8 +162,8 @@
                             <div class="level-right">
                                 <div v-if="$store.release.download_count_inst > 0" class="level-item has-text-centered">
                                     <div>
-                                        <b-button type="is-info" size="is-medium" icon-left="compact-disc"
-                                                tag="a" :href="$store.release.download_link_inst">
+                                        <b-button type="is-info" size="is-medium" icon-left="compact-disc" tag="a" :href="$store.release.download_link_inst"
+                                            @click="$gtag.event('Download-Modal', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             {{ $t('home.installer') }}
                                         </b-button>
 
@@ -172,8 +174,8 @@
 
                                 <div class="level-item has-text-centered has-side-margin">
                                     <div>
-                                        <b-button type="is-info" size="is-medium" icon-size="is-medium" icon-left="archive-alt"
-                                                tag="a" :href="$store.release.download_link_port">
+                                        <b-button type="is-info" size="is-medium" icon-size="is-medium" icon-left="archive-alt" tag="a" :href="$store.release.download_link_port" 
+                                            @click="$gtag.event('Download-Modal', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             {{ $t('home.portable') }}
                                         </b-button>
 

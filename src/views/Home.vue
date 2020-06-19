@@ -37,13 +37,13 @@
 
                         <div class="columns is-centered is-vcentered is-multiline is-mobile">
                             <div class="column is-narrow has-text-centered">
-                                <b-tooltip label="Downloads the installer version (.msi), which contains the main executable and optional addons." type="is-light" position="is-top" animated multilined>
+                                <b-tooltip :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-400ms">
                                         <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" rel="noopener"
                                                   class="has-text-expanded" :style="{ 'min-width': getMinWidthInstaller() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
-                                                  @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
+                                                  @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             {{ $t('home.installer') }}
                                         </b-button>
                                     </transition>
@@ -69,13 +69,13 @@
                             </div>
 
                             <div class="column is-narrow has-text-centered">
-                                <b-tooltip label="Downloads the portable version, which contains only the main executable. Addons needs to be dowloaded in Options > Extras." type="is-light" position="is-top" animated multilined>
+                                <b-tooltip :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in-600ms">
                                         <b-button ref="portableButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
                                                   :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'"  rel="noopener"
                                                   class="has-text-expanded" :style="{ 'min-width': getMinWidthPortable() }"
                                                   :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
-                                                  @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
+                                                  @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             {{ $t('home.portable') }}
                                         </b-button>
                                     </transition>
@@ -108,7 +108,7 @@
                                 <div class="columns is-vcentered is-centered is-mobile is-multiline has-top-margin">
                                     <div class="column is-narrow has-text-centered">
                                         <b-button class="has-text-expanded" type="is-primary" size="is-large" icon-left="shopping-bag" inverted style="width: 231px;"
-                                            tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g"
+                                            tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g" rel="noopener"
                                             @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Microsoft Store'})">
                                             Microsoft Store
                                         </b-button>
@@ -120,7 +120,7 @@
 
                                     <div class="column is-narrow has-text-centered">
                                         <b-button class="has-text-expanded" type="is-primary" size="is-large" icon-left="circle" inverted style="width: 231px;"
-                                            tag="a" target="_blank" width="100%" href="https://www.fosshub.com/ScreenToGif.html"
+                                            tag="a" target="_blank" width="100%" href="https://www.fosshub.com/ScreenToGif.html" rel="noopener"
                                             @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
                                             FossHub
                                         </b-button>
@@ -215,7 +215,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.fosshub.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Fosshub.svg')" maxWidth="150px" maxHeight="42.92px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Fosshub.svg')" width="150px" height="42.92px" maxWidth="150px" maxHeight="42.92px"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey has-text-weight-semibold">FossHub</p>
@@ -226,7 +226,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Bluepoint.png')" maxWidth="150px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Bluepoint.png')" width="150px" height="44px" maxWidth="150px" maxHeight="44px"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey has-text-weight-semibold">Bluepoint Games</p>
@@ -239,7 +239,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Jetbrains</p>
@@ -250,7 +250,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.linkedin.com/in/eirikbirkeland" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Eirik'})">
                                 <figure class="image">
-                                    <b-icon class="has-text-info" pack="unicon" icon="uil-user" style="width: 44px; height: 44px; font-size: 39pt"></b-icon>
+                                    <b-icon class="has-text-info" pack="unicon" icon="uil-user" style="width: 44px; height: 44px; font-size: 39pt"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Eirik</p>
@@ -261,7 +261,7 @@
                             <b-button class="is-light padded" tag="a" href="https://loam.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Loam.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Loam.png')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Loam</p>
@@ -272,7 +272,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Whsr.png')" maxWidth="44px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Whsr.png')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">WHSR</p>
@@ -283,7 +283,7 @@
                             <b-button class="is-light padded" tag="a" href="https://elmah.io?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Elmah.png')" maxWidth="60px" maxHeight="44px"></ResponsiveImage>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Elmah.png')" width="60px" height="44px" maxWidth="60px" maxHeight="44px"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Elmah</p>
@@ -307,28 +307,28 @@
                             <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.capture') }}</p>
                             <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.capture-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
 
-                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-capture"></b-icon>
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-capture"/>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.edit') }}</p>
                             <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.edit-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
 
-                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-image-edit"></b-icon>
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-image-edit"/>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.export') }}</p>
                             <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.export-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
 
-                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-film"></b-icon>
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-film"/>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold is-unselectable">{{ $t('home.usage.share') }}</p>
                             <p class="subtitle is-6 has-text-grey-light is-unselectable" v-html="$t('home.usage.share-info').replace(/<b>/g, '<b class=has-text-grey>')"></p>
 
-                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-share"></b-icon>
+                            <b-icon class="is-size-2 has-text-info" pack="unicon" icon="uil-share"/>
                         </div>
                     </div>
  
@@ -343,7 +343,7 @@
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.share.title') }}</h4>
                     <p class="subtitle is-size-5 is-unselectable">{{ $t('home.share.subtitle') }}</p>
 
-                    <TweetList></TweetList>
+                    <TweetList/>
 
                     <b-button tag="router-link" to="/share" type="is-link" class="has-top-margin is-medium">{{ $t('home.share.share') }}</b-button>
                 </div>
