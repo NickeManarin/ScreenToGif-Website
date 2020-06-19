@@ -67,11 +67,21 @@
         border-radius: 5px;
         height: 100%;
         max-width: none !important;
-        width: unset !important;
+        width: unset !important; //Kind of breaks Edge rendering.
+    }
+
+    /**
+    * Conditional CSS for Edge 12+.
+    * @link: https://jeffclayton.wordpress.com/2015/04/07/css-hacks-for-windows-10-and-spartan-browser-preview/
+    */
+    @supports (-ms-ime-align:auto) {
+        .twitter-tweet {
+            width: 100% !important;
+        }
     }
 
     iframe {
-        height: 100% !important;
+        //height: 100% !important; //Breaks Edge rendering.
         width: 100% !important;
     }
 </style>

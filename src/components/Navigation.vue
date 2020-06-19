@@ -484,4 +484,11 @@
     .dropdown-trigger > .button > .left-icon {
         margin-left: 1px !important;
     }
+
+    //Fix for edge, in which the dropdown was not being displayed properly.
+    .navbar-item.is-active .navbar-dropdown {
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transform: translateY(0) !important;
+    }
 </style>
