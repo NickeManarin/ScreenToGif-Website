@@ -54,7 +54,7 @@
                                         <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
                                             <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
                                             •
-                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString()) : "..." }}</small> 
+                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString($i18n.locale)) : "..." }}</small> 
                                         </p>
 
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -86,7 +86,7 @@
                                         <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
                                             <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
                                             •
-                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString()) : "..." }}</small>
+                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString($i18n.locale)) : "..." }}</small>
                                         </p>
 
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>

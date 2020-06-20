@@ -374,11 +374,11 @@
                                     </b-tooltip>
                                 </template>
 
-                                {{ props.row.value.toLocaleString() }} {{ props.row.currency }} 
+                                {{ props.row.value.toLocaleString($i18n.locale) }} {{ props.row.currency }} 
                             </b-table-column>
 
                             <!-- <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="date" label="Date" sortable centered>
-                                {{props.row.date ? new Date(props.row.date).toLocaleDateString() : "unknown"}}
+                                {{props.row.date ? new Date(props.row.date).toLocaleDateString($i18n.locale) : "unknown"}}
                             </b-table-column> -->
 
                             <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
@@ -603,8 +603,8 @@
             },
             feeConversion(start, end, currency){
                 return this.$t('donation.how-donate.paypal.becomes')
-                    .replace('{0}', start.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + currency)
-                    .replace('{1}', end.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + currency)
+                    .replace('{0}', start.toLocaleString(this.$i18n.locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + currency)
+                    .replace('{1}', end.toLocaleString(this.$i18n.locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + currency)
             },
             sortName(a, b, isAsc){
                 return ('' + a.name).localeCompare(b.name) * (isAsc ? -1 : 1);

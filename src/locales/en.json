@@ -159,7 +159,7 @@
       "free-info": "Open source on <b>GitHub<b>",
       "no-ads": "No ads",
       "no-ads-info": "Not even in the <b>installer</b>",
-      "committed": "Committed",
+      "committed": "Commitment",
       "committed-info": "Made with love by a committed developer",
       "for-you": "Made for you",
       "for-you-info": "<b>Feedback driven</b> development"
@@ -267,7 +267,7 @@
 
     "methods": {
       "title": "Methods of contact",
-      "subtitle": "Usually I answer more quickly via Twitter and Discord",
+      "subtitle": "Usually I reply faster via Twitter and Discord",
       "twitter-info": "Follow me <b>@NickeManarin</b>",
       "email": "Email",
       "email-info": "Click here to reveal",
@@ -280,7 +280,7 @@
         "title": "Here's my email",
         "subtitle": "Please, don't send spam :)",
         "spam": "By <b>spam</b>, I mean things unrelated to the app like services and products offerings.",
-        "help": "I'll be happy to try to help you out with the app, as I have always.",
+        "help": "I'll be happy to try to help you out with the app, as I always have.",
         "copied": "Email copied!",
         "copied-error": "It was not possible to copy the email."
       }
@@ -301,7 +301,7 @@
       "screen": {
         "title": "Screen",
         "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
-        "text2": "Select the maximum FPS of the capture (also supports timelapse).",
+        "text2": "Select the capture frequency mode (manual, normal in fps, timelapse in fpm/fph).",
         
         "older": {
           "title": "Older UI",
@@ -372,7 +372,7 @@
         "text3": "Captions/text.",
         "text4": "Drawings or shapes.",
         "text5": "Key strokes or mouse clicks.",
-        "text6": "Borders, shadows and obfuscation (pixelate).",
+        "text6": "Borders, shadows, and obfuscation (pixelate).",
         "text7": "Watermarks (pick your own image).",
         "text8": "Cinemagraph (select parts of the animation to stay static or move)."
       }
@@ -386,20 +386,20 @@
         "text1": "Select how the app starts.",
         "text2": "Choose among 4 color themes (from light to very dark).",
         "text3": "Alter the system tray icon behavior (clicks to open parts of the app).",
-        "text4": "Decide whether the app should update itself automatically (translation updates too can be toggled)."
+        "text4": "Decide whether the app should update itself automatically (translation updates can be toggled too)."
       },
 
       "recorder": {
         "title": "Recorder",
         "text1": "Select if you want the older or newer UI for the screen recorder.",
         "text2": "Choose which capture mode to use (BitBlt, DirectX, with memory cache or not).",
-        "text3": "Enable snapshot mode (manual capture).",
+        "text3": "Select the capture frequency mode (manual, normal, timelapse).",
         "text4": "Enable cursor following (the recorder will follow your cursor during the recording)."
       },
 
       "editor": {
         "title": "Editor",
-        "text1": "Select the previewer style (color and size of the ackgrund grid).",
+        "text1": "Select the previewer style (color and size of the background grid).",
         "text2": "Enable the auto-sizing of the editor window based on the content size and vice-versa.",
         "text3": "Options to enable confirmation dialogs before important actions.",
         "text4": "Option to limit the undo/redo stack."
@@ -425,7 +425,7 @@
       "storage": {
         "title": "Storage",
         "text1": "Control how the app store its data.",
-        "text2": "Recover used space, by deleting old projects."
+        "text2": "Recover used space by deleting old projects."
       },
 
       "extras": {
@@ -449,7 +449,7 @@
       "edit-remove": "Remove unwanted frames by selecting them with <b>Shift-Click</b> and pressing <b>Delete</b>.",
       "edit-transition": "Add a transition to the last frame, so the animation loops more <i>smoothly</i>.",
       "edit-save": "After your touch ups, click on <b>Save As</b> to export the animation to your format of choice.",
-      "final-gif": "Here's the result Gif, around <b>80.6 KB</b>."
+      "final-gif": "Here's the result Gif, around <b>80.6 KiB</b>."
     }
   },
 
@@ -458,7 +458,7 @@
     "meta-description": "See what people are saying about ScreenToGif.",
 
     "title": "Share",
-    "subtitle": "Share your thougths on this tool",
+    "subtitle": "Share your thoughts on this tool",
     "like": "Are you enjoying ScreenToGif?",
     "mention": "Mention it on Twitter 😊",
     "tweet": "Tweet @ScreenToGif or @NickeManarin",
@@ -491,7 +491,7 @@
       "title": "Privacy",
       "software": {
         "title": "The software",
-        "phrase1": "ScreenToGif, does not collect or transmit any personal (or system related) information without the user consent.",
+        "phrase1": "ScreenToGif does not collect or transmit any personal (or system related) information without the user consent.",
         "phrase2": "In fact, the only way that ScreenToGif sends personal or system related data happens when the user sends us a feedback via the Feedback tool.",
         "phrase3": "The personal information may be provided by the users (such as their name and e-mail).",
         "phrase4": "The system related information is captured automatically by the Feedback tool in order to facilitate solving possible issues.",
@@ -508,7 +508,7 @@
     "terms": {
       "title": "Terms",
       "phrase1": "ScreenToGif is free for use for everyone, even in corporate environments.",
-      "more": "You can read more about here."
+      "more": "You can read more about it here."
     }
   },
 
@@ -516,8 +516,8 @@
     "share": {
       "title": "<b>Share</b> on social media",
       "tweet": "Tweet",
-      "share": "Compartilhe",
-      "like": "Curta"
+      "share": "Share",
+      "like": "Like"
     },
 
     "language": "Language",

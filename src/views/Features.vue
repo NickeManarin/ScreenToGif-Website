@@ -260,7 +260,7 @@
                         <li><b>{{ $t('features.options.language.title') }}</b></li>
                         <ul>
                             <li v-html="$t('features.options.language.text1').replace('{0}', '24')"/>
-                            <li v-html="$t('features.options.shortcuts.text2')"/>
+                            <li v-html="$t('features.options.language.text2')"/>
                         </ul>
 
                         <li><b>{{ $t('features.options.storage.title') }}</b></li>

@@ -77,8 +77,8 @@ export default {
         
             return text.replace(new RegExp("[" + charlist + "]+$"), "");
         },
-        toLocaleFixed(value, decimals){
-            return value.toLocaleString(undefined, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
+        toLocaleFixed(value, decimals, locale){
+            return value.toLocaleString(locale, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
         }
     },
     // filters:{ }

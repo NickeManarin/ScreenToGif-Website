@@ -28,7 +28,7 @@
                             <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
                                 <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
                                 •
-                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString()) : "..." }}</small> 
+                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString($i18n.locale)) : "..." }}</small> 
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -51,7 +51,7 @@
                             <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
                                 <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
                                 •
-                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString()) : "..." }}</small>
+                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString($i18n.locale)) : "..." }}</small>
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -138,7 +138,7 @@
                             </b-table-column>
 
                             <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="release_date" :label="$t('downloads.releases.table.date')" sortable centered>
-                                {{props.row.release_date ? new Date(props.row.release_date).toLocaleDateString() : "unknown"}}
+                                {{props.row.release_date ? new Date(props.row.release_date).toLocaleDateString($i18n.locale) : "unknown"}}
                             </b-table-column>
 
                             <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="active_days" :label="$t('downloads.releases.table.days')" sortable numeric>
@@ -148,11 +148,11 @@
                                     </b-tooltip>
                                 </template>
 
-                                {{ props.row.active_days | round(1)}}
+                                {{ toLocaleFixed(props.row.active_days, 1, $i18n.locale) }}
                             </b-table-column>
 
                             <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="download_count" :label="$t('downloads.releases.table.count')" sortable numeric>
-                                {{ props.row.download_count.toLocaleString() }}
+                                {{ props.row.download_count.toLocaleString($i18n.locale) }}
                             </b-table-column>
                         </template>
 
@@ -225,7 +225,7 @@
                                                         {{ $t('home.installer') }}
                                                     </b-button>
 
-                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty(props.row.download_link_inst) ? $t('home.downloads').replace('{0}', props.row.download_count_inst.toLocaleString()) : "..." }}</p>
+                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty(props.row.download_link_inst) ? $t('home.downloads').replace('{0}', props.row.download_count_inst.toLocaleString($i18n.locale)) : "..." }}</p>
                                                     <p class="is-size-7 is-unselectable">{{ props.row.size_inst }}</p>
                                                 </div>
                                             </div>
@@ -240,7 +240,7 @@
                                                         {{ $t('home.portable') }}
                                                     </b-button>
 
-                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty(props.row.download_link_port) ? $t('home.downloads').replace('{0}', props.row.download_count_port.toLocaleString()) : "..." }}</p>
+                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty(props.row.download_link_port) ? $t('home.downloads').replace('{0}', props.row.download_count_port.toLocaleString($i18n.locale)) : "..." }}</p>
                                                     <p class="is-size-7 is-unselectable">{{ props.row.size_port }}</p>
                                                 </div>
                                             </div>
@@ -264,7 +264,7 @@
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-centered-desktop">
-                                    <p v-html="$t('downloads.releases.table.average-month').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed(averagePerMonth, 2))">
+                                    <p v-html="$t('downloads.releases.table.average-month').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed(averagePerMonth, 2, $i18n.locale))">
                                         <!-- <span>Average of </span>  
                                         <span class="has-text-grey">{{ averagePerMonth.toFixed(2).toLocaleString() }}</span>
                                         <span> per month</span> -->
@@ -283,7 +283,7 @@
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-numeric-desktop">
-                                    <p v-html="$t('downloads.releases.table.downloads-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed($store.totalDownloads, 0))">
+                                    <p v-html="$t('downloads.releases.table.downloads-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed($store.totalDownloads, 0, $i18n.locale))">
                                         <!-- <span>Downloaded </span> 
                                         <span class="has-text-grey">{{ $store.totalDownloads.toLocaleString() }}</span>
                                         <span> times</span> -->
@@ -654,12 +654,6 @@
                 //    months -= 1; 
 
                 return (this.downloads.length > 0 ? this.downloads.length : this.$store.releaseList.length) / months;
-            }
-        },
-
-        filters: {
-            round(value, length) {
-                return value.toFixed(length);
             }
         }
     };

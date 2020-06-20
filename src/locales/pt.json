@@ -449,7 +449,7 @@
       "edit-remove": "Remova quadros não desejados selecionando eles com <b>Shift-Click</b> e depois pressionando a tecla <b>Delete</b>.",
       "edit-transition": "Adicione uma transição no último quadro, para que a animação tenha um loop mais <i>suave</i>.",
       "edit-save": "Após retocar a animação, clique no botão <b>Salvar Como</b> para exportar a animação para o seu formato de escolha.",
-      "final-gif": "Aqui está o Gif exportado, com um tamanho de <b>80.6 KB</b>."
+      "final-gif": "Aqui está o Gif exportado, com um tamanho de <b>80,6 KiB</b>."
     }
   },
   

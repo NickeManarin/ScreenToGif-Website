@@ -175,7 +175,7 @@
                                             {{ $t('home.installer') }}
                                         </b-button>
 
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString()) }}</p>
+                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString($i18n.locale)) }}</p>
                                         <p class="is-size-7 is-unselectable has-arrow-cursor">{{ $store.release.size_inst }}</p>
                                     </div>
                                 </div>
@@ -187,7 +187,7 @@
                                             {{ $t('home.portable') }}
                                         </b-button>
 
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString()) }}</p>
+                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString($i18n.locale)) }}</p>
                                         <p class="is-size-7 is-unselectable has-arrow-cursor">{{ $store.release.size_port }}</p>
                                     </div>
                                 </div>
