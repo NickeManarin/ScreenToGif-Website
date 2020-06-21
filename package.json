@@ -1,6 +1,6 @@
 {
   "name": "screentogif.website",
-  "version": "0.9.1",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -65,5 +65,5 @@
     "> 1%",
     "last 2 versions"
   ],
-  "homepage": "https://github.com/NickeManarin/ScreenToGif-Website-Alpha"
+  "homepage": "https://github.com/NickeManarin/ScreenToGif-Website"
 }
