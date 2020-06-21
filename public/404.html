@@ -13,7 +13,8 @@
         console.log('Location', location);
 
         //Forces the navigation back to the main page, since it's the only entry point that works.
-        location.replace(location.pathname.split('/').slice(0, 1 + segment).join('/'));
+        //location.replace(location.pathname.split('/').slice(0, 1 + segment).join('/'));
+        location.replace('/');
 
         console.log('Location 2:', location);
       </script>
