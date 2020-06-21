@@ -6,7 +6,8 @@
       <script>
         const segment = 1;
         //Gets the relative path and the hash of the URL.
-        sessionStorage.redirect = '/' + location.pathname.slice(1).split('/').slice(segment).join('/');
+        //sessionStorage.redirect = '/' + location.pathname.slice(1).split('/').slice(segment).join('/');
+        sessionStorage.redirect = location.pathname.split('/').slice(0, 1 + segment).join('/');
         sessionStorage.hash = location.hash;
 
         console.log('SessionStorage', sessionStorage);
@@ -14,7 +15,7 @@
 
         //Forces the navigation back to the main page, since it's the only entry point that works.
         //location.replace(location.pathname.split('/').slice(0, 1 + segment).join('/'));
-        location.replace('/');
+        location.replace('/' + location.pathname.slice(1).split('/').slice(segment).join('/'));
 
         console.log('Location 2:', location);
       </script>
