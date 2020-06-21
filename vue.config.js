@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? '/ScreenToGif-Website-Alpha/' : '/', //Erase later when using custom domain.
+  //publicPath: process.env.NODE_ENV === 'production' ? '/ScreenToGif-Website-Alpha/' : '/', //Erase later when using custom domain.
   lintOnSave: false,
 
   pluginOptions: {
