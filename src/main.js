@@ -26,7 +26,7 @@ Vue.use(VueShowdown, {
 Vue.use(VueClipboard);
 Vue.use(CustomColors);
 Vue.use(VueGtag, { 
-    config: { id: "UA-87410077-2" },
+    config: { id: "UA-87410077-1" },
     enabled: process.env.NODE_ENV === 'production' 
 }, router);
 Vue.use(VueScrollTo);
