@@ -34,6 +34,8 @@ Vue.component('vue-headful', vueHeadful);
 
 Vue.config.productionTip = false;
 
+console.log('Is prod?', process.env.NODE_ENV === 'production');
+
 Vue.prototype.$store = {
     release: {},
     releaseList: [],
