@@ -53,7 +53,6 @@ new Vue({
             delete sessionStorage.redirect;
             delete sessionStorage.hash;
 
-            console.log('Final route:', redirect + hash);
             this.$router.push(redirect + hash);
         }
     }
