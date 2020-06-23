@@ -44,6 +44,10 @@ const routes = [
         path: "/releases",
         redirect: "/downloads"
     },
+    {
+        path: "/downloads.html",
+        redirect: "/downloads"
+    },
 
     {
         path: "/donation",
@@ -59,6 +63,10 @@ const routes = [
     },
     {
         path: "/donate",
+        redirect: "/donation"
+    },
+    {
+        path: "/donation.html",
         redirect: "/donation"
     },
 
@@ -82,6 +90,10 @@ const routes = [
         path: "/images",
         redirect: "/screenshots"
     },
+    {
+        path: "/screenshots.html",
+        redirect: "/screenshots"
+    },
 
     {
         path: "/contact",
@@ -97,6 +109,10 @@ const routes = [
     },
     {
         path: "/about",
+        redirect: "/contact"
+    },
+    {
+        path: "/contact.html",
         redirect: "/contact"
     },
 
