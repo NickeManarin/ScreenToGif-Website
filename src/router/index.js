@@ -212,6 +212,10 @@ const routes = [
         path: "/vpat",
         redirect: "/privacy-terms"
     },
+    {
+        path: "/privacy.html",
+        redirect: "/privacy-terms"
+    },
 
     {
         path: "/404",
