@@ -1,0 +1,536 @@
+{
+  "info": {
+    "code": "nl",
+    "lang": "Nederlands"
+  },
+
+  "navigation": {
+    "home": "Home",
+    "downloads": "Downloads",
+    "donate": "Doneren",
+    "screenshots": "Screenshots",
+    "contact": "Contact",
+    "more": "Meer",
+    "how-to-use": "Hoe te gebruiken",
+    "features": "Mogelijkheden",
+    "share": "Delen",
+    "source": "Broncode",
+    "privacy-terms": "Privacy en voorwaarden",
+
+    "download": {
+      "download": "Download",
+      "info": "De nieuwste release downloaden",
+      "by": "door {0}",
+      "dates": {
+        "years": "{0} jaren geleden",
+        "year": "een jaar geleden",
+        "months": "{0} maanden geleden",
+        "month": "een maand geleden",
+        "weeks": "{0} weken geleden",
+        "week": "een week geleden",
+        "days": "{0} dagen geleden",
+        "day": "een dag geleden",
+        "hours": "{0} uren geleden",
+        "hour": "een uur geleden",
+        "minutes": "{0} minuten geleden",
+        "minute": "een minuut geleden",
+        "now": "nu"
+      }
+    }
+  },
+
+  "home":{
+    "meta-title": "ScreenToGif - schermopname tool, waarmee je kan opnemen, bewerken en bewaren als een gif, video of andere formaten",
+    "meta-description": "Gratis schermopname tool, waarmee je kan opnemen, bewerken en bewaren als een gif, video of andere formaten.",
+
+    "subtitle": "<strong>Scherm-</strong>, <b>webcam-</b> en <b>whiteboard</b>opname met geintegreerde <b>bewerkingsmogelijkheden</b>",
+    "version": "Versie {0}",
+    "installer" : "Installatieprogramma",
+    "installer-info": "Download installatieprogramma (.msi), die uitvoerbestand bestand en benodigde aanvullingen bevat.",
+    "or": "of",
+    "portable" : "Portable",
+    "portable-info": "Download de portable versie, die enkel uitvoerbaar bestand (.exe) bevat. Aanvullingen moeten gedownload worden via Opties > Extra's.",
+    "downloads" : "{0} downloads",
+    "more-releases" : "Meer download opties",
+    "fewer-releases" : "Minder download opties",
+    "copy" : "Kopiëren",
+    "copied" : "Commanda gekopieerd!",
+    "not-copied" : "Het was niet mogelijk om commando te kopiëren.",
+
+    "why": {
+      "free": "Gratis",
+      "free-info": "Open source op <b>GitHub</b>",
+      "compact": "Compact",
+      "compact-info": "Zo klein als <b>{0}</b>",
+      "powerful": "Krachtig",
+      "powerful-info": "Opnemen, bewerken en <b>exporteren!</b>",
+      "customizable": "Aanpasbaar",
+      "customizable-info": "Gebruik het op de manier die <b>jij wilt</b>",
+      "features": "Ontdek alle mogelijkheden"
+    },
+  
+    "media": {
+      "title": "Media",
+      "subtitle": "Screenshots en gifs",
+      "more": "Bekijk meer screenshots"
+    },
+
+    "supporters": {
+      "title": "Speciale dank",
+      "subtitle": "Dit zijn sommige van onze supporters van dit project",
+      "become": "Wordt een sponsor"
+    },
+
+    "usage": {
+      "title": "Hoe te gebruiken?",
+      "subtitle": "Neem op en bewerk je opname in handomdraai",
+      "capture": "Opnemen",
+      "capture-info": "<b>Scherm</b>, <b>webcam</b> of <b>whiteboard</b> opname",
+      "edit": "Bewerken",
+      "edit-info": "Bewerk je <b>opname</b> of <b>andere media</b>",
+      "export": "Exporteren",
+      "export-info": "Exporteer naar <b>Gif</b>, <b>Apng</b>, <b>Video</b>, <b>Afbeeldingen</b>, <b>Project</b> of <b>PSD</b>",
+      "share": "Delen",
+      "share-info": "Deel via <b>Imgur</b>, <b>Gfycat</b> of anderen",
+      "learn": "Meer leren over gebruik"
+    },
+
+    "share": {
+      "title": "Wat de gebruikers zeggen",
+      "subtitle": "De leuke reacties van mensen op Twitter",
+      "share": "Deel je ervaring"
+    }
+  },
+
+  "downloads": {
+    "meta-title": "ScreenToGif - Downloads",
+    "meta-description": "Download installatieprogramma van portable versies van ScreenToGif nu!",
+
+    "latest": "Laatste versie",
+    "show-release-notes": "Toon release-opmerkingen",
+    "hide-release-notes": "Verberg release-opmerkingen",
+    
+    "requirements":{
+      "title": "Vereisten",
+      "subtitle": "Deze applicatie heeft de volgende minimale vereisten qua software en hardware om te kunnen werken",
+      "windows": "<b>Windows 7 SP1</b> of nieuwer",
+      "framework": "<b>.Net Framework 4.8</b> of nieuwer"
+    },
+
+    "releases":{
+      "title": "Alle releases",
+      "subtitle": "Vouw uit om de release-opmerkingen te zien",
+      
+      "table": {
+        "version": "Versie",
+        "date": "Release datum",
+        "days": "Actieve dagen",
+        "days-info": "Aantal dagen recentste release",
+        "count": "Download teller",
+        "not-possible": "Het was niet mogelijk om alle releases te laden",
+        "versions-total": "{0} versies uitgegeven",
+        "average-month": "Gemiddelde van {0} per maand",
+        "active-total": "Actief voor {0}",
+        "downloads-total": "{0} keren gedownload"
+      },
+
+      "dates": {
+        "years": "{0} jaren",
+        "year": "{0} jaar",
+        "months": "{0} maanden",
+        "month": "{0} maand",
+        "days": "{0} dagen",
+        "day": "{0} dag"
+      }
+    }
+  },
+
+  "donation": {
+    "meta-title": "ScreenToGif - Donatie",
+    "meta-description": "Help ScreenToGif te groeien door het project te steunen.",
+
+    "title": "Vindt je ScreenToGif leuk?",
+    "subtitle": "En hoe denk je erover om te helpen op één of andere manier?",
+
+    "why": {
+      "title": "Waarom ScreenToGif helpen?",
+      "subtitle": "Het project heeft baat bij je ondersteuning",
+      "free": "Gratis",
+      "free-info": "Open source op <b>GitHub<b>",
+      "no-ads": "Geen advertenties",
+      "no-ads-info": "Zelfs niet in <b>installatieprogramma</b>",
+      "committed": "Blijvende inzet",
+      "committed-info": "Gemaakt met liefde door betrokken ontwikkelaar",
+      "for-you": "Gemaakt voor jou",
+      "for-you-info": "<b>Feedback gedreven</b> ontwikkeling"
+    },
+
+    "how-help": {
+      "title": "Hoe kan ik helpen?",
+      "subtitle": "Als je het project wilt helpen, dan kan dat op de volgende manieren",
+      "feedback": "Feedback",
+      "feedback-info": "Rapporteer bugs en geef feedback over gebruikservaring",
+      "share": "Deel",
+      "share-info": "Deel met je vrienden of geef een review",
+      "localization": "Localisatie",
+      "localization-info": "Hou de vertalingen bij of voeg een ontbrekende toe",
+      "donate": "Doneer",
+      "donate-info": "Donaties zijn ook welkom 😊"
+    },
+
+    "how-donate": {
+      "title": "Hoe kan ik doneren?",
+      "subtitle": "Hier zijn wat mogelijkheden om te doneren",
+      "patreon-info": "Schrijf u in om maandelijks te doneren via Patreon",
+      "paypal-info": "Eenmalige donatie via PayPal",
+      "flattr-info": "Schrijf u in om maandelijks te doneren via Flattr",
+      "coffee-info": "Koop een kopje koffie voor de ontwikkelaar",
+      "steam-info": "Schenk games of credits via Steam",
+      "gog-info": "Schenk games via GOG",
+      "amazon": "Amazon wensenlijst",
+      "amazon-info": "Hulp voor nieuwe onderdelen voor mijn computer",
+
+      "paypal": {
+        "title": "Doneer metPayPal",
+        "subtitle": "Selecteer je munteenheid voordat je verder gaat",
+        "show-fee": "Toon uitleg over PayPal kosten",
+        "hide-fee": "Verberg uitleg over PayPal",
+        "explanation": "PayPal berekent kosten gebaseerd op gedoneerde waarde (6.4%) + vaste kosten gebaseerd op geselecteerde munteenheid(0.1 tot 0.5 cents per dollar).",
+        "becomes": "{0} wordt {1}",
+        "donate": "Doneer"
+      }
+    },
+
+    "list": {
+      "title": "Patroon lijst",
+      "subtitle": "Dit zijn enkele mensen of bedrijven die het project ondersteunen",
+      "patron": "Patroon",
+      "ammount": "Donatie hoogte",
+      "ammount-info": "De bestelling is gedaan in U$D waarde.",
+      "from": "Van",
+      "not-possible": "Het was niet mogelijk om de patreon list te laden.",
+      "list-name": "Wil je (bedrijfs)naam noemen in deze lijst na de donatie?",
+      "contact": "Contacteer mij :)"
+    }
+  },
+
+  "screenshots": {
+    "meta-title": "ScreenToGif - Screenshots",
+    "meta-description": "Screenshots van ScreenToGif bekijken.",
+
+    "title": "Screenshots en voorbeelden",
+    "subtitle": "Bekijk wat je allemaal kan doen met ScreenToGif",
+    "add": "Wil je je gif op deze pagina terugzien?",
+    "send": "Stuur me een bericht :)",
+
+    "gallery":{
+      "startup": "Dit is het startpunt van de applicatie.<br>Je kan echter ook de applicatie instellen dat je direct met de <b>opnamemogelijkheden</b> begint.",
+      "recorder": "Dit is het standaard scherm om scherm op te nemen. Je kan heel simpel dit scherm bovenop een venster of scherm plaatsen die je wilt opnemen.",
+      "recorder-use": "Als je klikt op draadkruis icoontje en deze op een venster sleept, dan zal de Schermopname zich aanpassen aan de grootte hiervan.",
+      "recorder-new": "Dit is <b>nieuwe scherpopname scherm</b>, welke je mogelijkheid biedt om met klikken en slepen een gedeelte van scherm te selecteren.<br>Je kan ook wisselen tussen de venster en scherm selectiemogelijkheden.",
+      "editor": "Dit is de editor. Hier kan je je opnames bewerken en exporteren naar <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> en/of <b>psd</b>.",
+      "webcam": "Dit is een opnamemogelijkheid van een webcam.",
+      "board": "De mogelijkheid voor whiteboard opname maakt het mogelijk om je tekeningen automatisch op te nemen tijdens het tekenen.",
+      "board-example": "Dit is een voorbeeld van een opname van een tekening.",
+      "options": "ScreenToGif heeft <b>heel veel</b> mogelijkheden!"
+    }
+  },
+  
+  "contact": {
+    "meta-title": "ScreenToGif - Contact",
+    "meta-description": "Neem contact op met de ontwikkelaar van ScreenToGif.",
+
+    "title": "Op deze manieren kan je me contacteren",
+    "subtitle": "En ook beetje details over de applicatie en mijzelf",
+
+    "who": {
+      "title": "Wie ben ik?",
+      "subtitle": "De maker van ScreenToGif",
+      "part1": "Hi, ik heet Nicke Manarin, een {0} jaar oude Braziliaanse ontwikkelaar.",
+      "part2": "Ik ontwikkel al software sinds 2012. Ik ben gestart met het leren van mijn vaardigheden tijdens computerlessen op school.",
+      "part3": "Na mijn diploma uitreiking in 2016 ben ik door blijven gaan met leren van nieuwe vaardigheden, die ik gelijk kon gebruiken in mijn projecten.",
+      "part4": "Ik ben er scherp op om software te ontwikkelen die betekenisvol en gemakkelijk te gebruiken is."
+    },
+
+    "why":{
+      "title": "Waarom bestaat ScreenToGif?",
+      "subtitle": "Geschiedenis achter de app",
+      "part1": "Dit project is geboren lang geleden in oktober 2013. Het was een manier voor mij om te leren coderen, terwijl ik wel iets zinnigs deed.",
+      "part2": "Ik wilde beter worden in het ontwerpen van gebruikersinterfaces (en ik had er ook problemen mee), dus ik dacht dat het handig zou zijn om wat schermopnames te maken zodat ik om hulp kon vragen in forums.",
+      "part3": "Terwijl er al verschillend apps bestonden, had geen enkele een specifieke mogelijkheid die ik nodig had. Hierop besloot ik om mijn eigen oplossing te maken, terwijl ik toen nog niet wist dat het zoveel werk zou zijn.",
+      "part4": "De naam 'ScreenToGif' is zo simpel als maar kan vanwege de eerste functie: een schermopname tool die je kan exporteren naar gif. De naam moest makkelijk te onthouden zijn.",
+      "part5": "Maar ik had geen vooruitziende blik: het enige gedeelte in de naam dat nog relevant is, is 'To'. De applicatie kan namelijk tegenwoordig meer opnemen dan alleen een computerscherm, maar ook naar meer formaten exporteren.",
+      "part6": "Dit project kreeg een volledige herstart in 2016. Nadat ik voor maanden verscheidene problemen had met het oude platformm, besloot ik opnieuw te beginnen.",
+      "part7": "Deze transitie heeft me de mogelijkheid gegeven om meer opties te ontwikkelen, met gemakkelijker te begrijpen gebruikersinterfaces.",
+      "part8": "Alhoewel ik de maker en het onderhoud van het project uitvoeren, zijn er ook andere gebruikers die bijdrages leveren met bug meldingen, wensen en vertalingen. Voel je vrij om een commentaar achter te laten! :)"
+    },
+
+    "methods": {
+      "title": "Contactmogelijkheden",
+      "subtitle": "Gebruikelijk reageer ik sneller via Twitter en Discord",
+      "twitter-info": "Volg mij <b>@NickeManarin</b>",
+      "email": "Email",
+      "email-info": "Klik hier om te tonen",
+      "discord-info": "Word lid van het kanaal",
+      "reddit-info": "Word lid van Reddit sub <b>r/ScreenToGif</b>",
+      "facebook-info": "Pagina leuk vinden",
+      "linkedin-info": "Volg de pagina",
+
+      "reveal": {
+        "title": "Dit is mijn email",
+        "subtitle": "Aub, stuur me geen spam :)",
+        "spam": "Met <b>spam</b> bedoel ik ook zaken die niets met de applicatie te maken hebben, zoals aanbiedingen voor diensten of producten.",
+        "help": "Ik zal je graag helpen met het gebruiken van de applicatie, zoals ik altijd heb gedaan.",
+        "copied": "Email gekopieerd!",
+        "copied-error": "Het was niet mogelijk om het emailadres te kopiëren."
+      }
+    }
+  },
+
+  "features": {
+    "meta-title": "ScreenToGif - Mogelijkheden",
+    "meta-description": "Ontdek alle ScreenToGif mogelijkheden.",
+    
+    "title": "Mogelijkheden",
+    "subtitle": "Bekijk wat je kan doen met ScreenToGif",
+
+    "recorders": {
+      "title": "Recorders",
+      "text1": "Gebruik ScreenToGif om je <b>scherm</b>, <b>webcam</b> of <b>whiteboard</b> tekeningen op te nemen.",
+
+      "screen": {
+        "title": "Scherm",
+        "text1": "Gebruik de <b>opname</b>, <b>pauzeer</b>, <b>weggooi</b> of <b>stop</b> knoppen om je opname te controleren.",
+        "text2": "Selecteer de opname frequentie modus (manueel, normaal in fps, timelapse in fpm/fph).",
+        
+        "older": {
+          "title": "Oudere gebruikersinterface",
+          "text1": "Sleep of wijzig formaat van venster om gebied te bepalen wat je wilt opnemen.",
+          "text2": "Type exacte grootte van je opname gebied in.",
+          "text3": "Sleep draadkruis icoontje en laat het vallen bovenop venster waarvoor opname gemaakt moet worden."
+        },
+
+        "newer": {
+          "title": "Nieuwe gebruikersinterface",
+          "text1": "Geef selectie mogelijkheid op, waarmee je een <b>gedeelte</b>, een <b>venster</b> of een <b>volledig scherm</b> kan opnemen."
+        }
+      },
+
+      "webcam":{
+        "title": "Webcam",
+        "text1": "Gebruik de <b>opname</b>, <b>pauzeer</b>, <b>weggooi</b> of <b>stop</b> knoppen om je opname te controleren.",
+        "text2": "Selecteer maximum FPS van de opname.",
+        "text3": "Wijzig formaat van het venster om grootte van opname te bepalen."
+      },
+
+      "sketchboard": {
+        "title": "Whiteboard",
+        "text1": "Gebruik de <b>Automatische opname</b> of druk <b>Ctrl om te schakelen tussen</b> (<i>pauzes</i> of <i>opnames</i>, afhankelijk of automatisch opnemen geactiveerd is of niet).",
+        "text2": "Selecteer maximum FPS van de opname.",
+        "text3": "Pas het formaat van het venster aan om de grootte van de opname aan te passen."
+      }
+    },
+
+    "editor": {
+      "title": "Editor",
+
+      "file": {
+        "title": "Bestand",
+        "text1": "Start een nieuwe opname of open een mediabestand (videos of afbeeldingen) of een projectbestand.",
+        "text2": "Voeg een nieuwe opname of mediabestand (videos of afbeeldingen) toe aan een bestaand project.",
+        "text3": "Open recente projecten.",
+        "text4": "Exporteer je project naar:",
+        "video": "Video",
+        "image": "Afbeeldingen",
+        "project": "ScreenToGif project"
+      },
+
+      "basic": {
+        "title": "Basisbediening",
+        "text1": "Ongedaan maken, herhalen, of alles herstellen.",
+        "text2": "Kopiëren, knippen en plakken van frames.",
+        "text3": "Selecteer meerdere frames of blader naar een specifieke frame.",
+        "text4": "Voorvertoning van de animatie."
+      },
+
+      "frame": {
+        "title": "Frame manipulatie",
+        "text1": "Verwijder geselecteerde frames.",
+        "text2": "Verwijder duplicaten.",
+        "text3": "Reduceer framerate.",
+        "text4": "Verwijder alle vorige of volgende frames.",
+        "text5": "Keer om, voeg jojo toe (voorwaarts en achterwaarts) of verplaats frames.",
+        "text6": "Wijzig de vertraging van de frames (overschrijven standaardwaarde, verhogen/verlagen of schalen).",
+        "text7": "Titelframes toevoegen.",
+        "text8": "Overgangen toevoegen (vervagen of dia-effecten)."
+      },
+
+      "image": {
+        "title": "Afbeelding manipulatie",
+        "text1": "Formaat aanpassen, bijsnijden of spiegelen / draaien.",
+        "text2": "Overlays toevoegen:",
+        "text3": "Bijschriften / tekst.",
+        "text4": "Tekeningen of vormen.",
+        "text5": "Toetsenbord aanslagen of muisklikken.",
+        "text6": "Randen, schaduwen en verduistering (pixelate).",
+        "text7": "Watermerken (kies je eigen afbeelding).",
+        "text8": "Cinemagraph (selecteer gedeeltes van animatie die statisch blijven of bewegen)."
+      }
+    },
+
+    "options": {
+      "title": "Opties",
+
+      "app": {
+        "title": "Applicatie",
+        "text1": "Selecteer hoe de applicatie start.",
+        "text2": "Kies tussen 4 verschillende kleurenthema's (van licht to zeer donker).",
+        "text3": "Wijzig het gedrag van het systeemvakpictogram (klikken om gedeeltes applicaties te openen).",
+        "text4": "Beslis of de applicatie zichzelf automatisch moet updaten (vertaling-updates kunnen ook worden ingschakeld)."
+      },
+
+      "recorder": {
+        "title": "Opname",
+        "text1": "Selecteer of u de oudere of nieuwere gebruikersinterface voor de schermrecorder wilt.",
+        "text2": "Kies welke opnamemodus u wilt gebruiken (BitBlt, DirectX, met geheugencache of niet).",
+        "text3": "Selecteer de opname frequentiemodus (handmatig, normaal, timelapse).",
+        "text4": "Muiscursor volgen inschakelen (de recorder volgt uw cursor tijdens de opname)."
+      },
+
+      "editor": {
+        "title": "Editor",
+        "text1": "Selecteer de voorbeeldstijl (kleur en grootte van het achtergrondraster).",
+        "text2": "Schakel het automatisch aanpassen van het editorvenster in op basis van de inhoudsgrootte en vice versa.",
+        "text3": "Opties om bevestigingsdialogen in te schakelen vóór belangrijke acties.",
+        "text4": "Optie om de ongedaan maken / opnieuw herhalen te beperken."
+      },
+
+      "tasks": {
+        "title": "Taken",
+        "text1": "U kunt taken maken om effecten op uw opname toe te passen, zodat u ze niet elke keer handmatig hoeft toe te passen."
+      },
+
+      "shortcuts": {
+        "title": "Snelkoppelingen",
+        "text1": "Stel sneltoetsen in om de opnamemogelijkheden en editor te openen.",
+        "text2": "Je kan ook snelkoppelingen instellen om je opnamen te beheren (opnemen, pauzeren, stoppen en meer)."
+      },
+
+      "language": {
+        "title": "Taal",
+        "text1": "Kies uit {0} talen.",
+        "text2": "De applicatie selecteert automatisch een taal op basis van uw huidige systeeminstellingen."
+      },
+
+      "storage": {
+        "title": "Opslag",
+        "text1": "Bepaal hoe de applicatie zijn gegevens opslaat.",
+        "text2": "Herstel gebruikte ruimte door oude projecten te verwijderen."
+      },
+
+      "extras": {
+        "title": "Extra's",
+        "text1": "Download plugins voor de applicatie."
+      }
+    }
+  },
+
+  "how-to-use": {
+    "meta-title": "ScreenToGif - Hoe te gebruiken",
+    "meta-description": "Leer hoe je ScreenToGif kan gebruiken.",
+
+    "title": "Hoe te gebruiken?",
+    "subtitle": "Leer hoe je ScreenToGif kan gebruiken",
+    "more": "Klik hier om meer te lezen over de gebruiksmogelijkheden van ScreenToGif",
+
+    "list": {
+      "startup": "Wanneer de applicatie start, klik je op de knop <b> Opname </b>.",
+      "record": "Er verschijnt een geperforeerd/leeg venster, lijn uit met wat u wilt opnemen en klik op <b> Opnemen </b>. Klik als u klaar bent op de knop <b> Stoppen </b>.",
+      "edit-remove": "Verwijder ongewenste frames door ze te selecteren met <b> Shift + klik </b> en op <b> Verwijderen </b> te drukken.",
+      "edit-transition": "Voeg een overgang toe aan het laatste frame, zodat de animatie <i> vloeiender </i> loopt.",
+      "edit-save": "Klik na uw aanpassingen op <b> Opslaan als </b> om de animatie naar het door u gewenste formaat te exporteren.",
+      "final-gif": "Hier is het resultaat Gif, ongeveer <b> 80,6 KiB </b>."
+    }
+  },
+
+  "share": {
+    "meta-title": "ScreenToGif - Delen",
+    "meta-description": "Bekijk wat andere mensen over ScreenToGif zeggen.",
+
+    "title": "Delen",
+    "subtitle": "Deel je gedachten over deze tool",
+    "like": "Heb je plezier aan ScreenToGif?",
+    "mention": "Meld het op Twitter 😊",
+    "tweet": "Tweet @ScreenToGif of @NickeManarin",
+    "text": "ScreenToGif is a scherm, webcam of whiteboard opnameprogramme met geintegreerde bewerkingsprogramme.",
+    "disclaimer": "Wil je je tweet niet zichtbaar op deze pagina? Contacteer mij"
+  },
+
+  "source": {
+    "meta-title": "ScreenToGif - Broncode",
+    "meta-description": "Bekijk de details van het open source project, ScreenToGif.",
+
+    "title": "Broncode",
+    "subtitle": "ScreenToGif is open source!",
+
+    "links": {
+      "app-info": "Broncode van ScreenToGif",
+      "website": "Website",
+      "website-info": "Broncode van deze website"
+    }
+  },
+
+  "privacy-terms": {
+    "meta-title": "ScreenToGif - Privacy en voorwaarden",
+    "meta-description": "Bekijk privacy en voorwaarden",
+
+    "title": "Privacy en voorwaarden",
+    "subtitle": "En andere technische details over ScreenToGif",
+
+    "privacy": {
+      "title": "Privacy",
+      "software": {
+        "title": "De software",
+        "phrase1": "ScreenToGif verzamelt niet of verzendt geen persoonlijke gegevens (of systeem gerelateerde) gegevens zonder uitdrukkelijke toestemming van gebruiker.",
+        "phrase2": "In feite is de enige plek waar ScreenToGif mogelijk persoonlijke of systeemgerelateerde gegevens verzendt als de gebruiker zelf feedback verstuurt via de Feedback mogelijkheid.",
+        "phrase3": "Persoonlijke informatie mag worden verstrekt door de gebruikers zelf (zoals naam en e-mail).",
+        "phrase4": "Systeemgerelateerde informatie wordt automatisch verzameld door de Feedback tool om mogelijke problemen op te lossen.",
+        "more": "Klik hier om meer informatie te krijgen over de mogelijke netwerkconnectie die deze software maakt."
+      },
+
+      "website": {
+        "title": "Deze website",
+        "phrase1": "Deze website maakt gebruik van Google Analytics services, waarmee sessiegegevens worden verzameld van elke paginaweergave.",
+        "phrase2": "De gegevens worden enkel en alleen gebruikt om beter begrip te krijgen over de behoeftes van bezoekers van deze site en tool."
+      }
+    },
+
+    "terms": {
+      "title": "Voorwaarden",
+      "phrase1": "ScreenToGif is gratis in gebruik voor iedereen, zelfs in zakelijke omgevingen.",
+      "more": "Je kan hier meer over lezen."
+    }
+  },
+
+  "footer": {
+    "share": {
+      "title": "<b>Deel</b> op social media",
+      "tweet": "Tweet",
+      "share": "Delen",
+      "like": "Leuk vinden"
+    },
+
+    "language": "Taal",
+    "follow": "<b>Volg</b> het project",
+    "watch": "Blijf volgen",
+    "made-by": "Gemaakt door {0}, uit <b>Brazilië</b> 🇧🇷",
+    "icons-by": "Pictogrammen gemaakt door {0}",
+    "license-app": "<b>ScreenToGif</b> is gelicentieerd onder {0}",
+    "license-web": "<b>Deze website</b> is gelicentieerd onder {0}"
+  },
+
+  "not-found": {
+    "title": "Pagina niet gevonden...",
+    "subtitle": "Probeer terug te gaan naar homepage"
+  }
+}
