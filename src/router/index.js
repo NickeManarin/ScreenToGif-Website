@@ -56,8 +56,8 @@ const routes = [
         meta: {
             title: 'ScreenToGif - Donation',
             metaTags: [
-                { name: 'description', content: 'Help ScreenToGif get better now, donating to the project.' },
-                { property: 'og:description', content: 'Help ScreenToGif get better now, donating to the project.' }
+                { name: 'description', content: 'Help ScreenToGif get better, by donating to the project.' },
+                { property: 'og:description', content: 'Help ScreenToGif get better, by donating to the project.' }
             ]
         }
     },
