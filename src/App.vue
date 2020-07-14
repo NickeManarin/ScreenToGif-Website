@@ -53,6 +53,8 @@
 <style lang="scss">
     //Import Bulma's core
     @import "~bulma/sass/utilities/_all";
+
+    //Custom styles
     @import "@/mixins/colors.scss";
     @import "@/mixins/customIcons.scss";
 

@@ -8,7 +8,7 @@ import VueShowdown from "vue-showdown";
 import VueClipboard from "vue-clipboard2";
 import VueGtag from "vue-gtag";
 import VueScrollTo from 'vue-scrollto';
-import vueHeadful from 'vue-headful';
+import VueHeadful from 'vue-headful';
 import CustomColors from "./mixins/colors.scss";
 
 Vue.use(VueResource);
@@ -30,11 +30,11 @@ Vue.use(VueGtag, {
     enabled: process.env.NODE_ENV === 'production' 
 }, router);
 Vue.use(VueScrollTo);
-Vue.component('vue-headful', vueHeadful);
+Vue.component('vue-headful', VueHeadful);
 
 Vue.config.productionTip = false;
 
-console.log('Is prod?', process.env.NODE_ENV === 'production');
+//console.log('Is prod?', process.env.NODE_ENV === 'production');
 
 Vue.prototype.$store = {
     release: {},

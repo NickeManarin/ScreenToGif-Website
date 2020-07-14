@@ -1,0 +1,536 @@
+{
+  "info": {
+    "code": "hu",
+    "lang": "Magyar"
+  },
+
+  "navigation": {
+    "home": "Kezdőlap",
+    "downloads": "Letöltések",
+    "donate": "Adomány",
+    "screenshots": "Képernyőképek",
+    "contact": "Kapcsolat",
+    "more": "Több",
+    "how-to-use": "Hogyan kell használni",
+    "features": "Funkciók",
+    "share": "Megosztás",
+    "source": "Forrás",
+    "privacy-terms": "Adatvédelem és feltételek",
+
+    "download": {
+      "download": "Letöltés",
+      "info": "Lehetővé teszi a legújabb kiadás letöltését",
+      "by": "{0} által",
+      "dates": {
+        "years": "{0} éve",
+        "year": "egy éve",
+        "months": "{0} hónapja",
+        "month": "egy hónapja",
+        "weeks": "{0} hete",
+        "week": "egy hete",
+        "days": "{0} napja",
+        "day": "egy napja",
+        "hours": "{0} órája",
+        "hour": "egy órája",
+        "minutes": "{0} perce",
+        "minute": "egy perce",
+        "now": "épp most"
+      }
+    }
+  },
+
+  "home":{
+    "meta-title": "ScreenToGif - Rögzítsd a képernyődet, szerkeszd és mentsd el gifként, videóként vagy egyéb formátumokban",
+    "meta-description": "Ingyenes képernyőfelvevő eszköz, amely lehetővé teszi, hogy rögzítsd, szerkeszd és mentsd gifként, videóként vagy egyéb formátumokban.",
+
+    "subtitle": "<strong>Képernyő-</strong>, <b>webkamera-</b> és <b>fehértábla-</b>felvevő integrált <b>szerkesztő</b>-vel",
+    "version": "Verzió {0}",
+    "installer" : "Telepítő",
+    "installer-info": "Letölti a telepítő verziót (.msi), amely tartalmazza a fő végrehajtható fájlt és választható kiegészítőket.",
+    "or": "vagy",
+    "portable" : "Hordozható",
+    "portable-info": "Letölti a hordozható verziót, amely csak a fő végrehajtható fájlt tartalmazza. A kiegészítőket az Beállítások > Extrák között kell letölteni.",
+    "downloads" : "{0} letöltés",
+    "more-releases" : "Több letöltési lehetőség",
+    "fewer-releases" : "Kevesebb letöltési lehetőség",
+    "copy" : "Másolás",
+    "copied" : "Parancs másolva!",
+    "not-copied" : "A parancs másolása nem volt lehetséges.",
+
+    "why": {
+      "free": "Ingyenes",
+      "free-info": "Nyílt forráskódú a <b>GitHub</b>-on",
+      "compact": "Kompakt",
+      "compact-info": "Mindössze <b>{0}</b>",
+      "powerful": "Nagy teljesítményű",
+      "powerful-info": "Rögzítsd, szerkeszd és <b>exportáld!</b>",
+      "customizable": "Testreszabható",
+      "customizable-info": "Használd úgy, ahogy <b>szereted</b>",
+      "features": "Az összes funkció felfedezése"
+    },
+  
+    "media": {
+      "title": "Média",
+      "subtitle": "Képernyőképek és gifek",
+      "more": "További képernyőképek"
+    },
+
+    "supporters": {
+      "title": "Külön köszönet",
+      "subtitle": "Íme néhány támogatója ennek a projektnek",
+      "become": "Legyél szponzor"
+    },
+
+    "usage": {
+      "title": "Hogyan kell használni?",
+      "subtitle": "A tartalmad rögzítése és szerkesztése egy pillanat alatt",
+      "capture": "Rögzítés",
+      "capture-info": "<b>Képernyő</b>, <b>webkamera</b> vagy <b>fehértábla</b> rögzítése",
+      "edit": "Szerkesztés",
+      "edit-info": "Szerkeszd a <b>rögzítésed</b> vagy <b>egyéb médiafájlt</b>",
+      "export": "Exportálás",
+      "export-info": "Exportálás <b>Gif</b>, <b>Apng</b>, <b>Videó</b>, <b>Képek</b>, <b>Projekt</b> vagy <b>PSD</b> formátumba",
+      "share": "Megosztás",
+      "share-info": "Oszd meg <b>Imgur</b>-ra, <b>Gfycat</b>-re vagy másokkal",
+      "learn": "Tudd meg, hogyan kell használni"
+    },
+
+    "share": {
+      "title": "Amit a felhasználók mondanak",
+      "subtitle": "Lásd a Twitteren lévő emberektől származó boldog gondolatokat.",
+      "share": "Oszd meg tapasztalatodat"
+    }
+  },
+
+  "downloads": {
+    "meta-title": "ScreenToGif - Letöltések",
+    "meta-description": "Töltsd le a ScreenToGif telepítőjét vagy a hordozható verzióját most.",
+
+    "latest": "Legújabb verzió",
+    "show-release-notes": "Kiadási megjegyzések megjelenítése",
+    "hide-release-notes": "Kiadási megjegyzések elrejtése",
+    
+    "requirements":{
+      "title": "Követelmények",
+      "subtitle": "Az alkalmazás futtatásához bizonyos minimális szoftver- és hardverkonfigurációkra van szükség",
+      "windows": "<b>Windows 7 SP1</b> vagy újabb",
+      "framework": "<b>.Net Framework 4.8</b> vagy újabb"
+    },
+
+    "releases":{
+      "title": "Minden kiadás",
+      "subtitle": "Bontsd ki a kiadás részleteinek megtekintéséhez",
+      
+      "table": {
+        "version": "Verzió",
+        "date": "Megjelenési dátum",
+        "days": "Aktív napok",
+        "days-info": "A legutóbbi kiadás napjainak száma",
+        "count": "Letöltések száma",
+        "not-possible": "Nem lehetett betölteni az összes kiadást",
+        "versions-total": "{0} verzió kiadva",
+        "average-month": "Átlagosan {0} havonta",
+        "active-total": "Aktív ezóta: {0}",
+        "downloads-total": "Letöltve {0} alkalommal"
+      },
+
+      "dates": {
+        "years": "{0} év",
+        "year": "{0} év",
+        "months": "{0} hónap",
+        "month": "{0} hónap",
+        "days": "{0} nap",
+        "day": "{0} nap"
+      }
+    }
+  },
+
+  "donation": {
+    "meta-title": "ScreenToGif - Adomány",
+    "meta-description": "Segítsd a ScreenToGif-et jobbá tenni, azzal, hogy adományozol a projektnek.",
+
+    "title": "Tetszett a ScreenToGif?",
+    "subtitle": "És azon gondolkodsz, hogy segítenéd valahogy?",
+
+    "why": {
+      "title": "Miért segítsd a ScreenToGif-et?",
+      "subtitle": "A projekt előnyre tenne szert a támogatásoddal.",
+      "free": "Ingyenes",
+      "free-info": "Nyílt forráskódú a <b>GitHub<b>-on",
+      "no-ads": "Nincsenek hirdetések",
+      "no-ads-info": "Még a <b>telepítőben</b> sem",
+      "committed": "Elkötelezettség",
+      "committed-info": "Szeretettel készítette egy elkötelezett fejlesztő",
+      "for-you": "Neked készült",
+      "for-you-info": "<b>Visszajelzésvezérelt</b> fejlesztés"
+    },
+
+    "how-help": {
+      "title": "Hogyan segíthetek?",
+      "subtitle": "Ha segíteni szeretnéd a projektet, a következőképpen",
+      "feedback": "Visszajelzés",
+      "feedback-info": "Jelentsd a hibákat, és adj visszajelzést a felhasználói élményről",
+      "share": "Megosztás",
+      "share-info": "Oszd meg barátaiddal vagy véleményezd",
+      "localization": "Honosítás",
+      "localization-info": "A honosítások naprakészen tartása vagy egy hiányzó hozzáadása",
+      "donate": "Adomány",
+      "donate-info": "Az adományok szintén üdvözlendők 😊"
+    },
+
+    "how-donate": {
+      "title": "Hogyan tudok adományozni?",
+      "subtitle": "Íme néhány mód az adományozásra",
+      "patreon-info": "Iratkozz fel havi adományozásra Patreonon keresztül",
+      "paypal-info": "Egyszeri adományozás PayPal-on keresztül",
+      "flattr-info": "Iratkozz fel havi adományozásra a Flattr-en keresztül",
+      "coffee-info": "Vásárolj egy kávét a fejlesztőnek",
+      "steam-info": "Ajándék játékok vagy kreditek a Steamen keresztül",
+      "gog-info": "Ajándék játékok a GOG-n keresztül",
+      "amazon": "Amazon kívánságlista",
+      "amazon-info": "Új alkatrészek beszerezése a számítógépemhez",
+
+      "paypal": {
+        "title": "Adomány a PayPal segítségével",
+        "subtitle": "A folytatás előtt válaszd ki a pénznemed",
+        "show-fee": "PayPal-díj magyarázatának megjelenítése",
+        "hide-fee": "PayPal-díj magyarázatának elrejtése",
+        "explanation": "A PayPal díjat számít fel az adományozott érték alapján (6,4%) + egy rögzített értéket a kiválasztott pénznem alapján (0,1-0,5 cent dollár).",
+        "becomes": "{0} -ból {1} lesz",
+        "donate": "Adományoz"
+      }
+    },
+
+    "list": {
+      "title": "Pártfogói lista",
+      "subtitle": "Íme néhány személy vagy vállalat, akik támogatják a projektet",
+      "patron": "Pártfogó",
+      "ammount": "Adomány összege",
+      "ammount-info": "A rendezés az USD $ értéke szerint történt.",
+      "from": "Honnan",
+      "not-possible": "A pártfogói listát nem lehetett betölteni.",
+      "list-name": "Szeretnéd, hogy a neved vagy a cég szerepeljen itt egy adományozás után?",
+      "contact": "Lépj kapcsolatba velem :)"
+    }
+  },
+
+  "screenshots": {
+    "meta-title": "ScreenToGif - Képernyőképek",
+    "meta-description": "Tekintsd meg a ScreenToGif képernyőképeit.",
+
+    "title": "Képernyőképek és példák",
+    "subtitle": "Nézd meg, mit tehetsz a ScreenToGif-fel",
+    "add": "Szeretnéd hozzáadni a gif-edet ehhez az oldalhoz?",
+    "send": "Küldj nekem egy üzenetet :)",
+
+    "gallery":{
+      "startup": "Ez az alkalmazás alapértelmezett belépési pontja. <br> Beállíthatod, hogy az alkalmazás közvetlenül a <b>felvevőkbe és a szerkesztőbe</b> nyíljon meg.",
+      "recorder": "Ez az alapértelmezett képernyőfelvevő felhasználói felülete. Egyszerűen helyezd át ezt az ablakot a rögzíteni kívánt tartalomra.",
+      "recorder-use": "Ha rákattintasz, és húzod a célkereszt ikont egy ablakra, a felvevő beállítja a határait.",
+      "recorder-new": "Ez a <b>új felvevő felhasználói felület</b>, amely lehetővé teszi, hogy kattintással és húzással kiválaszd a képernyő egy részét. <br>Ablak- és képernyőmódokra is válthatsz.",
+      "editor": "Ez a szerkesztő, ahol szerkesztheted a felvételeidet, és exportálhatod <b>gif</b>, <b>apng</b>, <b>videó</b>, <b>projekt</b>, <b>képek</b> és <b>psd</b> formátumba.",
+      "webcam": "Ez a webkamera-felvevő.",
+      "board": "A fehértábla-felvevő lehetővé teszi, hogy a rajzaidat rajzoláskor automatikusan rögzítse.",
+      "board-example": "Íme egy példa a rögzített rajzolásra.",
+      "options": "A ScreenToGif <b>sok</b> lehetőséget kínál!"
+    }
+  },
+  
+  "contact": {
+    "meta-title": "ScreenToGif - Kapcsolat",
+    "meta-description": "Lépj kapcsolatba a ScreenToGif fejlesztőjével.",
+
+    "title": "Így léphetsz kapcsolatba velem",
+    "subtitle": "És egy kis részlet rólam és az alkalmazásról",
+
+    "who": {
+      "title": "Ki vagyok?",
+      "subtitle": "A ScreenToGif alkotója",
+      "part1": "Helló, Nicke Manarin vagyok, egy {0} éves brazil fejlesztő.",
+      "part2": "2012 óta fejlesztek szoftvert, kezdve egy módszerként, a számítástechnika órákon tanított készségek gyakorlására.",
+      "part3": "A diplomám megszerzése után, ami 2016-ban történt, folytattam új készségek tanulását, amelyek közvetlenül felhasználásra kerültek a projektemben.",
+      "part4": "Szívesen fejlesztek olyan szoftvert, amely céltudatos és könnyen kezelhető."
+    },
+
+    "why":{
+      "title": "Miért létezik a ScreenToGif?",
+      "subtitle": "Az alkalmazás mögötti történelem",
+      "part1": "Ez a projekt 2013 októberében született egy módként, hogy segítsen nekem megtanulni a kódolást, miközben hasznos az igényeimhez.",
+      "part2": "Tanultam, hogyan kell tervezni a grafikus felhasználói felületeket (és problémáim voltak vele), ezért gondoltam, hogy jó lenne néhány képernyőfelvételt készíteni, hogy fórumokon segítséget kérhessek.",
+      "part3": "Bár egyes alkalmazások már léteztek, nem biztosították azt a speciális funkciót, amelyre szükségem volt, ami arra ösztönzött, hogy saját megoldást készítsek (nem gondoltam, hogy sok munkát igényel).",
+      "part4": "A 'ScreenToGif' név olyan egyszerű, mint amire gondoltam, hogy az eszköz lesz: egy képernyőfelvevő ami gif-ként exportál. Egy könnyen megjegyezhető névnek kellett lennie.",
+      "part5": "De nem voltam előrelátó: A név egyetlen releváns része a középső „To”, mivel az alkalmazás most már nemcsak a képernyőt képes rögzíteni, és más formátumokba is exportál.",
+      "part6": "Ez a projekt 2016-ban teljesen újraindult, miután néhány hónapig problémáim voltak a régi platformmal, végül átváltottam egy újra.",
+      "part7": "Ez az átmenet lehetővé tette számomra több funkció fejlesztését, könnyebben érthető felhasználói felületekkel.",
+      "part8": "Bár én vagyok a projekt alkotója és fenntartója, más felhasználók is hozzájárulnak a hibajelentésekkel, a funkciók kérésével és a fordításokkal. Nyugodtan hagyj hozzászólást! :)"
+    },
+
+    "methods": {
+      "title": "A kapcsolatba lépés módjai",
+      "subtitle": "Általában gyorsabban válaszolok Twitteren és Discordon keresztül",
+      "twitter-info": "Kövess <b>@NickeManarin</b>",
+      "email": "E-mail",
+      "email-info": "Kattints ide a felfedéshez",
+      "discord-info": "Csatlakozz a csatornához",
+      "reddit-info": "Csatlakozz az alcsoporthoz <b>r/ScreenToGif</b>",
+      "facebook-info": "Kedveld az oldalt",
+      "linkedin-info": "Kövesd az oldalt",
+
+      "reveal": {
+        "title": "Itt az e-mail címem",
+        "subtitle": "Kérlek ne küldj levélszemetet :)",
+        "spam": "A <b>levélszemét</b> alatt olyan dolgokat értek, amelyek nem kapcsolódnak az alkalmazáshoz, például szolgáltatások és termékajánlatok.",
+        "help": "Örömmel próbálok majd segíteni az alkalmazással kapcsolatban , ahogy mindig is.",
+        "copied": "E-mail cím másolva!",
+        "copied-error": "Nem lehetett az e-mail címet másolni."
+      }
+    }
+  },
+
+  "features": {
+    "meta-title": "ScreenToGif - Funkciók",
+    "meta-description": "Fedezd fel az összes ScreenToGif funkciót.",
+    
+    "title": "Funkciók",
+    "subtitle": "Nézd meg, mit tehetsz a ScreenToGif segítségével",
+
+    "recorders": {
+      "title": "Felvevők",
+      "text1": "A ScreenToGif használatával rögzítsd a <b> képernyőt </b>, a <b> webkamerát </b> vagy a <b>fehértábla</b> rajzokat.",
+
+      "screen": {
+        "title": "Képernyő",
+        "text1": "Használd a <b>felvétel</b>, <b>szünet</b>, <b>elvetés</b> vagy <b>megállít</b> gombokat a felvételed vezérléséhez.",
+        "text2": "Válaszd ki a rögzítés gyakoriságának módját (kézi, normál képkocka/másodpercben, timelapse képkocka/percben vagy képkocka/órában).",
+        
+        "older": {
+          "title": "Régebbi felhasználói felület",
+          "text1": "Az ablak húzásával vagy átméretezésével módosíthatod, hogy mit akarsz rögzíteni.",
+          "text2": "Írd be a rögzítési terület pontos méretét.",
+          "text3": "Húzd a célkereszt gombot, és dobd egy ablak tetejére a felvevő mozgatásához, hogy rögzítse azt."
+        },
+
+        "newer": {
+          "title": "Újabb felhasználói felület",
+          "text1": "Add meg a kijelölési módot, ami lehetővi teszi egy <b>terület</b>, egy <b>ablak</b> vagy egy <b>egész lépernyő</b> rögzítését."
+        }
+      },
+
+      "webcam":{
+        "title": "Webkamera",
+        "text1": "Használd a <b>felvétel</b>, <b>szünet</b>, <b>elvetés</b> vagy <b>megállít</b> gombokat a felvételed vezérléséhez.",
+        "text2": "Válaszd ki a rögzítés maximális FPS-ét.",
+        "text3": "A rögzítés méretének beállításához méretezd át az ablakot."
+      },
+
+      "sketchboard": {
+        "title": "Fehértábla",
+        "text1": "Engedélyezd az <b>automatikus rögzítést</b> vagy nyomd le a <b>Ctrl billentyűt a váltáshoz</b> (<i>szüneteltet</i> vagy <i>rögzít</i>, attól függően, hogy az automatikus rögzítés engedélyezve van vagy le van tiltva).",
+        "text2": "Válaszd ki a rögzítés maximális FPS-ét.",
+        "text3": "A rögzítés méretének beállításához méretezd át az ablakot."
+      }
+    },
+
+    "editor": {
+      "title": "Szerkesztő",
+
+      "file": {
+        "title": "Fájl",
+        "text1": "Indíts egy új felvételt vagy nyiss meg egy médiafájlt (videók vagy képek) vagy egy projekt fájlt.",
+        "text2": "Szúrj be egy felvételt vagy médiafájlt (videók vagy képek) egy meglévő projektbe.",
+        "text3": "A legutóbbi projektek megnyitása.",
+        "text4": "Exportáld a projektedet a következőbe:",
+        "video": "Videó",
+        "image": "Kép",
+        "project": "ScreenToGif projekt"
+      },
+
+      "basic": {
+        "title": "Alapvető vezérlők",
+        "text1": "A módosítások visszavonása, ismétlése vagy alaphelyzetbe állítása.",
+        "text2": "Képkockák másolása, kivágása és beillesztése.",
+        "text3": "Select multiple frames or browse to a specific frame.",
+        "text4": "Az animáció lejátszásának előnézete."
+      },
+
+      "frame": {
+        "title": "Képkocka-kezelés",
+        "text1": "A kijelölt képkockák törlése.",
+        "text2": "Ismétlődések eltávolítása.",
+        "text3": "A képkockasebesség csökkentése.",
+        "text4": "Az összes előző vagy az összes következő képkocka törlése.",
+        "text5": "Fordított lejátszás, yoyo alkalmazása (előre és hátra) vagy a képkockák mozgatása.",
+        "text6": "A képkockák késleltetésének módosítása (felülbírálás, növelés/csökkentés vagy méretezés).",
+        "text7": "Cím képkocka hozzáadása.",
+        "text8": "Átmenetek hozzáadása (halványítás vagy csúszás hatások)."
+      },
+
+      "image": {
+        "title": "Képkezelés",
+        "text1": "Átméretezés, körülvágás vagy tükrözés/forgatás.",
+        "text2": "Átfedések hozzáadása:",
+        "text3": "Feliratok/szöveg.",
+        "text4": "Rajzok vagy alakzatok.",
+        "text5": "Billentyűleütések vagy egérkattintások.",
+        "text6": "Szegélyek, árnyékok és elhomályosítás (pixelezés).",
+        "text7": "Vízjelek (válaszd ki a saját képedet).",
+        "text8": "Cinemagraph (válaszd ki az animáció egyes részeit, hogy statikus maradjon vagy mozogjon)."
+      }
+    },
+
+    "options": {
+      "title": "Beállítások",
+
+      "app": {
+        "title": "Alkalmazás",
+        "text1": "Válaszd ki, hogy az alkalmazás hogyan induljon.",
+        "text2": "Válassz a 4 színes téma közül (a világostól a nagyon sötétig).",
+        "text3": "Módosítsd a tálcán lévő ikon viselkedését (kattintások, amikkel az alkalmazás egyes részeit nyitod meg).",
+        "text4": "Döntsd el, hogy az alkalmazás automatikusan frissítse-e magát (a fordítási frissítések is bekapcsolhatók)."
+      },
+
+      "recorder": {
+        "title": "Felvevő",
+        "text1": "Válaszd ki, hogy a régebbi vagy az újabb felhasználói felületet szeretnéd-e használni a képernyőfelvevőhöz.",
+        "text2": "Válaszd ki, hogy melyik rögzítési módot használod (BitBlt, DirectX, memóriagyorsítótárral vagy anélkül).",
+        "text3": "Válaszd ki a rögzítés gyakoriságának módját (kézi, normál, timelapse).",
+        "text4": "A kurzor követésének engedélyezése (a felvevő követi a kurzort a felvétel során)."
+      },
+
+      "editor": {
+        "title": "Szerkesztő",
+        "text1": "Válaszd ki az előnézet stílusát (a háttérrács színét és méretét).",
+        "text2": "Engedélyezd a szerkesztőablak automatikus méretezését a tartalom mérete alapján, és fordítva.",
+        "text3": "Lehetőségek a fontos műveletek előtti megerősítő párbeszédpanelek engedélyezéséhez.",
+        "text4": "Lehetőség a visszavonási/ismétlési mennyiség korlátozására."
+      },
+
+      "tasks": {
+        "title": "Feladatok",
+        "text1": "Létrehozhatsz feladatokat, amelyek effektusokat alkalmaznak a felvételedre, így nem kell minden alkalommal manuálisan alkalmaznod őket."
+      },
+
+      "shortcuts": {
+        "title": "Billentyűparancsok",
+        "text1": "A felvevők és a szerkesztő megnyitásához állíts be billentyűparancsokat.",
+        "text2": "A felvételeid vezérléséhez szintén beállíthatsz billentyűparancsokat (felvétel, szüneteltetés, leállítás és egyebek)."
+      },
+
+      "language": {
+        "title": "Nyelv",
+        "text1": "Válassz {0} nyelv közül.",
+        "text2": "Az alkalmazás automatikusan kiválaszt egy nyelvet az operációs rendszer aktuális beállításai alapján."
+      },
+
+      "storage": {
+        "title": "Tárhely",
+        "text1": "Szabályozd, hogy az alkalmazás hogyan tárolja az adatait.",
+        "text2": "Régi projektek törlésével helyreállíthatod a felhasznált területet."
+      },
+
+      "extras": {
+        "title": "Extrák",
+        "text1": "Bővítmények letöltése az alkalmazáshoz."
+      }
+    }
+  },
+
+  "how-to-use": {
+    "meta-title": "ScreenToGif - Hogyan kell használni",
+    "meta-description": "Ismerd meg a ScreenToGif használatát.",
+
+    "title": "Hogyan kell használni?",
+    "subtitle": "Ismerd meg a ScreenToGif használatát.",
+    "more": "Ide kattintva bővebben olvashatsz a ScreenToGif használatáról",
+
+    "list": {
+      "startup": "Amikor az alkalmazás elindul, kattintson a <b>Rögzítés</b> gombra.",
+      "record": "A punctured window will appear, line up to what you want to record and click on <b>Record</b>. Ha kész, kattints a <b>Megállít</b> gombra.",
+      "edit-remove": "Távolítsd el a nem kívánt képkockákat úgy, hogy kiválasztod azokat a <b> Shift-Kattintás</b> kombinációval, és megnyomod a <b> Törlés </b> gombot.",
+      "edit-transition": "Adj hozzá egy átmenetet az utolsó képkockához, így az animáció <i>simább</i> lesz.",
+      "edit-save": "A retusálás után kattints a <b>Mentés másként</b> gombra, az animáció választott formátumba történő exportálásához.",
+      "final-gif": "Itt van az eredmény GIF fájl, körülbelül <b>80,6 KiB</b>."
+    }
+  },
+
+  "share": {
+    "meta-title": "ScreenToGif - Megosztás",
+    "meta-description": "Nézd meg, mit mondanak az emberek a ScreenToGif-ről.",
+
+    "title": "Megosztás",
+    "subtitle": "Oszd meg gondolataidat erről az eszközről",
+    "like": "Élvezed a ScreenToGif-et?",
+    "mention": "Említsd meg a Twitteren 😊",
+    "tweet": "Tweetelj @ScreenToGif vagy @NickeManarin",
+    "text": "A ScreenToGif egy képernyő-, webkamera- és fehértábla-felvevő integrált szerkesztővel.",
+    "disclaimer": "Szeretnéd, ha tweeted nem lenne összekapcsolva ezzel az oldallal? Lépj kapcsolatba velem"
+  },
+
+  "source": {
+    "meta-title": "ScreenToGif - Forrás",
+    "meta-description": "Tekintsd meg a ScreenToGif, nyílt forráskódú projekt részleteit.",
+
+    "title": "Forráskód",
+    "subtitle": "A ScreenToGif nyílt forráskódú!",
+
+    "links": {
+      "app-info": "A ScreenToGif forráskódja",
+      "website": "Weboldal",
+      "website-info": "Ezen weboldal forráskódja."
+    }
+  },
+
+  "privacy-terms": {
+    "meta-title": "ScreenToGif - Adatvédelem és feltételek",
+    "meta-description": "Tekintsd meg az adatvédelmet és a feltételeket.",
+
+    "title": "Adatvédelem és feltételek",
+    "subtitle": "És egyéb technikai részletek ScreenToGif-ről",
+
+    "privacy": {
+      "title": "Adatvédelem",
+      "software": {
+        "title": "A szoftver",
+        "phrase1": "A ScreenToGif a felhasználó engedélye nélkül nem gyűjt és nem továbbít személyes (vagy rendszerrel kapcsolatos) adatokat.",
+        "phrase2": "Valójában az egyetlen mód, amellyel a ScreenToGif személyes vagy rendszerrel kapcsolatos adatokat küld, akkor történik, amikor a felhasználó visszajelzést küld nekünk a Visszajelzés eszközön keresztül.",
+        "phrase3": "A személyes információkat a felhasználók biztosíthatják (például nevük és e-mail címük).",
+        "phrase4": "A rendszerrel kapcsolatos információkat a Visszajelzés eszköz automatikusan rögzíti, hogy megkönnyítse a lehetséges problémák megoldását.",
+        "more": "Ide kattintva olvashatsz bővebben a szoftver által megnyitott egyéb hálózati kapcsolatokról."
+      },
+
+      "website": {
+        "title": "Ez a weboldal",
+        "phrase1": "Ez a weboldal a Google Analytics szolgáltatásokat használja, amelyek minden oldalmegtekintéssel összegyűjtik a munkamenet adatait.",
+        "phrase2": "Az adatokat csak arra használjuk, hogy jobban megértsük a nyilvánosság viselkedését ezzel az eszközzel kapcsolatban."
+      }
+    },
+
+    "terms": {
+      "title": "Feltételek",
+      "phrase1": "A ScreenToGif ingyenes mindenki számára, még vállalati környezetben is.",
+      "more": "Erről bővebben itt olvashatsz."
+    }
+  },
+
+  "footer": {
+    "share": {
+      "title": "<b>Megosztás</b> a közösségi médiában",
+      "tweet": "Tweetelj",
+      "share": "Megosztás",
+      "like": "Tetszik"
+    },
+
+    "language": "Nyelv",
+    "follow": "<b>Kövesd</b> a projektet",
+    "watch": "Watch",
+    "made-by": "Készítette {0}, <b>Brazíliából</b> 🇧🇷",
+    "icons-by": "Ikonok {0} által",
+    "license-app": "A <b>ScreenToGif</b> az {0} szerint licencelve.",
+    "license-web": "<b>Ez a weboldal</b> a {0} szerint licencelve."
+  },
+
+  "not-found": {
+    "title": "Az oldal nem található...",
+    "subtitle": "Próbálj meg visszatérni a kezdőlapra"
+  }
+}
