@@ -340,6 +340,34 @@
                                 </article>
                             </b-button>
                         </div>
+
+                        <div class="column is-half-tablet is-one-third-desktop" v-if="false">
+                            <form action="https://www.coinpayments.net/index.php" method="post" target="_blank" rel="noopener">
+                                <input type="hidden" name="cmd" value="_donate">
+                                <input type="hidden" name="reset" value="1">
+                                <input type="hidden" name="merchant" value="579f3ffc9deba33fde35314f92f06513">
+                                <input type="hidden" name="item_name" value="ScreenToGif Donation">
+                                <input type="hidden" name="currency" value="USD">
+                                <input type="hidden" name="amountf" value="10.00000000">
+                                <input type="hidden" name="allow_amount" value="1">
+                                <input type="hidden" name="want_shipping" value="0">
+                                <input type="hidden" name="allow_extra" value="1">
+
+                                <button type="submit" name="submit" class="button is-light" 
+                                    @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Amazon'})">
+                                    <article class="media">
+                                        <figure class="media-left">
+                                            <ResponsiveImage :src="require('@/assets/media/donation/Amazon.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
+                                        </figure>
+
+                                        <div class="media-content">
+                                            <h5 class="is-size-4 has-text-weight-semibold">{{ $t('donation.how-donate.amazon') }}</h5>
+                                            <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.amazon-info') }}</p>
+                                        </div>
+                                    </article>
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -367,9 +395,9 @@
                             </b-table-column>
 
                             <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
-                                field="value" :label="$t('donation.list.ammount')" :custom-sort="sortValue" sortable numeric>
+                                field="value" :label="$t('donation.list.amount')" :custom-sort="sortValue" sortable numeric>
                                 <template slot="header" slot-scope="{ column }">
-                                    <b-tooltip :label="$t('donation.list.ammount-info')" type="is-info" size="is-small" animated dashed multilined>
+                                    <b-tooltip :label="$t('donation.list.amount-info')" type="is-info" size="is-small" animated dashed multilined>
                                         {{ column.label }}
                                     </b-tooltip>
                                 </template>
