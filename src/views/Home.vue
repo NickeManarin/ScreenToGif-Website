@@ -258,6 +258,17 @@
                         </div>
 
                         <div class="column is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://twitter.com/noderaider" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Noderaider'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/Noderaider.jpg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px" borderRadius="100px"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">Noderaider</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://loam.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">

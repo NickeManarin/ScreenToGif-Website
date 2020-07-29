@@ -96,7 +96,7 @@
         "dark-15": ($dark-15, $dark-15-inverted),
     );
 
-    // Import Bulma and Buefy styles
+    //Import Bulma and Buefy styles
     @import "~bulma";
     @import "~buefy/src/scss/buefy";
 

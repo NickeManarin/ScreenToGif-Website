@@ -490,6 +490,15 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "Noderaider",
+                        url: "https://twitter.com/noderaider",
+                        urlPretty: "twitter.com/noderaider",
+                        value: 120,
+                        valueInUsd: 120,
+                        currency: "USD $",
+                        platform: "Paypal"
+                    },
+                    {
                         name: "Loam",
                         url: "https://loam.net?from=ScreenToGif",
                         urlPretty: "loam.net",
