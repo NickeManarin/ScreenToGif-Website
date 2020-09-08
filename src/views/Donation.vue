@@ -589,6 +589,15 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "Rogerty",
+                        url: 'https://www.rogerty.com',
+                        urlPretty: 'rogerty.com',
+                        value: 15,
+                        valueInUsd: 17.6,
+                        currency: "EUR €",
+                        platform: "Paypal"
+                    },
+                    {
                         name: "Justin Ballen",
                         url: 'https://jballen.io?from=ScreenToGif',
                         urlPretty: 'jballen.io',
