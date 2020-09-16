@@ -481,56 +481,56 @@
   },
 
   "privacy-terms": {
-    "meta-title": "ScreenToGif - Privacy and terms",
-    "meta-description": "See the privacy and terms.",
+    "meta-title": "ScreenToGif - 隐私协议",
+    "meta-description": "查看隐私协议。",
 
-    "title": "Privacy and terms",
-    "subtitle": "And other technical details about ScreenToGif",
+    "title": "隐私协议",
+    "subtitle": "其他关于ScreenToGif的技术细节",
 
     "privacy": {
-      "title": "Privacy",
+      "title": "隐私",
       "software": {
-        "title": "The software",
-        "phrase1": "ScreenToGif does not collect or transmit any personal (or system related) information without the user consent.",
-        "phrase2": "In fact, the only way that ScreenToGif sends personal or system related data happens when the user sends us a feedback via the Feedback tool.",
-        "phrase3": "The personal information may be provided by the users (such as their name and e-mail).",
-        "phrase4": "The system related information is captured automatically by the Feedback tool in order to facilitate solving possible issues.",
-        "more": "Click here to read more about other possible network connections opened by the software."
+        "title": "软件",
+        "phrase1": "未经允许，ScreenToGif不会搜集或发送任何个人（或系统）信息。",
+        "phrase2": "实际上，唯一ScreenToGif会发送个人或系统信息的时机，是用户使用反馈工具发送发聩的时候。",
+        "phrase3": "用户提供的个人信息（如他们的名字、Email）。",
+        "phrase4": "系统相关信息是由反馈工具自动搜集的，以帮助解决各种可能的问题。",
+        "more": "点此阅读更多关于本软件可能使用网络链接的信息。"
       },
 
       "website": {
-        "title": "This website",
-        "phrase1": "This website uses Google Analytics services, which collects session data about every pageview.",
-        "phrase2": "The data is used only to understand better the public behavior towards this tool."
+        "title": "网站",
+        "phrase1": "本网站使用Google Analytics服务，它会搜集用户的浏览记录。",
+        "phrase2": "搜集到的资料仅用于更好地理解用户使用本软件的行为意图。"
       }
     },
 
     "terms": {
-      "title": "Terms",
-      "phrase1": "ScreenToGif is free for use for everyone, even in corporate environments.",
-      "more": "You can read more about it here."
+      "title": "协议",
+      "phrase1": "ScreenToGif对所有人免费，甚至是企业环境下的用户。",
+      "more": "更多信息。"
     }
   },
 
   "footer": {
     "share": {
-      "title": "<b>Share</b> on social media",
-      "tweet": "Tweet",
-      "share": "Share",
-      "like": "Like"
+      "title": "<b>分享</b>到社交媒体",
+      "tweet": "推",
+      "share": "分享",
+      "like": "赞"
     },
 
-    "language": "Language",
-    "follow": "<b>Follow</b> the project",
-    "watch": "Watch",
-    "made-by": "Made by {0}, from <b>Brazil</b> 🇧🇷",
-    "icons-by": "Icons by {0}",
-    "license-app": "<b>ScreenToGif</b> is licensed under {0}",
-    "license-web": "<b>This website</b> is licensed under {0}"
+    "language": "语言",
+    "follow": "<b>关注</b>本项目",
+    "watch": "关注",
+    "made-by": "由 {0} 制作，来自 <b>巴西</b> 🇧🇷",
+    "icons-by": "图标来自 {0}",
+    "license-app": "<b>ScreenToGif</b> 使用许可 {0}",
+    "license-web": "<b>本网站</b> 使用许可 {0}"
   },
 
   "not-found": {
-    "title": "Page not found...",
-    "subtitle": "Try returning to the home page"
+    "title": "找不到此页面...",
+    "subtitle": "试试回到主页"
   }
 }
