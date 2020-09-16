@@ -266,23 +266,23 @@
     },
 
     "methods": {
-      "title": "Methods of contact",
-      "subtitle": "Usually I reply faster via Twitter and Discord",
-      "twitter-info": "Follow me <b>@NickeManarin</b>",
+      "title": "联系方式",
+      "subtitle": "一般我在Twitter和Discord回复比较迅速",
+      "twitter-info": "Follow我 <b>@NickeManarin</b>",
       "email": "Email",
-      "email-info": "Click here to reveal",
-      "discord-info": "Join the channel",
-      "reddit-info": "Join the sub <b>r/ScreenToGif</b>",
-      "facebook-info": "Like the page",
-      "linkedin-info": "Follow the page",
+      "email-info": "揭露邮箱",
+      "discord-info": "加入频道",
+      "reddit-info": "加入Reddit子页面 <b>r/ScreenToGif</b>",
+      "facebook-info": "赞",
+      "linkedin-info": "订阅",
 
       "reveal": {
-        "title": "Here's my email",
-        "subtitle": "Please, don't send spam :)",
-        "spam": "By <b>spam</b>, I mean things unrelated to the app like services and products offerings.",
-        "help": "I'll be happy to try to help you out with the app, as I always have.",
-        "copied": "Email copied!",
-        "copied-error": "It was not possible to copy the email."
+        "title": "这是我的邮箱",
+        "subtitle": "拜托不要发垃圾邮件 :)",
+        "spam": "<b>垃圾邮件</b>的定义： 我认为与本应用无关的服务和产品信息。",
+        "help": "我很乐意为你提供关于本应用的帮助，我一直都这样",
+        "copied": "Email已复制！",
+        "copied-error": "Email复制失败。"
       }
     }
   },
