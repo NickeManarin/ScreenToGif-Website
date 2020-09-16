@@ -103,44 +103,44 @@
   },
 
   "downloads": {
-    "meta-title": "ScreenToGif - Downloads",
-    "meta-description": "Download the installer or portable versions of ScreenToGif now.",
+    "meta-title": "ScreenToGif - 下载",
+    "meta-description": "下载ScreenToGif的安装包，或免安装版。",
 
-    "latest": "Latest version",
-    "show-release-notes": "Show release notes",
-    "hide-release-notes": "Hide release notes",
+    "latest": "最新版本",
+    "show-release-notes": "显示发布信息",
+    "hide-release-notes": "隐藏发布信息",
     
     "requirements":{
-      "title": "Requirements",
-      "subtitle": "This app requires some software and hardware minimum configurations in order to run",
-      "windows": "<b>Windows 7 SP1</b> or newer",
-      "framework": "<b>.Net Framework 4.8</b> or newer"
+      "title": "设备要求",
+      "subtitle": "本应用需要的软硬件最低配置",
+      "windows": "<b>Windows 7 SP1</b>或更新版本",
+      "framework": "<b>.Net框架 4.8</b>或更新版本"
     },
 
     "releases":{
-      "title": "All releases",
-      "subtitle": "Expand to see the release details",
+      "title": "所有版本",
+      "subtitle": "展开查看版本详细信息",
       
       "table": {
-        "version": "Version",
-        "date": "Release Date",
-        "days": "Active Days",
-        "days-info": "Amount of days being the most recent release",
-        "count": "Download Count",
-        "not-possible": "It was not possible to load all the releases",
-        "versions-total": "{0} versions released",
-        "average-month": "Average of {0} per month",
-        "active-total": "Active for {0}",
-        "downloads-total": "Downloaded {0} times"
+        "version": "版本",
+        "date": "发布日期",
+        "days": "有效日期",
+        "days-info": "成为最新版本的时间",
+        "count": "下载计数",
+        "not-possible": "无法加载所有版本信息",
+        "versions-total": "{0} 已发布版本",
+        "average-month": "平均 {0} 每月",
+        "active-total": "已经持续 {0}",
+        "downloads-total": "总下载 {0} 次"
       },
 
       "dates": {
-        "years": "{0} years",
-        "year": "{0} year",
-        "months": "{0} months",
-        "month": "{0} month",
-        "days": "{0} days",
-        "day": "{0} day"
+        "years": "{0} 年",
+        "year": "{0} 年",
+        "months": "{0} 月",
+        "month": "{0} 月",
+        "days": "{0} 天",
+        "day": "{0} 天"
       }
     }
   },
