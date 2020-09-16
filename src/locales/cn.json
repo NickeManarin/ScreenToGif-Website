@@ -40,59 +40,59 @@
   },
 
   "home":{
-    "meta-title": "ScreenToGif - Record your screen, edit and save as a gif, video or other formats",
-    "meta-description": "Free screen recorder tool, which lets you record, edit and save as a gif, video or other formats.",
+    "meta-title": "ScreenToGif - 录屏，编辑，保存为GIF，视频或更多其他格式",
+    "meta-description": "免费录屏工具，帮你完成录屏，编辑，保存为GIF，视频或更多其他格式。",
 
-    "subtitle": "<strong>Screen</strong>, <b>webcam</b> and <b>sketchboard</b> recorder with an integrated <b>editor</b>",
-    "version": "Version {0}",
-    "installer" : "Installer",
-    "installer-info": "Downloads the installer version (.msi), which contains the main executable and optional addons.",
-    "or": "or",
-    "portable" : "Portable",
-    "portable-info": "Downloads the portable version, which contains only the main executable. Addons needs to be downloaded in Options > Extras.",
-    "downloads" : "{0} downloads",
-    "more-releases" : "More download options",
-    "fewer-releases" : "Fewer download options",
-    "copy" : "Copy",
-    "copied" : "Command copied!",
-    "not-copied" : "It was not possible to copy the command.",
+    "subtitle": "<strong>屏幕</strong>，<b>摄像头</b>和<b>画板</b>录像，并有内置<b>编辑器</b>",
+    "version": "版本 {0}",
+    "installer" : "安装包",
+    "installer-info": "下载安装包 (.msi)，其中包含主执行程序和可选插件。",
+    "or": "或",
+    "portable" : "免安装包",
+    "portable-info": "下载免安装包，包含主执行程序。插件可从 Options > Extras 下载。",
+    "downloads" : "{0} 下载",
+    "more-releases" : "更多下载选项",
+    "fewer-releases" : "精选下载选项",
+    "copy" : "复制",
+    "copied" : "命令已复制！",
+    "not-copied" : "此命令不可复制。",
 
     "why": {
-      "free": "Free",
-      "free-info": "Open source on <b>GitHub</b>",
-      "compact": "Compact",
-      "compact-info": "As little as <b>{0}</b>",
-      "powerful": "Powerful",
-      "powerful-info": "Record, edit and <b>export it!</b>",
-      "customizable": "Customizable",
-      "customizable-info": "Use it the way <b>you like it</b>",
-      "features": "Discover all features"
+      "free": "免费",
+      "free-info": "开源于<b>GitHub</b>",
+      "compact": "简约",
+      "compact-info": "仅有<b>{0}</b>",
+      "powerful": "强大",
+      "powerful-info": "录制，编辑与<b>导出！</b>",
+      "customizable": "客制化",
+      "customizable-info": "想怎么用，<b>就怎么用</b>",
+      "features": "探索更多功能"
     },
   
     "media": {
-      "title": "Media",
-      "subtitle": "Screenshots and gifs",
-      "more": "See more screenshots"
+      "title": "图片",
+      "subtitle": "截屏与动图",
+      "more": "查看更多截图"
     },
 
     "supporters": {
-      "title": "Special thanks",
-      "subtitle": "Here are some of the supporters of this project",
-      "become": "Become a sponsor"
+      "title": "鸣谢",
+      "subtitle": "本项目的支持者们",
+      "become": "成为赞助人"
     },
 
     "usage": {
-      "title": "How to use?",
-      "subtitle": "Record and edit your content in no time",
-      "capture": "Capture",
-      "capture-info": "<b>Screen</b>, <b>webcam</b> or <b>sketchboard</b> capture",
-      "edit": "Edit",
-      "edit-info": "Edit your <b>capture</b> or <b>other media</b>",
-      "export": "Export",
-      "export-info": "Export to <b>Gif</b>, <b>Apng</b>, <b>Video</b>, <b>Images</b>, <b>Project</b> or <b>PSD</b>",
-      "share": "Share",
-      "share-info": "Share to <b>Imgur</b>, <b>Gfycat</b> or others",
-      "learn": "Learn how to use"
+      "title": "如何使用？",
+      "subtitle": "迅速录制并编辑你的内容",
+      "capture": "录制",
+      "capture-info": "<b>屏幕</b>，<b>摄像头</b>或<b>画板</b>录制",
+      "edit": "编辑",
+      "edit-info": "编辑你的<b>录像</b>或<b>其他媒体</b>",
+      "export": "导出",
+      "export-info": "导出为<b>GIF</b>，<b>APNG</b>，<b>视频</b>，<b>图片</b>，<b>项目</b>或<b>PSD</b>",
+      "share": "分享",
+      "share-info": "分享至<b>Imgur</b>，<b>Gfycat</b>或其他地方",
+      "learn": "学习如何使用"
     },
 
     "share": {
