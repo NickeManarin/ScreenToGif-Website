@@ -49,7 +49,7 @@
     "installer-info": "下载安装包 (.msi)，其中包含主执行程序和可选插件。",
     "or": "或",
     "portable" : "免安装包",
-    "portable-info": "下载免安装包，包含主执行程序。插件可从 Options > Extras 下载。",
+    "portable-info": "下载免安装包，包含主执行程序。插件可从 选项 > 更多 下载。",
     "downloads" : "{0} 下载",
     "more-releases" : "更多下载选项",
     "fewer-releases" : "精选下载选项",
@@ -146,63 +146,63 @@
   },
 
   "donation": {
-    "meta-title": "ScreenToGif - Donation",
-    "meta-description": "Help ScreenToGif get better, by donating to the project.",
+    "meta-title": "ScreenToGif - 捐助",
+    "meta-description": "通过捐助帮助ScreenToGif变得更好。",
 
-    "title": "Did you like ScreenToGif?",
-    "subtitle": "And are you thinking about helping it somehow?",
+    "title": "您喜欢用ScreenToGif吗？",
+    "subtitle": "您有在想通过一些途径对它提供帮助吗？",
 
     "why": {
-      "title": "Why help ScreenToGif?",
-      "subtitle": "The project would benefit from your support",
-      "free": "Free",
-      "free-info": "Open source on <b>GitHub<b>",
-      "no-ads": "No ads",
-      "no-ads-info": "Not even in the <b>installer</b>",
-      "committed": "Commitment",
-      "committed-info": "Made with love by a committed developer",
-      "for-you": "Made for you",
-      "for-you-info": "<b>Feedback driven</b> development"
+      "title": "为什么要帮助ScreenToGif？",
+      "subtitle": "有您的支持，这个项目会更好",
+      "free": "免费",
+      "free-info": "开源于<b>GitHub<b>",
+      "no-ads": "无广告",
+      "no-ads-info": "包括<b>安装包</b>内",
+      "committed": "保证",
+      "committed-info": "由一位有决心的开发者制作",
+      "for-you": "为您效劳",
+      "for-you-info": "<b>反馈驱动</b>的开发模式"
     },
 
     "how-help": {
-      "title": "How can I help?",
-      "subtitle": "If you wish to help the project, here's how",
-      "feedback": "Feedback",
-      "feedback-info": "Report bugs and provide feedback about the user experience",
-      "share": "Share",
-      "share-info": "Share with your friends or create a review",
-      "localization": "Localization",
-      "localization-info": "Keep the localizations up to date or add one that is missing",
-      "donate": "Donate",
-      "donate-info": "Donations are also welcome 😊"
+      "title": "我能帮上什么忙？",
+      "subtitle": "如果你希望帮助这个项目，这里有一些途径",
+      "feedback": "反馈",
+      "feedback-info": "报告bug以及提供关于用户体验的反馈",
+      "share": "分享",
+      "share-info": "与你的朋友分享，或撰写相关评测",
+      "localization": "本地化",
+      "localization-info": "帮助更新本地化信息，添加缺失项",
+      "donate": "捐赠",
+      "donate-info": "感谢您的慷慨解囊 😊"
     },
 
     "how-donate": {
-      "title": "How can I donate?",
-      "subtitle": "Here are some ways to donate",
-      "patreon-info": "Subscribe to donate monthly via Patreon",
-      "paypal-info": "Single time donation via PayPal",
-      "flattr-info": "Subscribe to donate monthly via Flattr",
-      "coffee-info": "Buy a coffee for the developer",
-      "steam-info": "Gift games or credits via Steam",
-      "gog-info": "Gift games via GOG",
-      "amazon": "Amazon Wishlist",
-      "amazon-info": "Help get new parts for my computer",
+      "title": "我该如何捐赠？",
+      "subtitle": "这里有一些可选的捐赠途径",
+      "patreon-info": "订购每月Patreon捐赠",
+      "paypal-info": "PayPal单次捐赠",
+      "flattr-info": "订购每月Flattr捐赠",
+      "coffee-info": "为开发者买一杯咖啡",
+      "steam-info": "赠送Steam游戏或货币",
+      "gog-info": "通过GOG赠送游戏",
+      "amazon": "Amazon愿望清单",
+      "amazon-info": "新电脑众筹",
 
       "paypal": {
-        "title": "Donate with PayPal",
-        "subtitle": "Select your currency before continuing",
-        "show-fee": "Show PayPal fee explanation",
-        "hide-fee": "Hide PayPal fee explanation",
-        "explanation": "PayPal has a fee based on the value donated (6.4%) + a fixed value based on the currency selected (0.1 to 0.5 cents of dollar).",
-        "becomes": "{0} becomes {1}",
-        "donate": "Donate"
+        "title": "PayPal捐赠",
+        "subtitle": "选择您的货币",
+        "show-fee": "显示PayPal费用解释",
+        "hide-fee": "隐藏PayPal费用解释",
+        "explanation": "PayPal对捐助收费 (6.4%) + 对应货币收取额外0.1%-0.5%",
+        "becomes": "{0} 变成 {1}",
+        "donate": "捐助"
       }
     },
 
     "list": {
-      "title": "Patron list",
+      "title": "Patron列表",
       "subtitle": "Here are some of the people or companies who support the project",
       "patron": "Patron",
       "amount": "Donation amount",
@@ -253,16 +253,16 @@
     },
 
     "why":{
-      "title": "Why ScreenToGif exists?",
-      "subtitle": "The history behind the app",
-      "part1": "This project was born way back in October, 2013 as a way to help me learn how to code, while being useful to my needs.",
-      "part2": "I was learning how to design GUIs (and I was having issues with it), so I thought it would be nice to have some screen recordings so I could ask for help in forums.",
-      "part3": "While some apps already existed, they didn't provide the specific feature that I needed, which prompted me to build my own solution (not realizing it would require a lot of work).",
-      "part4": "The name 'ScreenToGif' is as simple as I guessed the tool would be: a screen recorder that exported as gif. It was supposed to be an easy to remember name.",
-      "part5": "But I had no foreshadowing powers: The only part of the name that stays relevant is the middle 'To', as the app can now capture more than the screen and export to other formats.",
-      "part6": "This project had a complete restart in 2016, after having issues for some months with the old platform, I ended up switching to a new one.",
-      "part7": "This transition allowed me to develop more features, with easier to understand user interfaces.",
-      "part8": "Although I'm the creator and maintainer of this project, other users also contribute with bug reports, feature requests and translations. Feel free to leave your comment. :)"
+      "title": "为什么ScreenToGif存在？",
+      "subtitle": "应用历史",
+      "part1": "这个项目诞生于2013年10月，作为我的学习项目，解决我自己的相关需要。",
+      "part2": "我当时在学习如何开发可视化程序（对我来说有困难），所以我想如果能把界面录制下来，我可以在论坛上得到更有效的反馈。",
+      "part3": "虽然已经有类似的程序存在，但它们缺少一些我特别想要的功能。所以我想不如自己做一个吧（没想到这么费工夫）。",
+      "part4": "ScreenToGif这个名字跟我能想到的这个工具的功能一样简单：录屏到GIF。它的名字应该容易被记住。",
+      "part5": "但我不是先知，这名字唯一还有效的部分只剩下中间的'To'了，现在这个应用已经不局限于录制屏幕上的信息，且能导出到很多其他格式。",
+      "part6": "2016年这个项目彻底重新开始了，因为老的平台已经让我达到瓶颈好几个月，我换到了另一个平台。",
+      "part7": "这个转变允许我开发更多新功能，并制作出更容易理解和使用的界面。",
+      "part8": "尽管我是这个项目的作者和维护者，很多其他用户贡献了bug报告，功能请求和翻译。欢迎留下您的评论：）"
     },
 
     "methods": {
@@ -379,7 +379,7 @@
     },
 
     "options": {
-      "title": "Options",
+      "title": "选项",
 
       "app": {
         "title": "Application",
@@ -429,7 +429,7 @@
       },
 
       "extras": {
-        "title": "Extras",
+        "title": "更多",
         "text1": "Download plugins for the app."
       }
     }
