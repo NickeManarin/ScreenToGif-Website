@@ -237,19 +237,19 @@
   },
   
   "contact": {
-    "meta-title": "ScreenToGif - Contact",
-    "meta-description": "Contact the developer of ScreenToGif.",
+    "meta-title": "ScreenToGif - 联系",
+    "meta-description": "联系ScreenToGif的开发者。",
 
-    "title": "Here's how to contact me",
-    "subtitle": "Also a bit of details about me and the app",
+    "title": "如何联系我",
+    "subtitle": "以及一些关于我和这个应用的详细信息",
 
     "who": {
-      "title": "Who am I?",
-      "subtitle": "The creator of ScreenToGif",
-      "part1": "Hi, I'm Nicke Manarin, a {0}-year-old Brazilian developer.",
-      "part2": "I have been developing software since 2012, starting as a way to practice the skills taught in Computer Science classes.",
-      "part3": "After my graduation, that happened back in 2016, I kept learning new skills, which were directly put to use in my projects.",
-      "part4": "I'm keen to try my best to develop software that is purposeful and easy to use."
+      "title": "我是谁",
+      "subtitle": "ScreenToGif的创造者",
+      "part1": "你好，我是Nicke Manarin，{0}岁的巴西开发者。",
+      "part2": "我从2012年开始开发软件，刚开始的时候是为了练习计算机专业课程的技术。",
+      "part3": "从2016年毕业后，我持续学习新技能，并直接使用到我的项目当中。",
+      "part4": "我热衷于用我最好的水准去开发有意义且方便使用的软件。"
     },
 
     "why":{
