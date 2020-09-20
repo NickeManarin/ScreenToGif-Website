@@ -52,7 +52,7 @@
     "portable-info": "下载免安装包，包含主执行程序。插件可从 选项 > 更多 下载。",
     "downloads" : "{0} 下载",
     "more-releases" : "更多下载选项",
-    "fewer-releases" : "精选下载选项",
+    "fewer-releases" : "隐藏下载选项",
     "copy" : "复制",
     "copied" : "命令已复制！",
     "not-copied" : "此命令不可复制。",
@@ -237,19 +237,19 @@
   },
   
   "contact": {
-    "meta-title": "ScreenToGif - Contact",
-    "meta-description": "Contact the developer of ScreenToGif.",
+    "meta-title": "ScreenToGif - 联系",
+    "meta-description": "联系ScreenToGif的开发者。",
 
-    "title": "Here's how to contact me",
-    "subtitle": "Also a bit of details about me and the app",
+    "title": "如何联系我",
+    "subtitle": "以及一些关于我和这个应用的详细信息",
 
     "who": {
-      "title": "Who am I?",
-      "subtitle": "The creator of ScreenToGif",
-      "part1": "Hi, I'm Nicke Manarin, a {0}-year-old Brazilian developer.",
-      "part2": "I have been developing software since 2012, starting as a way to practice the skills taught in Computer Science classes.",
-      "part3": "After my graduation, that happened back in 2016, I kept learning new skills, which were directly put to use in my projects.",
-      "part4": "I'm keen to try my best to develop software that is purposeful and easy to use."
+      "title": "我是谁？",
+      "subtitle": "ScreenToGif的创造者",
+      "part1": "你好，我是Nicke Manarin，{0}岁的巴西开发者。",
+      "part2": "我从2012年开始开发软件，刚开始的时候是为了练习计算机专业课程的技术。",
+      "part3": "从2016年毕业后，我持续学习新技能，并直接使用到我的项目当中。",
+      "part4": "我热衷于用我最好的水准去开发有意义且方便使用的软件。"
     },
 
     "why":{
@@ -481,56 +481,56 @@
   },
 
   "privacy-terms": {
-    "meta-title": "ScreenToGif - Privacy and terms",
-    "meta-description": "See the privacy and terms.",
+    "meta-title": "ScreenToGif - 隐私协议",
+    "meta-description": "查看隐私协议。",
 
-    "title": "Privacy and terms",
-    "subtitle": "And other technical details about ScreenToGif",
+    "title": "隐私协议",
+    "subtitle": "其他关于ScreenToGif的技术细节",
 
     "privacy": {
-      "title": "Privacy",
+      "title": "隐私",
       "software": {
-        "title": "The software",
-        "phrase1": "ScreenToGif does not collect or transmit any personal (or system related) information without the user consent.",
-        "phrase2": "In fact, the only way that ScreenToGif sends personal or system related data happens when the user sends us a feedback via the Feedback tool.",
-        "phrase3": "The personal information may be provided by the users (such as their name and e-mail).",
-        "phrase4": "The system related information is captured automatically by the Feedback tool in order to facilitate solving possible issues.",
-        "more": "Click here to read more about other possible network connections opened by the software."
+        "title": "软件",
+        "phrase1": "未经允许，ScreenToGif不会搜集或发送任何个人（或系统）信息。",
+        "phrase2": "实际上，唯一ScreenToGif会发送个人或系统信息的时机，是用户使用反馈工具发送反馈的时候。",
+        "phrase3": "个人信息（如名字、Email）由用户主动提供。",
+        "phrase4": "系统相关信息是由反馈工具自动搜集的，以帮助解决各种可能的问题。",
+        "more": "点此阅读更多关于本软件可能使用网络链接的信息。"
       },
 
       "website": {
-        "title": "This website",
-        "phrase1": "This website uses Google Analytics services, which collects session data about every pageview.",
-        "phrase2": "The data is used only to understand better the public behavior towards this tool."
+        "title": "网站",
+        "phrase1": "本网站使用Google Analytics服务，它会搜集用户的浏览记录。",
+        "phrase2": "搜集到的资料仅用于更好地理解用户使用本软件的行为意图。"
       }
     },
 
     "terms": {
-      "title": "Terms",
-      "phrase1": "ScreenToGif is free for use for everyone, even in corporate environments.",
-      "more": "You can read more about it here."
+      "title": "协议",
+      "phrase1": "ScreenToGif对所有人免费，甚至是企业环境下的用户。",
+      "more": "更多信息。"
     }
   },
 
   "footer": {
     "share": {
-      "title": "<b>Share</b> on social media",
-      "tweet": "Tweet",
-      "share": "Share",
-      "like": "Like"
+      "title": "<b>分享</b>到社交媒体",
+      "tweet": "推",
+      "share": "分享",
+      "like": "赞"
     },
 
-    "language": "Language",
-    "follow": "<b>Follow</b> the project",
-    "watch": "Watch",
-    "made-by": "Made by {0}, from <b>Brazil</b> 🇧🇷",
-    "icons-by": "Icons by {0}",
-    "license-app": "<b>ScreenToGif</b> is licensed under {0}",
-    "license-web": "<b>This website</b> is licensed under {0}"
+    "language": "语言",
+    "follow": "<b>关注</b>本项目",
+    "watch": "关注",
+    "made-by": "由 {0} 制作，来自 <b>巴西</b> 🇧🇷",
+    "icons-by": "图标来自 {0}",
+    "license-app": "<b>ScreenToGif</b> 使用许可 {0}",
+    "license-web": "<b>本网站</b> 使用许可 {0}"
   },
 
   "not-found": {
-    "title": "Page not found...",
-    "subtitle": "Try returning to the home page"
+    "title": "找不到此页面...",
+    "subtitle": "试试回到主页"
   }
 }
