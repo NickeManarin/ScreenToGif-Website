@@ -467,16 +467,16 @@
   },
 
   "source": {
-    "meta-title": "ScreenToGif - Source",
-    "meta-description": "See the details of the open source project, ScreenToGif.",
+    "meta-title": "ScreenToGif - 源代码",
+    "meta-description": "查看ScreenToGif开源项目的详细信息。",
 
-    "title": "Source code",
-    "subtitle": "ScreenToGif is open source!",
+    "title": "源代码",
+    "subtitle": "ScreenToGif是开源项目！",
 
     "links": {
-      "app-info": "The source code of ScreenToGif",
-      "website": "Website",
-      "website-info": "The source code of this website"
+      "app-info": "ScreenToGif的源代码",
+      "website": "网站",
+      "website-info": "网站源代码"
     }
   },
 
