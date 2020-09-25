@@ -391,29 +391,29 @@
 
       "recorder": {
         "title": "录像机",
-        "text1": "Select if you want the older or newer UI for the screen recorder.",
-        "text2": "Choose which capture mode to use (BitBlt, DirectX, with memory cache or not).",
-        "text3": "Select the capture frequency mode (manual, normal, timelapse).",
-        "text4": "Enable cursor following (the recorder will follow your cursor during the recording)."
+        "text1": "新老录像机界面供你选择。",
+        "text2": "选择录制模式（BitBlt，DirectX，是否启用内存缓存等等）。",
+        "text3": "设置录像帧率（自选，正常，延时模式）",
+        "text4": "启动光标跟随（录像机在录制过程中跟随光标位置）。"
       },
 
       "editor": {
         "title": "编辑器",
-        "text1": "Select the previewer style (color and size of the background grid).",
-        "text2": "Enable the auto-sizing of the editor window based on the content size and vice-versa.",
-        "text3": "Options to enable confirmation dialogs before important actions.",
-        "text4": "Option to limit the undo/redo stack."
+        "text1": "选择预览样式（背景栅格的颜色和大小）。",
+        "text2": "启用基于内容尺寸的编辑器窗口自适应，或让内容适应窗体大小。",
+        "text3": "控制是否在重要动作前弹出确认提示。",
+        "text4": "选择“撤销/重做”的历史数量。"
       },
 
       "tasks": {
         "title": "自动化任务",
-        "text1": "You can create tasks to apply effects to your recording, so that you don't need to manually apply them every time."
+        "text1": "你能创建自动化任务来为录像添加各种效果，免于每次手动添加。"
       },
 
       "shortcuts": {
         "title": "快捷键",
-        "text1": "Set keyboard shortcuts to open the recorders and editor.",
-        "text2": "You can also set shortcuts to control your recordings (record, pause, stop, and others)."
+        "text1": "设置键盘快捷键以方便打开录像机和编辑器。",
+        "text2": "你还能用快捷键控制你的录制过程（录制，暂停，结束，以及其他动作）。"
       },
 
       "language": {
@@ -424,13 +424,13 @@
 
       "storage": {
         "title": "临时文件",
-        "text1": "Control how the app store its data.",
-        "text2": "Recover used space by deleting old projects."
+        "text1": "控制应用如何储存信息。",
+        "text2": "删除冗余项目以释放储存空间。"
       },
 
       "extras": {
         "title": "更多",
-        "text1": "Download plugins for the app."
+        "text1": "多种插件可以下载。"
       }
     }
   },
