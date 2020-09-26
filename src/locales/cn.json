@@ -436,34 +436,34 @@
   },
 
   "how-to-use": {
-    "meta-title": "ScreenToGif - How to use",
-    "meta-description": "Learn how to use ScreenToGif.",
+    "meta-title": "ScreenToGif - 使用方法",
+    "meta-description": "学习如何使用ScreenToGif。",
 
-    "title": "How to use?",
-    "subtitle": "Learn how to use ScreenToGif",
-    "more": "Click here to read more about how to use ScreenToGif",
+    "title": "如何使用？",
+    "subtitle": "学习如何使用ScreenToGif",
+    "more": "点此阅读更多关于如何使用ScreenToGif的信息",
 
     "list": {
-      "startup": "When the app starts, click on the <b>Recorder</b> button.",
-      "record": "A punctured window will appear, line up to what you want to record and click on <b>Record</b>. When finished, click on the <b>Stop</b> button.",
-      "edit-remove": "Remove unwanted frames by selecting them with <b>Shift-Click</b> and pressing <b>Delete</b>.",
-      "edit-transition": "Add a transition to the last frame, so the animation loops more <i>smoothly</i>.",
-      "edit-save": "After your touch ups, click on <b>Save As</b> to export the animation to your format of choice.",
-      "final-gif": "Here's the result Gif, around <b>80.6 KiB</b>."
+      "startup": "当程序启动后，点击<b>录像机</b>按钮。",
+      "record": "一个带镂空的窗口会出现，把它对准你要录像的区域，点击<b>录制</b>。录制完成时，点击<b>停止</b>按钮。",
+      "edit-remove": "<b>Shift-点击</b>不想要的帧，按<b>删除</b>。",
+      "edit-transition": "给最后一帧加上过渡，使得整个动画能<i>顺畅地</i>循环播放。",
+      "edit-save": "修整完毕后，点击<b>另存为</b>可将动画导出到你想要的格式。",
+      "final-gif": "这是最终的GIF，大约<b>80.6 KiB</b>。"
     }
   },
 
   "share": {
-    "meta-title": "ScreenToGif - Share",
-    "meta-description": "See what people are saying about ScreenToGif.",
+    "meta-title": "ScreenToGif - 分享",
+    "meta-description": "看其他人如何评价ScreenToGif。",
 
-    "title": "Share",
-    "subtitle": "Share your thoughts on this tool",
-    "like": "Are you enjoying ScreenToGif?",
-    "mention": "Mention it on Twitter 😊",
-    "tweet": "Tweet @ScreenToGif or @NickeManarin",
-    "text": "ScreenToGif is a screen, webcam and sketch board recorder with an integrated editor.",
-    "disclaimer": "Would you like to not have your tweet linked on this page? Contact me"
+    "title": "分享",
+    "subtitle": "分享你对这个工具的看法",
+    "like": "你喜欢ScreenToGif吗？",
+    "mention": "在Twitter提起我 😊",
+    "tweet": "推 @ScreenToGif 或者 @NickeManarin",
+    "text": "ScreenToGif是一个自带编辑器的录屏，录像，画板录制工具。",
+    "disclaimer": "如您不希望您的推特出现在这个页面上，请联系我"
   },
 
   "source": {
