@@ -382,9 +382,8 @@
                     <b-table :data="patrons" ref="table" :loading="isLoading" hoverable selectable @select="openLink" :scrollable="false"
                          :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]">
                     
-                        <template slot-scope="props">
-                            <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
-                                field="version" :label="$t('donation.list.patron')" :custom-sort="sortName" sortable>
+                        <b-table-column class="is-unselectable" field="name" :label="$t('donation.list.patron')" :custom-sort="sortName" sortable v-slot="props">
+                            <div :class="props.row.url ? 'has-pointer-cursor' : ''">
                                 <b-tooltip v-if="props.row.url != null" :label="props.row.urlPretty" position="is-right" type="is-link">
                                     {{ props.row.name }}
 
@@ -392,32 +391,38 @@
                                 </b-tooltip>
 
                                 <p v-if="props.row.url == null">{{ props.row.name }}</p>
-                            </b-table-column>
+                            </div>
+                        </b-table-column>
 
-                            <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
-                                field="value" :label="$t('donation.list.amount')" :custom-sort="sortValue" sortable numeric>
-                                <template slot="header" slot-scope="{ column }">
-                                    <b-tooltip :label="$t('donation.list.amount-info')" type="is-info" size="is-small" animated dashed multilined>
-                                        {{ column.label }}
-                                    </b-tooltip>
-                                </template>
-
-                                {{ props.row.value.toLocaleString($i18n.locale) }} {{ props.row.currency }} 
-                            </b-table-column>
-
-                            <!-- <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="date" label="Date" sortable centered>
-                                {{props.row.date ? new Date(props.row.date).toLocaleDateString($i18n.locale) : "unknown"}}
-                            </b-table-column> -->
-
-                            <b-table-column class="is-unselectable" :cell-class="props.row.url ? 'has-pointer-cursor' : ''" 
-                                field="platform" :label="$t('donation.list.from')" sortable numeric>
-                                <template slot="header" slot-scope="{ column }">
+                        <b-table-column class="is-unselectable" field="value" :label="$t('donation.list.amount')" :custom-sort="sortValue" sortable numeric>
+                            <template v-slot:header="{ column }">
+                                <b-tooltip :label="$t('donation.list.amount-info')" type="is-info" size="is-small" animated dashed multilined>
                                     {{ column.label }}
-                                </template>
+                                </b-tooltip>
+                            </template>
 
-                                {{ props.row.platform }}
-                            </b-table-column>
-                        </template>
+                            <template v-slot="props">
+                                <div :class="props.row.url ? 'has-pointer-cursor' : ''">
+                                    {{ props.row.value.toLocaleString($i18n.locale) }} {{ props.row.currency }} 
+                                </div>
+                            </template>
+                        </b-table-column>
+
+                        <!-- <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="date" label="Date" sortable centered v-slot="props">
+                            {{props.row.date ? new Date(props.row.date).toLocaleDateString($i18n.locale) : "unknown"}}
+                        </b-table-column> -->
+
+                        <b-table-column class="is-unselectable"field="platform" :label="$t('donation.list.from')" sortable numeric>
+                            <template v-slot:header="{ column }">
+                                {{ column.label }}
+                            </template>
+
+                            <template v-slot="props">
+                                <div :class="props.row.url ? 'has-pointer-cursor' : ''">
+                                    {{ props.row.platform }}
+                                </div>
+                            </template>
+                        </b-table-column>
 
                         <template slot="empty">
                             <section v-if="!isLoading" class="section">
@@ -531,6 +536,15 @@
                         urlPretty: 'isitketo.org',
                         value: 40,
                         valueInUsd: 40,
+                        currency: "USD $",
+                        platform: "Paypal"
+                    },
+                    {
+                        name: "DataTraveler1",
+                        url: null,
+                        urlPretty: null,
+                        value: 36.7,
+                        valueInUsd: 36.7,
                         currency: "USD $",
                         platform: "Paypal"
                     },

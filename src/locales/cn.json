@@ -1,7 +1,10 @@
 {
   "info": {
     "code": "cn",
-    "lang": "简体中文"
+    "lang": "简体中文",
+    "lang-english": "Chinese (Simplified)",
+    "author": "Po Chen",
+    "status": "65"
   },
 
   "navigation": {

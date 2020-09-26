@@ -1,7 +1,10 @@
 {
   "info": {
     "code": "nl",
-    "lang": "Nederlands"
+    "lang": "Nederlands",
+    "lang-english": "Dutch",
+    "author": "Jasper Verweijj",
+    "status": "100"
   },
 
   "navigation": {
@@ -46,7 +49,7 @@
     "subtitle": "<strong>Scherm-</strong>, <b>webcam-</b> en <b>whiteboard</b>opname met geïntegreerde <b>bewerkingsmogelijkheden</b>",
     "version": "Versie {0}",
     "installer" : "Installatieprogramma",
-    "installer-info": "Download installatieprogramma (.msi), die uitvoerbestand bestand en benodigde aanvullingen bevat.",
+    "installer-info": "Download installatieprogramma (*.msi), incl. uitvoerbaar bestand en benodigde onderdelen.",
     "or": "of",
     "portable" : "Portable",
     "portable-info": "Download de portable versie, die enkel uitvoerbaar bestand (.exe) bevat. Aanvullingen moeten gedownload worden via Opties > Extra's.",
@@ -262,7 +265,7 @@
       "part5": "Maar ik had geen vooruitziende blik: het enige gedeelte in de naam dat nog relevant is, is 'To'. De applicatie kan namelijk tegenwoordig meer opnemen dan alleen een computerscherm, maar ook naar meer formaten exporteren.",
       "part6": "Dit project kreeg een volledige herstart in 2016. Nadat ik voor maanden verscheidene problemen had met het oude platformm, besloot ik opnieuw te beginnen.",
       "part7": "Deze transitie heeft me de mogelijkheid gegeven om meer opties te ontwikkelen, met gemakkelijker te begrijpen gebruikersinterfaces.",
-      "part8": "Alhoewel ik de maker en het onderhoud van het project uitvoeren, zijn er ook andere gebruikers die bijdrages leveren met bug meldingen, wensen en vertalingen. Voel je vrij om een commentaar achter te laten! :)"
+      "part8": "Alhoewel ik de maker ben en onderhoud aan het programma uitvoer, zijn er ook andere gebruikers die bijdrages leveren met bug meldingen, wensen en vertalingen. Voel je vrij om een commentaar achter te laten! :)"
     },
 
     "methods": {

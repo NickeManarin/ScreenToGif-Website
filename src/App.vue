@@ -120,6 +120,38 @@
         background-color: $grey-99;
     }
 
+    .button {
+        padding-bottom: calc(.375em - 1px);
+        padding-left: .75em;
+        padding-right: .75em;
+        padding-top: calc(.375em - 1px);
+        height: auto !important;
+
+        .icon:first-child:last-child {
+            margin-left: calc(-.375em - 1px);
+            margin-right: calc(-.375em - 1px);
+        }
+
+        .icon:first-child:not(:last-child) {
+            margin-left: calc(-.375em - 1px);
+            margin-right: .1875em;
+        }
+    }
+
+    .button, .input, .textarea, .taginput .taginput-container.is-focusable, .select select, .file-cta, .file-name, 
+    .pagination-previous, .pagination-next, .pagination-link, .pagination-ellipsis {
+        height: 2.25rem;
+        padding-bottom: calc(.375em - 1px);
+        padding-top: calc(.375em - 1px);
+    }
+    .media {
+        text-align: left;
+
+        .media-content {
+            text-align: left;
+        }
+    }
+
     //Custom color styles.
     .has-text-grey-95 {
         color: $grey-95 !important;

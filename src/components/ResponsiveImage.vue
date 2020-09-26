@@ -63,6 +63,11 @@
                 type: Boolean,
                 default: true,
                 required: false
+            },
+            isFixed: {
+                type: Boolean,
+                default: false,
+                required: false
             }
         },
 
@@ -96,7 +101,7 @@
                 };
 
                 //Enables the responsiveness of the image.
-                if (!this.loaded)
+                if (!this.loaded || this.isFixed)
                 {
                     if (this.width)
                         styles.width = this.width;

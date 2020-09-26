@@ -95,7 +95,7 @@
 
         <template slot="end">
             <b-navbar-item tag="div" class="has-dropdown is-hidden-touch">
-                <b-dropdown v-model="$i18n.locale" aria-role="list" 
+                <b-dropdown v-model="$i18n.locale" aria-role="list" position="is-bottom-left"
                     @change="$gtag.event('Language', {'event_category': 'Clicks', 'event_label': 'Switch language: ' + $i18n.locale})">
                     <button class="button" :class="navigationColor()" type="button" slot="trigger">
                         <template>
@@ -109,7 +109,7 @@
                     <b-dropdown-item v-for="(lang, i) in languageArray" :key="`lang${i}`" :value="lang.info.code" aria-role="listitem">
                         <div class="media">
                             <div class="media-content">
-                                <h3>{{lang.info.lang}}</h3>
+                                <h3>{{lang.info.lang}} <span v-if="lang.info.code !== 'en'">• {{lang.info['lang-english']}}</span></h3>
                             </div>
                         </div>
                     </b-dropdown-item>

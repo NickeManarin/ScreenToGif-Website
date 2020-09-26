@@ -1,7 +1,10 @@
 {
   "info": {
     "code": "hu",
-    "lang": "Magyar"
+    "lang": "Magyar",
+    "lang-english": "Hungarian",
+    "author": "László Földes",
+    "status": "100"
   },
 
   "navigation": {

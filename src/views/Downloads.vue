@@ -130,31 +130,31 @@
                         :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]"
                         @details-open="(row, index) => detailsOpen(row)" @details-close="(row, index) => detailsClose(row)">
                     
-                        <template slot-scope="props">
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" :label="$t('downloads.releases.table.version')" :custom-sort="sortVersion" sortable>
-                                <span class="tag" :class="versionType(props.row.is_prerelease)">
-                                    {{ props.row.version }}
-                                </span>
-                            </b-table-column>
+                        <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" :label="$t('downloads.releases.table.version')" :custom-sort="sortVersion" sortable v-slot="props">
+                            <span class="tag" :class="versionType(props.row.is_prerelease)">
+                                {{ props.row.version }}
+                            </span>
+                        </b-table-column>
 
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="release_date" :label="$t('downloads.releases.table.date')" sortable centered>
-                                {{props.row.release_date ? new Date(props.row.release_date).toLocaleDateString($i18n.locale) : "unknown"}}
-                            </b-table-column>
+                        <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="release_date" :label="$t('downloads.releases.table.date')" sortable centered v-slot="props">
+                            {{props.row.release_date ? new Date(props.row.release_date).toLocaleDateString($i18n.locale) : "unknown"}}
+                        </b-table-column>
 
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="active_days" :label="$t('downloads.releases.table.days')" sortable numeric>
-                                <template slot="header" slot-scope="{ column }">
-                                    <b-tooltip :label="$t('downloads.releases.table.days-info')" type="is-info" size="is-small" animated dashed multilined>
-                                        {{ column.label }}
-                                    </b-tooltip>
-                                </template>
+                        <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="active_days" :label="$t('downloads.releases.table.days')" sortable numeric>
+                            <template v-slot:header="{ column }">
+                                <b-tooltip :label="$t('downloads.releases.table.days-info')" type="is-info" size="is-small" animated dashed multilined>
+                                    {{ column.label }}
+                                </b-tooltip>
+                            </template>
 
+                            <template v-slot="props">
                                 {{ toLocaleFixed(props.row.active_days, 1, $i18n.locale) }}
-                            </b-table-column>
+                            </template>
+                        </b-table-column>
 
-                            <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="download_count" :label="$t('downloads.releases.table.count')" sortable numeric>
-                                {{ props.row.download_count.toLocaleString($i18n.locale) }}
-                            </b-table-column>
-                        </template>
+                        <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="download_count" :label="$t('downloads.releases.table.count')" sortable numeric v-slot="props">
+                            {{ props.row.download_count.toLocaleString($i18n.locale) }}
+                        </b-table-column>
 
                         <template slot="empty">
                             <section v-if="!isLoading" class="section">

@@ -1,7 +1,10 @@
 {
   "info": {
     "code": "en",
-    "lang": "English"
+    "lang": "English",
+    "lang-english": "English",
+    "author": "Nicke Manarin",
+    "status": "100"
   },
 
   "navigation": {

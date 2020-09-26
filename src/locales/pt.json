@@ -1,7 +1,10 @@
 {
   "info": {
     "code": "pt",
-    "lang": "Português"
+    "lang": "Português",
+    "lang-english": "Portuguese",
+    "author": "Nicke Manarin",
+    "status": "100"
   },
   
   "navigation": {

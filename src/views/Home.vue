@@ -215,7 +215,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.fosshub.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Fosshub.svg')" width="150px" height="42.92px" maxWidth="150px" maxHeight="42.92px"/>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Fosshub.svg')" width="150px" height="42.92px" maxWidth="150px" maxHeight="42.92px" :isFixed="true"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey has-text-weight-semibold">FossHub</p>
@@ -239,7 +239,7 @@
                             <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px" :isFixed="true"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Jetbrains</p>
