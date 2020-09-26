@@ -385,55 +385,55 @@
       "title": "选项",
 
       "app": {
-        "title": "Application",
-        "text1": "Select how the app starts.",
-        "text2": "Choose among 4 color themes (from light to very dark).",
-        "text3": "Alter the system tray icon behavior (clicks to open parts of the app).",
-        "text4": "Decide whether the app should update itself automatically (translation updates can be toggled too)."
+        "title": "应用程序",
+        "text1": "选择程序启动方式。",
+        "text2": "4种配色方案（亮色到暗色）。",
+        "text3": "改变系统托盘图标互动方式（点击打开程序的某一部分）。",
+        "text4": "决定程序是否自动更新（翻译更新可以单独选择）。"
       },
 
       "recorder": {
-        "title": "Recorder",
-        "text1": "Select if you want the older or newer UI for the screen recorder.",
-        "text2": "Choose which capture mode to use (BitBlt, DirectX, with memory cache or not).",
-        "text3": "Select the capture frequency mode (manual, normal, timelapse).",
-        "text4": "Enable cursor following (the recorder will follow your cursor during the recording)."
+        "title": "录像机",
+        "text1": "新老录像机界面供你选择。",
+        "text2": "选择录制模式（BitBlt，DirectX，是否启用内存缓存等等）。",
+        "text3": "设置录像帧率（自选，正常，延时模式）",
+        "text4": "启动光标跟随（录像机在录制过程中跟随光标位置）。"
       },
 
       "editor": {
-        "title": "Editor",
-        "text1": "Select the previewer style (color and size of the background grid).",
-        "text2": "Enable the auto-sizing of the editor window based on the content size and vice-versa.",
-        "text3": "Options to enable confirmation dialogs before important actions.",
-        "text4": "Option to limit the undo/redo stack."
+        "title": "编辑器",
+        "text1": "选择预览样式（背景栅格的颜色和大小）。",
+        "text2": "启用基于内容尺寸的编辑器窗口自适应，或让内容适应窗体大小。",
+        "text3": "控制是否在重要动作前弹出确认提示。",
+        "text4": "选择“撤销/重做”的历史数量。"
       },
 
       "tasks": {
-        "title": "Tasks",
-        "text1": "You can create tasks to apply effects to your recording, so that you don't need to manually apply them every time."
+        "title": "自动化任务",
+        "text1": "你能创建自动化任务来为录像添加各种效果，免于每次手动添加。"
       },
 
       "shortcuts": {
-        "title": "Shortcuts",
-        "text1": "Set keyboard shortcuts to open the recorders and editor.",
-        "text2": "You can also set shortcuts to control your recordings (record, pause, stop, and others)."
+        "title": "快捷键",
+        "text1": "设置键盘快捷键以方便打开录像机和编辑器。",
+        "text2": "你还能用快捷键控制你的录制过程（录制，暂停，结束，以及其他动作）。"
       },
 
       "language": {
-        "title": "Language",
-        "text1": "Select among {0} languages.",
-        "text2": "The app will automatically select a language, based on your current OS settings."
+        "title": "语言",
+        "text1": "{0}种可选语言。",
+        "text2": "程序会基于系统语言自动选择语言。"
       },
 
       "storage": {
-        "title": "Storage",
-        "text1": "Control how the app store its data.",
-        "text2": "Recover used space by deleting old projects."
+        "title": "临时文件",
+        "text1": "控制应用如何储存信息。",
+        "text2": "删除冗余项目以释放储存空间。"
       },
 
       "extras": {
         "title": "更多",
-        "text1": "Download plugins for the app."
+        "text1": "多种插件可以下载。"
       }
     }
   },
@@ -470,16 +470,16 @@
   },
 
   "source": {
-    "meta-title": "ScreenToGif - Source",
-    "meta-description": "See the details of the open source project, ScreenToGif.",
+    "meta-title": "ScreenToGif - 源代码",
+    "meta-description": "查看ScreenToGif开源项目的详细信息。",
 
-    "title": "Source code",
-    "subtitle": "ScreenToGif is open source!",
+    "title": "源代码",
+    "subtitle": "ScreenToGif是开源项目！",
 
     "links": {
-      "app-info": "The source code of ScreenToGif",
-      "website": "Website",
-      "website-info": "The source code of this website"
+      "app-info": "ScreenToGif的源代码",
+      "website": "网站",
+      "website-info": "网站源代码"
     }
   },
 
