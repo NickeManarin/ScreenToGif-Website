@@ -206,14 +206,14 @@
 
     "list": {
       "title": "Patron列表",
-      "subtitle": "Here are some of the people or companies who support the project",
+      "subtitle": "这里有一些支持这个项目的人和公司",
       "patron": "Patron",
-      "amount": "Donation amount",
-      "amount-info": "The ordering is done via the value in U$D.",
-      "from": "From",
-      "not-possible": "It was not possible to load the patron list.",
-      "list-name": "Would you like to have your name or company listed here after a donation?",
-      "contact": "Contact me :)"
+      "amount": "捐赠数额",
+      "amount-info": "购买（捐赠）是通过美金完成的。",
+      "from": "来自",
+      "not-possible": "无法加载Patron列表。",
+      "list-name": "您希望您或您公司的名字被加入到捐赠列表吗？",
+      "contact": "联系我 :)"
     }
   },
 
