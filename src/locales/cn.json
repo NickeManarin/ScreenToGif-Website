@@ -209,7 +209,7 @@
       "subtitle": "这里有一些支持这个项目的人和公司",
       "patron": "Patron",
       "amount": "捐赠数额",
-      "amount-info": "购买（捐赠）是通过美金完成的。",
+      "amount-info": "按美金价值排序。",
       "from": "来自",
       "not-possible": "无法加载Patron列表。",
       "list-name": "您希望您或您公司的名字被加入到捐赠列表吗？",
