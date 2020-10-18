@@ -99,9 +99,9 @@
     },
 
     "share": {
-      "title": "What the users are saying",
-      "subtitle": "See the happy thoughts from people from Twitter",
-      "share": "Share your experience"
+      "title": "用户们怎么说",
+      "subtitle": "看Twitter上其他用户的愉快经历",
+      "share": "分享你的体验"
     }
   },
 
@@ -218,24 +218,24 @@
   },
 
   "screenshots": {
-    "meta-title": "ScreenToGif - Screenshots",
-    "meta-description": "View the screenshots of ScreenToGif.",
+    "meta-title": "ScreenToGif - 截屏",
+    "meta-description": "阅览ScreenToGif的截屏。",
 
-    "title": "Screenshots and examples",
-    "subtitle": "Check out what you can do with ScreenToGif",
-    "add": "Would you like to add your gif to this page?",
-    "send": "Send me a message :)",
+    "title": "截屏和用例",
+    "subtitle": "你能用ScreenToGif来干什么",
+    "add": "你想把你的GIF添加到这个页面吗？",
+    "send": "给我发消息 :)",
 
     "gallery":{
-      "startup": "This is the default entry point of the app.<br>You can set the app to open directly into the <b>recorders and editor</b> instead.",
-      "recorder": "This is the default screen recorder UI. You simply move this window on top of the content that you want to record.",
-      "recorder-use": "If you click and drag the crosshair icon to a window, the recorder will adjust itself to the bounds.",
-      "recorder-new": "This is the <b>new recorder UI</b>, which lets you click and drag to select an area of your screen.<br>You can also switch to the window and screen modes.",
-      "editor": "This is the editor, where you can edit your recordings and export it to <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> and <b>psd</b>.",
-      "webcam": "This is the webcam recorder.",
-      "board": "The board recorder lets you capture your drawings automatically as you draw them.",
-      "board-example": "Here's an example of drawing recorded.",
-      "options": "ScreenToGif has <b>lots</b> of options!"
+      "startup": "这是默认启动界面。<br>你可以设置让应用直接打开至<b>录像机</b>或<b>编辑器</b>界面。",
+      "recorder": "这是默认的录像机界面。你可以把这个窗口移动到任何你想录像内容的上。",
+      "recorder-use": "如果你点击并拖动十字图标到任何一个窗口上，录像机会自动调整到窗口边界的大小。",
+      "recorder-new": "这是<b>新录像机界面/b>，它让你能够点击并拖动选取一个屏幕区域。<br>你也可以切换至窗口或屏幕模式。",
+      "editor": "这是编辑器，在此你可以编辑录像，并导出至<b>GIF</b>，<b>APNG</b>，<b>视频</b>，<b>项目</b>，<b>图片</b>以及<b>PSD</b>。",
+      "webcam": "这是摄像头录像机。",
+      "board": "画板录像机可以自动截取你绘画的过程。。",
+      "board-example": "这是一个录制下来的绘画过程的例子。",
+      "options": "ScreenToGif有<b>超级多</b>客制化选项！"
     }
   },
   
