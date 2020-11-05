@@ -303,19 +303,19 @@
 
       "screen": {
         "title": "屏幕",
-        "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
-        "text2": "Select the capture frequency mode (manual, normal in fps, timelapse in fpm/fph).",
+        "text1": "使用<b>录制</b>，<b>暂停</b>，<b>放弃</b>或<b>停止</b>按钮来控制录制。",
+        "text2": "选择录制频率模式（人工，普通，或延时模式 - 每分钟，每小时频率）。",
         
         "older": {
           "title": "老界面",
-          "text1": "Drag or resize the window to adjust what you want to capture.",
-          "text2": "Type the exact size of the capture region.",
-          "text3": "Drag the crosshair button and drop it on top of a window to move the recorder to capture that."
+          "text1": "拖拽或缩放窗口来调节录制区域。",
+          "text2": "输入准确的录制区域尺寸。",
+          "text3": "拖拽十字按钮并放到一个窗口上，来录制该窗口。"
         },
 
         "newer": {
           "title": "新界面",
-          "text1": "Enter selection mode, which lets you select a <b>region</b>, a <b>window</b> or an <b>entire screen</b> to capture."
+          "text1": "进入选取模式，选择一个<b>区域</b>，一个<b>窗口</b>或<b>整个屏幕</b>来录制。"
         }
       },
 
