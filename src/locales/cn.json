@@ -358,26 +358,26 @@
 
       "frame": {
         "title": "帧操作",
-        "text1": "Delete selected frames.",
-        "text2": "Remove duplicates.",
-        "text3": "Reduce framerate.",
-        "text4": "Delete all previous or all next frames.",
-        "text5": "Reverse, apply yoyo (forwards and backwards) or move frames around.",
-        "text6": "Alter the delay of the frames (override, increase/decrease or scale).",
-        "text7": "Add title frames.",
-        "text8": "Add transitions (fade or slide effects)."
+        "text1": "删除选中帧。",
+        "text2": "去除重复帧。",
+        "text3": "降低帧率。",
+        "text4": "删除所有之前或之后的帧。",
+        "text5": "逆转顺序，添加倒放回放（先正向播放，再逆向播放）效果，或移动帧。",
+        "text6": "更改每一帧之间的延迟（覆写，增加/减少，或按比例缩放）。",
+        "text7": "添加标题帧。",
+        "text8": "添加过渡效果（渐出渐入或滑动效果）。"
       },
 
       "image": {
         "title": "图像操作",
-        "text1": "Resize, crop or flip/rotate.",
-        "text2": "Add overlays:",
-        "text3": "Captions/text.",
-        "text4": "Drawings or shapes.",
-        "text5": "Key strokes or mouse clicks.",
-        "text6": "Borders, shadows, and obfuscation (pixelate).",
-        "text7": "Watermarks (pick your own image).",
-        "text8": "Cinemagraph (select parts of the animation to stay static or move)."
+        "text1": "缩放，裁剪或翻转/旋转。",
+        "text2": "添加覆盖：",
+        "text3": "标题或文字",
+        "text4": "图画或性状",
+        "text5": "按键点击或鼠标点击",
+        "text6": "外框，阴影以及马赛克",
+        "text7": "水印（可以选择你自己的图片）",
+        "text8": "动效（使部分动画保持静止或移动）"
       }
     },
 
