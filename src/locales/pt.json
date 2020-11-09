@@ -192,6 +192,14 @@
       "gog-info": "Dê jogos de presente via GOG",
       "amazon": "Lista de desejos na Amazon",
       "amazon-info": "Me ajude a conseguir peças para o meu computador",
+      "cripto-info": "Clique para revelar o endereço",
+
+      "cripto": {
+        "title": "Doe via {0}",
+        "subtitle": "Leia o código QR ou copie o endereço",
+        "address-copied": "Endereço copiado!",
+        "address-not-copied": "Não foi possível copiar o endereço."
+      },
 
       "paypal": {
         "title": "Doe com o PayPal",

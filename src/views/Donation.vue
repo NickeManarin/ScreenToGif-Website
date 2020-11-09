@@ -369,6 +369,80 @@
                             </form>
                         </div>
                     </div>
+
+                    <div class="columns is-centered is-multiline">
+                        <div class="column is-half-tablet is-one-third-desktop">
+                            <b-button class="is-light" @click="openBitcoinDialog()">
+                                <article class="media">
+                                    <figure class="media-left">
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Bitcoin.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
+                                    </figure>
+
+                                    <div class="media-content">
+                                        <h5 class="is-size-4 has-text-weight-semibold">Bitcoin</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.cripto-info') }}</p>
+                                    </div>
+                                </article>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-half-tablet is-one-third-desktop">
+                            <b-button class="is-light" @click="openBitcoinCashDialog()">
+                                <article class="media">
+                                    <figure class="media-left">
+                                        <ResponsiveImage :src="require('@/assets/media/donation/BitcoinCash.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
+                                    </figure>
+
+                                    <div class="media-content">
+                                        <h5 class="is-size-4 has-text-weight-semibold">Bitcoin Cash</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.cripto-info') }}</p>
+                                    </div>
+                                </article>
+                            </b-button>
+                        </div>
+                    </div>
+
+                    <b-modal :active.sync="isBitcoinModalActive" trap-focus aria-role="dialog" aria-modal :width="600" scroll="keep"
+                        @close="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Bitcoin hide'})">
+                        <div class="box has-text-centered content" style="padding: 40px">
+                            <h2 class="title">{{ $t('donation.how-donate.cripto.title').replace('{0}', 'Bitcoin') }}</h2>
+                            <p class="subtitle">{{ $t('donation.how-donate.cripto.subtitle') }}</p>
+                            
+                            <ResponsiveImage :src="require('@/assets/media/donation/BitcoinAddress.png')" width="145px" height="145px" maxWidth="145px" maxHeight="145px" borderRadius="4px" skeleton/>
+
+                            <br>
+
+                            <div class="columns is-centered is-mobile has-top-margin">
+                                <div class="column is-narrow has-text-centered">
+                                    <div class="has-code">
+                                        <code><span class="is-unselectable">></span> bc1q9l8ql9a2hsew0skcnnfupq97tlaqnxwqh4smrc </code>
+                                        <b-button type="is-primary" inverted @click="copyAddress('bc1q9l8ql9a2hsew0skcnnfupq97tlaqnxwqh4smrc', 'Bitcoin')">{{ $t('home.copy') }}</b-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </b-modal>
+
+                    <b-modal :active.sync="isBitcoinCashModalActive" trap-focus aria-role="dialog" aria-modal :width="600" scroll="keep"
+                        @close="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'BitcoinCash hide'})">
+                        <div class="box has-text-centered content" style="padding: 40px">
+                            <h2 class="title">{{ $t('donation.how-donate.cripto.title').replace('{0}', 'Bitcoin Cash') }}</h2>
+                            <p class="subtitle">{{ $t('donation.how-donate.cripto.subtitle') }}</p>
+                            
+                            <ResponsiveImage :src="require('@/assets/media/donation/BitcoinCashAddress.png')" width="207px" height="207px" maxWidth="207px" maxHeight="207px" borderRadius="4px" skeleton/>
+
+                            <br>
+
+                            <div class="columns is-centered is-mobile has-top-margin">
+                                <div class="column is-narrow has-text-centered">
+                                    <div class="has-code">
+                                        <code><span class="is-unselectable">></span> 1HN81cAwDo16tRtiYfkzvzFqikQUimM3S8 </code>
+                                        <b-button type="is-primary" inverted @click="copyAddress('1HN81cAwDo16tRtiYfkzvzFqikQUimM3S8', 'Bitcoin Cash')">{{ $t('home.copy') }}</b-button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </b-modal>
                 </div>
             </div>
         </section>
@@ -412,7 +486,7 @@
                             {{props.row.date ? new Date(props.row.date).toLocaleDateString($i18n.locale) : "unknown"}}
                         </b-table-column> -->
 
-                        <b-table-column class="is-unselectable"field="platform" :label="$t('donation.list.from')" sortable numeric>
+                        <b-table-column class="is-unselectable" field="platform" :label="$t('donation.list.from')" sortable numeric>
                             <template v-slot:header="{ column }">
                                 {{ column.label }}
                             </template>
@@ -465,6 +539,8 @@
             return {
                 isPaypalModalActive: false,
                 isPaypalExpanderOpen: false,
+                isBitcoinModalActive: false,
+                isBitcoinCashModalActive: false,
                 paypalCurrency: "USD",
                 patrons: [
                     {
@@ -661,6 +737,14 @@
                 this.isPaypalModalActive = true;
                 this.$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Paypal show'});
             },
+            openBitcoinDialog(){
+                this.isBitcoinModalActive = true;
+                this.$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Bitcoin show'});
+            },
+            openBitcoinCashDialog(){
+                this.isBitcoinCashModalActive = true;
+                this.$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'BitcoinCash show'});
+            },
             feeConversion(start, end, currency){
                 return this.$t('donation.how-donate.paypal.becomes')
                     .replace('{0}', start.toLocaleString(this.$i18n.locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' ' + currency)
@@ -678,6 +762,29 @@
 
                 window.open(row.url, '_blank', 'noopener');
                 this.$gtag.event('Patron table', {'event_category': 'Clicks', 'event_label': 'Installer ' + row.urlPretty });
+            },
+            copyAddress(address, type) {
+                this.$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Copy ' + type + ' address' });
+
+                this.$copyText(address).then((e) => {
+                    this.$buefy.toast.open({
+                        duration: 5000,
+                        message: this.$t('donation.how-donate.cripto.address-copied'),
+                        position: 'is-bottom',
+                        type: 'is-success'
+                    });
+                }, (e) => {
+                    console.log('It was not possible to copy the wallet address.', e);
+
+                    this.$buefy.toast.open({
+                        duration: 5000,
+                        message:  this.$t('donation.how-donate.cripto.address-not-copied'),
+                        position: 'is-bottom',
+                        type: 'is-danger'
+                    });
+
+                    this.$gtag.exception({'description': e, 'fatal': false});
+                });
             }
         }
     };
@@ -738,5 +845,37 @@
     //Adds a bit of margin to the expander content.
     .has-top-margin .collapse-content {
         margin-top: 0.5rem;
+    }
+
+        //Chocolatey code and button to copy.
+    .has-code {
+        display: inline-flex;
+        font-size: 1.1em;
+        color: white;
+        background: #5cadd5;
+        padding: calc(0.75rem - 1px); 
+        line-height: 1.5rem;
+        border-radius: 4px;
+        align-items: center;
+        -webkit-overflow-scrolling: touch;
+        overflow-x: auto;
+        white-space: pre;
+        word-wrap: normal;
+    }
+
+    //Makes the code inside the div.choco blend in.
+    .has-code code {
+        background-color: transparent;
+        color: currentColor;
+        font-size: 1em;
+        padding: 0;
+    }
+
+    .has-code button {
+        font-family: inherit;
+        line-height: 1.5rem;
+        margin: 0 0 0 1rem;
+        padding-bottom: calc(.375em - 1px) !important;
+        padding-top: calc(.375em - 1px) !important;
     }
 </style>

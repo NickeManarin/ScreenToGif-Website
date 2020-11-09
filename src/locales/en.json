@@ -192,6 +192,14 @@
       "gog-info": "Gift games via GOG",
       "amazon": "Amazon Wishlist",
       "amazon-info": "Help get new parts for my computer",
+      "cripto-info": "Click to reveal address",
+
+      "cripto": {
+        "title": "Donate via {0}",
+        "subtitle": "Scan the QR code or copy the address",
+        "address-copied": "Address copied!",
+        "address-not-copied": "It was not possible to copy the address."
+      },
 
       "paypal": {
         "title": "Donate with PayPal",
