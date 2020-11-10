@@ -99,9 +99,9 @@
     },
 
     "share": {
-      "title": "What the users are saying",
-      "subtitle": "See the happy thoughts from people from Twitter",
-      "share": "Share your experience"
+      "title": "用户们怎么说",
+      "subtitle": "看Twitter上其他用户的愉快经历",
+      "share": "分享你的体验"
     }
   },
 
@@ -206,36 +206,36 @@
 
     "list": {
       "title": "Patron列表",
-      "subtitle": "Here are some of the people or companies who support the project",
+      "subtitle": "这里有一些支持这个项目的人和公司",
       "patron": "Patron",
-      "amount": "Donation amount",
-      "amount-info": "The ordering is done via the value in U$D.",
-      "from": "From",
-      "not-possible": "It was not possible to load the patron list.",
-      "list-name": "Would you like to have your name or company listed here after a donation?",
-      "contact": "Contact me :)"
+      "amount": "捐赠数额",
+      "amount-info": "按美金价值排序。",
+      "from": "来自",
+      "not-possible": "无法加载Patron列表。",
+      "list-name": "您希望您或您公司的名字被加入到捐赠列表吗？",
+      "contact": "联系我 :)"
     }
   },
 
   "screenshots": {
-    "meta-title": "ScreenToGif - Screenshots",
-    "meta-description": "View the screenshots of ScreenToGif.",
+    "meta-title": "ScreenToGif - 截屏",
+    "meta-description": "阅览ScreenToGif的截屏。",
 
-    "title": "Screenshots and examples",
-    "subtitle": "Check out what you can do with ScreenToGif",
-    "add": "Would you like to add your gif to this page?",
-    "send": "Send me a message :)",
+    "title": "截屏和用例",
+    "subtitle": "你能用ScreenToGif来干什么",
+    "add": "你想把你的GIF添加到这个页面吗？",
+    "send": "给我发消息 :)",
 
     "gallery":{
-      "startup": "This is the default entry point of the app.<br>You can set the app to open directly into the <b>recorders and editor</b> instead.",
-      "recorder": "This is the default screen recorder UI. You simply move this window on top of the content that you want to record.",
-      "recorder-use": "If you click and drag the crosshair icon to a window, the recorder will adjust itself to the bounds.",
-      "recorder-new": "This is the <b>new recorder UI</b>, which lets you click and drag to select an area of your screen.<br>You can also switch to the window and screen modes.",
-      "editor": "This is the editor, where you can edit your recordings and export it to <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> and <b>psd</b>.",
-      "webcam": "This is the webcam recorder.",
-      "board": "The board recorder lets you capture your drawings automatically as you draw them.",
-      "board-example": "Here's an example of drawing recorded.",
-      "options": "ScreenToGif has <b>lots</b> of options!"
+      "startup": "这是默认启动界面。<br>你可以设置让应用直接打开至<b>录像机</b>或<b>编辑器</b>界面。",
+      "recorder": "这是默认的录像机界面。你可以把这个窗口移动到任何你想录像内容的上。",
+      "recorder-use": "如果你点击并拖动十字图标到任何一个窗口上，录像机会自动调整到窗口边界的大小。",
+      "recorder-new": "这是<b>新录像机界面</b>，它让你能够点击并拖动选取一个屏幕区域。<br>你也可以切换至窗口或屏幕模式。",
+      "editor": "这是编辑器，在此你可以编辑录像，并导出至<b>GIF</b>，<b>APNG</b>，<b>视频</b>，<b>项目</b>，<b>图片</b>以及<b>PSD</b>。",
+      "webcam": "这是摄像头录像机。",
+      "board": "画板录像机可以自动截取你绘画的过程。。",
+      "board-example": "这是一个录制下来的绘画过程的例子。",
+      "options": "ScreenToGif有<b>超级多</b>客制化选项！"
     }
   },
   
@@ -291,43 +291,43 @@
   },
 
   "features": {
-    "meta-title": "ScreenToGif - Features",
-    "meta-description": "Discover all ScreenToGif features.",
+    "meta-title": "ScreenToGif - 功能",
+    "meta-description": "探索全部ScreenToGif的功能。",
     
-    "title": "Features",
-    "subtitle": "See what you can do with ScreenToGif",
+    "title": "功能",
+    "subtitle": "看看你可以用ScreenToGif干什么",
 
     "recorders": {
-      "title": "Recorders",
-      "text1": "Use ScreenToGif to record your <b>screen</b>, your <b>webcam</b> feed or <b>sketch board</b> drawings.",
+      "title": "录像机",
+      "text1": "用ScreenToGif录下你的<b>屏幕</b>，你的<b>摄像头</b>视频或<b>画板</b>涂鸦。",
 
       "screen": {
-        "title": "Screen",
-        "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
-        "text2": "Select the capture frequency mode (manual, normal in fps, timelapse in fpm/fph).",
+        "title": "屏幕",
+        "text1": "使用<b>录制</b>，<b>暂停</b>，<b>放弃</b>或<b>停止</b>按钮来控制录制。",
+        "text2": "选择录制频率模式（人工，普通，或延时模式 - 每分钟，每小时频率）。",
         
         "older": {
-          "title": "Older UI",
-          "text1": "Drag or resize the window to adjust what you want to capture.",
-          "text2": "Type the exact size of the capture region.",
-          "text3": "Drag the crosshair button and drop it on top of a window to move the recorder to capture that."
+          "title": "老界面",
+          "text1": "拖拽或缩放窗口来调节录制区域。",
+          "text2": "输入准确的录制区域尺寸。",
+          "text3": "拖拽十字按钮并放到一个窗口上，来录制该窗口。"
         },
 
         "newer": {
-          "title": "Newer UI",
-          "text1": "Enter selection mode, which lets you select a <b>region</b>, a <b>window</b> or an <b>entire screen</b> to capture."
+          "title": "新界面",
+          "text1": "进入选取模式，选择一个<b>区域</b>，一个<b>窗口</b>或<b>整个屏幕</b>来录制。"
         }
       },
 
       "webcam":{
-        "title": "Webcam",
+        "title": "摄像头",
         "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
         "text2": "Select the maximum FPS of the capture.",
         "text3": "Resize the window to adjust the size of the capture."
       },
 
       "sketchboard": {
-        "title": "Sketch board",
+        "title": "画板",
         "text1": "Enable the <b>auto-capture</b> or press <b>Ctrl to toggle</b> (<i>pauses</i> or <i>captures</i> it, depending if the auto-capture is enabled or disabled).",
         "text2": "Select the maximum FPS of the capture.",
         "text3": "Resize the window to adjust the size of the capture."
@@ -335,29 +335,29 @@
     },
 
     "editor": {
-      "title": "Editor",
+      "title": "编辑器",
 
       "file": {
-        "title": "File",
-        "text1": "Start a new recording or open a media (videos or images) or project file.",
-        "text2": "Insert a new recording or media file (videos or images) into an existing project.",
-        "text3": "Open recent projects.",
-        "text4": "Export your project to:",
-        "video": "Video",
-        "image": "Image",
-        "project": "ScreenToGif project"
+        "title": "文件",
+        "text1": "开始一段新的录制，或打开一个多媒体文件（视频或图片），或项目文件。",
+        "text2": "插入一段新录屏，或多媒体文件到现有项目。",
+        "text3": "打开最近的项目。",
+        "text4": "导出项目到：",
+        "video": "视频",
+        "image": "图片",
+        "project": "ScreenToGif项目"
       },
 
       "basic": {
-        "title": "Basic controls",
-        "text1": "Undo, redo or reset your edits.",
-        "text2": "Copy, cut and paste frames.",
-        "text3": "Select multiple frames or browse to a specific frame.",
-        "text4": "Preview the playback of the animation."
+        "title": "基本操作",
+        "text1": "撤销，重做，和重置你的修改。",
+        "text2": "复制，剪切，和粘贴帧。",
+        "text3": "选择多帧，或找到特定某帧。",
+        "text4": "预览动画回放。"
       },
 
       "frame": {
-        "title": "Frame manipulation",
+        "title": "帧操作",
         "text1": "Delete selected frames.",
         "text2": "Remove duplicates.",
         "text3": "Reduce framerate.",
@@ -369,7 +369,7 @@
       },
 
       "image": {
-        "title": "Image manipulation",
+        "title": "图像操作",
         "text1": "Resize, crop or flip/rotate.",
         "text2": "Add overlays:",
         "text3": "Captions/text.",
