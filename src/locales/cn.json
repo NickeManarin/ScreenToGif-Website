@@ -192,6 +192,14 @@
       "gog-info": "通过GOG赠送游戏",
       "amazon": "Amazon愿望清单",
       "amazon-info": "新电脑众筹",
+      "cripto-info": "点此揭示地址",
+
+      "cripto": {
+        "title": "通过{0}捐助",
+        "subtitle": "扫描QR码或复制地址",
+        "address-copied": "地址已复制！",
+        "address-not-copied": "无法复制地址。"
+      },
 
       "paypal": {
         "title": "PayPal捐赠",
