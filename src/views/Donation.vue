@@ -436,8 +436,8 @@
                             <div class="columns is-centered is-mobile has-top-margin">
                                 <div class="column is-narrow has-text-centered">
                                     <div class="has-code">
-                                        <code><span class="is-unselectable">></span> 1HN81cAwDo16tRtiYfkzvzFqikQUimM3S8 </code>
-                                        <b-button type="is-primary" inverted @click="copyAddress('1HN81cAwDo16tRtiYfkzvzFqikQUimM3S8', 'Bitcoin Cash')">{{ $t('home.copy') }}</b-button>
+                                        <code><span class="is-unselectable">></span> qqcmje9zkgj0hazantpvx8pn3acqdg4pe5dtytm2c6 </code>
+                                        <b-button type="is-primary" inverted @click="copyAddress('qqcmje9zkgj0hazantpvx8pn3acqdg4pe5dtytm2c6', 'Bitcoin Cash')">{{ $t('home.copy') }}</b-button>
                                     </div>
                                 </div>
                             </div>
