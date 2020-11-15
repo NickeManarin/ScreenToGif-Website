@@ -329,16 +329,16 @@
 
       "webcam":{
         "title": "摄像头",
-        "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
-        "text2": "Select the maximum FPS of the capture.",
-        "text3": "Resize the window to adjust the size of the capture."
+        "text1": "使用<b>录制</b>，<b>暂停</b>，<b>弃用</b>或<b>停止</b>按钮来控制录像。",
+        "text2": "选择录制的最大帧率。",
+        "text3": "缩放窗口以调整录制尺寸。"
       },
 
       "sketchboard": {
         "title": "画板",
-        "text1": "Enable the <b>auto-capture</b> or press <b>Ctrl to toggle</b> (<i>pauses</i> or <i>captures</i> it, depending if the auto-capture is enabled or disabled).",
-        "text2": "Select the maximum FPS of the capture.",
-        "text3": "Resize the window to adjust the size of the capture."
+        "text1": "开启<b>自动捕捉</b>，或按住<b>Ctrl切换</b>（<i>暂停</i>或<i>捕捉</i>动画，取决于自动捕捉是否开启）。",
+        "text2": "选择录制的最大帧率。",
+        "text3": "缩放窗口以调整录制尺寸。"
       }
     },
 
