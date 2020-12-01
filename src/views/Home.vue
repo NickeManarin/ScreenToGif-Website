@@ -161,7 +161,9 @@
                             <p class="title is-4 has-text-weight-semibold">{{ $t('home.why.free') }}</p>
                             <p class="subtitle is-6 has-text-grey-light" v-html="$t('home.why.free-info').replace('<b>', '<b class=has-text-grey>')"></p>
 
-                            <b-icon class="has-text-success is-size-2" pack="unicon" icon="uil-github-alt"></b-icon>
+                            <a href="https://github.com/NickeManarin/ScreenToGif" target="_blank">
+                                <b-icon class="has-text-success is-size-2" pack="unicon" icon="uil-github-alt"></b-icon>
+                            </a>
                         </div>
 
                         <div class="column is-half-mobile has-text-centered">
