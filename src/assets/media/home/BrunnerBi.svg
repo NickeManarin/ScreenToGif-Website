@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 313.6 385.6" style="enable-background:new 0 0 313.6 385.6;" xml:space="preserve">
+	 viewBox="0 0 338.2 398.4" style="enable-background:new 0 0 338.2 398.4;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:none;stroke:#E7FF6E;stroke-width:10;stroke-miterlimit:10;}
-	.st1{fill:#E7FF6E;}
-	.st2{font-family:'SegoeUI-Bold';}
-	.st3{font-size:43px;}
+	.st0{fill:none;stroke:#E7FF6E;stroke-width:40;stroke-miterlimit:10;}
 </style>
 <g>
-	<path class="st0" d="M305.9,280.8l-149.1,88l-149.1-88v-176l149.1-88l149.1,88V280.8z"/>
+	<path class="st0" d="M318.2,287.2l-149.1,88L20,287.2v-176l149.1-88l149.1,88V287.2z"/>
 </g>
-<text transform="matrix(1 0 0 1 75.2554 192.4995)"><tspan x="0" y="0" class="st1 st2 st3">Brunner</tspan><tspan x="61" y="51.6" class="st1 st2 st3">BI</tspan></text>
 </svg>

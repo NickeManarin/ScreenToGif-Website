@@ -477,7 +477,7 @@
 
                             <template v-slot="props">
                                 <div :class="props.row.url ? 'has-pointer-cursor' : ''">
-                                    {{ props.row.value.toLocaleString($i18n.locale) }} {{ props.row.currency }} 
+                                    {{ props.row.value.toLocaleString($i18n.locale, { minimumFractionDigits: (props.row.currency === 'BTC' ? 4 : 0) }) }} {{ props.row.currency }} 
                                 </div>
                             </template>
                         </b-table-column>
