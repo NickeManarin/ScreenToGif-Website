@@ -1,5 +1,14 @@
-<svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 298.185 352.082" xmlns="http://www.w3.org/2000/svg" viewBox="-7.711681034482751 -16.751025862068985 313.6083620689655 385.58405172413796" role="img">
-    <g>
-        <path d="M298.185 264.061l-149.093 88.021L0 264.061V88.021L149.092 0l149.093 88.021v176.04z"></path>
-    </g>
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 313.6 385.6" style="enable-background:new 0 0 313.6 385.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#E7FF6E;stroke-width:10;stroke-miterlimit:10;}
+	.st1{fill:#E7FF6E;}
+	.st2{font-family:'SegoeUI-Bold';}
+	.st3{font-size:43px;}
+</style>
+<g>
+	<path class="st0" d="M305.9,280.8l-149.1,88l-149.1-88v-176l149.1-88l149.1,88V280.8z"/>
+</g>
+<text transform="matrix(1 0 0 1 75.2554 192.4995)"><tspan x="0" y="0" class="st1 st2 st3">Brunner</tspan><tspan x="61" y="51.6" class="st1 st2 st3">BI</tspan></text>
 </svg>
