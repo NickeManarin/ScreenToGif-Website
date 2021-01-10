@@ -280,6 +280,17 @@
                         </div>
 
                         <div class="column is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.brunner.bi?from=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BrunnerBI'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/BrunnerBi.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">Brunner BI</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">

@@ -589,6 +589,15 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "Brunner BI",
+                        url: "https://www.brunner.bi",
+                        urlPretty: "brunner.bi",
+                        value: 0.0015,
+                        valueInUsd: 55.68,
+                        currency: "BTC",
+                        platform: "Bitcoin"
+                    },
+                    {
                         name: "WHSR",
                         url: "https://www.webhostingsecretrevealed.net?from=ScreenToGif",
                         urlPretty: "webhostingsecretrevealed.net",
