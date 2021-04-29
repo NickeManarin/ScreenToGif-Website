@@ -43,18 +43,18 @@
   },
 
   "home":{
-    "meta-title": "ScreenToGif - Rögzítsd a képernyődet, szerkeszd és mentsd el gifként, videóként vagy egyéb formátumokban",
-    "meta-description": "Ingyenes képernyőfelvevő eszköz, amely lehetővé teszi, hogy rögzítsd, szerkeszd és mentsd gifként, videóként vagy egyéb formátumokban.",
+    "meta-title": "ScreenToGif - A képernyő felvétele, szerkesztése és mentése gif, videó vagy más formátumba",
+    "meta-description": "Ingyenes képernyőfelvevő eszköz, amely lehetővé teszi, hogy rögzítsd, szerkeszd és mentsd gifként, videóként vagy egyéb formátumokba.",
 
     "subtitle": "<strong>Képernyő-</strong>, <b>webkamera-</b> és <b>fehértábla-</b>felvevő integrált <b>szerkesztő</b>vel",
     "version": "Verzió {0}",
     "installer" : "Telepítő",
-    "installer-info": "Letölti a telepítő verziót (.msi), amely tartalmazza a fő végrehajtható fájlt és a választható kiegészítőket.",
+    "installer-info": "Letölti a telepítő verziót (.msi), amely a fő futtatható programot és az opcionális kiegészítőket tartalmazza.",
     "or": "vagy",
     "portable" : "Hordozható",
-    "portable-info": "Letölti a hordozható verziót, amely csak a fő végrehajtható fájlt tartalmazza. A kiegészítőket a Beállítások > Extrák között kell letölteni.",
+    "portable-info": "Letölti a hordozható verziót, amely csak a fő futtatható fájlt tartalmazza. A kiegészítőket a Beállítások > Extrák menüpontban kell letölteni.",
     "downloads" : "{0} letöltés",
-    "more-releases" : "Több letöltési lehetőség",
+    "more-releases" : "További letöltési lehetőségek",
     "fewer-releases" : "Kevesebb letöltési lehetőség",
     "copy" : "Másolás",
     "copied" : "Parancs másolva!",
@@ -80,13 +80,13 @@
 
     "supporters": {
       "title": "Külön köszönet",
-      "subtitle": "Íme néhány támogatója ennek a projektnek",
+      "subtitle": "Íme néhány a projekt támogatói közül",
       "become": "Legyél szponzor"
     },
 
     "usage": {
       "title": "Hogyan kell használni?",
-      "subtitle": "A tartalmad rögzítése és szerkesztése egy pillanat alatt",
+      "subtitle": "Rögzítsd és szerkeszd tartalmadat pillanatok alatt.",
       "capture": "Rögzítés",
       "capture-info": "<b>Képernyő</b>, <b>webkamera</b> vagy <b>fehértábla</b> rögzítése",
       "edit": "Szerkesztés",
@@ -100,7 +100,7 @@
 
     "share": {
       "title": "Amit a felhasználók mondanak",
-      "subtitle": "Íme a Twitteren lévő emberektől származó boldog gondolatok.",
+      "subtitle": "Tekintsd meg az emberek boldog gondolatait a Twitterről",
       "share": "Oszd meg tapasztalatodat"
     }
   },
@@ -128,7 +128,7 @@
         "version": "Verzió",
         "date": "Megjelenési dátum",
         "days": "Aktív napok",
-        "days-info": "A legutóbbi kiadás napjainak száma",
+        "days-info": "A legutóbbi kiadás óta eltelt napok száma",
         "count": "Letöltések száma",
         "not-possible": "Nem lehetett betölteni az összes kiadást",
         "versions-total": "{0} verzió kiadva",
@@ -150,7 +150,7 @@
 
   "donation": {
     "meta-title": "ScreenToGif - Adomány",
-    "meta-description": "Segítsd a ScreenToGif-et jobbá tenni, azzal, hogy adományozol a projektnek.",
+    "meta-description": "Segíts a ScreenToGif-nek jobbá válni, hogy adományozol a projektnek.",
 
     "title": "Tetszett a ScreenToGif?",
     "subtitle": "És azon gondolkodsz, hogy segítenéd valahogy?",
@@ -192,6 +192,14 @@
       "gog-info": "Ajándék játékok a GOG-n keresztül",
       "amazon": "Amazon kívánságlista",
       "amazon-info": "Új alkatrészek beszerezése a számítógépemhez",
+	    "cripto-info": "Kattints a cím felfedéséhez",
+
+      "cripto": {
+        "title": "Adomány {0} használatával",
+        "subtitle": "Szkenneld be a QR-kódot vagy másold ki a címet",
+        "address-copied": "Cím másolva!",
+        "address-not-copied": "A cím másolása nem volt lehetséges."
+      },									   
 
       "paypal": {
         "title": "Adomány a PayPal segítségével",
@@ -205,13 +213,13 @@
     },
 
     "list": {
-      "title": "Pártfogói lista",
+      "title": "Támogatói lista",
       "subtitle": "Íme néhány személy vagy vállalat, akik támogatják a projektet",
-      "patron": "Pártfogó",
-      "ammount": "Adomány összege",
-      "ammount-info": "A rendezés az USD $ értéke szerint történt.",
+      "patron": "Támogató",
+      "amount": "Adomány összege",
+      "amount-info": "A rendezés az U$D érték szerint történt.",
       "from": "Honnan",
-      "not-possible": "A pártfogói listát nem lehetett betölteni.",
+      "not-possible": "A támogatói listát nem lehetett betölteni.",
       "list-name": "Szeretnéd, hogy a neved vagy a cég szerepeljen itt egy adományozás után?",
       "contact": "Lépj kapcsolatba velem :)"
     }
@@ -250,22 +258,22 @@
       "title": "Ki vagyok?",
       "subtitle": "A ScreenToGif alkotója",
       "part1": "Helló, Nicke Manarin vagyok, egy {0} éves brazil fejlesztő.",
-      "part2": "2012 óta fejlesztek szoftvert, kezdve egy módszerként, a számítástechnika órákon tanított készségek gyakorlására.",
-      "part3": "A diplomám megszerzése után, ami 2016-ban történt, folytattam új készségek tanulását, amelyek közvetlenül felhasználásra kerültek a projektemben.",
-      "part4": "Szívesen fejlesztek olyan szoftvert, amely céltudatos és könnyen kezelhető."
+      "part2": "2012 óta foglalkozom szoftverfejlesztéssel, amit az informatikaórákon tanult készségek gyakorlásaként kezdtem.",
+      "part3": "A 2016-ban megszerzett diplomám után folyamatosan új készségeket tanultam, amelyeket közvetlenül a projektjeimben használtam fel.",
+      "part4": "Mindent megteszek azért, hogy célszerű és könnyen használható szoftvereket fejlesszek."
     },
 
     "why":{
       "title": "Miért létezik a ScreenToGif?",
-      "subtitle": "Az alkalmazás mögötti történelem",
-      "part1": "Ez a projekt 2013 októberében született egy módként, hogy segítsen nekem megtanulni a kódolást, miközben hasznos az igényeimhez.",
-      "part2": "Tanultam, hogyan kell tervezni a grafikus felhasználói felületeket (és problémáim voltak vele), ezért gondoltam, hogy jó lenne néhány képernyőfelvételt készíteni, hogy fórumokon segítséget kérhessek.",
-      "part3": "Bár egyes alkalmazások már léteztek, nem biztosították azt a speciális funkciót, amelyre szükségem volt, ami arra ösztönzött, hogy saját megoldást készítsek (nem gondoltam, hogy sok munkát igényel).",
-      "part4": "A 'ScreenToGif' név olyan egyszerű, mint amire gondoltam, hogy az eszköz lesz: egy képernyőfelvevő ami gif-ként exportál. Egy könnyen megjegyezhető névnek kellett lennie.",
+      "subtitle": "Az alkalmazás története",
+      "part1": "Ez a projekt 2013 októberében született, hogy segítsen nekem megtanulni kódolni, miközben hasznos az igényeimnek.",
+      "part2": "Tanultam, hogyan kell tervezni a grafikus felhasználói felületeket (és problémáim voltak vele), ezért úgy gondoltam, jó lenne néhány képernyőfelvételt készíteni, hogy fórumokon segítséget kérhessek.",
+      "part3": "Bár néhány alkalmazás már létezett, de nem biztosította azt a speciális funkciót, amire szükségem volt, ami arra késztetett, hogy saját megoldást építsek (nem is sejtve, hogy ez sok munkát igényel).",
+      "part4": "A 'ScreenToGif' név olyan egyszerű, mint amilyennek gondoltam az eszközt: egy képernyőfelvevő, amely gif-ként exportál. A névnek könnyen megjegyezhetőnek kellett lennie.",
       "part5": "De nem voltam előrelátó: A név egyetlen releváns része a középső „To”, mivel az alkalmazás most már nemcsak a képernyőt képes rögzíteni, és más formátumokba is exportál.",
-      "part6": "Ez a projekt 2016-ban teljesen újraindult, miután néhány hónapig problémáim voltak a régi platformmal, végül átváltottam egy újra.",
-      "part7": "Ez az átmenet lehetővé tette számomra több funkció fejlesztését, könnyebben érthető felhasználói felületekkel.",
-      "part8": "Bár én vagyok a projekt alkotója és fenntartója, más felhasználók is hozzájárulnak a hibajelentésekkel, a funkciók kérésével és a fordításokkal. Nyugodtan hagyj hozzászólást! :)"
+      "part6": "Ez a projekt 2016-ban teljesen újraindult, miután néhány hónapig problémák adódtak a régi platformmal, végül egy új platformra váltottam.",
+      "part7": "Ez az átállás lehetővé tette számomra több funkció fejlesztését, könnyebben érthető felhasználói felületekkel.",
+      "part8": "Bár én vagyok a projekt létrehozója és karbantartója, más felhasználók is hozzájárulnak hibajelentésekkel, funkciókérésekkel és fordításokkal. Nyugodtan hagyj megjegyzést :)"
     },
 
     "methods": {
@@ -283,7 +291,7 @@
         "title": "Itt az e-mail címem",
         "subtitle": "Kérlek ne küldj levélszemetet :)",
         "spam": "A <b>levélszemét</b> alatt olyan dolgokat értek, amelyek nem kapcsolódnak az alkalmazáshoz, például szolgáltatások és termékajánlatok.",
-        "help": "Örömmel próbálok majd segíteni az alkalmazással kapcsolatban, ahogy mindig is.",
+        "help": "Örömmel próbálok majd segíteni az alkalmazással kapcsolatban, ahogy mindig is tettem.",
         "copied": "E-mail cím másolva!",
         "copied-error": "Nem lehetett az e-mail címet másolni."
       }
@@ -376,8 +384,8 @@
         "text4": "Rajzok vagy alakzatok.",
         "text5": "Billentyűleütések vagy egérkattintások.",
         "text6": "Szegélyek, árnyékok és elhomályosítás (pixelezés).",
-        "text7": "Vízjelek (válaszd ki a saját képedet).",
-        "text8": "Cinemagraph (válaszd ki az animáció egyes részeit, hogy statikus maradjon vagy mozogjon)."
+        "text7": "Vízjelek (válassz saját képet).",
+        "text8": "Cinemagraph (válaszd ki, hogy az animáció egyes részei statikusak maradjanak vagy mozogjanak)."
       }
     },
 
@@ -465,13 +473,13 @@
     "like": "Élvezed a ScreenToGif-et?",
     "mention": "Említsd meg a Twitteren 😊",
     "tweet": "Tweetelj @ScreenToGif vagy @NickeManarin",
-    "text": "A ScreenToGif egy képernyő-, webkamera- és fehértábla-felvevő integrált szerkesztővel.",
+    "text": "A ScreenToGif egy integrált szerkesztővel rendelkező képernyő-, webkamera- és fehértábla-felvevő eszköz.",
     "disclaimer": "Szeretnéd, ha tweeted nem lenne összekapcsolva ezzel az oldallal? Lépj kapcsolatba velem!"
   },
 
   "source": {
     "meta-title": "ScreenToGif - Forrás",
-    "meta-description": "Tekintsd meg a ScreenToGif, nyílt forráskódú projekt részleteit.",
+    "meta-description": "Tekintsd meg a ScreenToGif nevű nyílt forráskódú projekt részleteit.",
 
     "title": "Forráskód",
     "subtitle": "A ScreenToGif nyílt forráskódú!",
@@ -510,7 +518,7 @@
 
     "terms": {
       "title": "Feltételek",
-      "phrase1": "A ScreenToGif ingyenes mindenki számára, még vállalati környezetben is.",
+      "phrase1": "A ScreenToGif mindenki számára ingyenesen használható, még vállalati környezetben is.",
       "more": "Erről bővebben itt olvashatsz."
     }
   },
