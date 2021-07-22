@@ -536,8 +536,8 @@
     "watch": "Vigiar",
     "made-by": "Feito por {0}, do <b>Brasil</b> 🇧🇷",
     "icons-by": "Ícones por {0}",
-    "license-app": "<b>ScreenToGif</b> é licensiado sob {0}",
-    "license-web": "<b>Este site</b> é licensiado sob {0}"
+    "license-app": "<b>ScreenToGif</b> é licenciado sob {0}",
+    "license-web": "<b>Este site</b> é licenciado sob {0}"
   },
 
   "not-found": {
