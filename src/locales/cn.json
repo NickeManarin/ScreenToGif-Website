@@ -3,7 +3,7 @@
     "code": "cn",
     "lang": "简体中文",
     "lang-english": "Chinese (Simplified)",
-    "author": "Po Chen",
+    "author": "Po Chen, 董玮",
     "status": "100"
   },
 
@@ -43,8 +43,8 @@
   },
 
   "home":{
-    "meta-title": "ScreenToGif - 录屏，编辑，保存为GIF，视频或更多其他格式",
-    "meta-description": "免费录屏工具，帮你完成录屏，编辑，保存为GIF，视频或更多其他格式。",
+    "meta-title": "ScreenToGif - 录屏，编辑，保存为 GIF 动画，视频或更多其他格式",
+    "meta-description": "免费录屏工具，帮你完成录屏，编辑，保存为 GIF 动画，视频或更多其他格式。",
 
     "subtitle": "<strong>屏幕</strong>，<b>摄像头</b>和<b>画板</b>录像，并有内置<b>编辑器</b>",
     "version": "版本 {0}",
@@ -53,6 +53,7 @@
     "or": "或",
     "portable" : "免安装包",
     "portable-info": "下载免安装包，包含主执行程序。插件可从 选项 > 更多 下载。",
+    "microsoftstore": "微软应用商店",
     "downloads" : "{0} 下载",
     "more-releases" : "更多下载选项",
     "fewer-releases" : "隐藏下载选项",
@@ -62,12 +63,12 @@
 
     "why": {
       "free": "免费",
-      "free-info": "开源于<b>GitHub</b>",
+      "free-info": "开源于 <b>GitHub</b>",
       "compact": "简约",
       "compact-info": "仅有<b>{0}</b>",
       "powerful": "强大",
       "powerful-info": "录制，编辑与<b>导出！</b>",
-      "customizable": "客制化",
+      "customizable": "定制化",
       "customizable-info": "想怎么用，<b>就怎么用</b>",
       "features": "探索更多功能"
     },
@@ -92,22 +93,22 @@
       "edit": "编辑",
       "edit-info": "编辑你的<b>录像</b>或<b>其他媒体</b>",
       "export": "导出",
-      "export-info": "导出为<b>GIF</b>，<b>APNG</b>，<b>视频</b>，<b>图片</b>，<b>项目</b>或<b>PSD</b>",
+      "export-info": "导出为 <b>GIF 动画</b>，<b>APNG</b>，<b>视频</b>，<b>图片</b>，<b>项目</b>或<b>PSD</b>",
       "share": "分享",
-      "share-info": "分享至<b>Imgur</b>，<b>Gfycat</b>或其他地方",
+      "share-info": "分享至 <b>Imgur</b>，<b>Gfycat</b> 或其他地方",
       "learn": "学习如何使用"
     },
 
     "share": {
       "title": "用户们怎么说",
-      "subtitle": "看Twitter上其他用户的愉快经历",
+      "subtitle": "看 Twitter 上其他用户的愉快经历",
       "share": "分享你的体验"
     }
   },
 
   "downloads": {
     "meta-title": "ScreenToGif - 下载",
-    "meta-description": "下载ScreenToGif的安装包，或免安装版。",
+    "meta-description": "下载 ScreenToGif 的安装包，或免安装版。",
 
     "latest": "最新版本",
     "show-release-notes": "显示发布信息",
@@ -116,8 +117,8 @@
     "requirements":{
       "title": "设备要求",
       "subtitle": "本应用需要的软硬件最低配置",
-      "windows": "<b>Windows 7 SP1</b>或更新版本",
-      "framework": "<b>.Net框架 4.8</b>或更新版本"
+      "windows": "<b>Windows 7 SP1</b> 或更新版本",
+      "framework": "<b>.Net 框架 4.8</b> 或更新版本"
     },
 
     "releases":{
@@ -150,13 +151,13 @@
 
   "donation": {
     "meta-title": "ScreenToGif - 捐助",
-    "meta-description": "通过捐助帮助ScreenToGif变得更好。",
+    "meta-description": "通过捐助帮助 ScreenToGif 变得更好。",
 
-    "title": "您喜欢用ScreenToGif吗？",
+    "title": "您喜欢用 ScreenToGif 吗？",
     "subtitle": "您有在想通过一些途径对它提供帮助吗？",
 
     "why": {
-      "title": "为什么要帮助ScreenToGif？",
+      "title": "为什么要帮助 ScreenToGif ？",
       "subtitle": "有您的支持，这个项目会更好",
       "free": "免费",
       "free-info": "开源于<b>GitHub<b>",
@@ -172,7 +173,7 @@
       "title": "我能帮上什么忙？",
       "subtitle": "如果你希望帮助这个项目，这里有一些途径",
       "feedback": "反馈",
-      "feedback-info": "报告bug以及提供关于用户体验的反馈",
+      "feedback-info": "报告缺陷以及提供关于用户体验的反馈",
       "share": "分享",
       "share-info": "与你的朋友分享，或撰写相关评测",
       "localization": "本地化",
@@ -184,42 +185,42 @@
     "how-donate": {
       "title": "我该如何捐赠？",
       "subtitle": "这里有一些可选的捐赠途径",
-      "patreon-info": "订购每月Patreon捐赠",
-      "paypal-info": "PayPal单次捐赠",
-      "flattr-info": "订购每月Flattr捐赠",
+      "patreon-info": "订购每月 Patreon 捐赠",
+      "paypal-info": "PayPal 单次捐赠",
+      "flattr-info": "订购每月 Flattr 捐赠",
       "coffee-info": "为开发者买一杯咖啡",
-      "steam-info": "赠送Steam游戏或货币",
-      "gog-info": "通过GOG赠送游戏",
-      "amazon": "Amazon愿望清单",
+      "steam-info": "赠送 Steam 游戏或货币",
+      "gog-info": "通过 GOG 赠送游戏",
+      "amazon": "Amazon 愿望清单",
       "amazon-info": "新电脑众筹",
-      "cripto-info": "点此揭示地址",
+      "cripto-info": "点此显示地址",
 
       "cripto": {
-        "title": "通过{0}捐助",
-        "subtitle": "扫描QR码或复制地址",
+        "title": "通过 {0} 捐助",
+        "subtitle": "扫描 QR 码或复制地址",
         "address-copied": "地址已复制！",
         "address-not-copied": "无法复制地址。"
       },
 
       "paypal": {
-        "title": "PayPal捐赠",
+        "title": "PayPal 捐赠",
         "subtitle": "选择您的货币",
-        "show-fee": "显示PayPal费用解释",
-        "hide-fee": "隐藏PayPal费用解释",
-        "explanation": "PayPal对捐助收费 (6.4%) + 对应货币收取额外0.1%-0.5%",
+        "show-fee": "显示 PayPal 费用解释",
+        "hide-fee": "隐藏 PayPal 费用解释",
+        "explanation": "PayPal 对捐助收费 (6.4%) + 对应货币收取额外 0.1%-0.5%",
         "becomes": "{0} 变成 {1}",
         "donate": "捐助"
       }
     },
 
     "list": {
-      "title": "Patron列表",
+      "title": "Patron 列表",
       "subtitle": "这里有一些支持这个项目的人和公司",
       "patron": "Patron",
       "amount": "捐赠数额",
       "amount-info": "按美金价值排序。",
       "from": "来自",
-      "not-possible": "无法加载Patron列表。",
+      "not-possible": "无法加载 Patron 列表。",
       "list-name": "您希望您或您公司的名字被加入到捐赠列表吗？",
       "contact": "联系我 :)"
     }
@@ -227,11 +228,11 @@
 
   "screenshots": {
     "meta-title": "ScreenToGif - 截屏",
-    "meta-description": "阅览ScreenToGif的截屏。",
+    "meta-description": "阅览 ScreenToGif 的截屏。",
 
     "title": "截屏和用例",
-    "subtitle": "你能用ScreenToGif来干什么",
-    "add": "你想把你的GIF添加到这个页面吗？",
+    "subtitle": "你能用 ScreenToGif 来干什么",
+    "add": "你想把你的 GIF 动画添加到这个页面吗？",
     "send": "给我发消息 :)",
 
     "gallery":{
@@ -241,49 +242,49 @@
       "recorder-new": "这是<b>新录像机界面</b>，它让你能够点击并拖动选取一个屏幕区域。<br>你也可以切换至窗口或屏幕模式。",
       "editor": "这是编辑器，在此你可以编辑录像，并导出至<b>GIF</b>，<b>APNG</b>，<b>视频</b>，<b>项目</b>，<b>图片</b>以及<b>PSD</b>。",
       "webcam": "这是摄像头录像机。",
-      "board": "画板录像机可以自动截取你绘画的过程。。",
+      "board": "画板录像机可以自动截取你绘画的过程。",
       "board-example": "这是一个录制下来的绘画过程的例子。",
-      "options": "ScreenToGif有<b>超级多</b>客制化选项！"
+      "options": "ScreenToGif 有<b>超级多的</b>定制化选项！"
     }
   },
   
   "contact": {
     "meta-title": "ScreenToGif - 联系",
-    "meta-description": "联系ScreenToGif的开发者。",
+    "meta-description": "联系 ScreenToGif 的开发者。",
 
     "title": "如何联系我",
     "subtitle": "以及一些关于我和这个应用的详细信息",
 
     "who": {
       "title": "我是谁？",
-      "subtitle": "ScreenToGif的创造者",
-      "part1": "你好，我是Nicke Manarin，{0}岁的巴西开发者。",
-      "part2": "我从2012年开始开发软件，刚开始的时候是为了练习计算机专业课程的技术。",
-      "part3": "从2016年毕业后，我持续学习新技能，并直接使用到我的项目当中。",
+      "subtitle": "ScreenToGif 的创造者",
+      "part1": "你好，我是 Nicke Manarin，{0} 岁的巴西开发者。",
+      "part2": "我从 2012 年开始开发软件，刚开始的时候是为了练习计算机专业课程的技术。",
+      "part3": "从 2016 年毕业后，我持续学习新技能，并直接使用到我的项目当中。",
       "part4": "我热衷于用我最好的水准去开发有意义且方便使用的软件。"
     },
 
     "why":{
-      "title": "为什么ScreenToGif存在？",
+      "title": "为什么 ScreenToGif 存在？",
       "subtitle": "应用历史",
-      "part1": "这个项目诞生于2013年10月，作为我的学习项目，解决我自己的相关需要。",
+      "part1": "这个项目诞生于 2013 年 10 月，作为我的学习项目，解决我自己的相关需要。",
       "part2": "我当时在学习如何开发可视化程序（对我来说有困难），所以我想如果能把界面录制下来，我可以在论坛上得到更有效的反馈。",
       "part3": "虽然已经有类似的程序存在，但它们缺少一些我特别想要的功能。所以我想不如自己做一个吧（没想到这么费工夫）。",
-      "part4": "ScreenToGif这个名字跟我能想到的这个工具的功能一样简单：录屏到GIF。它的名字应该容易被记住。",
+      "part4": "ScreenToGif 这个名字跟我能想到的这个工具的功能一样简单：录屏到 GIF 动画格式。它的名字应该容易被记住。",
       "part5": "但我不是先知，这名字唯一还有效的部分只剩下中间的'To'了，现在这个应用已经不局限于录制屏幕上的信息，且能导出到很多其他格式。",
-      "part6": "2016年这个项目彻底重新开始了，因为老的平台已经让我达到瓶颈好几个月，我换到了另一个平台。",
+      "part6": "2016 年这个项目彻底重新开始了，因为老的平台已经让我达到瓶颈好几个月，我换到了另一个平台。",
       "part7": "这个转变允许我开发更多新功能，并制作出更容易理解和使用的界面。",
-      "part8": "尽管我是这个项目的作者和维护者，很多其他用户贡献了bug报告，功能请求和翻译。欢迎留下您的评论：）"
+      "part8": "尽管我是这个项目的作者和维护者，很多其他用户贡献了缺陷报告，功能请求和翻译。欢迎留下您的评论：）"
     },
 
     "methods": {
       "title": "联系方式",
-      "subtitle": "一般我在Twitter和Discord回复比较迅速",
-      "twitter-info": "Follow我 <b>@NickeManarin</b>",
-      "email": "Email",
-      "email-info": "揭露邮箱",
+      "subtitle": "一般我在 Twitter 和 Discord 回复比较迅速",
+      "twitter-info": "请通过 <b>@NickeManarin</b> 联系我",
+      "email": "电子邮箱",
+      "email-info": "显示邮箱地址",
       "discord-info": "加入频道",
-      "reddit-info": "加入Reddit子页面 <b>r/ScreenToGif</b>",
+      "reddit-info": "加入 Reddit 子页面 <b>r/ScreenToGif</b>",
       "facebook-info": "赞",
       "linkedin-info": "订阅",
 
@@ -292,22 +293,22 @@
         "subtitle": "拜托不要发垃圾邮件 :)",
         "spam": "<b>垃圾邮件</b>的定义： 我认为与本应用无关的服务和产品信息。",
         "help": "我很乐意为你提供关于本应用的帮助，我一直都这样",
-        "copied": "Email已复制！",
-        "copied-error": "Email复制失败。"
+        "copied": "邮箱地址已复制！",
+        "copied-error": "邮箱地址复制失败。"
       }
     }
   },
 
   "features": {
     "meta-title": "ScreenToGif - 功能",
-    "meta-description": "探索全部ScreenToGif的功能。",
+    "meta-description": "探索全部 ScreenToGif 的功能。",
     
     "title": "功能",
-    "subtitle": "看看你可以用ScreenToGif干什么",
+    "subtitle": "看看你可以用 ScreenToGif 干什么",
 
     "recorders": {
       "title": "录像机",
-      "text1": "用ScreenToGif录下你的<b>屏幕</b>，你的<b>摄像头</b>视频或<b>画板</b>涂鸦。",
+      "text1": "用 ScreenToGif 录下你的<b>屏幕</b>，你的<b>摄像头</b>视频或<b>画板</b>涂鸦。",
 
       "screen": {
         "title": "屏幕",
@@ -336,7 +337,7 @@
 
       "sketchboard": {
         "title": "画板",
-        "text1": "开启<b>自动捕捉</b>，或按住<b>Ctrl切换</b>（<i>暂停</i>或<i>捕捉</i>动画，取决于自动捕捉是否开启）。",
+        "text1": "开启<b>自动捕捉</b>，或按住 <b>Ctrl 切换</b>（<i>暂停</i>或<i>捕捉</i>动画，取决于自动捕捉是否开启）。",
         "text2": "选择录制的最大帧率。",
         "text3": "缩放窗口以调整录制尺寸。"
       }
@@ -353,7 +354,7 @@
         "text4": "导出项目到：",
         "video": "视频",
         "image": "图片",
-        "project": "ScreenToGif项目"
+        "project": "ScreenToGif 项目"
       },
 
       "basic": {
@@ -395,7 +396,7 @@
       "app": {
         "title": "应用程序",
         "text1": "选择程序启动方式。",
-        "text2": "4种配色方案（亮色到暗色）。",
+        "text2": "四种配色方案（亮色到暗色）。",
         "text3": "改变系统托盘图标互动方式（点击打开程序的某一部分）。",
         "text4": "决定程序是否自动更新（翻译更新可以单独选择）。"
       },
@@ -403,7 +404,7 @@
       "recorder": {
         "title": "录像机",
         "text1": "新老录像机界面供你选择。",
-        "text2": "选择录制模式（BitBlt，DirectX，是否启用内存缓存等等）。",
+        "text2": "选择录制模式（BitBlt、DirectX、是否启用内存缓存等等）。",
         "text3": "设置录像帧率（自选，正常，延时模式）",
         "text4": "启动光标跟随（录像机在录制过程中跟随光标位置）。"
       },
@@ -429,7 +430,7 @@
 
       "language": {
         "title": "语言",
-        "text1": "{0}种可选语言。",
+        "text1": "{0} 种可选语言。",
         "text2": "程序会基于系统语言自动选择语言。"
       },
 
@@ -448,11 +449,11 @@
 
   "how-to-use": {
     "meta-title": "ScreenToGif - 使用方法",
-    "meta-description": "学习如何使用ScreenToGif。",
+    "meta-description": "学习如何使用 ScreenToGif。",
 
     "title": "如何使用？",
-    "subtitle": "学习如何使用ScreenToGif",
-    "more": "点此阅读更多关于如何使用ScreenToGif的信息",
+    "subtitle": "学习如何使用 ScreenToGif ",
+    "more": "点此阅读更多关于如何使用 ScreenToGif 的信息",
 
     "list": {
       "startup": "当程序启动后，点击<b>录像机</b>按钮。",
@@ -460,19 +461,19 @@
       "edit-remove": "<b>Shift-点击</b>不想要的帧，按<b>删除</b>。",
       "edit-transition": "给最后一帧加上过渡，使得整个动画能<i>顺畅地</i>循环播放。",
       "edit-save": "修整完毕后，点击<b>另存为</b>可将动画导出到你想要的格式。",
-      "final-gif": "这是最终的GIF，大约<b>80.6 KiB</b>。"
+      "final-gif": "这是最终的 GIF 动画，大约<b>80.6 KiB</b>。"
     }
   },
 
   "share": {
     "meta-title": "ScreenToGif - 分享",
-    "meta-description": "看其他人如何评价ScreenToGif。",
+    "meta-description": "看其他人如何评价 ScreenToGif。",
 
     "title": "分享",
     "subtitle": "分享你对这个工具的看法",
-    "like": "你喜欢ScreenToGif吗？",
-    "mention": "在Twitter提起我 😊",
-    "tweet": "推 @ScreenToGif 或者 @NickeManarin",
+    "like": "你喜欢 ScreenToGif 吗？",
+    "mention": "在 Twitter 提起我 😊",
+    "tweet": "通过 @ScreenToGif 或 @NickeManarin 在 Twitter 上联系我",
     "text": "ScreenToGif是一个自带编辑器的录屏，录像，画板录制工具。",
     "disclaimer": "如您不希望您的推特出现在这个页面上，请联系我"
   },
@@ -482,10 +483,10 @@
     "meta-description": "查看ScreenToGif开源项目的详细信息。",
 
     "title": "源代码",
-    "subtitle": "ScreenToGif是开源项目！",
+    "subtitle": "ScreenToGif 是开源项目！",
 
     "links": {
-      "app-info": "ScreenToGif的源代码",
+      "app-info": "ScreenToGif 的源代码",
       "website": "网站",
       "website-info": "网站源代码"
     }
@@ -502,23 +503,23 @@
       "title": "隐私",
       "software": {
         "title": "软件",
-        "phrase1": "未经允许，ScreenToGif不会搜集或发送任何个人（或系统）信息。",
-        "phrase2": "实际上，唯一ScreenToGif会发送个人或系统信息的时机，是用户使用反馈工具发送反馈的时候。",
-        "phrase3": "个人信息（如名字、Email）由用户主动提供。",
+        "phrase1": "未经允许，ScreenToGif 不会搜集或发送任何个人（或系统）信息。",
+        "phrase2": "实际上，唯一 ScreenToGif 会发送个人或系统信息的时机，是用户使用反馈工具发送反馈的时候。",
+        "phrase3": "个人信息（如名字、电子邮箱）由用户主动提供。",
         "phrase4": "系统相关信息是由反馈工具自动搜集的，以帮助解决各种可能的问题。",
         "more": "点此阅读更多关于本软件可能使用网络链接的信息。"
       },
 
       "website": {
         "title": "网站",
-        "phrase1": "本网站使用Google Analytics服务，它会搜集用户的浏览记录。",
+        "phrase1": "本网站使用 Google Analytics 服务，它会搜集用户的浏览记录。",
         "phrase2": "搜集到的资料仅用于更好地理解用户使用本软件的行为意图。"
       }
     },
 
     "terms": {
       "title": "协议",
-      "phrase1": "ScreenToGif对所有人免费，甚至是企业环境下的用户。",
+      "phrase1": "ScreenToGif 对所有人免费，甚至是企业环境下的用户。",
       "more": "更多信息。"
     }
   },
@@ -526,9 +527,9 @@
   "footer": {
     "share": {
       "title": "<b>分享</b>到社交媒体",
-      "tweet": "推",
+      "tweet": "Tweet 我",
       "share": "分享",
-      "like": "赞"
+      "like": "为我点赞"
     },
 
     "language": "语言",
@@ -541,7 +542,7 @@
   },
 
   "not-found": {
-    "title": "找不到此页面...",
-    "subtitle": "试试回到主页"
+    "title": "找不到此页面……",
+    "subtitle": "点此尝试回到主页"
   }
 }
