@@ -110,7 +110,7 @@
                                         <b-button class="has-text-expanded" type="is-primary" size="is-large" icon-left="shopping-bag" inverted style="width: 231px;"
                                             tag="a" target="_blank" width="100%" href="https://www.microsoft.com/p/screentogif/9n3sqk8pds8g" rel="noopener"
                                             @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Microsoft Store'})">
-                                            Microsoft Store
+                                             {{ $t('home.microsoftstore') }}
                                         </b-button>
                                     </div>
 

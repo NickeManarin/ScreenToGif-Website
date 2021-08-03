@@ -53,6 +53,7 @@
     "or": "or",
     "portable" : "Portable",
     "portable-info": "Downloads the portable version, which contains only the main executable. Addons needs to be downloaded in Options > Extras.",
+    "microsoftstore": "Microsoft Store",
     "downloads" : "{0} downloads",
     "more-releases" : "More download options",
     "fewer-releases" : "Fewer download options",
