@@ -551,7 +551,7 @@
                         });
                   },
                     (e) => {
-                        console.log("It was not possible to copy the winget command.", e);
+                        console.log("It was not possible to copy the SHA1", e);
 
                         this.$buefy.toast.open({
                             duration: 5000,
