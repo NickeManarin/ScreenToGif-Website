@@ -56,7 +56,11 @@
                                             •
                                             <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString($i18n.locale)) : "..." }}</small> 
                                         </p>
-
+                                        <p v-if="!isLoading && !isEmpty($store.release)">
+                                          <a style="color:white" @click="copySHA1(false)">
+                                              <small><small>{{!isEmpty($store.release)? "(SHA1: a11d4e5227ce7b8b3611aa39bd03c9716dc7a45e)": ""}}</small></small>
+                                          </a>
+                                        </p>
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                                     </div>
                                 </transition>
@@ -88,7 +92,11 @@
                                             •
                                             <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString($i18n.locale)) : "..." }}</small>
                                         </p>
-
+                                         <p v-if="!isLoading && !isEmpty($store.release)">
+                                          <a style="color:white" @click="copySHA1(true)">
+                                              <small><small>{{!isEmpty($store.release)? "(SHA1: b82cf0f2cec0543b75ae00b587847c76ec21a274)": ""}}</small></small>
+                                          </a>
+                                        </p>
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
                                     </div>
                                 </transition>
@@ -519,6 +527,42 @@
 
                     this.$gtag.exception({'description': e, 'fatal': false});
                 });
+            },
+            copySHA1(isPortable) {
+                this.$gtag.event("Copy", {event_category: "Clicks",event_label: "SHA1"});
+
+                let sha1 = "";
+                let msg = "";
+                if (!isPortable) {
+                  sha1 = "a11d4e5227ce7b8b3611aa39bd03c9716dc7a45e";
+                  msg = this.$t("home.sha1copied").replace('{0}',this.$t("home.installer"));
+                } else {
+                  sha1 = "b82cf0f2cec0543b75ae00b587847c76ec21a274";
+                  msg = this.$t("home.sha1copied").replace('{0}',this.$t("home.portable"));
+                }
+
+                this.$copyText(sha1).then(
+                    (_) => {
+                        this.$buefy.toast.open({
+                              duration: 5000,
+                              message: msg,
+                              position: "is-bottom",
+                              type: "is-success",
+                        });
+                  },
+                    (e) => {
+                        console.log("It was not possible to copy the winget command.", e);
+
+                        this.$buefy.toast.open({
+                            duration: 5000,
+                            message: this.$t("home.not-copied"),
+                            position: "is-bottom",
+                            type: "is-danger",
+                        });
+
+                        this.$gtag.exception({ description: e, fatal: false });
+                    }
+                  );
             }
         }
     };

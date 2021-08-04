@@ -59,6 +59,7 @@
     "fewer-releases" : "Fewer download options",
     "copy" : "Copy",
     "copied" : "Command copied!",
+    "sha1copied" : "{0}'s SHA1 copied!",
     "not-copied" : "It was not possible to copy the command.",
 
     "why": {
