@@ -117,13 +117,14 @@
       "title": "Requerimentos",
       "subtitle": "Este aplicativo requer um mínimo de configurações de software e hardware para funcionar",
       "windows": "<b>Windows 7 SP1</b> ou mais recente",
-      "framework": "<b>.Net Framework 4.8</b> ou mais recente"
+      "framework": "<b>.NET 6</b> ou mais recente"
     },
 
     "releases":{
       "title": "Todas as versões",
       "subtitle": "Expanda para ver os detalhes de cada versão",
-      
+      "loading-issue": "Por conta de um problema carregando as versões, você só está vendo as 10 mais recentes.",
+
       "table": {
         "version": "Versão",
         "date": "Data de Lançamento",

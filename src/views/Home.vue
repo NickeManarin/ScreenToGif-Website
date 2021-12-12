@@ -14,7 +14,7 @@
                     <transition name="slide-down">
                         <h1 v-if="showElements" class="title is-size-1 is-spaced">ScreenToGif</h1>
                     </transition>
-                    <transition name="slide-up-200ms">
+                    <transition name="slide-up">
                         <h2 v-if="showElements" class="subtitle" v-html="$t('home.subtitle')"/>
                     </transition>
                 </div>
@@ -23,38 +23,60 @@
             <div class="hero-foot">
                 <div class="section has-smaller-padding">
                     <div class="container">
-                        <div class="column is-12 has-text-centered">
-                            <transition name="slow-in-300ms">
-                                <div v-if="showElements">
-                                    <p v-if="!isLoading" class="is-unselectable">
-                                        {{ !isEmpty($store.release) ? $t('home.version').replace('{0}', $store.release.version) : '...' }}
-                                    </p>
+                        <transition name="slow-in">
+                            <p class="subtitle has-text-centered is-unselectable">
+                                <span v-if="!isLoading">
+                                    {{ !isEmpty($store.state.release) ? $t('home.version').replace('{0}', $store.state.release.version) : '...' }}
+                                </span>
 
-                                    <b-skeleton v-if="isLoading" width="65px" height="1em"></b-skeleton>
-                                </div>
-                            </transition>
-                        </div>
+                                <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
+                            </p>
+                        </transition>
+
+                        <b-dropdown class="columns is-centered is-vcentered is-mobile" v-model="$store.state.architecture" aria-role="list" 
+                            v-if="$store.state.release.version !== '' && $store.state.release.assets.length > 2"
+                            @change="$gtag.event('Language', {'event_category': 'Clicks', 'event_label': 'Switch architecture: ' + this.$store.state.architecture})">
+                            <button class="button is-transparent" type="button" slot="trigger">
+                                <template>
+                                    <b-icon class="left-icon" icon="processor"/>
+                                    <span class="has">{{$store.state.architecture}}</span>
+                                </template>
+
+                                <b-icon pack="unicon" icon="uil-angle-down"/>
+                            </button>
+
+                            <b-dropdown-item value="arm64" aria-role="listitem">
+                                <h3 class="is-unselectable">arm64 • Arm 64 bits</h3>
+                            </b-dropdown-item>
+
+                            <b-dropdown-item value="x64" aria-role="listitem">
+                                <h3 class="is-unselectable">x64 • 64 bits</h3>
+                            </b-dropdown-item>
+
+                            <b-dropdown-item value="x86" aria-role="listitem">
+                                <h3 class="is-unselectable">x86 • 32 bits</h3>
+                            </b-dropdown-item>
+                        </b-dropdown>
 
                         <div class="columns is-centered is-vcentered is-multiline is-mobile">
                             <div class="column is-narrow has-text-centered">
-                                <b-tooltip :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
-                                    <transition name="slow-in-400ms">
+                                <b-tooltip key="button" :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
+                                    <transition name="slow-in">
                                         <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'" rel="noopener"
-                                                  class="has-text-expanded" :style="{ 'min-width': getMinWidthInstaller() }"
-                                                  :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
-                                                  @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Installer'})">
+                                                :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.state.release) ? '_self' : '_blank'" rel="noopener"
+                                                class="has-text-expanded" :style="{ 'min-width': getMinWidthInstaller() }" :href="$store.getters.getUrlInstaller"
+                                                @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             {{ $t('home.installer') }}
                                         </b-button>
                                     </transition>
                                 </b-tooltip>
 
-                                <transition name="slow-in-400ms">
+                                <transition name="slow-in">
                                     <div v-if="showElements">
-                                        <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
-                                            <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
+                                        <p v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
+                                            <small>{{ $store.getters.getSizeInstaller }}</small>
                                             •
-                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString($i18n.locale)) : "..." }}</small> 
+                                            <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small> 
                                         </p>
 
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -63,30 +85,29 @@
                             </div>
 
                             <div class="column is-12-mobile is-1-tablet has-text-centered">
-                                <transition name="slow-in-500ms">
+                                <transition name="slow-in">
                                     <p v-if="showElements" class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
                                 </transition>
                             </div>
 
                             <div class="column is-narrow has-text-centered">
                                 <b-tooltip :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
-                                    <transition name="slow-in-600ms">
+                                    <transition name="slow-in">
                                         <b-button ref="portableButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
-                                                  :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.release) ? '_self' : '_blank'"  rel="noopener"
-                                                  class="has-text-expanded" :style="{ 'min-width': getMinWidthPortable() }"
-                                                  :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'"
-                                                  @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Portable'})">
+                                            :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.state.release) ? '_self' : '_blank'"  rel="noopener"
+                                            class="has-text-expanded" :style="{ 'min-width': getMinWidthPortable() }" :href="$store.getters.getUrlPortable"
+                                            @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             {{ $t('home.portable') }}
                                         </b-button>
                                     </transition>
                                 </b-tooltip>
                                 
-                                <transition name="slow-in-600ms">
+                                <transition name="slow-in">
                                     <div v-if="showElements">
-                                        <p v-if="!isLoading && !isEmpty($store.release)" class="is-unselectable">
-                                            <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
+                                        <p v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
+                                            <small>{{ $store.getters.getSizePortable }}</small>
                                             •
-                                            <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString($i18n.locale)) : "..." }}</small>
+                                            <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
                                         </p>
 
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -95,7 +116,7 @@
                             </div>
                         </div>
 
-                        <transition name="slow-in-700ms">
+                        <transition name="slow-in">
                             <b-collapse v-if="showElements" class="has-text-light has-text-centered" :open.sync="isExpanderOpen" position="is-top" animation="slide" aria-id="expander"
                                 @open="$gtag.event('More downloads', {'event_category': 'Clicks', 'event_label': 'Open'})"
                                 @close="$gtag.event('More downloads', {'event_category': 'Clicks', 'event_label': 'Close'})">
@@ -168,7 +189,7 @@
 
                         <div class="column is-half-mobile has-text-centered">
                             <p class="title is-4 has-text-weight-semibold">{{ $t('home.why.compact') }}</p>
-                            <p class="subtitle is-6 has-text-grey-light" v-html="$t('home.why.compact-info').replace('<b>', '<b class=has-text-grey>').replace('{0}', !isEmpty($store.release) ? $store.release.size_inst : '3.1 MiB')"></p>
+                            <p class="subtitle is-6 has-text-grey-light" v-html="$t('home.why.compact-info').replace('<b>', '<b class=has-text-grey>').replace('{0}', $store.getters.getSizeInstaller || '6.5 MiB')"></p>
 
                             <b-icon class="has-text-warning is-size-2" pack="unicon" icon="uil-box"></b-icon>
                         </div>
@@ -383,7 +404,7 @@
     import ResponsiveImage from "@/components/ResponsiveImage.vue";
     import Gallery from "@/components/Gallery.vue";
     import TweetList from "@/components/TweetList.vue";
-
+    
     export default {
         name: "Home",
         mixins: [helpers, downloader],
@@ -399,7 +420,7 @@
                 isLoading: true,
                 trials: 0,
                 trialsFoss: 0,
-                isExpanderOpen: false,
+                isExpanderOpen: false
             };
         },
 
@@ -444,8 +465,7 @@
                     this.isLoading = true;
 
                     //If the release details were not downloaded yet, it must be downloaded.
-                    if (this.isEmpty(this.$store.release) || this.$store.release.fromFoss) {
-
+                    if (this.$store.state.release.version === '' || this.$store.state.release.fromFoss) {
                         if (this.trials < 2) {
                             this.trials++;
                             this.downloadDetails(() => { this.download(); });
@@ -477,7 +497,7 @@
             copyChoco() {
                 this.$gtag.event('Copy', {'event_category': 'Clicks', 'event_label': 'Chocolatey'});
 
-                this.$copyText('choco install screentogif').then((e) => {
+                this.$copyText('choco install screentogif').then(() => {
                     this.$buefy.toast.open({
                         duration: 5000,
                         message: this.$t('home.copied'),
@@ -500,7 +520,7 @@
             copyWinget() {
                 this.$gtag.event('Copy', {'event_category': 'Clicks', 'event_label': 'Winget'});
 
-                this.$copyText('winget install screentogif').then((e) => {
+                this.$copyText('winget install screentogif').then(() => {
                     this.$buefy.toast.open({
                         duration: 5000,
                         message: this.$t('home.copied'),
@@ -526,11 +546,6 @@
 
 <style lang="scss" scoped>
     //Keyframes used in the animations bellow.
-    @keyframes disappear {
-        0% { opacity: 1; }
-        100% { opacity: 0; }
-    }
-
     @keyframes slideDown {
         0% { opacity: 0; transform: translateY(-1rem); }
         100% { opacity: 1; transform: translateY(0); }
@@ -546,9 +561,9 @@
         100% { opacity: 1; transform: scale(1) }
     }
 
-    //Animation: Slide down • 0s
+    //Animation: Slide down • 400ms
     .slide-down-enter-active {
-      animation: slideDown .4s ease-out;
+        animation: slideDown .4s ease-out;
     }
 
     .slide-down-enter, .slide-down-leave-to { 
@@ -561,56 +576,33 @@
         transform: translateY(0);
     }
 
-    //Animation: Slide up • 0.2s
-    .slide-up-200ms-enter-active {
-      animation: disappear 0s forwards, slideUp .4s ease-out .2s; //name, duration, timing-function, delay, iteration-count, direction, fill-mode.
+    //Animation: Slide up • 400ms
+    .slide-up-enter-active {
+        /* Name, duration, timing-function, delay, iteration-count, direction, fill-mode. */
+        animation: slideUp .4s ease-out;
     }
 
-    .slide-up-200ms-enter, .slide-up-200ms-leave-to { 
+    .slide-up-enter, .slide-up-leave-to { 
         opacity: 0;
         transform: translateY(1rem);
     }
 
-    .slide-up-200ms-leave, .slide-up-200ms-enter-to { 
+    .slide-up-leave, .slide-up-enter-to { 
         opacity: 1;
         transform: translateY(0);
     }
 
-    //Animation: Slow in • 0.3s, 0.4s, 0.5s, 0.6s, 0.7s
-    .slow-in-300ms-enter-active {
-      animation: disappear 0s forwards, slowIn .4s ease-out .3s;
+    //Animation: Slow in • 800ms
+    .slow-in-enter-active {
+        animation: slowIn .8s ease-out;
     }
 
-    .slow-in-400ms-enter-active {
-      animation: disappear 0s forwards, slowIn .4s ease-out .4s;
-    }
-
-    .slow-in-500ms-enter-active {
-      animation: disappear 0s forwards, slowIn .4s ease-out .5s;
-    }
-
-    .slow-in-600ms-enter-active {
-      animation: disappear 0s forwards, slowIn .4s ease-out .6s;
-    }
-
-    .slow-in-700ms-enter-active {
-      animation: disappear 0s forwards, slowIn .4s ease-out .7s;
-    }
-
-    .slow-in-300ms-enter, .slow-in-300ms-leave-to,
-    .slow-in-400ms-enter, .slow-in-400ms-leave-to,
-    .slow-in-500ms-enter, .slow-in-500ms-leave-to,
-    .slow-in-600ms-enter, .slow-in-600ms-leave-to,
-    .slow-in-700ms-enter, .slow-in-700ms-leave-to { 
+    .slow-in-enter, .slow-in-leave-to { 
         opacity: 0;
         transform: scale(.9);
     }
 
-    .slow-in-300ms-leave, .slow-in-300ms-enter-to, 
-    .slow-in-400ms-leave, .slow-in-400ms-enter-to, 
-    .slow-in-500ms-leave, .slow-in-500ms-enter-to, 
-    .slow-in-600ms-leave, .slow-in-600ms-enter-to, 
-    .slow-in-700ms-leave, .slow-in-700ms-enter-to { 
+    .slow-in-leave, .slow-in-enter-to { 
         opacity: 1;
         transform: scale(1);
     }
@@ -715,8 +707,13 @@
 </style>
 
 <style lang="scss">
-    //Makes the text of the button to ocupy all the space left.
+    /* Makes the text of the button to ocupy all the space left. */
     .has-text-expanded > span:not(icon) {
         width: 100%;
+    }
+
+    .dropdown .dropdown-menu {
+        left: unset;
+        min-width: 10rem;
     }
 </style>

@@ -8,27 +8,52 @@
                     <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('downloads.latest') }}</h2>
                     <p class="subtitle has-text-centered has-text-grey-lighter is-unselectable">
                         <span v-if="!isLoading">
-                            {{ !isEmpty($store.release) ? $t('home.version').replace('{0}', $store.release.version) : '...' }}
+                            {{ !isEmpty($store.state.release) ? $t('home.version').replace('{0}', $store.state.release.version) : '...' }}
                         </span>
 
                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                     </p>
 
+                    <b-dropdown class="columns is-centered is-vcentered" v-model="$store.state.architecture" aria-role="list" 
+                        v-if="$store.state.release.version !== '' && $store.state.release.assets.length > 2"
+                        @change="$gtag.event('Language', {'event_category': 'Clicks', 'event_label': 'Switch architecture: ' + this.$store.state.architecture})">
+                        <button class="button is-download" type="button" slot="trigger">
+                            <template>
+                                <b-icon class="left-icon" icon="processor"/>
+                                <span class="has">{{$store.state.architecture}}</span>                                           
+                            </template>
+
+                            <b-icon pack="unicon" icon="uil-angle-down"/>
+                        </button>
+
+                        <b-dropdown-item value="arm64" aria-role="listitem">
+                            <h3 class="is-unselectable">arm64 • Arm 64 bits</h3>
+                        </b-dropdown-item>
+
+                        <b-dropdown-item value="x64" aria-role="listitem">
+                            <h3 class="is-unselectable">x64 • 64 bits</h3>
+                        </b-dropdown-item>
+
+                        <b-dropdown-item value="x86" aria-role="listitem">
+                            <h3 class="is-unselectable">x86 • 32 bits</h3>
+                        </b-dropdown-item>
+                    </b-dropdown>
+
                     <div class="columns is-centered is-vcentered is-multiline is-mobile">
                         <div class="column is-narrow has-text-centered">
                             <b-tooltip :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="installerButton" type="is-info" size="is-large" icon-left="compact-disc" 
-                                    :style="{ 'min-width': getMinWidthPortable() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'" 
-                                    :href="!isEmpty($store.release) ? $store.release.download_link_inst : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" 
-                                    :inverted="!isLoading" :outlined="!isLoading" @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
+                                    :style="{ 'min-width': getMinWidthPortable() }" :loading="isLoading" tag="a" :target="$store.state.release.length > 0 ? '_self' : '_blank'" 
+                                    :href="$store.getters.getUrlInstaller" :inverted="!isLoading" :outlined="!isLoading" 
+                                    @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                     {{ $t('home.installer') }}
                                 </b-button>
                             </b-tooltip>
                             
-                            <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
-                                <small>{{ !isEmpty($store.release) ? $store.release.size_inst : "..." }}</small>
+                            <p v-if="!isLoading && !isEmpty($store.state.release) && !$store.state.release.fromFoss" class="is-unselectable has-arrow-cursor">
+                                <small>{{ $store.getters.getSizeInstaller }}</small>
                                 •
-                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString($i18n.locale)) : "..." }}</small> 
+                                <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small> 
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -41,17 +66,17 @@
                         <div class="column is-narrow has-text-centered">
                             <b-tooltip :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="portableButton" type="is-info" size="is-large" icon-left="archive-alt" 
-                                    :style="{ 'min-width': getMinWidthInstaller() }" :loading="isLoading" tag="a" :target="downloads.length > 0 ? '_self' : '_blank'"
-                                    :href="!isEmpty($store.release) ? $store.release.download_link_port : 'https://github.com/NickeManarin/ScreenToGif/releases/latest'" 
-                                    :inverted="!isLoading" :outlined="!isLoading" @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
+                                    :style="{ 'min-width': getMinWidthInstaller() }" :loading="isLoading" tag="a" :target="$store.state.release.length > 0 ? '_self' : '_blank'" 
+                                    :href="$store.getters.getUrlPortable" :inverted="!isLoading" :outlined="!isLoading" 
+                                    @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                      {{ $t('home.portable') }}
                                 </b-button>
                             </b-tooltip>
 
-                            <p v-if="!isLoading && !isEmpty($store.release) && !$store.release.fromFoss" class="is-unselectable has-arrow-cursor">
-                                <small>{{ !isEmpty($store.release) ? $store.release.size_port : "..." }}</small>
+                            <p v-if="!isLoading && !isEmpty($store.state.release) && !$store.state.release.fromFoss" class="is-unselectable has-arrow-cursor">
+                                <small>{{ $store.getters.getSizePortable }}</small>
                                 •
-                                <small>{{ !isEmpty($store.release) ? $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString($i18n.locale)) : "..." }}</small>
+                                <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
                             </p>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -72,7 +97,7 @@
                         <div class="columns is-centered has-top-margin">
                             <div class="column is-10-tablet is-9-desktop is-8-widescreen is-7-fullhd">
                                 <p class="content has-text-light has-text-justified is-unselectable">
-                                    <VueShowdown :markdown="!isEmpty($store.release) ? $store.release.description : ''" tag="span"></VueShowdown> 
+                                    <VueShowdown :markdown="!isEmpty($store.state.release) ? $store.state.release.description : ''" tag="span"></VueShowdown> 
                                 </p>
                             </div>
                         </div>
@@ -118,19 +143,23 @@
             </div>
         </section>
 
-        <section class="hero">
+        <section class="hero" v-if="displayReleases">
             <div class="hero-body">
                 <div class="container">
                     <h2 class="title is-size-3 has-text-centered is-unselectable">{{ $t('downloads.releases.title') }}</h2>
                     <p class="subtitle has-text-centered has-text-grey-71 is-unselectable">{{ $t('downloads.releases.subtitle') }}</p>
 
-                    <b-table ref="table" :data="$store.releaseList" :loading="isLoading" hoverable detailed detail-key="version" 
-                        selectable @select="toggle" paginated :per-page="perPage" :current-page.sync="currentPage" :scrollable="false"
+                    <b-message type="is-info" v-if="isFallback">
+                        {{ $t('downloads.releases.loading-issue') }}
+                    </b-message>
+
+                    <b-table ref="table" :data="$store.state.releases" :loading="isLoading" hoverable detailed detail-key="version" 
+                        selectable @select="toggle" paginated backend-pagination :total="$store.state.releasesCount" :per-page="pageSize" @page-change="onPageChange" :scrollable="false"
                         aria-next-label="Next page" aria-previous-label="Previous page" aria-page-label="Page" aria-current-label="Current page" 
-                        :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]"
+                        backend-sorting @sort="onSort" :default-sort-direction="defaultSortOrder" :default-sort="[sortField, sortOrder]"
                         @details-open="(row, index) => detailsOpen(row)" @details-close="(row, index) => detailsClose(row)">
                     
-                        <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" :label="$t('downloads.releases.table.version')" :custom-sort="sortVersion" sortable v-slot="props">
+                        <b-table-column class="is-unselectable" cell-class="has-pointer-cursor" field="version" :label="$t('downloads.releases.table.version')" sortable v-slot="props">
                             <span class="tag" :class="versionType(props.row.is_prerelease)">
                                 {{ props.row.version }}
                             </span>
@@ -166,16 +195,6 @@
                                     <p>{{ $t('downloads.releases.table.not-possible') }}</p>
                                 </div>
                             </section>
-
-                            <!-- <section v-else class="section">
-                                <div class="content has-text-grey has-text-centered">
-                                    <p>
-                                        <b-icon icon="sync" size="is-large"></b-icon>
-                                    </p>
-
-                                    <p>Loading...</p>
-                                </div>
-                            </section> -->
                         </template>
 
                         <template slot="detail" slot-scope="props">
@@ -208,44 +227,38 @@
                                         </div>
                                     </nav>
 
-                                    <div class="content has-side-padding">
-                                        <VueShowdown :markdown="props.row.description" tag="span"/>
-                                    </div>
-
-                                    <hr>
-
-                                    <nav class="level is-marginless is-paddingless">
-                                        <div class="level-left"></div>
-
-                                        <div class="level-right">
-                                            <div v-if="props.row.download_count_inst > 0" class="level-item has-text-centered">
-                                                <div>
-                                                    <b-button type="is-info" size="is-medium" icon-left="compact-disc" tag="a" :href="props.row.download_link_inst" rel="noopener"
-                                                        @click="$gtag.event('Download-Row', {'event_category': 'Clicks', 'event_label': 'Installer ' + props.row.version })">
-                                                        {{ $t('home.installer') }}
-                                                    </b-button>
-
-                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty(props.row.download_link_inst) ? $t('home.downloads').replace('{0}', props.row.download_count_inst.toLocaleString($i18n.locale)) : "..." }}</p>
-                                                    <p class="is-size-7 is-unselectable">{{ props.row.size_inst }}</p>
-                                                </div>
-                                            </div>
-
-                                            <div class="level-item"></div>
-
-                                            <div class="level-item has-text-centered">
-                                                <div>
-                                                    <b-button type="is-info" size="is-medium" icon-left="archive-alt" tag="a" :href="props.row.download_link_port" rel="noopener"
-                                                        :disabled="props.row.download_link_port === null" 
-                                                        @click="$gtag.event('Download-Row', {'event_category': 'Clicks', 'event_label': 'Portable ' + props.row.version })">
-                                                        {{ $t('home.portable') }}
-                                                    </b-button>
-
-                                                    <p class="is-size-7 is-unselectable">{{ !isEmpty(props.row.download_link_port) ? $t('home.downloads').replace('{0}', props.row.download_count_port.toLocaleString($i18n.locale)) : "..." }}</p>
-                                                    <p class="is-size-7 is-unselectable">{{ props.row.size_port }}</p>
-                                                </div>
-                                            </div>
+                                    <div class="px-3">
+                                        <div class="content">
+                                            <VueShowdown :markdown="props.row.description" tag="span"/>
                                         </div>
-                                    </nav>
+
+                                        <hr>
+
+                                        <h3 class="title is-size-5 is-unselectable mb-2">Files</h3>
+
+                                        <div v-for="asset in props.row.assets" :key="asset.url" class="ml-2">
+                                            <nav class="level is-marginless p-1">
+                                                <div class="level-left">
+                                                    <div class="level-item">
+                                                        <a :href="asset.url" rel="nofollow" :class="{ 'is-italic is-disabled is-unselectable has-text-grey': asset.url == null }">
+                                                            <i class="unicon is-large" :class="[ asset.type === 'portable' ? 'uil-archive-alt' : 'uil-compact-disc' ]"></i>
+                                                            <span class="px-1 has-text-weight-medium">{{ asset.type === 'portable' ? $t('home.portable') : $t('home.installer') }}</span>
+                                                        </a>
+
+                                                        <b-tag class="is-light ml-1" :class="[ asset.arch === 'arm64' ? 'is-success' : asset.arch === 'x64' ? 'is-link' : 'is-warning' ]" v-if="asset.arch !== 'anyCpu'" v-text="asset.arch"/>
+                                                    </div>
+                                                </div>
+
+                                                <div class="level-right mt-0">
+                                                    <div class="level-item has-text-centered">
+                                                        <p class="has-text-grey" v-text="asset.size"/>
+                                                        <p class="has-text-weight-bold px-1">•</p>
+                                                        <p class="has-text-grey" v-text="$t('home.downloads').replace('{0}', asset.downloadCount.toLocaleString($i18n.locale))"/>
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
                                 </div>
                             </article>
                         </template>
@@ -255,9 +268,7 @@
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap">
-                                    <p v-html="$t('downloads.releases.table.versions-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', $store.releaseList != null ? $store.releaseList.length : 0)">
-                                        <!-- <span class="has-text-grey">{{ $store.releaseList != null ? $store.releaseList.length : 0 }}</span>
-                                        <span> versions released</span>   -->
+                                    <p v-html="$t('downloads.releases.table.versions-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', $store.state.releasesCount != null ? $store.state.releasesCount : 0)">
                                     </p> 
                                 </div>
                             </th>
@@ -265,9 +276,6 @@
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-centered-desktop">
                                     <p v-html="$t('downloads.releases.table.average-month').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed(averagePerMonth, 2, $i18n.locale))">
-                                        <!-- <span>Average of </span>  
-                                        <span class="has-text-grey">{{ averagePerMonth.toFixed(2).toLocaleString() }}</span>
-                                        <span> per month</span> -->
                                     </p>
                                 </div>
                             </th>
@@ -275,18 +283,13 @@
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-numeric-desktop">
                                     <p v-html="$t('downloads.releases.table.active-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', projectAge)">
-                                        <!-- <span>Active for </span>  
-                                        <span class="has-text-grey">{{ projectAge }} </span> -->
                                     </p>
                                 </div>
                             </th>
 
                             <th v-if="!isLoading">
                                 <div class="th-wrap is-numeric-desktop">
-                                    <p v-html="$t('downloads.releases.table.downloads-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed($store.totalDownloads, 0, $i18n.locale))">
-                                        <!-- <span>Downloaded </span> 
-                                        <span class="has-text-grey">{{ $store.totalDownloads.toLocaleString() }}</span>
-                                        <span> times</span> -->
+                                    <p v-html="$t('downloads.releases.table.downloads-total').replace('{0}', '<span class=has-text-grey>{1}</span>').replace('{1}', toLocaleFixed($store.state.totalDownloads, 0, $i18n.locale))">
                                     </p>
                                 </div>
                             </th>
@@ -300,29 +303,27 @@
 
 <script>
     import ResponsiveImage from "@/components/ResponsiveImage.vue";
-    import helpers from '../mixins/helpers';
+    import helpers from '@/mixins/helpers';
 
     export default {
         components: {
             ResponsiveImage
         },
         mixins: [
-            helpers,
+            helpers
         ],
 
         data() {
             return {
-                downloads: [],
-                aux: {},
+                displayReleases:  true,
                 isLoading: true,
                 isExpanderOpen: false,
-                totalDownloads: 0,
-                totalDays: 0,
+                isFallback: false,
                 sortField: "version",
                 sortOrder: "desc",
                 defaultSortOrder: "desc",
-                currentPage: 1,
-                perPage: 10
+                page: 1,
+                pageSize: 10
             };
         },
 
@@ -358,211 +359,187 @@
                 return size;
             },
 
-            sortVersion(a, b, isAsc){
-                return this.compareVersion(a.version, b.version) * (isAsc ? 1 : -1);
+            onPageChange(page) {
+                this.page = page
+                this.load()
             },
-            compareVersion(versionA, versionB){
-                var versionsA = versionA.split(/\./g), versionsB = versionB.split(/\./g);
+            onSort(field, order) {
+                this.sortField = field
+                this.sortOrder = order
+                this.load()
+            },
 
-                while (versionsA.length || versionsB.length) {
-                    var a = Number(versionsA.shift()), b = Number(versionsB.shift());
-                    
-                    if (a == b)
-                        continue;
-                    
-                    return (a > b || isNaN(b)) ? 1 : -1;
-                }
-                
-                return -1;
-            },
             load() {
-                if (this.$store.releaseList.length > 0 && this.$store.previousDate && new Date().getTime() - this.$store.previousDate > 300) { //300s, 5 minutes.
-                    this.isLoading = false;
-                    return;
-                }
+                const params = [
+                    `pageSize=${this.pageSize}`,
+                    `page=${this.page}`,
+                    `sortColumn=${this.sortField}`,
+                    `sortDirection=${this.sortOrder}`
+                ].join('&')
 
-                this.$http.get("https://screentogif-releases.azurewebsites.net/api/v1/releases")
+                this.isLoading = true;
+                this.$http.get(`https://screentogif-releases.azurewebsites.net/api/v1/releases?${params}`)
                     .then(async res => {
-                        this.treatData(await res.json());
+                        this.parse(await res.json());
                     }, error =>{
-                        console.log("Exception in getting releases.", error);
+                        console.log('error', 'Exception in getting releases.', error);
 
-                        this.fallbackLoad();
+                        this.loadFromGithub();
 
                         this.$gtag.exception({'description': error, 'fatal': false});
-                        throw error;
-                    })
-                    .catch(e => {
-                        console.log("Exception in getting releases.", e);
-
-                        this.fallbackLoad();
-
-                        this.$gtag.exception({'description': e, 'fatal': false});
-                        throw e;
                     });
             },
-            fallbackLoad(){
-                this.$http.get(`https://api.github.com/repos/NickeManarin/ScreenToGif/releases?per_page=70`)
+            loadFromGithub(){
+                this.$http.get('https://api.github.com/repos/NickeManarin/ScreenToGif/releases?per_page=10')
                     .then(async res => {
-                        this.treatDataFallback(await res.json());
+                        this.parseFromGithub(await res.json());
                     }, error => {
-                        console.log("Exception in getting releases, in fallback.", error);
-
+                        console.log('error', 'Exception in getting releases, in fallback.', error);
+                        
                         this.showError();
-                        this.downloads = [];
-                        this.totalDownloads = 0;
-                        this.totalDays = 0;
-
                         this.loadFromFosshub();
 
                         this.$gtag.exception({'description': error, 'fatal': true});
-                        throw error;
-                    })
-                    .catch(e => {
-                        console.log("Exception in getting releases, in fallback.", e);
-
-                        this.showError();
-                        this.downloads = [];
-                        this.totalDownloads = 0;
-                        this.totalDays = 0;
-
-                        this.loadFromFosshub();
-
-                        this.$gtag.exception({'description': e, 'fatal': true});
-                        throw e;
                     });
             },
             loadFromFosshub(){
-                this.$http.get(`https://www.fosshub.com/feed/5bfc6fce8c9fe8186f809d24.json`)
+                this.displayReleases = false;
+
+                this.$http.get('https://www.fosshub.com/feed/5bfc6fce8c9fe8186f809d24.json')
                     .then(async res => {
                         var e = await res.json();
 
-                        this.aux = {};
-                        this.aux.fromFoss = true;
-                        this.aux.version = e.items[0].version;
-                        this.aux.download_link_port = e.items.filter((e) => { return e.type.endsWith('(Zip)'); })[0].link;
-                        this.aux.download_link_inst = e.items.filter((e) => { return e.type.endsWith('(MSI)'); })[0].link;
-                        this.aux.release_date = e.published_at;
-                        this.aux.release_date_obj = updatedAt;
-                        //this.aux.date_time_since = this.since(updatedAt, new Date());
+                        var aux = {};
+                        aux.fromFoss = true;
+                        aux.version = e.items[0].version;
+                        aux.release_date = new Date(e.published_at);
 
-                        this.$store.release = this.aux;
-                        this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
+                        aux.assets = e.items.map(m => {
+                            return {
+                                arch: this.getArchitecture(m.title),
+                                type: this.getBinaryType(m.title),
+                                url: m.link,
+                                downloadCount: 0,
+                                size: ''
+                            }
+                        });
+                        
+                        this.$store.commit('setRelease', aux);
                         this.isLoading = false;
                     }, error => {
-                        console.log("Exception in getting latest release from Fosshub.", error);
+                        console.log('error', 'Exception in getting latest release from Fosshub.', error);
 
                         this.isLoading = false;
                         throw error;
-                    })
-                    .catch(e => {
-                        console.log("Exception in getting latest release from Fosshub.", e);
-
-                        this.isLoading = false;
-                        throw e;
                     });
             },
-            treatData(data) {
-                this.totalDownloads = 0;
-                this.totalDays = 0;
-                var previousUpdatedAt = new Date();
-                this.downloads = [];
 
-                data.releases.forEach((e, index) => {
+            parse(data) {
+                this.isFallback = false;
+                this.displayReleases = true;
+
+                let aux = data.releases.map(e => {
                     var releaseDate = new Date(e.releaseDate);
 
                     //Displayed on the row.
-                    this.aux = {};
-                    this.aux.version = e.version;
-                    this.aux.release_date = releaseDate;
-                    this.aux.release_date_obj = releaseDate;
-                    this.aux.download_count = e.downloadCount;
-                    this.aux.is_prerelease = e.isPreRelease;
-                    this.aux.active_days = this.dateDiff(previousUpdatedAt, releaseDate);
+                    var aux = {};
+                    aux.version = e.version;
+                    aux.release_date = releaseDate;
+                    aux.release_date_obj = releaseDate;
+                    aux.download_count = e.downloadCount;
+                    aux.is_prerelease = e.isPreRelease;
+                    aux.active_days = e.activeDays;
 
                     //Displayed on the detailed view.
-                    this.aux.author_login = e.authorLogin;
-                    this.aux.author_picture = e.authorAvatar;
-                    this.aux.is_picture_loaded = false;
-                    this.aux.author_url = e.authorUrl;
-                    this.aux.url = e.url;
-                    this.aux.description = e.description;
-                    //this.aux.date_time_since = this.since(releaseDate, new Date());
+                    aux.author_login = e.authorLogin;
+                    aux.author_picture = e.authorAvatar;
+                    aux.is_picture_loaded = false;
+                    aux.author_url = e.authorUrl;
+                    aux.url = e.url;
+                    aux.description = e.description;
 
-                    this.aux.download_count_port = e.downloadCountPortable;
-                    this.aux.download_link_port = e.portableUrl;
-                    this.aux.size_port = this.humanizeSize(e.portableSize, false);
-                    this.aux.download_count_inst = e.downloadCountInstaller;
-                    this.aux.download_link_inst = e.installerUrl;
-                    this.aux.size_inst = this.humanizeSize(e.installerSize, false);
-
-                    this.downloads.push(this.aux);
-
-                    this.totalDownloads += this.aux.download_count;
-                    this.totalDays += this.aux.active_days;
-                    previousUpdatedAt = releaseDate;
+                    aux.assets = e.assets.map(m => {
+                        return {
+                            arch: this.getArchitecture(m.name),
+                            type: this.getBinaryType(m.name),
+                            url: m.url,
+                            id: m.id,
+                            name: m.name,
+                            downloadCount: m.downloadCount,
+                            size: this.humanizeSize(m.size, false)
+                        }
+                    }).sort((a, b) => this.fieldSorter(a, b, ['type', 'arch']));
+                    
+                    return aux;
                 });
 
-                this.$store.releaseList = this.downloads;
-                this.$store.release = this.downloads[0];
-                this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
-                this.$store.totalDownloads = this.totalDownloads;
-                this.$store.totalDays = this.totalDays;
+                this.$store.commit('setRelease', aux[0]);
+                this.$store.commit('setReleases', aux);
+                this.$store.commit('setDownloadCount', data.downloadCount);
+                this.$store.commit('setDaysCount', data.activeDays);
+                this.$store.commit('setReleaseCount', data.releasesCount);
+
                 this.isLoading = false;
             },
-            treatDataFallback(data) {
-                this.totalDownloads = 0;
-                this.totalDays = 0;
-                var previousUpdatedAt = new Date();
-                this.downloads = [];
+            parseFromGithub(data) {
+                this.displayReleases = true;
+                let totalDownloads = 0;
+                let totalDays = 0;
+                let previousUpdatedAt = new Date();
 
-                data.forEach((e, index) => {
+                let aux = data.map((e) => {
                     if (e.assets.length === 0) 
-                        return; //Equivalent to continue;
+                        return;
 
-                    var port = e.assets[0];
-                    var inst = e.assets[1];
                     var updatedAt = new Date(e.published_at);
 
                     //Displayed on the row.
-                    this.aux = {};
-                    this.aux.version = e.tag_name;
-                    this.aux.release_date = updatedAt;
-                    this.aux.release_date_obj = updatedAt;
-                    this.aux.download_count = port.download_count + (inst != undefined ? inst.download_count : 0);
-                    this.aux.is_prerelease = e.prerelease;
-                    this.aux.active_days = this.dateDiff(previousUpdatedAt, updatedAt);
+                    var aux = {};
+                    aux.version = e.tag_name;
+                    aux.release_date = updatedAt;
+                    aux.release_date_obj = updatedAt;
+                    aux.download_count = e.assets.map(item => item.download_count).reduce((prev, next) => prev + next);
+                    aux.is_prerelease = e.prerelease;
+                    aux.active_days = this.dateDiff(previousUpdatedAt, updatedAt);
 
                     //Displayed on the detailed view.
-                    this.aux.author_login = e.author.login;
-                    this.aux.author_picture = e.author.avatar_url;
-                    this.aux.is_picture_loaded = false;
-                    this.aux.author_url = e.author.url;
-                    this.aux.url = e.html_url;
-                    this.aux.description = e.body;
-                    //this.aux.date_time_since = this.since(updatedAt, new Date());
+                    aux.author_login = e.author.login;
+                    aux.author_picture = e.author.avatar_url;
+                    aux.is_picture_loaded = false;
+                    aux.author_url = e.author.url;
+                    aux.url = e.html_url;
+                    aux.description = e.body;
 
-                    this.aux.download_count_port = port.download_count;
-                    this.aux.download_link_port = port.browser_download_url;
-                    this.aux.size_port = this.humanizeSize(port.size, false);
-                    this.aux.download_count_inst = inst != undefined ? inst.download_count : 0;
-                    this.aux.download_link_inst = (inst != undefined ? inst.browser_download_url : undefined)
-                    this.aux.size_inst = (inst != undefined ? this.humanizeSize(inst.size, false) : undefined)
+                    aux.assets = e.assets.map(m => {
+                        return {
+                            arch: this.getArchitecture(m.name),
+                            type: this.getBinaryType(m.name),
+                            url: m.browser_download_url,
+                            id: m.id,
+                            name: m.name,
+                            downloadCount: m.download_count,
+                            size: this.humanizeSize(m.size, false)
+                        }
+                    }).sort((a, b) => this.fieldSorter(a, b, ['type', 'arch']));
 
-                    this.downloads.push(this.aux);
-
-                    this.totalDownloads += this.aux.download_count;
-                    this.totalDays += this.aux.active_days;
+                    totalDownloads += aux.download_count;
+                    totalDays += aux.active_days;
                     previousUpdatedAt = updatedAt;
+
+                    return aux;
                 });
 
-                this.$store.releaseList = this.downloads;
-                this.$store.release = this.downloads[0];
-                this.$store.previousDate = new Date().getTime() / 1000; //Seconds.
-                this.$store.totalDownloads = this.totalDownloads;
-                this.$store.totalDays = this.totalDays;
+                this.$store.commit('setRelease', aux[0]);
+                this.$store.commit('setReleases', aux);
+                this.$store.commit('setDownloadCount', totalDownloads);
+                this.$store.commit('setDaysCount', totalDays);
+                this.$store.commit('setReleaseCount', aux.length);
+                this.$store.commit('setOldestDate', aux.map(m => m.release_date).reduce((a, b) => a < b ? a : b));
+
+                this.isFallback = true;
                 this.isLoading = false;
             },
+
             toggle(row) {
                 this.$refs.table.toggleDetails(row);
             },
@@ -582,16 +559,13 @@
                     position: 'is-bottom',
                     type: 'is-danger'
                 })
-            },
-            daysInMonth(date) {
-                return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
             }
         },
 
         computed: {
             projectAge() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = new Date(2013, 10 - 1, 12);
+                var start = this.isFallback ? this.$store.state.oldestDate : new Date(2013, 10 - 1, 12);
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();
@@ -610,7 +584,7 @@
                 var diff = end - start;
                 
                 //Divide that by 86400 to get the number of days.
-                var days = Math.round(diff / 86400 / 1000);
+                var numberOfDays = Math.round(diff / 86400 / 1000);
                 
                 //Now convert months back to years and months.
                 years = parseInt(months / 12);
@@ -629,18 +603,18 @@
                     text += this.$t('downloads.releases.dates.month' + (months == 1 ? '' : 's')).replace('{0}', months);
                 }
 
-                if (days) {
+                if (numberOfDays) {
                     if (text.length)
                         text = text + ", ";
                     
-                    text += this.$t('downloads.releases.dates.day' + (days == 1 ? '' : 's')).replace('{0}', days);
+                    text += this.$t('downloads.releases.dates.day' + (numberOfDays == 1 ? '' : 's')).replace('{0}', numberOfDays);
                 }
                                
                 return text;
             },
             averagePerMonth() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = new Date(2013, 10 - 1, 12);
+                var start = this.isFallback ? this.$store.state.oldestDate : new Date(2013, 10 - 1, 12);
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();
@@ -653,7 +627,7 @@
                 //if (days < 0)
                 //    months -= 1; 
 
-                return (this.downloads.length > 0 ? this.downloads.length : this.$store.releaseList.length) / months;
+                return this.$store.state.releasesCount / months;
             }
         }
     };
@@ -682,11 +656,6 @@
         height: 100%;
     }
 
-    .has-side-padding {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-
     .has-side-margin {
         margin-left: 1.5rem;
     }
@@ -710,11 +679,33 @@
     hr {
         margin: 1rem 0;
     }
+
+    .is-disabled {
+        cursor: not-allowed;
+        text-decoration: line-through;
+    }
 </style>
 
 <style lang="scss">
     //Removes the hover effect on the detail of the row.
     .table.is-hoverable tbody tr.detail:not(.is-selected):hover {
         background-color: hsl(0, 0, 98%);
+    }
+
+    @media screen and (max-width: 1023px)
+    {
+        .table-wrapper {
+            overflow-x: hidden;
+        }
+    }
+
+    /* Release notes text (not the section titles) */
+    .content span p {
+        margin-left: 0.5rem !important;
+    }
+
+    .dropdown .dropdown-menu {
+        left: unset;
+        min-width: 10rem;
     }
 </style>

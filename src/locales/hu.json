@@ -117,7 +117,7 @@
       "title": "Követelmények",
       "subtitle": "Az alkalmazás futtatásához bizonyos minimális szoftver- és hardverkonfigurációkra van szükség",
       "windows": "<b>Windows 7 SP1</b> vagy újabb",
-      "framework": "<b>.Net Framework 4.8</b> vagy újabb"
+      "framework": "<b>.NET 6</b> vagy újabb"
     },
 
     "releases":{

@@ -118,7 +118,7 @@
       "title": "Configuration requise",
       "subtitle": "Cette application nécessite une configuration logicielle et matérielle minimum pour fonctionner",
       "windows": "<b>Windows 7 SP1</b> ou plus récent",
-      "framework": "<b>.Net Framework 4.8</b> ou plus récent"
+      "framework": "<b>.NET 6</b> ou plus récent"
     },
 
     "releases":{

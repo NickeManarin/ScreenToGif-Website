@@ -67,18 +67,61 @@ export default {
         },
         trimLeft(text, charlist) {
             if (charlist === undefined)
-                charlist = "\s";
+                charlist = "\\s";
         
             return text.replace(new RegExp("^[" + charlist + "]+"), "");
         },
         trimRight(text, charlist) {
             if (charlist === undefined)
-                charlist = "\s";
+                charlist = "\\s";
         
             return text.replace(new RegExp("[" + charlist + "]+$"), "");
         },
         toLocaleFixed(value, decimals, locale){
             return value.toLocaleString(locale, { minimumFractionDigits: decimals, maximumFractionDigits: decimals })
+        },
+        getArchitecture(name) {
+            if (name?.toLowerCase().includes('x64'))
+                return 'x64';
+            
+            if (name?.toLowerCase().includes('arm64'))
+                return 'arm64';
+            
+            if (name?.toLowerCase().includes('x86'))
+                return 'x86';
+
+            return 'anyCpu';
+        },
+        getBinaryType(name) {
+            if (name?.toLowerCase().includes('setup'))
+                return 'installer';
+            
+            return 'portable';
+        },
+        daysInMonth(date) {
+            return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+        },
+        fieldSorter(a, b, fields) {
+            var dir = [], i, l = fields.length;
+            
+            fields = fields.map(function(o, i) {
+              if (o[0] === "-") {
+                dir[i] = -1;
+                o = o.substring(1);
+              } else {
+                dir[i] = 1;
+              }
+
+              return o;
+            });
+
+            for (i = 0; i < l; i++) {
+                var o = fields[i];
+
+                if (a[o] > b[o]) return dir[i];
+                if (a[o] < b[o]) return -(dir[i]);
+              }
+              return 0;
         }
     },
     // filters:{ }

@@ -1,6 +1,6 @@
 module.exports = {
   //publicPath: process.env.NODE_ENV === 'production' ? '/ScreenToGif-Website/' : '/',
-  publicPath: '/',
+  publicPath: "/",
   lintOnSave: false,
 
   pluginOptions: {
@@ -11,4 +11,8 @@ module.exports = {
       enableInSFC: true,
     },
   },
+
+  configureWebpack: {
+    devtool: "source-map"
+  }
 };

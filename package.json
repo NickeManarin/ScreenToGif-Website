@@ -1,6 +1,6 @@
 {
   "name": "screentogif.website",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -11,40 +11,41 @@
     "i18n:report": "vue-cli-service i18n:report --src './src/**/*.?(js|vue)' --locales './src/locales/**/*.json'"
   },
   "dependencies": {
-    "buefy": "^0.9.3",
-    "core-js": "^3.6.5",
-    "node-sass": "^4.14.1",
-    "sass-loader": "^10.0.2",
-    "vue": "^2.6.12",
-    "vue-clipboard2": "^0.3.1",
-    "vue-gtag": "^1.9.1",
+    "buefy": "^0.9.13",
+    "core-js": "^3.19.2",
+    "vue": "^2.6.14",
+    "vue-clipboard2": "^0.3.3",
+    "vue-gtag": "^1.16.1",
     "vue-headful": "^2.1.0",
-    "vue-i18n": "^8.21.1",
+    "vue-i18n": "^8.26.7",
     "vue-popperjs": "^2.3.0",
-    "vue-resource": "^1.5.1",
-    "vue-router": "^3.4.4",
-    "vue-scrollto": "^2.18.2",
+    "vue-resource": "^1.5.3",
+    "vue-router": "^3.5.3",
+    "vue-scrollto": "^2.20.0",
     "vue-showdown": "^2.4.1",
-    "vue-tweet-embed": "^2.4.0"
+    "vue-tweet-embed": "^2.4.0",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
-    "@intlify/vue-i18n-loader": "^1.0.0",
-    "@vue/cli-plugin-babel": "^4.5.6",
-    "@vue/cli-plugin-eslint": "^4.5.6",
-    "@vue/cli-plugin-router": "^4.5.6",
-    "@vue/cli-service": "^4.5.6",
+    "@intlify/vue-i18n-loader": "^1.1.0",
+    "@vue/cli-plugin-babel": "^4.5.15",
+    "@vue/cli-plugin-eslint": "^4.5.15",
+    "@vue/cli-plugin-router": "^4.5.15",
+    "@vue/cli-service": "^4.5.15",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.1.0",
-    "chalk": "^4.1.0",
+    "chalk": "^4.1.2",
     "eslint": "^6.8.0",
-    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-prettier": "^3.4.1",
     "eslint-plugin-vue": "^6.2.2",
-    "execa": "^4.0.3",
-    "node-emoji": "^1.10.0",
-    "prettier": "^2.1.2",
+    "execa": "^4.1.0",
+    "node-emoji": "^1.11.0",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.5.0",
+    "sass-loader": "^10.2.0",
     "vue-cli-plugin-gh-pages-auto-deploy": "^0.3.1",
     "vue-cli-plugin-i18n": "~1.0.1",
-    "vue-template-compiler": "^2.6.12"
+    "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
     "root": true,
@@ -53,8 +54,7 @@
     },
     "extends": [
       "plugin:vue/essential",
-      "eslint:recommended",
-      "@vue/prettier"
+      "eslint:recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"

@@ -83,19 +83,19 @@
 
             <div class="columns is-mobile is-centered">
                 <div class="column is-one-half is-narrow">
-                    <router-link to="/" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.home') }}</router-link>
-                    <router-link to="/downloads" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.downloads') }}</router-link>
-                    <router-link to="/donation" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.donate') }}</router-link>
-                    <router-link to="/screenshots" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.screenshots') }}</router-link>
-                    <router-link to="/contact" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.contact') }}</router-link>
+                    <router-link to="/" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.home') }}</router-link>
+                    <router-link to="/downloads" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.downloads') }}</router-link>
+                    <router-link to="/donation" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.donate') }}</router-link>
+                    <router-link to="/screenshots" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.screenshots') }}</router-link>
+                    <router-link to="/contact" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.contact') }}</router-link>
                 </div>
 
                 <div class="column is-one-half is-narrow">
-                    <router-link to="/features" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.features') }}</router-link>
-                    <router-link to="/share" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.share') }}</router-link>
-                    <router-link to="/how-to-use" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.how-to-use') }}</router-link>
-                    <router-link to="/source" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.source') }}</router-link>
-                    <router-link to="/privacy" tag="a" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.privacy-terms') }}</router-link>
+                    <router-link to="/features" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.features') }}</router-link>
+                    <router-link to="/share" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.share') }}</router-link>
+                    <router-link to="/how-to-use" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.how-to-use') }}</router-link>
+                    <router-link to="/source" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.source') }}</router-link>
+                    <router-link to="/privacy" class="navbar-item has-text-weight-semibold has-small-padding">{{ $t('navigation.privacy-terms') }}</router-link>
                 </div>
             </div>
 
@@ -132,14 +132,10 @@
 </template>
 
 <script>
-    import ResponsiveImage from "@/components/ResponsiveImage.vue";
     import { languages } from '@/locales';
 
     export default {
         name: "Footer",
-        components: {
-            ResponsiveImage
-        },
 
         data() {
             return {
@@ -202,7 +198,6 @@
                 },
                 set: function(newVal) {
                     this.$i18n.locale = newVal;
-                    //this.i18n.updateTitle();
                 }
             }
         }

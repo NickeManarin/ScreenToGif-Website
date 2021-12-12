@@ -10,36 +10,38 @@ export default {
                     if (e.assets.length === 0)
                         throw new Error("Release has no assets.");
 
-                    var port = e.assets[0];
-                    var inst = e.assets[1];
                     var updatedAt = new Date(e.published_at);
 
-                    //Displayed on the row.
+                    //Main details.
                     var aux = {};
                     aux.version = e.tag_name;
-                    aux.release_date = e.published_at;
-                    aux.release_date_obj = updatedAt; //As Date object.
-                    aux.download_count = port.download_count + (inst != undefined ? inst.download_count : 0);
+                    aux.release_date = updatedAt;
+                    aux.download_count = e.assets.map(item => item.download_count).reduce((prev, next) => prev + next);
                     aux.is_prerelease = e.prerelease;
                     aux.active_days = this.dateDiff(updatedAt, new Date());
 
                     //Displayed on the detailed view.
                     aux.author_login = e.author.login;
                     aux.author_picture = e.author.avatar_url;
+                    aux.is_picture_loaded = false;
                     aux.author_url = e.author.url;
                     aux.url = e.html_url;
                     aux.description = e.body;
-                    //aux.date_time_since = this.since(updatedAt, new Date());
 
-                    aux.download_count_port = port.download_count;
-                    aux.download_link_port = port.browser_download_url;
-                    aux.size_port = this.humanizeSize(port.size, false);
-                    aux.download_count_inst = inst != undefined ? inst.download_count : 0;
-                    aux.download_link_inst = inst != undefined ? inst.browser_download_url : undefined;
-                    aux.size_inst = inst != undefined ? this.humanizeSize(inst.size, false) : undefined;
+                    aux.assets = e.assets.map(m => {
+                        return {
+                            arch: this.getArchitecture(m.name),
+                            type: this.getBinaryType(m.name),
+                            url: m.browser_download_url,
+                            id: m.id,
+                            name: m.name,
+                            downloadCount: m.download_count,
+                            size: this.humanizeSize(m.size, false)
+                        }
+                    }).sort((a, b) => this.fieldSorter(a, b, ['type', 'arch']));
 
                     //Makes sure that the object is full created before setting to the global variable.
-                    this.$store.release = aux;
+                    this.$store.commit('setRelease', aux);
 
                     //Calls the action that should be executed after the download.
                     if (action != undefined)
@@ -69,20 +71,23 @@ export default {
                 .then(async res => {
                     var e = await res.json();
 
-                    var updatedAt = new Date(e.published_at);
-
-                    //TODO: Test this later.
                     var aux = {};
                     aux.fromFoss = true;
                     aux.version = e.items[0].version;
-                    aux.download_link_port = e.items.filter((e) => { return e.type.endsWith('(Zip)'); })[0].link;
-                    aux.download_link_inst = e.items.filter((e) => { return e.type.endsWith('(MSI)'); })[0].link;
-                    aux.release_date = e.published_at;
-                    aux.release_date_obj = updatedAt; //As Date object.
-                    //aux.date_time_since = this.since(updatedAt, new Date());
+                    aux.release_date = new Date(e.published_at);
+
+                    aux.assets = e.items.map(m => {
+                        return {
+                            arch: this.getArchitecture(m.title),
+                            type: this.getBinaryType(m.title),
+                            url: m.link,
+                            downloadCount: 0,
+                            size: ''
+                        }
+                    });
                     
                     //Makes sure that the object is full created before setting to the global variable.
-                    this.$store.release = aux;
+                    this.$store.commit('setRelease', aux);
 
                     if (action != undefined)
                         action();
@@ -111,6 +116,5 @@ export default {
                 type: "is-danger"
             });
         }
-    },
-    // filters:{ }
+    }
 };

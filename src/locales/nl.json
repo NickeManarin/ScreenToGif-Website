@@ -117,7 +117,7 @@
       "title": "Vereisten",
       "subtitle": "Deze applicatie heeft de volgende minimale vereisten qua software en hardware om te kunnen werken",
       "windows": "<b>Windows 7 SP1</b> of nieuwer",
-      "framework": "<b>.Net Framework 4.8</b> of nieuwer"
+      "framework": "<b>.NET 6</b> of nieuwer"
     },
 
     "releases":{

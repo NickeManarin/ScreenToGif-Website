@@ -60,40 +60,47 @@
 
     $table-row-hover-background-color: hsl(0, 0%, 96%);
 
+    //Lists and maps
+    $custom-colors: null !default;
+    $custom-shades: null !default;
+
     //Setup $colors to use as bulma classes (e.g. 'is-twitter')
-    $colors: (
-        "white": ($white, $black),
-        "black": ($black, $white),
-        "light": ($light, $light-invert),
-        "dark": ($dark, $dark-invert),
-        "primary": ($primary, $primary-invert),
-        "info": ($info, $info-invert),
-        "link": ($link, $link-invert),
-        "success": ($success, $success-invert),
-        "warning": ($warning, $warning-invert),
-        "danger": ($danger, $danger-invert),
+    $colors: mergeColorMaps(
+        (
+            "white": ($white, $black),
+            "black": ($black, $white),
+            "light": ($light, $light-invert),
+            "dark": ($dark, $dark-invert),
+            "primary": ($primary, $primary-invert, $primary-light, $primary-dark),
+            "info": ($info, $info-invert, $info-light, $info-dark),
+            "link": ($link, $link-invert, $link-light, $link-dark),
+            "success": ($success, $success-invert, $success-light, $success-dark),
+            "warning": ($warning, $warning-invert, $warning-light, $warning-dark),
+            "danger": ($danger, $danger-invert, $danger-light, $danger-dark),
 
-        "twitter": ($twitter, $twitter-invert),
-        "facebook": ($facebook, $facebook-invert),
-        "linkedin": ($linkedin, $linkedin-invert),
-        "reddit": ($reddit, $reddit-invert),
+            "twitter": ($twitter, $twitter-invert),
+            "facebook": ($facebook, $facebook-invert),
+            "linkedin": ($linkedin, $linkedin-invert),
+            "reddit": ($reddit, $reddit-invert),
 
-        "home": ($home, $home-inverted),
-        "home-light": ($home-light, $home-light-inverted),
-        "download": ($download, $download-inverted),
-        "download-light": ($download-light, $download-light-inverted),
-        "donation": ($donation, $donation-inverted),
-        "donation-light": ($donation-light, $donation-light-inverted),
-        "screenshots": ($screenshots, $screenshots-inverted),
-        "screenshots-light": ($screenshots-light, $screenshots-light-inverted),
-        "contact": ($contact, $contact-inverted),
-        "contact-light": ($contact-light, $contact-light-inverted),
+            "home": ($home, $home-inverted),
+            "home-light": ($home-light, $home-light-inverted),
+            "download": ($download, $download-inverted),
+            "download-light": ($download-light, $download-light-inverted),
+            "donation": ($donation, $donation-inverted),
+            "donation-light": ($donation-light, $donation-light-inverted),
+            "screenshots": ($screenshots, $screenshots-inverted),
+            "screenshots-light": ($screenshots-light, $screenshots-light-inverted),
+            "contact": ($contact, $contact-inverted),
+            "contact-light": ($contact-light, $contact-light-inverted),
 
-        "grey-71": ($grey-71, $grey-71-inverted),
-        "grey-80": ($grey-80, $grey-80-inverted),
-        "grey-95": ($grey-95, $grey-95-inverted),
-        "grey-98": ($grey-98, $grey-98-inverted),
-        "dark-15": ($dark-15, $dark-15-inverted),
+            "grey-71": ($grey-71, $grey-71-inverted),
+            "grey-80": ($grey-80, $grey-80-inverted),
+            "grey-95": ($grey-95, $grey-95-inverted),
+            "grey-98": ($grey-98, $grey-98-inverted),
+            "dark-15": ($dark-15, $dark-15-inverted)
+        ),
+        $custom-colors
     );
 
     //Import Bulma and Buefy styles

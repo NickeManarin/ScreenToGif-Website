@@ -132,67 +132,64 @@
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-64x64">
-                                <ResponsiveImage :src="$store.release.author_picture + '&s=128'" width="64px" height="64px" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
+                                <ResponsiveImage :src="($store.state.release || {}).author_picture + '&s=128'" width="64px" height="64px" maxWidth="64px" maxHeight="64px" borderRadius="4px" skeleton/>
                             </p>
                         </figure>
 
                         <div class="media-content">
                             <nav class="level is-marginless">
                                 <div class="level-left">
-                                    <a class="level-item" :href="$store.release.url" target="_blank" rel="noopener" 
+                                    <a class="level-item" :href="($store.state.release || {}).url" target="_blank" rel="noopener" 
                                         @click="$gtag.event('Release links', {'event_category': 'Clicks', 'event_label': 'Release'})">
-                                        <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ $store.release.version }}</span>  
+                                        <span class="is-size-4 has-text-weight-semibold is-marginless">ScreenToGif {{ ($store.state.release || {}).version }}</span>  
                                     </a>
 
                                     <p class="level-item is-vcentered">
                                         <small v-html="$t('navigation.download.by').replace('{0}', '<a href={0} target=_blank rel=noopener>@{1}</a>')
-                                            .replace('{0}', $store.release.author_url).replace('{1}', $store.release.author_login)"
+                                            .replace('{0}', ($store.state.release || {}).author_url).replace('{1}', ($store.state.release || {}).author_login)"
                                             @click="$gtag.event('Release links', {event_category: 'Clicks', event_label: 'Author'})"/>
                                     </p>
                                 </div>
 
                                 <div class="level-right">
                                     <p class="level-item">
-                                        <small>{{ isEmpty($store.release) ? "" : since($store.release.release_date_obj, new Date()) }}</small>
+                                        <small>{{ isEmpty($store.state.release) ? "" : since($store.state.release.release_date, new Date()) }}</small>
                                     </p>
                                 </div>
                             </nav>
 
-                            <div class="content has-side-padding" v-if="!isEmpty($store.release)">
-                                <VueShowdown :markdown="$store.release.description" tag="span"/>
-                            </div>
-
-                            <hr>
-
-                            <nav class="level is-marginless is-paddingless">
-                            <div class="level-left"></div>
-
-                            <div class="level-right">
-                                <div v-if="$store.release.download_count_inst > 0" class="level-item has-text-centered">
-                                    <div>
-                                        <b-button type="is-info" size="is-medium" icon-left="compact-disc" tag="a" :href="$store.release.download_link_inst" rel="noopener"
-                                            @click="$gtag.event('Download-Modal', {'event_category': 'Clicks', 'event_label': 'Installer'})">
-                                            {{ $t('home.installer') }}
-                                        </b-button>
-
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_inst.toLocaleString($i18n.locale)) }}</p>
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ $store.release.size_inst }}</p>
-                                    </div>
+                            <div class="px-3">
+                                <div class="content" v-if="!isEmpty($store.state.release)">
+                                    <VueShowdown :markdown="$store.state.release.description" tag="span"/>
                                 </div>
 
-                                <div class="level-item has-text-centered has-side-margin">
-                                    <div>
-                                        <b-button type="is-info" size="is-medium" icon-left="archive-alt" tag="a" :href="$store.release.download_link_port" rel="noopener"
-                                            @click="$gtag.event('Download-Modal', {'event_category': 'Clicks', 'event_label': 'Portable'})">
-                                            {{ $t('home.portable') }}
-                                        </b-button>
+                                <hr>
 
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ isEmpty($store.release) ? 0 : $t('home.downloads').replace('{0}', $store.release.download_count_port.toLocaleString($i18n.locale)) }}</p>
-                                        <p class="is-size-7 is-unselectable has-arrow-cursor">{{ $store.release.size_port }}</p>
-                                    </div>
+                                <h3 class="title is-size-5 is-unselectable mb-2">Files</h3>
+
+                                <div v-for="asset in ($store.state.release || {}).assets" :key="asset.url" class="ml-2">
+                                    <nav class="level is-marginless p-1">
+                                        <div class="level-left">
+                                            <div class="level-item">
+                                                <a :href="asset.url" rel="nofollow" :class="{ 'is-italic is-disabled has-text-grey': asset.url == null }">
+                                                    <i class="unicon is-large" :class="[ asset.type === 'portable' ? 'uil-archive-alt' : 'uil-compact-disc' ]"></i>
+                                                    <span class="px-1 has-text-weight-medium">{{ asset.type === 'portable' ? $t('home.portable') : $t('home.installer') }}</span>
+                                                </a>
+
+                                                <span class="tag is-light ml-1" :class="[ asset.arch === 'arm64' ? 'is-success' : asset.arch === 'x64' ? 'is-link' : 'is-warning' ]" v-if="asset.arch !== 'anyCpu'" v-text="asset.arch"/>
+                                            </div>
+                                        </div>
+
+                                        <div class="level-right mt-0">
+                                            <div class="level-item has-text-centered">
+                                                <p class="has-text-grey" v-text="asset.size"/>
+                                                <p class="has-text-weight-bold px-1">•</p>
+                                                <p class="has-text-grey" v-text="$t('home.downloads').replace('{0}', asset.downloadCount.toLocaleString($i18n.locale))"/>
+                                            </div>
+                                        </div>
+                                    </nav>
                                 </div>
                             </div>
-                            </nav>
                         </div>
                     </article>
                 </div>
@@ -231,7 +228,7 @@
         mounted() {
             window.addEventListener('resize', this.handleWindowResize);
 
-            this.handleWindowResize();
+            this.handleWindowResize(); 
         },
 
         beforeDestroy() {
@@ -300,7 +297,7 @@
                     this.isLoading = true;
 
                     //If the release details were not downloaded yet, it must be downloaded.
-                    if (this.isEmpty(this.$store.release) || this.$store.release.fromFoss) {
+                    if (this.$store.state.release.version === '' || this.$store.state.release.fromFoss) {
                         if (this.trials < 3) {
                             this.trials++;
                             this.downloadDetails(() => { this.download(); });
