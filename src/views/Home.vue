@@ -234,7 +234,18 @@
                     <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.supporters.subtitle') }}</p>
 
                     <div class="columns is-centered">
-                        <div class="column is-half-tablet is-one-third-desktop">
+                        <div class="column is-one-third-tablet is-one-third-desktop">
+                            <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px" :isFixed="true"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">Jetbrains</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-one-third-tablet is-one-third-desktop">
                             <b-button class="is-light padded" tag="a" href="https://www.fosshub.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
                                 <figure class="image">
@@ -245,7 +256,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-half-tablet is-one-third-desktop">
+                        <div class="column is-one-third-tablet is-one-third-desktop">
                             <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
                                 <figure class="image">
@@ -258,18 +269,18 @@
                     </div>
 
                     <div class="columns is-centered is-multiline is-mobile">
-                        <div class="column is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
-                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.ndepend.com?from=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'NDepend'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px" :isFixed="true"/>
+                                    <ResponsiveImage :src="require('@/assets/media/home/NDepend.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
                                 </figure>
 
-                                <p class="is-size-6 has-text-grey">Jetbrains</p>
+                                <p class="is-size-6 has-text-grey">NDepend</p>
                             </b-button>
                         </div>
 
-                        <div class="column is-half-mobile">
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.linkedin.com/in/eirikbirkeland" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Eirik'})">
                                 <figure class="image">
@@ -280,7 +291,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-half-mobile">
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://twitter.com/noderaider" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Noderaider'})">
                                 <figure class="image">
@@ -291,7 +302,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-half-mobile">
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://loam.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">
@@ -302,7 +313,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-half-mobile">
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.brunner.bi?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BrunnerBI'})">
                                 <figure class="image">
@@ -313,7 +324,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-half-mobile">
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
@@ -324,7 +335,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-half-mobile">
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://elmah.io?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
                                 <figure class="image">

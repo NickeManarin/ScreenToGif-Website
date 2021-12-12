@@ -128,11 +128,22 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-4 has-text-centered">
+                        <div class="column is-4 has-text-centered" v-if="$store.state.release.version === '' || $store.state.release.assets.length < 3">
                             <b-button class="is-light" tag="a" href="http://go.microsoft.com/fwlink/?LinkId=2085155" target="_blank" rel="noopener"
                                 @click="$gtag.event('Requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
                                 <figure class="image is-64x64 is-inline-block">
                                     <ResponsiveImage :src="require('@/assets/media/downloads/Net.png')" maxWidth="64px" maxHeight="64px" alt="Net Framework logo." border-radius="0"/>
+                                </figure>
+
+                                <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.framework').replace('.NET 6', '.NET Framework 4.8')"></p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-4 has-text-centered" v-if="$store.state.release.version !== '' && $store.state.release.assets.length > 2">
+                            <b-button class="is-light" tag="a" href="https://dotnet.microsoft.com/en-us/download" target="_blank" rel="noopener"
+                                @click="$gtag.event('Requirements links', {'event_category': 'Clicks', 'event_label': 'NetFramework'})">
+                                <figure class="image is-64x64 is-inline-block">
+                                    <ResponsiveImage :src="require('@/assets/media/downloads/Net.png')" maxWidth="64px" maxHeight="64px" alt=".NET logo." border-radius="0"/>
                                 </figure>
 
                                 <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.framework')"></p>
