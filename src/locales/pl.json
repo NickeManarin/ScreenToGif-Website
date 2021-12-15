@@ -4,14 +4,14 @@
     "lang": "Polski",
     "lang-english": "Polish",
     "author": "Nicke Manarin",
-    "status": "2"
+    "status": "7"
   },
 
   "navigation": {
     "home": "Główna",
     "downloads": "Pobierz",
     "donate": "Donate",
-    "screenshots": "Zrzute ekranu",
+    "screenshots": "Zrzuty ekranu",
     "contact": "Kontakt",
     "more": "Więcej",
     "how-to-use": "Jak korzystać",
@@ -25,19 +25,19 @@
       "info": "Pozwala na pobranie najnowszej wersji",
       "by": "by {0}",
       "dates": {
-        "years": "{0} lat temu",
+        "years": "{0} lat(a) temu",
         "year": "rok temu",
-        "months": "{0} miesięcy temu",
+        "months": "{0} miesiące(y) temu",
         "month": "miesiąc temu",
-        "weeks": "{0} tygodni temu",
+        "weeks": "{0} tygodnie(i) temu",
         "week": "tydzień temu",
         "days": "{0} dni temu",
-        "day": "a day ago",
-        "hours": "{0} hours ago",
-        "hour": "an hour ago",
-        "minutes": "{0} minutes ago",
-        "minute": "a minute ago",
-        "now": "just now"
+        "day": "dzień temu",
+        "hours": "{0} godzin(y) temu",
+        "hour": "godzina temu",
+        "minutes": "{0} minut(y) temu",
+        "minute": "minuta temu",
+        "now": "w tym momencie"
       }
     }
   },
