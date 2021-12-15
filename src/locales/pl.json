@@ -10,7 +10,7 @@
   "navigation": {
     "home": "Główna",
     "downloads": "Pobierz",
-    "donate": "Donate",
+    "donate": "Wesprzyj",
     "screenshots": "Zrzuty ekranu",
     "contact": "Kontakt",
     "more": "Więcej",
@@ -51,45 +51,45 @@
     "installer" : "Instalator",
     "installer-info": "Pobiera wersję instalatora (.msi), która zawiera główny plik wykonywalny i opcjonalne dodatki.",
     "or": "or",
-    "portable" : "Przenośna",
-    "portable-info": "Downloads the portable version, which contains only the main executable. Addons needs to be downloaded in Options > Extras.",
+    "portable" : "Portable",
+    "portable-info": "Pobiera wersję portable, która posiada tylko główny plik wykonywalny. Dodatki muszą być zainstalowane za pomocą Opcje > Dodatki.",
     "microsoftstore": "Microsoft Store",
-    "downloads" : "{0} downloads",
-    "more-releases" : "More download options",
-    "fewer-releases" : "Fewer download options",
-    "copy" : "Copy",
-    "copied" : "Command copied!",
-    "not-copied" : "It was not possible to copy the command.",
+    "downloads" : "{0} pobrań",
+    "more-releases" : "Więcej opcji pobierania",
+    "fewer-releases" : "Mniej opcji pobierania",
+    "copy" : "Kopiuj",
+    "copied" : "Skopiowano polecenie!",
+    "not-copied" : "Skopiowanie polecenia nie było możliwe.",
 
     "why": {
-      "free": "Free",
-      "free-info": "Open source on <b>GitHub</b>",
-      "compact": "Compact",
-      "compact-info": "As little as <b>{0}</b>",
-      "powerful": "Powerful",
-      "powerful-info": "Record, edit and <b>export it!</b>",
-      "customizable": "Customizable",
-      "customizable-info": "Use it the way <b>you like it</b>",
-      "features": "Discover all features"
+      "free": "Darmowy",
+      "free-info": "Otwarty kod źródłowy na <b>GitHub</b>",
+      "compact": "Kompaktowy",
+      "compact-info": "Tylko <b>{0}</b>",
+      "powerful": "Potężny",
+      "powerful-info": "Nagrywaj, edytuj i <b>exportuj to!</b>",
+      "customizable": "Elastyczny",
+      "customizable-info": "Używaj go <b>tak jak lubisz</b>",
+      "features": "Odkryj wszystkie możliwości"
     },
   
     "media": {
       "title": "Media",
-      "subtitle": "Screenshots and gifs",
-      "more": "See more screenshots"
+      "subtitle": "Zrzuty ekranu i gify",
+      "more": "Zobacz więcej zrzutów ekranu"
     },
 
     "supporters": {
-      "title": "Special thanks",
-      "subtitle": "Here are some of the supporters of this project",
-      "become": "Become a sponsor"
+      "title": "Specjalne podziękowania",
+      "subtitle": "Niektórzy z wspierających projektu",
+      "become": "Zostań sponsorem"
     },
 
     "usage": {
-      "title": "How to use?",
-      "subtitle": "Record and edit your content in no time",
-      "capture": "Capture",
-      "capture-info": "<b>Screen</b>, <b>webcam</b> or <b>sketchboard</b> capture",
+      "title": "Jak korzystać?",
+      "subtitle": "Błyskawicznie nagraj i zedytuj swoje nagrania",
+      "capture": "Przechwyć",
+      "capture-info": "<b>Ekran</b>, <b>kamerę internetową</b> lub <b>sketchboard</b> capture",
       "edit": "Edit",
       "edit-info": "Edit your <b>capture</b> or <b>other media</b>",
       "export": "Export",
