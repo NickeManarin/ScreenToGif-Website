@@ -4,7 +4,7 @@
     "lang": "Polski",
     "lang-english": "Polish",
     "author": "Nicke Manarin",
-    "status": "7"
+    "status": "10"
   },
 
   "navigation": {
@@ -43,15 +43,15 @@
   },
 
   "home":{
-    "meta-title": "ScreenToGif - Record your screen, edit and save as a gif, video or other formats",
-    "meta-description": "Free screen recorder tool, which lets you record, edit and save as a gif, video or other formats.",
+    "meta-title": "ScreenToGif - Nagrywaj ekran, edytuj i zapisuj jako gif, film albo w innym formacie",
+    "meta-description": "Darmowe narzędzie do nagrywania ekranu, które pozwala na nagrywanie, edytowanie i zapisywanie jako gif, film lub w innym formacie",
 
-    "subtitle": "<strong>Screen</strong>, <b>webcam</b> and <b>sketchboard</b> recorder with an integrated <b>editor</b>",
-    "version": "Version {0}",
-    "installer" : "Installer",
-    "installer-info": "Downloads the installer version (.msi), which contains the main executable and optional addons.",
+    "subtitle": "Rejestrator <strong>ekranu</strong>, <b>kamery internetowej</b> oraz <b>szkicownika</b> ze zintegrowanym <b>edytorem</b>",
+    "version": "Wersja {0}",
+    "installer" : "Instalator",
+    "installer-info": "Pobiera wersję instalatora (.msi), która zawiera główny plik wykonywalny i opcjonalne dodatki.",
     "or": "or",
-    "portable" : "Portable",
+    "portable" : "Przenośna",
     "portable-info": "Downloads the portable version, which contains only the main executable. Addons needs to be downloaded in Options > Extras.",
     "microsoftstore": "Microsoft Store",
     "downloads" : "{0} downloads",
