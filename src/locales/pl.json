@@ -91,9 +91,9 @@
       "capture": "Przechwyć",
       "capture-info": "<b>Ekran</b>, <b>kamerę internetową</b> lub <b>sketchboard</b> capture",
       "edit": "Edit",
-      "edit-info": "Edit your <b>capture</b> or <b>other media</b>",
-      "export": "Export",
-      "export-info": "Export to <b>Gif</b>, <b>Apng</b>, <b>Video</b>, <b>Images</b>, <b>Project</b> or <b>PSD</b>",
+      "edit-info": "Edytuj <b>przechwytywane</b> lub <b>inne media</b>",
+      "export": "Eksportowanie",
+      "export-info": "Eksportuj do <b>Gif</b>, <b>Apng</b>, <b>Wideo</b>, <b>Obrazu</b>, <b>Projektu</b> lub do <b>PSD</b>",
       "share": "Share",
       "share-info": "Share to <b>Imgur</b>, <b>Gfycat</b> or others",
       "learn": "Learn how to use"
