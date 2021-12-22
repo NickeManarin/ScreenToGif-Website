@@ -95,28 +95,28 @@
       "export": "Eksportowanie",
       "export-info": "Eksportuj do <b>Gif</b>, <b>Apng</b>, <b>Wideo</b>, <b>Obrazu</b>, <b>Projektu</b> lub do <b>PSD</b>",
       "share": "Share",
-      "share-info": "Share to <b>Imgur</b>, <b>Gfycat</b> or others",
-      "learn": "Learn how to use"
+      "share-info": "Udostępniaj na <b>Imgur</b>, <b>Gfycat</b> lub innych",
+      "learn": "Sprawdź jak używać"
     },
 
     "share": {
-      "title": "What the users are saying",
-      "subtitle": "See the happy thoughts from people from Twitter",
-      "share": "Share your experience"
+      "title": "Co mówią użytkownicy",
+      "subtitle": "Sprawdź opinie ludzi z Twittera",
+      "share": "Podziel się swoimi wrażeniami"
     }
   },
 
   "downloads": {
-    "meta-title": "ScreenToGif - Downloads",
-    "meta-description": "Download the installer or portable versions of ScreenToGif now.",
+    "meta-title": "ScreenToGif - Pobieranie",
+    "meta-description": "Pobierz instalator lub wersję portable ScreenToGif.",
 
-    "latest": "Latest version",
-    "show-release-notes": "Show release notes",
-    "hide-release-notes": "Hide release notes",
+    "latest": "Najnowsza wersja",
+    "show-release-notes": "Pokaż informacje o wersji",
+    "hide-release-notes": "Ukryj informacje o wersji",
     
     "requirements":{
-      "title": "Requirements",
-      "subtitle": "This app requires some software and hardware minimum configurations in order to run",
+      "title": "Wymagania",
+      "subtitle": "Ta aplikacja wymaga konkretnego oprogramowania i sprzętu aby mogła działać",
       "windows": "<b>Windows 7 SP1</b> or newer",
       "framework": "<b>.NET 6</b> or newer"
     },
