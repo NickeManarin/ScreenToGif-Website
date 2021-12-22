@@ -117,35 +117,35 @@
     "requirements":{
       "title": "Wymagania",
       "subtitle": "Ta aplikacja wymaga konkretnego oprogramowania i sprzętu aby mogła działać",
-      "windows": "<b>Windows 7 SP1</b> or newer",
-      "framework": "<b>.NET 6</b> or newer"
+      "windows": "<b>Windows 7 SP1</b> lub nowszy",
+      "framework": "<b>.NET 6</b> nowszy"
     },
 
     "releases":{
-      "title": "All releases",
-      "subtitle": "Expand to see the release details",
-      "loading-issue": "Due to an issue loading the releases, only the latest 10 are being displayed.",
+      "title": "Wszystkie wersje",
+      "subtitle": "Rozwiń żeby zobaczyć informacje szczegółowe o wersjach",
+      "loading-issue": "Z powodu błędu w ładowaniu listy wersji, tylko 10 najnowszych jest wyświetlane.",
       
       "table": {
-        "version": "Version",
-        "date": "Release Date",
-        "days": "Active Days",
-        "days-info": "Amount of days being the most recent release",
-        "count": "Download Count",
-        "not-possible": "It was not possible to load all the releases",
-        "versions-total": "{0} versions released",
-        "average-month": "Average of {0} per month",
-        "active-total": "Active for {0}",
+        "version": "Wersja",
+        "date": "Data wydania",
+        "days": "Dni aktualności",
+        "days-info": "Liczba dni, w których była najnowszą wersją",
+        "count": "Liczba pobrań",
+        "not-possible": "Nie udało się załadować wszystkich wersji",
+        "versions-total": "{0} wersji wydano",
+        "average-month": "Śrenio {0} na miesiąc",
+        "active-total": "Aktywne przez {0}",
         "downloads-total": "Downloaded {0} times"
       },
 
       "dates": {
-        "years": "{0} years",
-        "year": "{0} year",
-        "months": "{0} months",
-        "month": "{0} month",
-        "days": "{0} days",
-        "day": "{0} day"
+        "years": "{0} lat(a)",
+        "year": "{0} rok",
+        "months": "{0} miesiące(y)",
+        "month": "{0} miesiąc",
+        "days": "{0} dni",
+        "day": "{0} dzień"
       }
     }
   },
