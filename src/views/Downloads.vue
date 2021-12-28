@@ -14,7 +14,7 @@
                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                     </p>
 
-                    <b-dropdown class="columns is-centered is-vcentered" v-model="$store.state.architecture" aria-role="list" 
+                    <b-dropdown class="columns is-centered is-vcentered is-mobile" v-model="$store.state.architecture" aria-role="list" 
                         v-if="$store.state.release.version !== '' && $store.state.release.assets.length > 2"
                         @change="$gtag.event('Language', {'event_category': 'Clicks', 'event_label': 'Switch architecture: ' + this.$store.state.architecture})">
                         <button class="button is-download" type="button" slot="trigger">
@@ -484,7 +484,6 @@
                     return aux;
                 });
 
-                this.$store.commit('setRelease', aux[0]);
                 this.$store.commit('setReleases', aux);
                 this.$store.commit('setDownloadCount', data.downloadCount);
                 this.$store.commit('setDaysCount', data.activeDays);
@@ -517,7 +516,7 @@
                     aux.author_login = e.author.login;
                     aux.author_picture = e.author.avatar_url;
                     aux.is_picture_loaded = false;
-                    aux.author_url = e.author.url;
+                    aux.author_url = e.author.html_url;
                     aux.url = e.html_url;
                     aux.description = e.body;
 

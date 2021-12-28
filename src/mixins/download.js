@@ -24,7 +24,7 @@ export default {
                     aux.author_login = e.author.login;
                     aux.author_picture = e.author.avatar_url;
                     aux.is_picture_loaded = false;
-                    aux.author_url = e.author.url;
+                    aux.author_url = e.author.html_url;
                     aux.url = e.html_url;
                     aux.description = e.body;
 
