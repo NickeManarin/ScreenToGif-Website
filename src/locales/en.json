@@ -62,7 +62,7 @@
     "not-copied" : "It was not possible to copy the command.",
 
     "warning": {
-      "net": "For the portable version, you need have installed the <strong>.NET 6 Desktop Runtime</strong>.",
+      "net": "For the portable version, you need have manually install the <strong>.NET 6 Desktop Runtime</strong>.",
       "download": "Click here to download it."
     },
 
