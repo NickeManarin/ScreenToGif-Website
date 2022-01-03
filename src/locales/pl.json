@@ -136,7 +136,7 @@
         "versions-total": "{0} wersji wydano",
         "average-month": "Średnio {0} na miesiąc",
         "active-total": "Aktywne przez {0}",
-        "downloads-total": "Downloaded {0} times"
+        "downloads-total": "Pobrano {0} razy"
       },
 
       "dates": {
@@ -209,36 +209,36 @@
         "show-fee": "Zobacz objaśnienie marży PayPal",
         "hide-fee": "Ukryj objaśnienie marży PayPal",
         "explanation": "PayPal wprowadza opłatę opartą na wartości (6.4%) + stała wartość oparta na wybranej walucie (0.1 do 0.5 centów dolara).",
-        "becomes": "{0} zostaje {1}",
+        "becomes": "{0} staje się {1}",
         "donate": "Wesprzyj"
       }
     },
 
     "list": {
       "title": "Lista patronów",
-      "subtitle": "Here are some of the people or companies who support the project",
+      "subtitle": "Niektórzy z ludzi i firm, którzy wsparli ten projekt",
       "patron": "Patron",
-      "amount": "Donation amount",
-      "amount-info": "The ordering is done via the value in U$D.",
-      "from": "From",
-      "not-possible": "It was not possible to load the patron list.",
-      "list-name": "Would you like to have your name or company listed here after a donation?",
-      "contact": "Contact me :)"
+      "amount": "Przekazano",
+      "amount-info": "Przedstawione w kolejności od największej wartości USD",
+      "from": "Sposób płatności",
+      "not-possible": "Załadowanie listy patronów było niemożliwe.",
+      "list-name": "Czy chcesz aby twoje imię lub nazwa twojej firmy widniała na tej liście po przekazaniu dotacji?",
+      "contact": "Skontaktuj się ze mną :)"
     }
   },
 
   "screenshots": {
-    "meta-title": "ScreenToGif - Screenshots",
-    "meta-description": "View the screenshots of ScreenToGif.",
+    "meta-title": "ScreenToGif - Zrzuty ekranu",
+    "meta-description": "Zobacz zrzuty przedstawiające ScreenToGif.",
 
-    "title": "Screenshots and examples",
-    "subtitle": "Check out what you can do with ScreenToGif",
-    "add": "Would you like to add your gif to this page?",
-    "send": "Send me a message :)",
+    "title": "Zrzuty ekranu i przykłady",
+    "subtitle": "Zobacz co możesz zrobić z ScreenToGif",
+    "add": "Chcesz dodać swój gif do tej strony?",
+    "send": "Wyślij mi wiadomość :)",
 
     "gallery":{
-      "startup": "This is the default entry point of the app.<br>You can set the app to open directly into the <b>recorders and editor</b> instead.",
-      "recorder": "This is the default screen recorder UI. You simply move this window on top of the content that you want to record.",
+      "startup": "Domyślny ekran startowy apki.<br>Zamiast tego możesz ustawić żeby apka otwierała się na oknie <b>edytora i nagrań</b>.",
+      "recorder": "Domyślny interfejs nagrywający. Po prostu przesuń to okno tak, aby obejmowało zawartość, którą chcesz nagrać.",
       "recorder-use": "If you click and drag the crosshair icon to a window, the recorder will adjust itself to the bounds.",
       "recorder-new": "This is the <b>new recorder UI</b>, which lets you click and drag to select an area of your screen.<br>You can also switch to the window and screen modes.",
       "editor": "This is the editor, where you can edit your recordings and export it to <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> and <b>psd</b>.",
