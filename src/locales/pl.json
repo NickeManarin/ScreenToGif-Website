@@ -239,28 +239,28 @@
     "gallery":{
       "startup": "Domyślny ekran startowy apki.<br>Zamiast tego możesz ustawić żeby apka otwierała się na oknie <b>edytora i nagrań</b>.",
       "recorder": "Domyślny interfejs nagrywający. Po prostu przesuń to okno tak, aby obejmowało zawartość, którą chcesz nagrać.",
-      "recorder-use": "If you click and drag the crosshair icon to a window, the recorder will adjust itself to the bounds.",
-      "recorder-new": "This is the <b>new recorder UI</b>, which lets you click and drag to select an area of your screen.<br>You can also switch to the window and screen modes.",
-      "editor": "This is the editor, where you can edit your recordings and export it to <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> and <b>psd</b>.",
-      "webcam": "This is the webcam recorder.",
-      "board": "The board recorder lets you capture your drawings automatically as you draw them.",
-      "board-example": "Here's an example of drawing recorded.",
+      "recorder-use": "Użyj narzędzia celownika, aby obszar nagrywania automatycznie dostosował się do krawędzi klikniętego okna.",
+      "recorder-new": "To jest <b>nowy interfejs nagrywający</b>, którym możesz zaznaczać za pomocą przeciągania nagrywany obszar.<br>Możesz też przełączyć się na tryb nagrywania okna i całego ekranu.",
+      "editor": "Oto edytor, w nim możesz edytować swoje nagrania i eksportować je do formatów: <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> oraz <b>psd</b>.",
+      "webcam": "Nagrywarka kamery internetowej.",
+      "board": "Nagrywarka tablicy pozwala na automatyczne nagrywanie rysunków.",
+      "board-example": "Przykład nagranego rysunku.",
       "options": "ScreenToGif has <b>lots</b> of options!"
     }
   },
   
   "contact": {
-    "meta-title": "ScreenToGif - Contact",
-    "meta-description": "Contact the developer of ScreenToGif.",
+    "meta-title": "ScreenToGif - Kontakt",
+    "meta-description": "Skontaktuj się z twórcą ScreenToGif.",
 
-    "title": "Here's how to contact me",
-    "subtitle": "Also a bit of details about me and the app",
+    "title": "Skontaktuj się ze mną",
+    "subtitle": "I kilka szczegółów o mnie i o programie",
 
     "who": {
-      "title": "Who am I?",
-      "subtitle": "The creator of ScreenToGif",
-      "part1": "Hi, I'm Nicke Manarin, a {0}-year-old Brazilian developer.",
-      "part2": "I have been developing software since 2012, starting as a way to practice the skills taught in Computer Science classes.",
+      "title": "Kim jestem?",
+      "subtitle": "Twórca ScreenToGif",
+      "part1": "Cześć ,nazywam się Nicke Manarin, jestem {0}-letnim developerem z Brazylii.",
+      "part2": "Tworzę oprogramowanie od 2012 roku, co rozpoczęło się poprzez chęć poprawienia swojej wiedzy zdobytej podczas lekcji.",
       "part3": "After my graduation, that happened back in 2016, I kept learning new skills, which were directly put to use in my projects.",
       "part4": "I'm keen to try my best to develop software that is purposeful and easy to use."
     },
