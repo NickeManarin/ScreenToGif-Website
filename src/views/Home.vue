@@ -352,7 +352,7 @@
                                     <ResponsiveImage :src="require('@/assets/media/home/Elmah.png')" width="60px" height="44px" maxWidth="60px" maxHeight="44px"/>
                                 </figure>
 
-                                <p class="is-size-6 has-text-grey">Elmah</p>
+                                <p class="is-size-6 has-text-grey">elmah.io</p>
                             </b-button>
                         </div>
                     </div>
