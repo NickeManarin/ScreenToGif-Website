@@ -59,6 +59,7 @@
     "fewer-releases" : "隐藏下载选项",
     "copy" : "复制",
     "copied" : "命令已复制！",
+    "sha1copied" : "{0}的 SHA1 已复制",
     "not-copied" : "此命令不可复制。",
 
     "why": {
