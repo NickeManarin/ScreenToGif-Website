@@ -43,10 +43,10 @@
   },
 
   "home":{
-    "meta-title": "ScreenToGif - 录屏，编辑，保存为 GIF 动画，视频或更多其他格式",
-    "meta-description": "免费录屏工具，帮你完成录屏，编辑，保存为 GIF 动画，视频或更多其他格式。",
+    "meta-title": "ScreenToGif - 录屏，编辑，保存为 GIF 动画、视频或更多其他格式",
+    "meta-description": "免费录屏工具，帮你完成录屏，编辑，保存为 GIF 动画、视频或更多其他格式。",
 
-    "subtitle": "<strong>屏幕</strong>，<b>摄像头</b>和<b>画板</b>录像，并有内置<b>编辑器</b>",
+    "subtitle": "<strong>屏幕</strong>、<b>摄像头</b>和<b>画板</b>录像，并有内置<b>编辑器</b>",
     "version": "版本 {0}",
     "installer" : "安装包",
     "installer-info": "下载安装包 (.msi)，其中包含主执行程序和可选插件。",
@@ -65,7 +65,7 @@
       "free": "免费",
       "free-info": "开源于 <b>GitHub</b>",
       "compact": "简约",
-      "compact-info": "仅有<b>{0}</b>",
+      "compact-info": "仅有 <b>{0}</b>",
       "powerful": "强大",
       "powerful-info": "录制，编辑与<b>导出！</b>",
       "customizable": "定制化",
@@ -93,9 +93,9 @@
       "edit": "编辑",
       "edit-info": "编辑你的<b>录像</b>或<b>其他媒体</b>",
       "export": "导出",
-      "export-info": "导出为 <b>GIF 动画</b>，<b>APNG</b>，<b>视频</b>，<b>图片</b>，<b>项目</b>或<b>PSD</b>",
+      "export-info": "导出为 <b>GIF 动画</b>、<b>APNG</b>、<b>视频</b>、<b>图片</b>、<b>项目</b>或<b>PSD</b>",
       "share": "分享",
-      "share-info": "分享至 <b>Imgur</b>，<b>Gfycat</b> 或其他地方",
+      "share-info": "分享至 <b>Imgur</b>、<b>Gfycat</b> 或其他地方",
       "learn": "学习如何使用"
     },
 
@@ -118,7 +118,7 @@
       "title": "设备要求",
       "subtitle": "本应用需要的软硬件最低配置",
       "windows": "<b>Windows 7 SP1</b> 或更新版本",
-      "framework": "<b>.Net 框架 4.8</b> 或更新版本"
+      "framework": "<b>.NET 框架 4.8</b> 或更新版本"
     },
 
     "releases":{
@@ -160,7 +160,7 @@
       "title": "为什么要帮助 ScreenToGif ？",
       "subtitle": "有您的支持，这个项目会更好",
       "free": "免费",
-      "free-info": "开源于<b>GitHub<b>",
+      "free-info": "开源于 <b>GitHub<b>",
       "no-ads": "无广告",
       "no-ads-info": "包括<b>安装包</b>内",
       "committed": "保证",
@@ -274,7 +274,7 @@
       "part5": "但我不是先知，这名字唯一还有效的部分只剩下中间的'To'了，现在这个应用已经不局限于录制屏幕上的信息，且能导出到很多其他格式。",
       "part6": "2016 年这个项目彻底重新开始了，因为老的平台已经让我达到瓶颈好几个月，我换到了另一个平台。",
       "part7": "这个转变允许我开发更多新功能，并制作出更容易理解和使用的界面。",
-      "part8": "尽管我是这个项目的作者和维护者，很多其他用户贡献了缺陷报告，功能请求和翻译。欢迎留下您的评论：）"
+      "part8": "虽然我是这个项目的作者和维护者，但还有很多其他用户贡献了缺陷报告、功能请求和翻译。欢迎留下您的评论：）"
     },
 
     "methods": {
@@ -313,7 +313,7 @@
       "screen": {
         "title": "屏幕",
         "text1": "使用<b>录制</b>，<b>暂停</b>，<b>放弃</b>或<b>停止</b>按钮来控制录制。",
-        "text2": "选择录制频率模式（人工，普通，或延时模式 - 每分钟，每小时频率）。",
+        "text2": "选择录制频率模式（人工、普通或延时模式 - 每分钟、每小时频率）。",
         
         "older": {
           "title": "老界面",
@@ -359,8 +359,8 @@
 
       "basic": {
         "title": "基本操作",
-        "text1": "撤销，重做，和重置你的修改。",
-        "text2": "复制，剪切，和粘贴帧。",
+        "text1": "撤销、重做、重置你的修改。",
+        "text2": "复制、剪切、粘贴帧。",
         "text3": "选择多帧，或找到特定某帧。",
         "text4": "预览动画回放。"
       },
@@ -379,7 +379,7 @@
 
       "image": {
         "title": "图像操作",
-        "text1": "缩放，裁剪或翻转/旋转。",
+        "text1": "缩放、裁剪或翻转/旋转。",
         "text2": "添加覆盖：",
         "text3": "标题或文字",
         "text4": "图画或性状",
@@ -405,7 +405,7 @@
         "title": "录像机",
         "text1": "新老录像机界面供你选择。",
         "text2": "选择录制模式（BitBlt、DirectX、是否启用内存缓存等等）。",
-        "text3": "设置录像帧率（自选，正常，延时模式）",
+        "text3": "设置录像帧率（自选、正常、延时模式）",
         "text4": "启动光标跟随（录像机在录制过程中跟随光标位置）。"
       },
 
@@ -425,7 +425,7 @@
       "shortcuts": {
         "title": "快捷键",
         "text1": "设置键盘快捷键以方便打开录像机和编辑器。",
-        "text2": "你还能用快捷键控制你的录制过程（录制，暂停，结束，以及其他动作）。"
+        "text2": "你还能用快捷键控制你的录制过程（录制、暂停、结束，以及其他动作）。"
       },
 
       "language": {
@@ -461,7 +461,7 @@
       "edit-remove": "<b>Shift-点击</b>不想要的帧，按<b>删除</b>。",
       "edit-transition": "给最后一帧加上过渡，使得整个动画能<i>顺畅地</i>循环播放。",
       "edit-save": "修整完毕后，点击<b>另存为</b>可将动画导出到你想要的格式。",
-      "final-gif": "这是最终的 GIF 动画，大约<b>80.6 KiB</b>。"
+      "final-gif": "这是最终的 GIF 动画，大约 <b>80.6 KiB</b>。"
     }
   },
 
@@ -480,7 +480,7 @@
 
   "source": {
     "meta-title": "ScreenToGif - 源代码",
-    "meta-description": "查看ScreenToGif开源项目的详细信息。",
+    "meta-description": "查看 ScreenToGif 开源项目的详细信息。",
 
     "title": "源代码",
     "subtitle": "ScreenToGif 是开源项目！",
@@ -497,7 +497,7 @@
     "meta-description": "查看隐私协议。",
 
     "title": "隐私协议",
-    "subtitle": "其他关于ScreenToGif的技术细节",
+    "subtitle": "其他关于 ScreenToGif 的技术细节",
 
     "privacy": {
       "title": "隐私",
