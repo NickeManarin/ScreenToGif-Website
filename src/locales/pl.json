@@ -260,16 +260,16 @@
       "title": "Kim jestem?",
       "subtitle": "Twórca ScreenToGif",
       "part1": "Cześć ,nazywam się Nicke Manarin, jestem {0}-letnim developerem z Brazylii.",
-      "part2": "Tworzę oprogramowanie od 2012 roku, co rozpoczęło się poprzez chęć poprawienia swojej wiedzy zdobytej podczas lekcji.",
-      "part3": "After my graduation, that happened back in 2016, I kept learning new skills, which were directly put to use in my projects.",
-      "part4": "I'm keen to try my best to develop software that is purposeful and easy to use."
+      "part2": "Tworzę oprogramowanie od 2012 roku, co rozpoczęło się poprzez chęć poprawienia swojej wiedzy zdobytej podczas studiowania.",
+      "part3": "Po ukończeniu studiów w 2016 roku, stale zdobywałem nowe umiejętności, które mają bezpośrednie zastosowanie w trakcie tworzenia moich projektów.",
+      "part4": "Chcę spróbować wszystkiego co w mojej mocy, aby tworzyć oprogramowanie, które jest przydatne i łatwe w użyciu."
     },
 
     "why":{
-      "title": "Why ScreenToGif exists?",
-      "subtitle": "The history behind the app",
-      "part1": "This project was born way back in October, 2013 as a way to help me learn how to code, while being useful to my needs.",
-      "part2": "I was learning how to design GUIs (and I was having issues with it), so I thought it would be nice to have some screen recordings so I could ask for help in forums.",
+      "title": "Dlaczego powstało ScreenToGif?",
+      "subtitle": "Historia powstania programu",
+      "part1": "Projekt powstał w październiku 2013 roku jako mój sposób nauczenia się programowania, jednocześnie będąc narzędziem, które mi się przyda.",
+      "part2": "Uczyłem się jak projektować GUI (i miałem z tym problemy), więc pomyślałem, że dobrze by było mieć jakieś nagrania ekranu, co pomogłoby mi zadawać pytania na forach.",
       "part3": "While some apps already existed, they didn't provide the specific feature that I needed, which prompted me to build my own solution (not realizing it would require a lot of work).",
       "part4": "The name 'ScreenToGif' is as simple as I guessed the tool would be: a screen recorder that exported as gif. It was supposed to be an easy to remember name.",
       "part5": "But I had no foreshadowing powers: The only part of the name that stays relevant is the middle 'To', as the app can now capture more than the screen and export to other formats.",
