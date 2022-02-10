@@ -177,6 +177,7 @@
                                                 </a>
 
                                                 <span class="tag is-light ml-1" :class="[ asset.arch === 'arm64' ? 'is-success' : asset.arch === 'x64' ? 'is-link' : 'is-warning' ]" v-if="asset.arch !== 'anyCpu'" v-text="asset.arch"/>
+                                                <span class="tag is-light ml-1" :class="[ asset.mode === 'light' ? 'is-error' : 'is-info']" v-if="asset.mode === 'light'" v-text="asset.mode"/>
                                             </div>
                                         </div>
 

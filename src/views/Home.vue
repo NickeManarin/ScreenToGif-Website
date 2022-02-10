@@ -59,12 +59,41 @@
                         </b-dropdown>
 
                         <div class="columns is-centered is-vcentered is-multiline is-mobile">
-                            <div class="column is-narrow has-text-centered">
-                                <b-tooltip key="button" :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
+                            <!-- MSIX • Package -->
+                            <div class="column has-gap is-narrow has-text-centered" v-if="$store.getters.packageRelease">
+                                <b-tooltip class="is-inline" key="button" :label="$t('home.package-info')" type="is-light" position="is-top" animated multilined>
+                                    <transition name="slow-in">
+                                        <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="package" 
+                                                :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.state.release) ? '_self' : '_blank'" rel="noopener"
+                                                class="has-text-expanded"  :href="$store.getters.getUrlPackage"
+                                                @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Package'})">
+                                            {{ $t('home.package') }}
+                                        </b-button>
+                                    </transition>
+                                </b-tooltip>
+
+                                <transition name="slow-in">
+                                    <div v-if="showElements">
+                                        <div v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
+                                            <small>{{ $store.getters.getSizePackage }}</small>
+                                            •
+                                            <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPackage) }}</small> 
+                                            <br>
+                                            <small>MSIX • Windows 10 1709</small>
+                                        </div>
+
+                                        <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
+                                    </div>
+                                </transition>
+                            </div>
+
+                            <!-- MSI • Installer -->
+                            <div class="column has-gap is-narrow has-text-centered">
+                                <b-tooltip class="is-inline" key="button" :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in">
                                         <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
                                                 :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.state.release) ? '_self' : '_blank'" rel="noopener"
-                                                class="has-text-expanded" :style="{ 'min-width': getMinWidthInstaller() }" :href="$store.getters.getUrlInstaller"
+                                                class="has-text-expanded"  :href="$store.getters.getUrlInstaller"
                                                 @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                             {{ $t('home.installer') }}
                                         </b-button>
@@ -73,29 +102,26 @@
 
                                 <transition name="slow-in">
                                     <div v-if="showElements">
-                                        <p v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
+                                        <div v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
                                             <small>{{ $store.getters.getSizeInstaller }}</small>
                                             •
-                                            <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small> 
-                                        </p>
+                                            <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small>
+                                            <br>
+                                            <small>MSI • Windows 7 SP1</small>
+                                        </div>
 
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                                     </div>
                                 </transition>
                             </div>
 
-                            <div class="column is-12-mobile is-1-tablet has-text-centered">
-                                <transition name="slow-in">
-                                    <p v-if="showElements" class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
-                                </transition>
-                            </div>
-
-                            <div class="column is-narrow has-text-centered">
-                                <b-tooltip :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
+                            <!-- ZIP • Portable -->
+                            <div class="column has-gap is-narrow has-text-centered">
+                                <b-tooltip class="is-inline" key="button" :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
                                     <transition name="slow-in">
                                         <b-button ref="portableButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
                                             :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.state.release) ? '_self' : '_blank'"  rel="noopener"
-                                            class="has-text-expanded" :style="{ 'min-width': getMinWidthPortable() }" :href="$store.getters.getUrlPortable"
+                                            class="has-text-expanded" :href="$store.getters.getUrlPortable"
                                             @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                             {{ $t('home.portable') }}
                                         </b-button>
@@ -104,28 +130,20 @@
                                 
                                 <transition name="slow-in">
                                     <div v-if="showElements">
-                                        <p v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
+                                        <div v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
                                             <small>{{ $store.getters.getSizePortable }}</small>
                                             •
                                             <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
-                                        </p>
+                                            <br>
+                                            <small>ZIP • Windows 7 SP1</small>
+                                        </div>
 
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
                                     </div>
                                 </transition>
                             </div>
                         </div>
-
-                        <div class="columns is-centered is-mobile">
-                            <b-message type="is-info">
-                                <div class="has-text-centered">
-                                    <p v-html="$t('home.warning.net')"/>
-                                    <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime" target="_blank" rel="noopener" 
-                                            @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 6'})">{{$t('home.warning.download')}}</a>
-                                </div>
-                            </b-message>
-                        </div>
-                        
+                       
                         <transition name="slow-in">
                             <b-collapse v-if="showElements" class="has-text-light has-text-centered" :open.sync="isExpanderOpen" position="is-top" animation="slide" aria-id="expander"
                                 @open="$gtag.event('More downloads', {'event_category': 'Clicks', 'event_label': 'Open'})"
@@ -135,6 +153,76 @@
 
                                     {{ !props.open ? $t('home.more-releases') : $t('home.fewer-releases') }}
                                 </a>
+
+                                <div class="columns is-vcentered is-centered is-mobile is-multiline has-top-margin">
+                                    <div class="column has-gap is-narrow has-text-centered" v-if="$store.getters.installerLightRelease">
+                                        <b-tooltip class="is-inline" key="button" :label="$t('home.installer-info') + '\n' + $t('home.light-info')" type="is-light" position="is-top" animated multilined>
+                                            <transition name="slow-in">
+                                                <b-button ref="installerButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="compact-disc" 
+                                                        :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.state.release) ? '_self' : '_blank'" rel="noopener"
+                                                        class="has-text-expanded" :href="$store.getters.getUrlLightInstaller"
+                                                        @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Installer-Light'})">
+                                                    {{ $t('home.installer') }} ({{ $t('home.light') }})
+                                                </b-button>
+                                            </transition>
+                                        </b-tooltip>
+
+                                        <transition name="slow-in">
+                                            <div v-if="showElements">
+                                                <div v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
+                                                    <small>{{ $store.getters.getSizeLightInstaller }}</small>
+                                                    •
+                                                    <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountLightInstaller) }}</small>
+                                                    <br>
+                                                    <small>MSI • Windows 7 SP1</small>
+                                                </div>
+
+                                                <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
+                                            </div>
+                                        </transition>
+                                    </div>
+
+                                    <div class="column is-12-mobile is-1-tablet has-text-centered" v-if="$store.getters.installerLightRelease">
+                                        <p class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
+                                    </div>
+
+                                    <div class="column has-gap is-narrow has-text-centered" v-if="$store.getters.installerLightRelease">
+                                        <b-tooltip class="is-inline" key="button" :label="$t('home.portable-info') + '\n' + $t('home.light-info')" type="is-light" position="is-top" animated multilined>
+                                            <transition name="slow-in">
+                                                <b-button ref="portableButton" v-if="showElements" :type="isLoading ? 'is-light' : 'is-primary'" size="is-large" icon-left="archive-alt" 
+                                                    :loading="isLoading" :inverted="!isLoading" tag="a" :target="!isEmpty($store.state.release) ? '_self' : '_blank'"  rel="noopener"
+                                                    class="has-text-expanded" :href="$store.getters.getUrlLightPortable"
+                                                    @click="$gtag.event('Download-Home', {'event_category': 'Clicks', 'event_label': 'Portable-Light'})">
+                                                    {{ $t('home.portable') }} ({{ $t('home.light') }})
+                                                </b-button>
+                                            </transition>
+                                        </b-tooltip>
+                                        
+                                        <transition name="slow-in">
+                                            <div v-if="showElements">
+                                                <div v-if="!isLoading && !isEmpty($store.state.release)" class="is-unselectable">
+                                                    <small>{{ $store.getters.getSizeLightPortable }}</small>
+                                                    •
+                                                    <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountLightPortable) }}</small>
+                                                    <br>
+                                                    <small>ZIP • Windows 7 SP1</small>
+                                                </div>
+
+                                                <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
+                                            </div>
+                                        </transition>
+                                    </div>
+                                </div>
+
+                                <div class="columns is-centered is-mobile">
+                                    <b-message type="is-info">
+                                        <div class="has-text-centered">
+                                            <p v-html="$t('home.warning.net')"/>
+                                            <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime" target="_blank" rel="noopener" 
+                                                    @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 6'})">{{$t('home.warning.download')}}</a>
+                                        </div>
+                                    </b-message>
+                                </div>
 
                                 <div class="columns is-vcentered is-centered is-mobile is-multiline has-top-margin">
                                     <div class="column is-narrow has-text-centered">
@@ -454,33 +542,6 @@
         },
 
         methods: {
-            getMinWidthInstaller() {
-                var size = this.$refs.portableButton !== undefined ? (this.$refs.portableButton.$el.clientWidth + 2) + "px" : 0;
-
-                this.$nextTick().then(() => {
-                    this.$refs.installerButton.$el.style.minWidth = 0 + "px";
-
-                    this.$nextTick().then(() => {
-                        this.$refs.installerButton.$el.style.minWidth = (this.$refs.portableButton.$el.clientWidth + 2) + "px";
-                    });
-                });
-
-                return size;
-            },
-            getMinWidthPortable() {
-                var size = this.$refs.installerButton !== undefined ? (this.$refs.installerButton.$el.clientWidth + 2) + "px" : 0;
-
-                this.$nextTick().then(() => {
-                    this.$refs.portableButton.$el.style.minWidth = 0 + "px";
-
-                    this.$nextTick().then(() => {
-                        this.$refs.portableButton.$el.style.minWidth = (this.$refs.installerButton.$el.clientWidth + 2) + "px";
-                    });
-                });
-
-                return size;
-            },
-
             download() {
                 try {
                     this.isLoading = true;
@@ -736,5 +797,14 @@
     .dropdown .dropdown-menu {
         left: unset;
         min-width: 10rem;
+    }
+
+    .column.has-gap {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .column.is-narrow {
+        flex-basis: 100%;
     }
 </style>

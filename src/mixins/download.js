@@ -32,13 +32,14 @@ export default {
                         return {
                             arch: this.getArchitecture(m.name),
                             type: this.getBinaryType(m.name),
+                            mode: this.getContentType(m.name),
                             url: m.browser_download_url,
                             id: m.id,
                             name: m.name,
                             downloadCount: m.download_count,
                             size: this.humanizeSize(m.size, false)
                         }
-                    }).sort((a, b) => this.fieldSorter(a, b, ['type', 'arch']));
+                    }).sort((a, b) => this.fieldSorter(a, b, ['mode', 'type', 'arch']));
 
                     //Makes sure that the object is full created before setting to the global variable.
                     this.$store.commit('setRelease', aux);
@@ -80,11 +81,12 @@ export default {
                         return {
                             arch: this.getArchitecture(m.title),
                             type: this.getBinaryType(m.title),
+                            mode: this.getContentType(m.title),
                             url: m.link,
                             downloadCount: 0,
                             size: ''
                         }
-                    });
+                    }).sort((a, b) => this.fieldSorter(a, b, ['mode', 'type', 'arch']));
                     
                     //Makes sure that the object is full created before setting to the global variable.
                     this.$store.commit('setRelease', aux);

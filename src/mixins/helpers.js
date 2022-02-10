@@ -96,7 +96,16 @@ export default {
             if (name?.toLowerCase().includes('setup'))
                 return 'installer';
             
+            if (name?.toLowerCase().includes('package'))
+                return 'package';
+
             return 'portable';
+        },
+        getContentType(name) {
+            if (name?.toLowerCase().includes('light'))
+                return 'light';
+            
+            return 'full';
         },
         daysInMonth(date) {
             return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();

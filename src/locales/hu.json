@@ -53,12 +53,18 @@
     "or": "vagy",
     "portable" : "Hordozható",
     "portable-info": "Letölti a hordozható verziót, amely csak a fő futtatható fájlt tartalmazza. A kiegészítőket a Beállítások > Extrák menüpontban kell letölteni.",
+    "microsoftstore": "Microsoft Áruház",
     "downloads" : "{0} letöltés",
     "more-releases" : "További letöltési lehetőségek",
     "fewer-releases" : "Kevesebb letöltési lehetőség",
     "copy" : "Másolás",
     "copied" : "Parancs másolva!",
     "not-copied" : "A parancs másolása nem volt lehetséges.",
+
+    "warning": {
+      "net": "A hordozható verzióhoz telepíteni kell a <strong>.NET 6 asztali futtatókörnyezet</strong>-et.",
+      "download": "Kattints ide a letöltéséhez."
+    },
 
     "why": {
       "free": "Ingyenes",

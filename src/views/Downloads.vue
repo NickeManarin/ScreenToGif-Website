@@ -40,44 +40,68 @@
                     </b-dropdown>
 
                     <div class="columns is-centered is-vcentered is-multiline is-mobile">
-                        <div class="column is-narrow has-text-centered">
+                        <!-- MSIX • Package -->
+                        <div class="column has-gap is-narrow has-text-centered" v-if="$store.getters.packageRelease">
+                            <b-tooltip class="is-inline" :label="$t('home.package-info')" type="is-light" position="is-top" animated multilined>
+                                <b-button type="is-info" size="is-large" icon-left="package" 
+                                    :loading="isLoading" tag="a" :target="$store.state.release.length > 0 ? '_self' : '_blank'" 
+                                    :href="$store.getters.getUrlPackage" :inverted="!isLoading" :outlined="!isLoading" 
+                                    @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Package'})">
+                                    {{ $t('home.package') }}
+                                </b-button>
+                            </b-tooltip>
+
+                            <div v-if="!isLoading && !isEmpty($store.state.release) && !$store.state.release.fromFoss" class="is-unselectable has-arrow-cursor">
+                                <small>{{ $store.getters.getSizePackage }}</small>
+                                •
+                                <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPackage) }}</small> 
+                                <br>
+                                <small>MSIX • Windows 10 1709</small>
+                            </div>
+
+                            <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
+                        </div>
+
+                        <!-- MSI • Installer -->
+                        <div class="column has-gap is-narrow has-text-centered">
                             <b-tooltip :label="$t('home.installer-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="installerButton" type="is-info" size="is-large" icon-left="compact-disc" 
-                                    :style="{ 'min-width': getMinWidthPortable() }" :loading="isLoading" tag="a" :target="$store.state.release.length > 0 ? '_self' : '_blank'" 
+                                    :loading="isLoading" tag="a" :target="$store.state.release.length > 0 ? '_self' : '_blank'" 
                                     :href="$store.getters.getUrlInstaller" :inverted="!isLoading" :outlined="!isLoading" 
                                     @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Installer'})">
                                     {{ $t('home.installer') }}
                                 </b-button>
                             </b-tooltip>
                             
-                            <p v-if="!isLoading && !isEmpty($store.state.release) && !$store.state.release.fromFoss" class="is-unselectable has-arrow-cursor">
+                            <div v-if="!isLoading && !isEmpty($store.state.release) && !$store.state.release.fromFoss" class="is-unselectable has-arrow-cursor">
                                 <small>{{ $store.getters.getSizeInstaller }}</small>
                                 •
-                                <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small> 
-                            </p>
+                                <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small>
+                                <br>
+                                <small>MSI • Windows 7 SP1</small>
+                            </div>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                         </div>
 
-                        <div class="column is-12-mobile is-1-tablet has-text-centered">
-                            <p class="has-text-light is-unselectable">{{ $t('home.or') }}</p>
-                        </div>
-
-                        <div class="column is-narrow has-text-centered">
+                        <!-- ZIP • Portable -->
+                        <div class="column has-gap is-narrow has-text-centered">
                             <b-tooltip :label="$t('home.portable-info')" type="is-light" position="is-top" animated multilined>
                                 <b-button ref="portableButton" type="is-info" size="is-large" icon-left="archive-alt" 
-                                    :style="{ 'min-width': getMinWidthInstaller() }" :loading="isLoading" tag="a" :target="$store.state.release.length > 0 ? '_self' : '_blank'" 
+                                    :loading="isLoading" tag="a" :target="$store.state.release.length > 0 ? '_self' : '_blank'" 
                                     :href="$store.getters.getUrlPortable" :inverted="!isLoading" :outlined="!isLoading" 
                                     @click="$gtag.event('Download', {'event_category': 'Clicks', 'event_label': 'Portable'})">
                                      {{ $t('home.portable') }}
                                 </b-button>
                             </b-tooltip>
 
-                            <p v-if="!isLoading && !isEmpty($store.state.release) && !$store.state.release.fromFoss" class="is-unselectable has-arrow-cursor">
+                            <div v-if="!isLoading && !isEmpty($store.state.release) && !$store.state.release.fromFoss" class="is-unselectable has-arrow-cursor">
                                 <small>{{ $store.getters.getSizePortable }}</small>
                                 •
                                 <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
-                            </p>
+                                <br>
+                                <small>ZIP • Windows 7 SP1</small>
+                            </div>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
                         </div>
@@ -257,6 +281,7 @@
                                                         </a>
 
                                                         <b-tag class="is-light ml-1" :class="[ asset.arch === 'arm64' ? 'is-success' : asset.arch === 'x64' ? 'is-link' : 'is-warning' ]" v-if="asset.arch !== 'anyCpu'" v-text="asset.arch"/>
+                                                        <span class="tag is-light ml-1" :class="[ asset.mode === 'light' ? 'is-error' : 'is-info']" v-if="asset.mode === 'light'" v-text="asset.mode"/>
                                                     </div>
                                                 </div>
 
@@ -343,33 +368,6 @@
         },
 
         methods: {
-            getMinWidthInstaller() {
-                var size = this.$refs.portableButton !== undefined ? (this.$refs.portableButton.$el.clientWidth + 2) + "px" : 0;
-
-                this.$nextTick().then(() => {
-                    this.$refs.installerButton.$el.style.minWidth = 0 + "px";
-
-                    this.$nextTick().then(() => {
-                        this.$refs.installerButton.$el.style.minWidth = (this.$refs.portableButton.$el.clientWidth + 2) + "px";
-                    });
-                });
-
-                return size;
-            },
-            getMinWidthPortable() {
-                var size = this.$refs.installerButton !== undefined ? (this.$refs.installerButton.$el.clientWidth + 2) + "px" : 0;
-
-                this.$nextTick().then(() => {
-                    this.$refs.portableButton.$el.style.minWidth = 0 + "px";
-
-                    this.$nextTick().then(() => {
-                        this.$refs.portableButton.$el.style.minWidth = (this.$refs.installerButton.$el.clientWidth + 2) + "px";
-                    });
-                });
-
-                return size;
-            },
-
             onPageChange(page) {
                 this.page = page
                 this.load()
@@ -391,6 +389,7 @@
                 this.isLoading = true;
                 this.$http.get(`https://screentogif-releases.azurewebsites.net/api/v1/releases?${params}`)
                     .then(async res => {
+                        console.log(res);
                         this.parse(await res.json());
                     }, error =>{
                         console.log('error', 'Exception in getting releases.', error);
@@ -415,6 +414,7 @@
             },
             loadFromFosshub(){
                 this.displayReleases = false;
+                this.isFallback = true;
 
                 this.$http.get('https://www.fosshub.com/feed/5bfc6fce8c9fe8186f809d24.json')
                     .then(async res => {
@@ -429,11 +429,12 @@
                             return {
                                 arch: this.getArchitecture(m.title),
                                 type: this.getBinaryType(m.title),
+                                mode: this.getContentType(m.title),
                                 url: m.link,
                                 downloadCount: 0,
                                 size: ''
                             }
-                        });
+                        }).sort((a, b) => this.fieldSorter(a, b, ['mode', 'type', 'arch']));
                         
                         this.$store.commit('setRelease', aux);
                         this.isLoading = false;
@@ -473,13 +474,14 @@
                         return {
                             arch: this.getArchitecture(m.name),
                             type: this.getBinaryType(m.name),
+                            mode: this.getContentType(m.name),
                             url: m.url,
                             id: m.id,
                             name: m.name,
                             downloadCount: m.downloadCount,
                             size: this.humanizeSize(m.size, false)
                         }
-                    }).sort((a, b) => this.fieldSorter(a, b, ['type', 'arch']));
+                    }).sort((a, b) => this.fieldSorter(a, b, ['mode', 'type', 'arch']));
                     
                     return aux;
                 });
@@ -488,6 +490,7 @@
                 this.$store.commit('setDownloadCount', data.downloadCount);
                 this.$store.commit('setDaysCount', data.activeDays);
                 this.$store.commit('setReleaseCount', data.releasesCount);
+                this.$store.commit('setOldestDate', aux.map(m => m.release_date).reduce((a, b) => a < b ? a : b));
 
                 this.isLoading = false;
             },
@@ -496,6 +499,7 @@
                 let totalDownloads = 0;
                 let totalDays = 0;
                 let previousUpdatedAt = new Date();
+                this.isFallback = true;
 
                 let aux = data.map((e) => {
                     if (e.assets.length === 0) 
@@ -524,13 +528,14 @@
                         return {
                             arch: this.getArchitecture(m.name),
                             type: this.getBinaryType(m.name),
+                            mode: this.getContentType(m.name),
                             url: m.browser_download_url,
                             id: m.id,
                             name: m.name,
                             downloadCount: m.download_count,
                             size: this.humanizeSize(m.size, false)
                         }
-                    }).sort((a, b) => this.fieldSorter(a, b, ['type', 'arch']));
+                    }).sort((a, b) => this.fieldSorter(a, b, ['mode', 'type', 'arch']));
 
                     totalDownloads += aux.download_count;
                     totalDays += aux.active_days;
@@ -544,9 +549,7 @@
                 this.$store.commit('setDownloadCount', totalDownloads);
                 this.$store.commit('setDaysCount', totalDays);
                 this.$store.commit('setReleaseCount', aux.length);
-                this.$store.commit('setOldestDate', aux.map(m => m.release_date).reduce((a, b) => a < b ? a : b));
-
-                this.isFallback = true;
+                                
                 this.isLoading = false;
             },
 
@@ -575,7 +578,7 @@
         computed: {
             projectAge() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = this.isFallback ? this.$store.state.oldestDate : new Date(2013, 10 - 1, 12);
+                var start = this.isFallback ? new Date(2013, 10 - 1, 12) : this.$store.state.oldestDate;
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();
@@ -624,7 +627,7 @@
             },
             averagePerMonth() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = this.isFallback ? this.$store.state.oldestDate : new Date(2013, 10 - 1, 12);
+                var start = this.isFallback ? new Date(2013, 10 - 1, 12) : this.$store.state.oldestDate;
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();
@@ -693,6 +696,15 @@
     .is-disabled {
         cursor: not-allowed;
         text-decoration: line-through;
+    }
+
+    .column.has-gap {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+
+    .column.is-narrow {
+        flex-basis: 100%;
     }
 </style>
 
