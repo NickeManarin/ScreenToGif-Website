@@ -172,8 +172,8 @@
                                         <div class="level-left">
                                             <div class="level-item">
                                                 <a :href="asset.url" rel="nofollow" :class="{ 'is-italic is-disabled has-text-grey': asset.url == null }">
-                                                    <i class="unicon is-large" :class="[ asset.type === 'portable' ? 'uil-archive-alt' : 'uil-compact-disc' ]"></i>
-                                                    <span class="px-1 has-text-weight-medium">{{ asset.type === 'portable' ? $t('home.portable') : $t('home.installer') }}</span>
+                                                    <i class="unicon is-large" :class="[ asset.type === 'portable' ? 'uil-archive-alt' : asset.type === 'package' ? 'uil-package' : 'uil-compact-disc' ]"></i>
+                                                    <span class="px-1 has-text-weight-medium">{{ asset.type === 'portable' ? $t('home.portable') : asset.type === 'package' ? $t('home.package') : $t('home.installer') }}</span>
                                                 </a>
 
                                                 <span class="tag is-light ml-1" :class="[ asset.arch === 'arm64' ? 'is-success' : asset.arch === 'x64' ? 'is-link' : 'is-warning' ]" v-if="asset.arch !== 'anyCpu'" v-text="asset.arch"/>
