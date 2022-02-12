@@ -107,7 +107,7 @@
                                             •
                                             <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small>
                                             <br>
-                                            <small>MSI • Windows 7 SP1</small>
+                                            <small>MSI • Windows 8</small>
                                         </div>
 
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -135,7 +135,7 @@
                                             •
                                             <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
                                             <br>
-                                            <small>ZIP • Windows 7 SP1</small>
+                                            <small>ZIP • Windows 8</small>
                                         </div>
 
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
