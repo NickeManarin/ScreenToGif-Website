@@ -78,7 +78,7 @@
                                 •
                                 <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small>
                                 <br>
-                                <small>MSI • Windows 7 SP1</small>
+                                <small>MSI • Windows 8</small>
                             </div>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -100,7 +100,7 @@
                                 •
                                 <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
                                 <br>
-                                <small>ZIP • Windows 7 SP1</small>
+                                <small>ZIP • Windows 8</small>
                             </div>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -490,7 +490,6 @@
                 this.$store.commit('setDownloadCount', data.downloadCount);
                 this.$store.commit('setDaysCount', data.activeDays);
                 this.$store.commit('setReleaseCount', data.releasesCount);
-                this.$store.commit('setOldestDate', aux.map(m => m.release_date).reduce((a, b) => a < b ? a : b));
 
                 this.isLoading = false;
             },
@@ -578,7 +577,7 @@
         computed: {
             projectAge() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = this.isFallback ? new Date(2013, 10 - 1, 12) : this.$store.state.oldestDate;
+                var start = this.$store.state.oldestDate ?? new Date(2013, 10 - 1, 12);
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();
@@ -627,7 +626,7 @@
             },
             averagePerMonth() {
                 var end = new Date(new Date().setHours(0, 0, 0, 0));
-                var start = this.isFallback ? new Date(2013, 10 - 1, 12) : this.$store.state.oldestDate;
+                var start = this.$store.state.oldestDate ?? new Date(2013, 10 - 1, 12);
 
                 var years = end.getFullYear() - start.getFullYear();
                 var months = end.getMonth() - start.getMonth();

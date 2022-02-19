@@ -61,7 +61,7 @@ const store = new Vuex.Store({
         totalDownloads: 0,
         totalDays: 0,
         releasesCount: 0,
-        oldestDate: new Date()
+        oldestDate: undefined
     },
     mutations: {
         setRelease(state, payload) {
