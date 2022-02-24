@@ -401,6 +401,17 @@
                         </div>
 
                         <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://datamate.org?from=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'datamate'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/Datamate.png')" style="width: 44px; height: 44px;" maxWidth="44px" maxHeight="44px"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">datamate</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://loam.net?from=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">

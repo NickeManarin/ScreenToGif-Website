@@ -580,6 +580,15 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "datamate",
+                        url: "https://datamate.org?from=ScreenToGif",
+                        urlPretty: "datamate",
+                        value: 100,
+                        valueInUsd: 111.72,
+                        currency: "EUR €",
+                        platform: "Paypal"
+                    },
+                    {
                         name: "Loam",
                         url: "https://loam.net?from=ScreenToGif",
                         urlPretty: "loam.net",
