@@ -333,7 +333,7 @@
 
                     <div class="columns is-centered">
                         <div class="column is-one-third-tablet is-one-third-desktop">
-                            <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Jetbrains.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px" :isFixed="true"/>
@@ -344,7 +344,7 @@
                         </div>
 
                         <div class="column is-one-third-tablet is-one-third-desktop">
-                            <b-button class="is-light padded" tag="a" href="https://www.fosshub.com?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://www.fosshub.com?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Fosshub.svg')" width="150px" height="42.92px" maxWidth="150px" maxHeight="42.92px" :isFixed="true"/>
@@ -355,7 +355,7 @@
                         </div>
 
                         <div class="column is-one-third-tablet is-one-third-desktop">
-                            <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Bluepoint.png')" width="150px" height="44px" maxWidth="150px" maxHeight="44px"/>
@@ -368,7 +368,7 @@
 
                     <div class="columns is-centered is-multiline is-mobile">
                         <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://www.ndepend.com?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://www.ndepend.com?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'NDepend'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/NDepend.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
@@ -401,7 +401,7 @@
                         </div>
 
                         <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://datamate.org?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://datamate.org?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'datamate'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Datamate.png')" style="width: 44px; height: 44px;" maxWidth="44px" maxHeight="44px"/>
@@ -412,7 +412,7 @@
                         </div>
 
                         <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://loam.net?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://loam.net?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Loam.png')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
@@ -423,7 +423,18 @@
                         </div>
 
                         <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://www.brunner.bi?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://kreiseder.org/?ref=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Kreiseder'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/Kreiseder.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">Kreiseder IT Services</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.brunner.bi?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BrunnerBI'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/BrunnerBi.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
@@ -434,7 +445,7 @@
                         </div>
 
                         <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Whsr.png')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
@@ -445,7 +456,7 @@
                         </div>
 
                         <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
-                            <b-button class="is-light padded" tag="a" href="https://elmah.io?from=ScreenToGif" target="_blank" rel="noopener"
+                            <b-button class="is-light padded" tag="a" href="https://elmah.io?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
                                 <figure class="image">
                                     <ResponsiveImage :src="require('@/assets/media/home/Elmah.png')" width="60px" height="44px" maxWidth="60px" maxHeight="44px"/>

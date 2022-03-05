@@ -545,7 +545,7 @@
                 patrons: [
                     {
                         name: "Bluepoint Games",
-                        url: "https://www.bluepointgames.com?from=ScreenToGif",
+                        url: "https://www.bluepointgames.com?ref=ScreenToGif",
                         urlPretty: "bluepointgames.com",
                         value: 1000,
                         valueInUsd: 1000,
@@ -581,7 +581,7 @@
                     },
                     {
                         name: "datamate",
-                        url: "https://datamate.org?from=ScreenToGif",
+                        url: "https://datamate.org?ref=ScreenToGif",
                         urlPretty: "datamate",
                         value: 100,
                         valueInUsd: 111.72,
@@ -590,7 +590,7 @@
                     },
                     {
                         name: "Loam",
-                        url: "https://loam.net?from=ScreenToGif",
+                        url: "https://loam.net?ref=ScreenToGif",
                         urlPretty: "loam.net",
                         value: 100,
                         valueInUsd: 100,
@@ -598,8 +598,17 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "Kreiseder IT Services",
+                        url: 'https://kreiseder.org/?ref=ScreenToGif',
+                        urlPretty: 'kreiseder.org',
+                        value: 60,
+                        valueInUsd: 66,
+                        currency: "EUR €",
+                        platform: "Paypal"
+                    },
+                    {
                         name: "Brunner BI",
-                        url: "https://www.brunner.bi",
+                        url: "https://www.brunner.bi?ref=ScreenToGif",
                         urlPretty: "brunner.bi",
                         value: 0.0015,
                         valueInUsd: 55.68,
@@ -608,7 +617,7 @@
                     },
                     {
                         name: "WHSR",
-                        url: "https://www.webhostingsecretrevealed.net?from=ScreenToGif",
+                        url: "https://www.webhostingsecretrevealed.net?ref=ScreenToGif",
                         urlPretty: "webhostingsecretrevealed.net",
                         value: 50,
                         valueInUsd: 50,
@@ -617,7 +626,7 @@
                     },
                     {
                         name: "Elmah",
-                        url: "http://elmah.io?from=ScreenToGif",
+                        url: "http://elmah.io?ref=ScreenToGif",
                         urlPretty: "elmah.io",
                         value: 50,
                         valueInUsd: 50,
@@ -626,7 +635,7 @@
                     },
                     {
                         name: "Is It Keto?",
-                        url: 'https://www.isitketo.org?from=ScreenToGif',
+                        url: 'https://www.isitketo.org?ref=ScreenToGif',
                         urlPretty: 'isitketo.org',
                         value: 40,
                         valueInUsd: 40,
@@ -644,7 +653,7 @@
                     },
                     {
                         name: "CampusMVP",
-                        url: 'https://www.campusmvp.es?from=ScreenToGif',
+                        url: 'https://www.campusmvp.es?ref=ScreenToGif',
                         urlPretty: 'campusmvp.es',
                         value: 30,
                         valueInUsd: 30,
@@ -653,7 +662,7 @@
                     },
                     {
                         name: "TTVPS",
-                        url: 'https://ttvps.com?from=ScreenToGif',
+                        url: 'https://ttvps.com?ref=ScreenToGif',
                         urlPretty: 'ttvps.com',
                         value: 200,
                         valueInUsd: 25.8,
@@ -680,7 +689,7 @@
                     },
                     {
                         name: "Guard.io",
-                        url: 'https://guard.io?from=ScreenToGif',
+                        url: 'https://guard.io?ref=ScreenToGif',
                         urlPretty: 'guard.io',
                         value: 20,
                         valueInUsd: 20,
@@ -689,7 +698,7 @@
                     },
                     {
                         name: "Naruto Story",
-                        url: 'https://narutostory.net?from=ScreenToGif',
+                        url: 'https://narutostory.net?ref=ScreenToGif',
                         urlPretty: 'narutostory.net',
                         value: 80,
                         valueInUsd: 19,
@@ -698,7 +707,7 @@
                     },
                     {
                         name: "Rogerty",
-                        url: 'https://www.rogerty.com',
+                        url: 'https://www.rogerty.com?ref=ScreenToGif',
                         urlPretty: 'rogerty.com',
                         value: 15,
                         valueInUsd: 17.6,
@@ -707,7 +716,7 @@
                     },
                     {
                         name: "Justin Ballen",
-                        url: 'https://jballen.io?from=ScreenToGif',
+                        url: 'https://jballen.io?ref=ScreenToGif',
                         urlPretty: 'jballen.io',
                         value: 15,
                         valueInUsd: 15,
@@ -725,7 +734,7 @@
                     },
                     {
                         name: "Sqlitybi",
-                        url: 'https://sqlitybi.com?from=ScreenToGif',
+                        url: 'https://sqlitybi.com?ref=ScreenToGif',
                         urlPretty: 'sqlitybi.com',
                         value: 40,
                         valueInUsd: 9.51,
