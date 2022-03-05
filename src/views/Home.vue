@@ -367,7 +367,7 @@
                     </div>
 
                     <div class="columns is-centered is-multiline is-mobile">
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.ndepend.com?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'NDepend'})">
                                 <figure class="image">
@@ -378,7 +378,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.linkedin.com/in/eirikbirkeland" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Eirik'})">
                                 <figure class="image">
@@ -389,7 +389,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://twitter.com/noderaider" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Noderaider'})">
                                 <figure class="image">
@@ -400,7 +400,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://datamate.org?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'datamate'})">
                                 <figure class="image">
@@ -411,7 +411,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://loam.net?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Loam'})">
                                 <figure class="image">
@@ -422,18 +422,18 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://kreiseder.org/?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Kreiseder'})">
                                 <figure class="image">
-                                    <ResponsiveImage :src="require('@/assets/media/home/Kreiseder.svg')" width="44px" height="44px" maxWidth="44px" maxHeight="44px"/>
+                                    <ResponsiveImage :src="require('@/assets/media/home/Kreiseder.svg')" style="width: 130px; height: 44px;"/>
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Kreiseder IT Services</p>
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.brunner.bi?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BrunnerBI'})">
                                 <figure class="image">
@@ -444,7 +444,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.webhostingsecretrevealed.net?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Whsr'})">
                                 <figure class="image">
@@ -455,7 +455,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-2-desktop is-one-third-tablet is-half-mobile">
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://elmah.io?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Elmah'})">
                                 <figure class="image">
