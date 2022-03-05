@@ -1,0 +1,549 @@
+{
+  "info": {
+    "code": "pl",
+    "lang": "Polski",
+    "lang-english": "Polish",
+    "author": "Nicke Manarin",
+    "status": "10"
+  },
+
+  "navigation": {
+    "home": "Główna",
+    "downloads": "Pobierz",
+    "donate": "Wesprzyj",
+    "screenshots": "Zrzuty ekranu",
+    "contact": "Kontakt",
+    "more": "Więcej",
+    "how-to-use": "Jak korzystać",
+    "features": "Funkcje",
+    "share": "Udostępnij",
+    "source": "Źródło",
+    "privacy-terms": "Prywatność i warunki korzystania",
+
+    "download": {
+      "download": "Pobierz",
+      "info": "Pozwala na pobranie najnowszej wersji",
+      "by": "by {0}",
+      "dates": {
+        "years": "{0} lat(a) temu",
+        "year": "rok temu",
+        "months": "{0} miesiące(y) temu",
+        "month": "miesiąc temu",
+        "weeks": "{0} tygodnie(i) temu",
+        "week": "tydzień temu",
+        "days": "{0} dni temu",
+        "day": "dzień temu",
+        "hours": "{0} godzin(y) temu",
+        "hour": "godzina temu",
+        "minutes": "{0} minut(y) temu",
+        "minute": "minuta temu",
+        "now": "w tym momencie"
+      }
+    }
+  },
+
+  "home":{
+    "meta-title": "ScreenToGif - Nagrywaj ekran, edytuj i zapisuj jako gif, film albo w innym formacie",
+    "meta-description": "Darmowe narzędzie do nagrywania ekranu, które pozwala na nagrywanie, edytowanie i zapisywanie jako gif, film lub w innym formacie",
+
+    "subtitle": "Rejestrator <strong>ekranu</strong>, <b>kamery internetowej</b> oraz <b>szkicownika</b> ze zintegrowanym <b>edytorem</b>",
+    "version": "Wersja {0}",
+    "installer" : "Instalator",
+    "installer-info": "Pobiera wersję instalatora (.msi), która zawiera główny plik wykonywalny i opcjonalne dodatki.",
+    "or": "or",
+    "portable" : "Portable",
+    "portable-info": "Pobiera wersję portable, która posiada tylko główny plik wykonywalny. Dodatki muszą być zainstalowane za pomocą Opcje > Dodatki.",
+    "microsoftstore": "Microsoft Store",
+    "downloads" : "{0} pobrań",
+    "more-releases" : "Więcej opcji pobierania",
+    "fewer-releases" : "Mniej opcji pobierania",
+    "copy" : "Kopiuj",
+    "copied" : "Skopiowano polecenie!",
+    "not-copied" : "Skopiowanie polecenia nie było możliwe.",
+
+    "why": {
+      "free": "Darmowy",
+      "free-info": "Otwarty kod źródłowy na <b>GitHub</b>",
+      "compact": "Kompaktowy",
+      "compact-info": "Tylko <b>{0}</b>",
+      "powerful": "Potężny",
+      "powerful-info": "Nagrywaj, edytuj i <b>exportuj to!</b>",
+      "customizable": "Elastyczny",
+      "customizable-info": "Używaj go <b>tak jak lubisz</b>",
+      "features": "Odkryj wszystkie możliwości"
+    },
+  
+    "media": {
+      "title": "Media",
+      "subtitle": "Zrzuty ekranu i gify",
+      "more": "Zobacz więcej zrzutów ekranu"
+    },
+
+    "supporters": {
+      "title": "Specjalne podziękowania",
+      "subtitle": "Niektórzy z wspierających projektu",
+      "become": "Zostań sponsorem"
+    },
+
+    "usage": {
+      "title": "Jak korzystać?",
+      "subtitle": "Błyskawicznie nagraj i zedytuj swoje nagrania",
+      "capture": "Przechwyć",
+      "capture-info": "<b>Ekran</b>, <b>kamerę internetową</b> lub <b>sketchboard</b> capture",
+      "edit": "Edit",
+      "edit-info": "Edytuj <b>przechwytywane</b> lub <b>inne media</b>",
+      "export": "Eksportowanie",
+      "export-info": "Eksportuj do <b>Gif</b>, <b>Apng</b>, <b>Wideo</b>, <b>Obrazu</b>, <b>Projektu</b> lub do <b>PSD</b>",
+      "share": "Share",
+      "share-info": "Udostępniaj na <b>Imgur</b>, <b>Gfycat</b> lub innych",
+      "learn": "Sprawdź jak używać"
+    },
+
+    "share": {
+      "title": "Co mówią użytkownicy",
+      "subtitle": "Sprawdź opinie ludzi z Twittera",
+      "share": "Podziel się swoimi wrażeniami"
+    }
+  },
+
+  "downloads": {
+    "meta-title": "ScreenToGif - Pobieranie",
+    "meta-description": "Pobierz instalator lub wersję portable ScreenToGif.",
+
+    "latest": "Najnowsza wersja",
+    "show-release-notes": "Pokaż informacje o wersji",
+    "hide-release-notes": "Ukryj informacje o wersji",
+    
+    "requirements":{
+      "title": "Wymagania",
+      "subtitle": "Ta aplikacja wymaga konkretnego oprogramowania i sprzętu aby mogła działać",
+      "windows": "<b>Windows 7 SP1</b> lub nowszy",
+      "framework": "<b>.NET 6</b> nowszy"
+    },
+
+    "releases":{
+      "title": "Wszystkie wersje",
+      "subtitle": "Rozwiń żeby zobaczyć informacje szczegółowe o wersjach",
+      "loading-issue": "Z powodu błędu w ładowaniu listy wersji, tylko 10 najnowszych jest wyświetlane.",
+      
+      "table": {
+        "version": "Wersja",
+        "date": "Data wydania",
+        "days": "Dni aktualności",
+        "days-info": "Liczba dni, w których była najnowszą wersją",
+        "count": "Liczba pobrań",
+        "not-possible": "Nie udało się załadować wszystkich wersji",
+        "versions-total": "{0} wersji wydano",
+        "average-month": "Średnio {0} na miesiąc",
+        "active-total": "Aktywne przez {0}",
+        "downloads-total": "Pobrano {0} razy"
+      },
+
+      "dates": {
+        "years": "{0} lat(a)",
+        "year": "{0} rok",
+        "months": "{0} miesiące(y)",
+        "month": "{0} miesiąc",
+        "days": "{0} dni",
+        "day": "{0} dzień"
+      }
+    }
+  },
+
+  "donation": {
+    "meta-title": "ScreenToGif - Dotacje",
+    "meta-description": "Pomóż w usprawnieniu ScreenToGif, poprzez wsparcie pieniężne produktu.",
+
+    "title": "Podoba ci się ScreenToGif?",
+    "subtitle": "Czy myślisz o tym, że chcesz jakoś go wesprzeć?",
+
+    "why": {
+      "title": "Po co wspierać ScreenToGif?",
+      "subtitle": "Projekt skorzystałby z twojego wsparcia",
+      "free": "Darmowy",
+      "free-info": "Otwarty kod źródłowy na <b>GitHub<b>",
+      "no-ads": "Brak reklam",
+      "no-ads-info": "Nie ma ich nawet w <b>instalatorze</b>",
+      "committed": "Zaangażowanie",
+      "committed-info": "Stworzone z miłością przez zaangażowanego dewelopera",
+      "for-you": "Stworzony dla Ciebie",
+      "for-you-info": "Proces tworzenia oparty na <b>informacji zwrotnej</b> użytkownika"
+    },
+
+    "how-help": {
+      "title": "Jak mogę pomóc?",
+      "subtitle": "Jeśli chcesz pomóc w rozwoju projektu, tutaj jest to wytłumaczone",
+      "feedback": "Informacje zwrotne",
+      "feedback-info": "Zgłaszaj błędy i przekazuj informacje o wrażeniach z użytkowania",
+      "share": "Udostępniaj",
+      "share-info": "Powiedz o ScreenToGif swoim znajomym, lub napisz opinię",
+      "localization": "Lokalizacja",
+      "localization-info": "Aktualizuj tłumaczenia lub dodaj brakujące",
+      "donate": "Dotacje",
+      "donate-info": "Dotacje są mile widzane 😊"
+    },
+
+    "how-donate": {
+      "title": "Jak mogę przekazać dotację?",
+      "subtitle": "Jest kilka sposobów na przekazanie dotacji",
+      "patreon-info": "Zasubskrybuj żeby wspierać co miesiąc przez Patreon",
+      "paypal-info": "Jednorazowa dotacja przez PayPal",
+      "flattr-info": "Zasubskrybuj żeby wspierać co miesiąc przez Flattr",
+      "coffee-info": "Kup kawę developerowi",
+      "steam-info": "Podaruj gry lub karty podarunkowe na Steam",
+      "gog-info": "Podaruj gry przez GOG",
+      "amazon": "Lista życzeń Amazon",
+      "amazon-info": "Pomóż mi kupić części do nowego komputera",
+      "cripto-info": "Kliknij aby odkryć adres",
+
+      "cripto": {
+        "title": "Wesprzyj poprzez {0}",
+        "subtitle": "Zeskanuj kod QR lub skopiuj adres",
+        "address-copied": "Skopiowano adres!",
+        "address-not-copied": "Nie udało się skopiowac adresu."
+      },
+
+      "paypal": {
+        "title": "Wesprzyj przez PayPal",
+        "subtitle": "Wybierz swoją walutę przed kontynuowaniem",
+        "show-fee": "Zobacz objaśnienie marży PayPal",
+        "hide-fee": "Ukryj objaśnienie marży PayPal",
+        "explanation": "PayPal wprowadza opłatę opartą na wartości (6.4%) + stała wartość oparta na wybranej walucie (0.1 do 0.5 centów dolara).",
+        "becomes": "{0} staje się {1}",
+        "donate": "Wesprzyj"
+      }
+    },
+
+    "list": {
+      "title": "Lista patronów",
+      "subtitle": "Niektórzy z ludzi i firm, którzy wsparli ten projekt",
+      "patron": "Patron",
+      "amount": "Przekazano",
+      "amount-info": "Przedstawione w kolejności od największej wartości USD",
+      "from": "Sposób płatności",
+      "not-possible": "Załadowanie listy patronów było niemożliwe.",
+      "list-name": "Czy chcesz aby twoje imię lub nazwa twojej firmy widniała na tej liście po przekazaniu dotacji?",
+      "contact": "Skontaktuj się ze mną :)"
+    }
+  },
+
+  "screenshots": {
+    "meta-title": "ScreenToGif - Zrzuty ekranu",
+    "meta-description": "Zobacz zrzuty przedstawiające ScreenToGif.",
+
+    "title": "Zrzuty ekranu i przykłady",
+    "subtitle": "Zobacz co możesz zrobić z ScreenToGif",
+    "add": "Chcesz dodać swój gif do tej strony?",
+    "send": "Wyślij mi wiadomość :)",
+
+    "gallery":{
+      "startup": "Domyślny ekran startowy apki.<br>Zamiast tego możesz ustawić żeby apka otwierała się na oknie <b>edytora i nagrań</b>.",
+      "recorder": "Domyślny interfejs nagrywający. Po prostu przesuń to okno tak, aby obejmowało zawartość, którą chcesz nagrać.",
+      "recorder-use": "Użyj narzędzia celownika, aby obszar nagrywania automatycznie dostosował się do krawędzi klikniętego okna.",
+      "recorder-new": "To jest <b>nowy interfejs nagrywający</b>, którym możesz zaznaczać za pomocą przeciągania nagrywany obszar.<br>Możesz też przełączyć się na tryb nagrywania okna i całego ekranu.",
+      "editor": "Oto edytor, w nim możesz edytować swoje nagrania i eksportować je do formatów: <b>gif</b>, <b>apng</b>, <b>video</b>, <b>project</b>, <b>images</b> oraz <b>psd</b>.",
+      "webcam": "Nagrywarka kamery internetowej.",
+      "board": "Nagrywarka tablicy pozwala na automatyczne nagrywanie rysunków.",
+      "board-example": "Przykład nagranego rysunku.",
+      "options": "ScreenToGif has <b>lots</b> of options!"
+    }
+  },
+  
+  "contact": {
+    "meta-title": "ScreenToGif - Kontakt",
+    "meta-description": "Skontaktuj się z twórcą ScreenToGif.",
+
+    "title": "Skontaktuj się ze mną",
+    "subtitle": "I kilka szczegółów o mnie i o programie",
+
+    "who": {
+      "title": "Kim jestem?",
+      "subtitle": "Twórca ScreenToGif",
+      "part1": "Cześć ,nazywam się Nicke Manarin, jestem {0}-letnim developerem z Brazylii.",
+      "part2": "Tworzę oprogramowanie od 2012 roku, co rozpoczęło się poprzez chęć poprawienia swojej wiedzy zdobytej podczas studiowania.",
+      "part3": "Po ukończeniu studiów w 2016 roku, stale zdobywałem nowe umiejętności, które mają bezpośrednie zastosowanie w trakcie tworzenia moich projektów.",
+      "part4": "Chcę spróbować wszystkiego co w mojej mocy, aby tworzyć oprogramowanie, które jest przydatne i łatwe w użyciu."
+    },
+
+    "why":{
+      "title": "Dlaczego powstało ScreenToGif?",
+      "subtitle": "Historia powstania programu",
+      "part1": "Projekt powstał w październiku 2013 roku jako mój sposób nauczenia się programowania, jednocześnie będąc narzędziem, które mi się przyda.",
+      "part2": "Uczyłem się jak projektować GUI (i miałem z tym problemy), więc pomyślałem, że dobrze by było mieć jakieś nagrania ekranu, co pomogłoby mi zadawać pytania na forach.",
+      "part3": "While some apps already existed, they didn't provide the specific feature that I needed, which prompted me to build my own solution (not realizing it would require a lot of work).",
+      "part4": "The name 'ScreenToGif' is as simple as I guessed the tool would be: a screen recorder that exported as gif. It was supposed to be an easy to remember name.",
+      "part5": "But I had no foreshadowing powers: The only part of the name that stays relevant is the middle 'To', as the app can now capture more than the screen and export to other formats.",
+      "part6": "This project had a complete restart in 2016, after having issues for some months with the old platform, I ended up switching to a new one.",
+      "part7": "This transition allowed me to develop more features, with easier to understand user interfaces.",
+      "part8": "Although I'm the creator and maintainer of this project, other users also contribute with bug reports, feature requests and translations. Feel free to leave your comment. :)"
+    },
+
+    "methods": {
+      "title": "Methods of contact",
+      "subtitle": "Usually I reply faster via Twitter and Discord",
+      "twitter-info": "Follow me <b>@NickeManarin</b>",
+      "email": "Email",
+      "email-info": "Click here to reveal",
+      "discord-info": "Join the channel",
+      "reddit-info": "Join the sub <b>r/ScreenToGif</b>",
+      "facebook-info": "Like the page",
+      "linkedin-info": "Follow the page",
+
+      "reveal": {
+        "title": "Here's my email",
+        "subtitle": "Please, don't send spam :)",
+        "spam": "By <b>spam</b>, I mean things unrelated to the app like services and products offerings.",
+        "help": "I'll be happy to try to help you out with the app, as I always have.",
+        "copied": "Email copied!",
+        "copied-error": "It was not possible to copy the email."
+      }
+    }
+  },
+
+  "features": {
+    "meta-title": "ScreenToGif - Features",
+    "meta-description": "Discover all ScreenToGif features.",
+    
+    "title": "Features",
+    "subtitle": "See what you can do with ScreenToGif",
+
+    "recorders": {
+      "title": "Recorders",
+      "text1": "Use ScreenToGif to record your <b>screen</b>, your <b>webcam</b> feed or <b>sketch board</b> drawings.",
+
+      "screen": {
+        "title": "Screen",
+        "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
+        "text2": "Select the capture frequency mode (manual, normal in fps, timelapse in fpm/fph).",
+        
+        "older": {
+          "title": "Older UI",
+          "text1": "Drag or resize the window to adjust what you want to capture.",
+          "text2": "Type the exact size of the capture region.",
+          "text3": "Drag the crosshair button and drop it on top of a window to move the recorder to capture that."
+        },
+
+        "newer": {
+          "title": "Newer UI",
+          "text1": "Enter selection mode, which lets you select a <b>region</b>, a <b>window</b> or an <b>entire screen</b> to capture."
+        }
+      },
+
+      "webcam":{
+        "title": "Webcam",
+        "text1": "Use the <b>record</b>, <b>pause</b>, <b>discard</b> or <b>stop</b> buttons to control your capture.",
+        "text2": "Select the maximum FPS of the capture.",
+        "text3": "Resize the window to adjust the size of the capture."
+      },
+
+      "sketchboard": {
+        "title": "Sketch board",
+        "text1": "Enable the <b>auto-capture</b> or press <b>Ctrl to toggle</b> (<i>pauses</i> or <i>captures</i> it, depending if the auto-capture is enabled or disabled).",
+        "text2": "Select the maximum FPS of the capture.",
+        "text3": "Resize the window to adjust the size of the capture."
+      }
+    },
+
+    "editor": {
+      "title": "Editor",
+
+      "file": {
+        "title": "File",
+        "text1": "Start a new recording or open a media (videos or images) or project file.",
+        "text2": "Insert a new recording or media file (videos or images) into an existing project.",
+        "text3": "Open recent projects.",
+        "text4": "Export your project to:",
+        "video": "Video",
+        "image": "Image",
+        "project": "ScreenToGif project"
+      },
+
+      "basic": {
+        "title": "Basic controls",
+        "text1": "Undo, redo or reset your edits.",
+        "text2": "Copy, cut and paste frames.",
+        "text3": "Select multiple frames or browse to a specific frame.",
+        "text4": "Preview the playback of the animation."
+      },
+
+      "frame": {
+        "title": "Frame manipulation",
+        "text1": "Delete selected frames.",
+        "text2": "Remove duplicates.",
+        "text3": "Reduce framerate.",
+        "text4": "Delete all previous or all next frames.",
+        "text5": "Reverse, apply yoyo (forwards and backwards) or move frames around.",
+        "text6": "Alter the delay of the frames (override, increase/decrease or scale).",
+        "text7": "Add title frames.",
+        "text8": "Add transitions (fade or slide effects)."
+      },
+
+      "image": {
+        "title": "Image manipulation",
+        "text1": "Resize, crop or flip/rotate.",
+        "text2": "Add overlays:",
+        "text3": "Captions/text.",
+        "text4": "Drawings or shapes.",
+        "text5": "Key strokes or mouse clicks.",
+        "text6": "Borders, shadows, and obfuscation (pixelate).",
+        "text7": "Watermarks (pick your own image).",
+        "text8": "Cinemagraph (select parts of the animation to stay static or move)."
+      }
+    },
+
+    "options": {
+      "title": "Options",
+
+      "app": {
+        "title": "Application",
+        "text1": "Select how the app starts.",
+        "text2": "Choose among 4 color themes (from light to very dark).",
+        "text3": "Alter the system tray icon behavior (clicks to open parts of the app).",
+        "text4": "Decide whether the app should update itself automatically (translation updates can be toggled too)."
+      },
+
+      "recorder": {
+        "title": "Recorder",
+        "text1": "Select if you want the older or newer UI for the screen recorder.",
+        "text2": "Choose which capture mode to use (BitBlt, DirectX, with memory cache or not).",
+        "text3": "Select the capture frequency mode (manual, normal, timelapse).",
+        "text4": "Enable cursor following (the recorder will follow your cursor during the recording)."
+      },
+
+      "editor": {
+        "title": "Editor",
+        "text1": "Select the previewer style (color and size of the background grid).",
+        "text2": "Enable the auto-sizing of the editor window based on the content size and vice-versa.",
+        "text3": "Options to enable confirmation dialogs before important actions.",
+        "text4": "Option to limit the undo/redo stack."
+      },
+
+      "tasks": {
+        "title": "Tasks",
+        "text1": "You can create tasks to apply effects to your recording, so that you don't need to manually apply them every time."
+      },
+
+      "shortcuts": {
+        "title": "Shortcuts",
+        "text1": "Set keyboard shortcuts to open the recorders and editor.",
+        "text2": "You can also set shortcuts to control your recordings (record, pause, stop, and others)."
+      },
+
+      "language": {
+        "title": "Language",
+        "text1": "Select among {0} languages.",
+        "text2": "The app will automatically select a language, based on your current OS settings."
+      },
+
+      "storage": {
+        "title": "Storage",
+        "text1": "Control how the app store its data.",
+        "text2": "Recover used space by deleting old projects."
+      },
+
+      "extras": {
+        "title": "Extras",
+        "text1": "Download plugins for the app."
+      }
+    }
+  },
+
+  "how-to-use": {
+    "meta-title": "ScreenToGif - How to use",
+    "meta-description": "Learn how to use ScreenToGif.",
+
+    "title": "How to use?",
+    "subtitle": "Learn how to use ScreenToGif",
+    "more": "Click here to read more about how to use ScreenToGif",
+
+    "list": {
+      "startup": "When the app starts, click on the <b>Recorder</b> button.",
+      "record": "A punctured window will appear, line up to what you want to record and click on <b>Record</b>. When finished, click on the <b>Stop</b> button.",
+      "edit-remove": "Remove unwanted frames by selecting them with <b>Shift-Click</b> and pressing <b>Delete</b>.",
+      "edit-transition": "Add a transition to the last frame, so the animation loops more <i>smoothly</i>.",
+      "edit-save": "After your touch ups, click on <b>Save As</b> to export the animation to your format of choice.",
+      "final-gif": "Here's the result Gif, around <b>80.6 KiB</b>."
+    }
+  },
+
+  "share": {
+    "meta-title": "ScreenToGif - Share",
+    "meta-description": "See what people are saying about ScreenToGif.",
+
+    "title": "Share",
+    "subtitle": "Share your thoughts on this tool",
+    "like": "Are you enjoying ScreenToGif?",
+    "mention": "Mention it on Twitter 😊",
+    "tweet": "Tweet @ScreenToGif or @NickeManarin",
+    "text": "ScreenToGif is a screen, webcam and sketch board recorder with an integrated editor.",
+    "disclaimer": "Would you like to not have your tweet linked on this page? Contact me"
+  },
+
+  "source": {
+    "meta-title": "ScreenToGif - Source",
+    "meta-description": "See the details of the open source project, ScreenToGif.",
+
+    "title": "Source code",
+    "subtitle": "ScreenToGif is open source!",
+
+    "links": {
+      "app-info": "The source code of ScreenToGif",
+      "website": "Website",
+      "website-info": "The source code of this website"
+    }
+  },
+
+  "privacy-terms": {
+    "meta-title": "ScreenToGif - Privacy and terms",
+    "meta-description": "See the privacy and terms.",
+
+    "title": "Privacy and terms",
+    "subtitle": "And other technical details about ScreenToGif",
+
+    "privacy": {
+      "title": "Privacy",
+      "software": {
+        "title": "The software",
+        "phrase1": "ScreenToGif does not collect or transmit any personal (or system related) information without the user consent.",
+        "phrase2": "In fact, the only way that ScreenToGif sends personal or system related data happens when the user sends us a feedback via the Feedback tool.",
+        "phrase3": "The personal information may be provided by the users (such as their name and e-mail).",
+        "phrase4": "The system related information is captured automatically by the Feedback tool in order to facilitate solving possible issues.",
+        "more": "Click here to read more about other possible network connections opened by the software."
+      },
+
+      "website": {
+        "title": "This website",
+        "phrase1": "This website uses Google Analytics services, which collects session data about every pageview.",
+        "phrase2": "The data is used only to understand better the public behavior towards this tool."
+      }
+    },
+
+    "terms": {
+      "title": "Terms",
+      "phrase1": "ScreenToGif is free for use for everyone, even in corporate environments.",
+      "more": "You can read more about it here."
+    }
+  },
+
+  "footer": {
+    "share": {
+      "title": "<b>Share</b> on social media",
+      "tweet": "Tweet",
+      "share": "Share",
+      "like": "Like"
+    },
+
+    "language": "Language",
+    "follow": "<b>Follow</b> the project",
+    "watch": "Watch",
+    "made-by": "Made by {0}, from <b>Brazil</b> 🇧🇷",
+    "icons-by": "Icons by {0}",
+    "license-app": "<b>ScreenToGif</b> is licensed under {0}",
+    "license-web": "<b>This website</b> is licensed under {0}"
+  },
+
+  "not-found": {
+    "title": "Page not found...",
+    "subtitle": "Try returning to the home page"
+  }
+}
