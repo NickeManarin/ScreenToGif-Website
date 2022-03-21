@@ -118,7 +118,7 @@
       "title": "设备要求",
       "subtitle": "本应用需要的软硬件最低配置",
       "windows": "<b>Windows 7 SP1</b> 或更新版本",
-      "framework": "<b>.NET 框架 4.8</b> 或更新版本"
+      "framework": "<b>.NET 框架 6</b> 或更新版本"
     },
 
     "releases":{
