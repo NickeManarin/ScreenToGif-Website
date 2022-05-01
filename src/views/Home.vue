@@ -217,9 +217,13 @@
                                 <div class="columns is-centered is-mobile">
                                     <b-message type="is-info">
                                         <div class="has-text-centered">
-                                            <p v-html="$t('home.warning.net')"/>
-                                            <a href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime" target="_blank" rel="noopener" 
-                                                    @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 6'})">{{$t('home.warning.download')}}</a>
+                                            <p v-html="$t('home.warning.net').replace('6', $store && $store.state.architecture === 'arm64' ? '7' : '6')"/>
+
+                                            <a v-if="$store && $store.state.architecture === 'arm64'"
+                                                href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime" target="_blank" rel="noopener" 
+                                                @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 7'})">{{$t('home.warning.download')}}</a>
+                                            <a v-else href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime" target="_blank" rel="noopener" 
+                                                @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 6'})">{{$t('home.warning.download')}}</a>
                                         </div>
                                     </b-message>
                                 </div>
