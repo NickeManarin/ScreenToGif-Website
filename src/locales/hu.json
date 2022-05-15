@@ -13,7 +13,7 @@
     "donate": "Adomány",
     "screenshots": "Képernyőképek",
     "contact": "Kapcsolat",
-    "more": "Több",
+    "more": "Továbbiak",
     "how-to-use": "Hogyan kell használni",
     "features": "Funkciók",
     "share": "Megosztás",
@@ -48,12 +48,16 @@
 
     "subtitle": "<strong>Képernyő-</strong>, <b>webkamera-</b> és <b>fehértábla-</b>felvevő integrált <b>szerkesztő</b>vel",
     "version": "Verzió {0}",
+	  "package" : "Csomag",
+    "package-info": "Letölti a Windows 10/11 csomag verziót (.msix), amely a fő futtatható fájlt tartalmazza. A kiegészítőket az Beállítások > Extrák menüpontban kell letölteni.",	
     "installer" : "Telepítő",
     "installer-info": "Letölti a telepítő verziót (.msi), amely a fő futtatható programot és az opcionális kiegészítőket tartalmazza.",
     "or": "vagy",
     "portable" : "Hordozható",
     "portable-info": "Letölti a hordozható verziót, amely csak a fő futtatható fájlt tartalmazza. A kiegészítőket a Beállítások > Extrák menüpontban kell letölteni.",
-    "microsoftstore": "Microsoft Áruház",
+    "light": "Könnyű",
+    "light-info": "Ehhez a verzióhoz a .NET 6 asztali futtatókörnyezet telepítése szükséges.",
+	  "microsoftstore": "Microsoft Áruház",
     "downloads" : "{0} letöltés",
     "more-releases" : "További letöltési lehetőségek",
     "fewer-releases" : "Kevesebb letöltési lehetőség",
@@ -129,6 +133,7 @@
     "releases":{
       "title": "Minden kiadás",
       "subtitle": "Bontsd ki a kiadás részleteinek megtekintéséhez",
+	    "loading-issue": "Egy kiadások betöltésével kapcsolatos probléma miatt csak a legújabb 10 jelenik meg.",
       
       "table": {
         "version": "Verzió",
