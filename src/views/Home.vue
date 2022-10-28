@@ -336,7 +336,7 @@
                     <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.supporters.subtitle') }}</p>
 
                     <div class="columns is-centered">
-                        <div class="column is-one-third-tablet is-one-third-desktop">
+                        <div class="column is-one-fourth-tablet is-one-fourth-desktop">
                             <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
                                 <figure class="image">
@@ -347,7 +347,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-one-third-tablet is-one-third-desktop">
+                        <div class="column is-one-fourth-tablet is-one-fourth-desktop">
                             <b-button class="is-light padded" tag="a" href="https://www.fosshub.com?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'FossHub'})">
                                 <figure class="image">
@@ -358,7 +358,7 @@
                             </b-button>
                         </div>
 
-                        <div class="column is-one-third-tablet is-one-third-desktop">
+                        <div class="column is-one-fourth-tablet is-one-fourth-desktop">
                             <b-button class="is-light padded" tag="a" href="https://www.bluepointgames.com?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BluePointGames'})">
                                 <figure class="image">
@@ -366,6 +366,17 @@
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey has-text-weight-semibold">Bluepoint Games</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-one-fourth-tablet is-one-fourth-desktop">
+                            <b-button class="is-light padded" tag="a" href="https://www.microsoft.com?ref=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Microsoft'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/Microsoft.svg')" width="150px" height="44px" maxWidth="150px" maxHeight="44px"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey has-text-weight-semibold">Microsoft</p>
                             </b-button>
                         </div>
                     </div>
@@ -390,6 +401,17 @@
                                 </figure>
 
                                 <p class="is-size-6 has-text-grey">Eirik</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://easeus.com/?ref=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'EaseUs'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/EaseUs.png')" width="84px" height="64px" maxWidth="84px" maxHeight="64px"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">EaseUS</p>
                             </b-button>
                         </div>
 
@@ -796,6 +818,7 @@
 
     .column .padded {
         padding: 0.75rem;
+        min-height: 100px;
     }
 
     //Makes the figure captions resize to the image.

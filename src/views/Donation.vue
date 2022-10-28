@@ -553,6 +553,15 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "Microsoft",
+                        url: "https://www.microsoft.com?ref=ScreenToGif",
+                        urlPretty: "microsoft.com",
+                        value: 500,
+                        valueInUsd: 500,
+                        currency: "USD $",
+                        platform: "Github"
+                    },
+                    {
                         name: "Nanch",
                         url: null,
                         urlPretty: null,
@@ -567,6 +576,15 @@
                         urlPretty: "linkedin.com/in/eirikbirkeland",
                         value: 150,
                         valueInUsd: 150,
+                        currency: "USD $",
+                        platform: "Paypal"
+                    },
+                    {
+                        name: "EaseUS",
+                        url: "https://easeus.com/?ref=ScreenToGif",
+                        urlPretty: "easeus.com",
+                        value: 120,
+                        valueInUsd: 120,
                         currency: "USD $",
                         platform: "Paypal"
                     },

@@ -5,10 +5,6 @@
         </div>
 
         <div class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
-            <Tweet widget-class="twitter-card" id="1261313183597367298" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }"/>
-        </div>
-
-        <div class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
             <Tweet widget-class="twitter-card" id="1260470890950799362" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }"/>
         </div>
 
@@ -24,10 +20,10 @@
             <Tweet widget-class="twitter-card" id="1223660258264068096" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }"/>
         </div>
 
-
-        <div v-if="showAll" class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
+        <div class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
             <Tweet widget-class="twitter-card" id="1266162907710013441" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }"/>
         </div>
+
 
         <div v-if="showAll" class="column is-one-third-widescreen is-half-desktop is-half-tablet is-inline-block">
             <Tweet widget-class="twitter-card" id="1266348932331954176" :options="{ cards: 'hidden', conversation: 'none', dnt: 'true' }"/>
