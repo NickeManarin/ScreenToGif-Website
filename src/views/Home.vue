@@ -416,6 +416,17 @@
                         </div>
 
                         <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://easeus.de/?ref=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'EaseUs-Germany'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/EaseUs.png')" width="84px" height="64px" maxWidth="84px" maxHeight="64px"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">EaseUS Germany</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://twitter.com/noderaider" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Noderaider'})">
                                 <figure class="image">

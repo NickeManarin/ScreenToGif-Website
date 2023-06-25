@@ -79,6 +79,7 @@
             "danger": ($danger, $danger-invert, $danger-light, $danger-dark),
 
             "twitter": ($twitter, $twitter-invert),
+            "mastodon": ($mastodon, $mastodon-invert),
             "facebook": ($facebook, $facebook-invert),
             "linkedin": ($linkedin, $linkedin-invert),
             "reddit": ($reddit, $reddit-invert),

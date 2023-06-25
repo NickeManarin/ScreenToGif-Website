@@ -589,6 +589,15 @@
                         platform: "Paypal"
                     },
                     {
+                        name: "EaseUS Germany",
+                        url: "https://easeus.de/?ref=ScreenToGif",
+                        urlPretty: "easeus.de",
+                        value: 120,
+                        valueInUsd: 120,
+                        currency: "USD $",
+                        platform: "Paypal"
+                    },
+                    {
                         name: "Noderaider",
                         url: "https://twitter.com/noderaider",
                         urlPretty: "twitter.com/noderaider",

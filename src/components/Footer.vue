@@ -68,6 +68,11 @@
                             NickeManarin
                         </b-button>
 
+                        <b-button type="is-mastodon" icon-left="chat-bubble-user" tag="a" target="_blank" href="https://mastodon.social/@NickeManarin"
+                                @click="$gtag.event('Follow', {'event_category': 'Clicks', 'event_label': 'NickeManarin Mastodon'})">
+                            NickeManarin
+                        </b-button>
+
                         <b-button type="is-twitter" icon-left="twitter-alt" tag="a" target="_blank" href="https://twitter.com/ScreenToGif"
                                 @click="$gtag.event('Follow', {'event_category': 'Clicks', 'event_label': 'ScreenToGif Twitter'})">
                             ScreenToGif
