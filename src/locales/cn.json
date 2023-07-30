@@ -3,7 +3,7 @@
     "code": "cn",
     "lang": "简体中文",
     "lang-english": "Chinese (Simplified)",
-    "author": "Po Chen, 董玮",
+    "author": "Po Chen, 董玮, 神枪968(GodGun968)",
     "status": "100"
   },
 
@@ -48,18 +48,27 @@
 
     "subtitle": "<strong>屏幕</strong>、<b>摄像头</b>和<b>画板</b>录像，并有内置<b>编辑器</b>",
     "version": "版本 {0}",
+    "package" : "Package",
+    "package-info": "下载 Windows 10/11 package 版 (.msix)，其中包含主执行程序。插件可从 选项 > 更多 下载。",
     "installer" : "安装包",
     "installer-info": "下载安装包 (.msi)，其中包含主执行程序和可选插件。",
     "or": "或",
-    "portable" : "免安装包",
-    "portable-info": "下载免安装包，包含主执行程序。插件可从 选项 > 更多 下载。",
+    "portable" : "便携版",
+    "portable-info": "下载便携版，包含主执行程序。插件可从 选项 > 更多 下载。",
+    "light": "Light",
+    "light-info": "此版本需要安装 .NET 6 Desktop Runtime.",
     "microsoftstore": "微软应用商店",
     "downloads" : "{0} 下载",
     "more-releases" : "更多下载选项",
     "fewer-releases" : "隐藏下载选项",
     "copy" : "复制",
     "copied" : "命令已复制！",
-    "not-copied" : "此命令不可复制。",
+   "not-copied" : "此命令不可复制。",
+
+    "warning": {
+      "net": "对于便携版，需要手动安装 <strong>.NET 6 Desktop Runtime</strong> 。",
+      "download": "点击此处下载。"
+    },
 
     "why": {
       "free": "免费",
@@ -124,7 +133,8 @@
     "releases":{
       "title": "所有版本",
       "subtitle": "展开查看版本详细信息",
-      
+      "loading-issue": "由于加载发行版时出现问题，仅显示最新的前 10 个版本。",
+
       "table": {
         "version": "版本",
         "date": "发布日期",
