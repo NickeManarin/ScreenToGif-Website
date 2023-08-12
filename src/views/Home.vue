@@ -335,7 +335,7 @@
                     <h4 class="title is-size-3 is-unselectable">{{ $t('home.supporters.title') }}</h4>
                     <p class="subtitle is-size-5 has-text-grey-light is-unselectable">{{ $t('home.supporters.subtitle') }}</p>
 
-                    <div class="columns is-centered">
+                    <div class="columns is-centered is-multiline is-mobile">
                         <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.jetbrains.com/resharper/?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Resharper'})">
