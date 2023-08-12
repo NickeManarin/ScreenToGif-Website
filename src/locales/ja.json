@@ -197,6 +197,7 @@
         "subtitle": "寄付の方法をいくつか紹介します",
         "patreon-info": "Patreon 経由で毎月寄付を申し込む",
         "paypal-info": "PayPal による 1 回限りの寄付",
+        "stripe-info": "Stripe による 1 回限りの寄付",
         "flattr-info": "Flattr 経由で毎月寄付を申し込む",
         "coffee-info": "開発者のためにコーヒーを買う",
         "steam-info": "Steam 経由でゲームやクレジットを贈る",

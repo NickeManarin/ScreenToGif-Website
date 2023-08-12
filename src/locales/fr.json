@@ -187,6 +187,7 @@
       "subtitle": "Voici quelques manières pour faire un don",
       "patreon-info": "Abonnez-vous pour faire un don mensuel via Patreon",
       "paypal-info": "Don unique via PayPal",
+      "stripe-info": "Don unique via Stripe",
       "flattr-info": "Abonnez-vous pour faire un don mensuel via Flattr",
       "coffee-info": "Achetez un café au développeur",
       "steam-info": "Offrez des jeux ou crédits via Steam",

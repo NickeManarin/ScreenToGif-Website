@@ -149,15 +149,16 @@
                         </div>
 
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" @click="openPaypalDialog()">
+                            <b-button class="is-light" tag="a" href="https://donate.stripe.com/cN23dfaz9dJW1wc000" target="_blank" rel="noopener"
+                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Stripe'})">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Paypal.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Stripe.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Paypal</h5>
-                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.paypal-info') }}</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">Stripe</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.stripe-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
@@ -244,16 +245,15 @@
 
                     <div class="columns is-centered is-multiline">
                         <div class="column is-half-tablet is-one-third-desktop">
-                            <b-button class="is-light" tag="a" href="https://flattr.com/@NickeManarin/domain/screentogif.com" target="_blank" rel="noopener"
-                                @click="$gtag.event('How-to-donate', {'event_category': 'Clicks', 'event_label': 'Flattr'})">
+                            <b-button class="is-light" @click="openPaypalDialog()">
                                 <article class="media">
                                     <figure class="media-left">
-                                        <ResponsiveImage :src="require('@/assets/media/donation/Flattr.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
+                                        <ResponsiveImage :src="require('@/assets/media/donation/Paypal.svg')" width="40px" height="40px" maxWidth="40px" maxHeight="40px"/>
                                     </figure>
 
                                     <div class="media-content">
-                                        <h5 class="is-size-4 has-text-weight-semibold">Flattr</h5>
-                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.flattr-info') }}</p>
+                                        <h5 class="is-size-4 has-text-weight-semibold">Paypal</h5>
+                                        <p class="is-size-5 has-text-grey">{{ $t('donation.how-donate.paypal-info') }}</p>
                                     </div>
                                 </article>
                             </b-button>
