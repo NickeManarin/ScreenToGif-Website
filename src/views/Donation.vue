@@ -643,6 +643,15 @@
                         platform: "Bitcoin"
                     },
                     {
+                        name: "digitalpush GmbH",
+                        url: "https://www.digitalpush.net?ref=ScreenToGif",
+                        urlPretty: "digitalpush.net",
+                        value: 50,
+                        valueInUsd: 53,
+                        currency: "USD $",
+                        platform: "GitHub Sponsors"
+                    },
+                    {
                         name: "WHSR",
                         url: "https://www.webhostingsecretrevealed.net?ref=ScreenToGif",
                         urlPretty: "webhostingsecretrevealed.net",
