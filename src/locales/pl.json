@@ -117,8 +117,8 @@
     "requirements":{
       "title": "Wymagania",
       "subtitle": "Ta aplikacja wymaga konkretnego oprogramowania i sprzętu aby mogła działać",
-      "windows": "<b>Windows 7 SP1</b> lub nowszy",
-      "framework": "<b>.NET 6</b> nowszy"
+      "windows": "<b>Windows 10 1607</b> lub nowszy",
+      "framework": "<b>.NET 8</b> nowszy"
     },
 
     "releases":{

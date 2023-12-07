@@ -56,7 +56,7 @@
     "portable" : "Portable",
     "portable-info": "Downloads the portable version, which contains only the main executable. Addons needs to be downloaded in Options > Extras.",
     "light": "Light",
-    "light-info": "This version requires the installation of .NET 6 Desktop Runtime.",
+    "light-info": "This version requires the installation of .NET 8 Desktop Runtime.",
     "microsoftstore": "Microsoft Store",
     "downloads" : "{0} downloads",
     "more-releases" : "More download options",
@@ -66,7 +66,7 @@
     "not-copied" : "It was not possible to copy the command.",
 
     "warning": {
-      "net": "For the portable version, you need to manually install the <strong>.NET 6 Desktop Runtime</strong>.",
+      "net": "For the portable version, you need to manually install the <strong>.NET 8 Desktop Runtime</strong>.",
       "download": "Click here to download it."
     },
 
@@ -126,8 +126,8 @@
     "requirements":{
       "title": "Requirements",
       "subtitle": "This app requires some software and hardware minimum configurations in order to run",
-      "windows": "<b>Windows 7 SP1</b> or newer",
-      "framework": "<b>.NET 6</b> or newer"
+      "windows": "<b>Windows 10 1607</b> or newer",
+      "framework": "<b>.NET 8</b> or newer"
     },
 
     "releases":{

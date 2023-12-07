@@ -116,8 +116,8 @@
     "requirements":{
       "title": "Requisiti di sistema",
       "subtitle": "Qusta app richiede un hardware e un software minimo per essere utilizzata",
-      "windows": "<b>Windows 7 SP1</b> o successivo",
-      "framework": "<b>.NET 6</b> o successivo"
+      "windows": "<b>Windows 10 1607</b> o successivo",
+      "framework": "<b>.NET 8</b> o successivo"
     },
 
     "releases":{

@@ -78,7 +78,7 @@
                                 •
                                 <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small>
                                 <br>
-                                <small>MSI • Windows 8</small>
+                                <small>MSI • Windows 10 1607</small>
                             </div>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -100,7 +100,7 @@
                                 •
                                 <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
                                 <br>
-                                <small>ZIP • Windows 8</small>
+                                <small>ZIP • Windows 10 1607</small>
                             </div>
 
                             <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -159,7 +159,7 @@
                                     <ResponsiveImage :src="require('@/assets/media/downloads/Net.png')" maxWidth="64px" maxHeight="64px" alt="Net Framework logo." border-radius="0"/>
                                 </figure>
 
-                                <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.framework').replace('.NET 6', '.NET Framework 4.8')"></p>
+                                <p class="subtitle is-size-6 has-text-grey" v-html="$t('downloads.requirements.framework').replace('.NET 8', '.NET Framework 4.8')"></p>
                             </b-button>
                         </div>
 

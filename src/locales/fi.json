@@ -56,7 +56,7 @@
     "portable" : "Siirrettävä",
     "portable-info": "Lataa siirrettävä versio, joka sisältää vain varsinaisen suoritettavan ohjelman. Lisäosat on ladattava kohdassa Asetukset > Lisäosat.",
     "light": "Kevyt",
-    "light-info": "Tämä versio edellyttää .NET 6 Desktop Runtimen asentamista.",
+    "light-info": "Tämä versio edellyttää .NET 8 Desktop Runtimen asentamista.",
     "microsoftstore": "Microsoft Store",
     "downloads" : "{0} latausta",
     "more-releases" : "Lisää latausvaihtoehtoja",
@@ -66,7 +66,7 @@
     "not-copied" : "Komentoa ei voitu kopioida.",
 
     "warning": {
-      "net": "Siirrettävää versiota varten sinun on asennettava käsin <strong>.NET 6 Desktop Runtime</strong>.",
+      "net": "Siirrettävää versiota varten sinun on asennettava käsin <strong>.NET 8 Desktop Runtime</strong>.",
       "download": "Lataa se klikkaamalla tästä."
     },
 
@@ -126,8 +126,8 @@
     "requirements":{
       "title": "Vaatimukset",
       "subtitle": "Tämä sovellus vaatii joitakin ohjelmisto- ja laitteistokohtaisia vähimmäiskokoonpanoja toimiakseen.",
-      "windows": "<b>Windows 7 SP1</b> tai uudempi",
-      "framework": "<b>.NET 6</b> tai uudempi"
+      "windows": "<b>Windows 10 1607</b> tai uudempi",
+      "framework": "<b>.NET 8</b> tai uudempi"
     },
 
     "releases":{

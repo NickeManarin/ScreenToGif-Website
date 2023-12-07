@@ -107,7 +107,7 @@
                                             •
                                             <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountInstaller) }}</small>
                                             <br>
-                                            <small>MSI • Windows 8</small>
+                                            <small>MSI • Windows 10 1607</small>
                                         </div>
 
                                         <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -135,7 +135,7 @@
                                             •
                                             <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountPortable) }}</small>
                                             <br>
-                                            <small>ZIP • Windows 8</small>
+                                            <small>ZIP • Windows 10 1607</small>
                                         </div>
 
                                         <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -174,7 +174,7 @@
                                                     •
                                                     <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountLightInstaller) }}</small>
                                                     <br>
-                                                    <small>MSI • Windows 7 SP1</small>
+                                                    <small>MSI • Windows 10 1607</small>
                                                 </div>
 
                                                 <b-skeleton v-if="isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -205,7 +205,7 @@
                                                     •
                                                     <small>{{ $t('home.downloads').replace('{0}', $store.getters.getDownloadCountLightPortable) }}</small>
                                                     <br>
-                                                    <small>ZIP • Windows 7 SP1</small>
+                                                    <small>ZIP • Windows 10 1607</small>
                                                 </div>
 
                                                 <b-skeleton v-if="showElements && isLoading" height="20px" width="180px" animated></b-skeleton>
@@ -217,13 +217,10 @@
                                 <div class="columns is-centered is-mobile">
                                     <b-message type="is-info">
                                         <div class="has-text-centered">
-                                            <p v-html="$t('home.warning.net').replace('6', $store && $store.state.architecture === 'arm64' ? '7' : '6')"/>
+                                            <p v-html="$t('home.warning.net')"/>
 
-                                            <a v-if="$store && $store.state.architecture === 'arm64'"
-                                                href="https://dotnet.microsoft.com/en-us/download/dotnet/7.0/runtime" target="_blank" rel="noopener" 
-                                                @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 7'})">{{$t('home.warning.download')}}</a>
-                                            <a v-else href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime" target="_blank" rel="noopener" 
-                                                @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 6'})">{{$t('home.warning.download')}}</a>
+                                            <a href="https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime" target="_blank" rel="noopener" 
+                                               @click="$gtag.event('Exceptional', {'event_category': 'Clicks', 'event_label': '.NET 8'})">{{$t('home.warning.download')}}</a>
                                         </div>
                                     </b-message>
                                 </div>
