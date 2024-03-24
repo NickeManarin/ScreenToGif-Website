@@ -652,6 +652,15 @@
                         platform: "GitHub Sponsors"
                     },
                     {
+                        name: "Rogerty",
+                        url: 'https://www.rogerty.com?ref=ScreenToGif',
+                        urlPretty: 'rogerty.com',
+                        value: 45,
+                        valueInUsd: 50,
+                        currency: "EUR €",
+                        platform: "Paypal"
+                    },
+                    {
                         name: "WHSR",
                         url: "https://www.webhostingsecretrevealed.net?ref=ScreenToGif",
                         urlPretty: "webhostingsecretrevealed.net",
@@ -739,15 +748,6 @@
                         value: 80,
                         valueInUsd: 19,
                         currency: "PLN zł",
-                        platform: "Paypal"
-                    },
-                    {
-                        name: "Rogerty",
-                        url: 'https://www.rogerty.com?ref=ScreenToGif',
-                        urlPretty: 'rogerty.com',
-                        value: 15,
-                        valueInUsd: 17.6,
-                        currency: "EUR €",
                         platform: "Paypal"
                     },
                     {

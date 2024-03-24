@@ -490,6 +490,17 @@
                         </div>
 
                         <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.rogerty.com/?ref=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'Rogerty'})">
+                                <figure class="image">
+                                    <b-icon class="has-text-info" pack="unicon" icon="uil-user" style="width: 44px; height: 44px; font-size: 39pt"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">Rogerty</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.digitalpush.net?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'DigitalPush'})">
                                 <figure class="image">
