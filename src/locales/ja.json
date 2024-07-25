@@ -290,7 +290,7 @@
   
       "methods": {
         "title": "連絡方法",
-        "subtitle": "通常は Twitter と Discord の方が早く返信します",
+        "subtitle": "通常は 𝕏 と Discord の方が早く返信します",
         "twitter-info": "私をフォローしてください <b>@NickeManarin</b>",
         "email": "メール",
         "email-info": "ここをクリックして表示",
@@ -483,8 +483,8 @@
       "title": "Share",
       "subtitle": "このツールに関するご意見をお寄せください",
       "like": "ScreenToGif を楽しんでいますか？",
-      "mention": "Twitterでメンションしてください😊 ",
-      "tweet": "Tweet @ScreenToGif or @NickeManarin",
+      "mention": "𝕏でメンションしてください😊 ",
+      "tweet": "Post @ScreenToGif or @NickeManarin",
       "text": "ScreenToGif は、エディターが統合されたスクリーン、ウェブカメラ、スケッチボードレコーダーです。",
       "disclaimer": "あなたのツイートがこのページにリンクされないようにするには、私に連絡してください"
     },
@@ -538,7 +538,7 @@
     "footer": {
       "share": {
         "title": "ソーシャル メディアで <b>共有</b> ",
-        "tweet": "Tweet",
+        "tweet": "Post",
         "share": "共有",
         "like": "Like"
       },
@@ -548,7 +548,7 @@
       "watch": "Watch",
       "made-by": "<b>Brazil</b> 🇧🇷出身の{0}によって作られました。",
       "icons-by": "Icons by {0}",
-      "license-app": "<b>ScreenToGif</b> は {0} の下でラインセスされています",
+      "license-app": "<b>ScreenToGif</b> は {0} の下でライセンスされています",
       "license-web": "<b>このウェブサイト</b> は {0} の下でライセンスされています"
     },
   
