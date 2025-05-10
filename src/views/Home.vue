@@ -479,6 +479,17 @@
                         </div>
 
                         <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
+                            <b-button class="is-light padded" tag="a" href="https://www.img.vision/?ref=ScreenToGif" target="_blank" rel="noopener"
+                                @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'img.vision'})">
+                                <figure class="image">
+                                    <ResponsiveImage :src="require('@/assets/media/home/Img.vision.svg')" style="width: 130px; height: 44px;"/>
+                                </figure>
+
+                                <p class="is-size-6 has-text-grey">Img.vision</p>
+                            </b-button>
+                        </div>
+
+                        <div class="column is-one-fifth-desktop is-one-third-tablet is-half-mobile">
                             <b-button class="is-light padded" tag="a" href="https://www.brunner.bi?ref=ScreenToGif" target="_blank" rel="noopener"
                                 @click="$gtag.event('Open support links', {'event_category': 'Clicks', 'event_label': 'BrunnerBI'})">
                                 <figure class="image">
