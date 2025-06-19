@@ -42,28 +42,28 @@
     }
   },
 
-  "home":{
+  "home": {
     "meta-title": "ScreenToGif - 화면을 녹화하고 편집하여 GIF, 비디오 또는 기타 형식으로 저장합니다.",
     "meta-description": "GIF, 비디오 및 기타 형식으로 녹화, 편집, 저장할 수 있는 무료 화면 녹화 도구입니다.",
 
     "subtitle": "<strong>화면</strong>, <b>웹캠</b> 그리고 <b>스케치보드</b> 레코더가 통합된 <b>편집기</b>",
     "version": "버전 {0}",
-    "package" : "패키지",
+    "package": "패키지",
     "package-info": "메인 실행 파일이 포함된 Windows 10/11 패키지 버전(.msix)을 다운로드합니다. 애드온은 옵션 > 추가 기능에서 다운로드해야 합니다.",
-    "installer" : "설치 프로그램",
+    "installer": "설치 프로그램",
     "installer-info": "메인 실행 파일과 선택적 애드온이 포함된 설치 프로그램 버전(.msi)을 다운로드합니다.",
     "or": "또는",
-    "portable" : "포터블",
+    "portable": "포터블",
     "portable-info": "메인 실행 파일만 포함된 포터블 버전을 다운로드합니다. 애드온은 옵션 > 추가 기능에서 다운로드해야 합니다.",
     "light": "경량",
     "light-info": "이 버전을 사용하려면 .NET 8 데스크톱 런타임을 설치해야 합니다.",
     "microsoftstore": "Microsoft Store",
-    "downloads" : "{0}회 다운로드",
-    "more-releases" : "더 많은 다운로드 옵션",
-    "fewer-releases" : "더 적은 다운로드 옵션",
-    "copy" : "복사",
-    "copied" : "명령이 복사되었습니다!",
-    "not-copied" : "명령을 복사할 수 없습니다.",
+    "downloads": "{0}회 다운로드",
+    "more-releases": "더 많은 다운로드 옵션",
+    "fewer-releases": "더 적은 다운로드 옵션",
+    "copy": "복사",
+    "copied": "명령이 복사되었습니다!",
+    "not-copied": "명령을 복사할 수 없습니다.",
 
     "warning": {
       "net": "포터블 버전의 경우 <strong>.NET 8 데스크톱 런타임</strong>을 수동으로 설치해야 합니다.",
@@ -81,7 +81,7 @@
       "customizable-info": "<b>원하는 대로</b> 사용하세요",
       "features": "모든 기능 보기"
     },
-  
+
     "media": {
       "title": "미디어",
       "subtitle": "스크린샷과 GIF",
@@ -89,22 +89,22 @@
     },
 
     "supporters": {
-      "title": "Special thanks",
+      "title": "특별한 감사",
       "subtitle": "이 프로젝트를 후원해주신 분들입니다",
       "become": "후원자가 되기"
     },
-  
+
     "usage": {
       "title": "어떻게 사용하나요?",
       "subtitle": "빠르게 녹화하고 편집하세요",
       "capture": "캡처",
       "capture-info": "<b>화면</b>, <b>웹캠</b> 또는 <b>스케치보드</b> 캡처",
       "edit": "편집",
-      "edit-info": "<b>캡처한 내용</b>이나 <b>다른 미디어</b>를 편집하세요",
+      "edit-info": "<b>캡처한 내용</b>이나 <b>다른 미디어</b>를 편집",
       "export": "내보내기",
-      "export-info": "<b>GIF</b>, <b>APNG</b>, <b>동영상</b>, <b>이미지</b>, <b>프로젝트</b> 또는 <b>PSD</b>로 내보내기",
+      "export-info": "<b>GIF</b>, <b>APNG</b>, <b>동영상</b>, <b>이미지</b>, <b>프로젝트</b><br>또는 <b>PSD</b>로 내보내기",
       "share": "공유",
-      "share-info": "<b>Imgur</b>, <b>Gfycat</b> 등으로 공유하세요",
+      "share-info": "<b>Imgur</b>, <b>Gfycat</b> 등으로 공유",
       "learn": "사용 방법 알아보기"
     },
 
@@ -122,19 +122,19 @@
     "latest": "최신 버전",
     "show-release-notes": "릴리스 노트 보기",
     "hide-release-notes": "릴리스 노트 숨기기",
-    
-    "requirements":{
+
+    "requirements": {
       "title": "요구사항",
       "subtitle": "이 앱을 실행하려면 몇 가지 소프트웨어 및 하드웨어 최소 구성이 필요합니다",
       "windows": " <b>Windows 10 1607</b> 이상",
       "framework": " <b>.NET 8</b> 이상"
     },
 
-    "releases":{
+    "releases": {
       "title": "모든 릴리스",
       "subtitle": "확장하여 릴리스 세부 정보 보기",
       "loading-issue": "릴리스를 로드하는 데 문제가 있어 최신 10개만 표시됩니다.",
-      
+
       "table": {
         "version": "버전",
         "date": "릴리스 날짜",
@@ -172,13 +172,13 @@
       "free": "무료",
       "free-info": "<b>GitHub</b>에서 오픈소스로 공개",
       "no-ads": "광고 없음",
-      "no-ads-info": "<b>설치 프로그램</b>에도 광고가 없습니다",
+      "no-ads-info": "<b>설치 프로그램</b>에도 광고 없음",
       "committed": "헌신적 개발",
       "committed-info": "열정적인 개발자가 애정을 담아 제작",
       "for-you": "사용자를 위한 개발",
       "for-you-info": "<b>피드백 중심</b>의 개발 방식"
     },
-  
+
     "how-help": {
       "title": "어떻게 도울 수 있나요?",
       "subtitle": "프로젝트를 도우고 싶으시다면 이런 방법들이 있습니다",
@@ -191,7 +191,7 @@
       "donate": "후원",
       "donate-info": "후원도 언제나 환영합니다 😊"
     },
-  
+
     "how-donate": {
       "title": "어떻게 후원할 수 있나요?",
       "subtitle": "다양한 후원 방법을 안내드립니다",
@@ -205,14 +205,14 @@
       "amazon": "Amazon 위시리스트",
       "amazon-info": "개발자의 컴퓨터 부품 구매 도움",
       "cripto-info": "주소 보기",
-  
+
       "cripto": {
         "title": "{0}로 후원하기",
         "subtitle": "QR 코드를 스캔하거나 주소를 복사하세요",
         "address-copied": "주소가 복사되었습니다!",
         "address-not-copied": "주소를 복사할 수 없습니다."
       },
-  
+
       "paypal": {
         "title": "PayPal로 후원하기",
         "subtitle": "계속하기 전에 통화를 선택하세요",
@@ -223,7 +223,7 @@
         "donate": "후원하기"
       }
     },
-  
+
     "list": {
       "title": "후원자 목록",
       "subtitle": "프로젝트를 지원해주시는 개인 및 기업 분들입니다",
@@ -246,7 +246,7 @@
     "add": "이 페이지에 당신의 GIF를 추가하시겠습니까?",
     "send": "메시지를 보내주세요 :)",
 
-    "gallery":{
+    "gallery": {
       "startup": "이것은 앱의 기본 진입점입니다.<br>대신 <b>녹화기와 편집기</b>를 직접 열도록 앱을 설정할 수 있습니다.",
       "recorder": "이것은 기본 화면 녹화기 UI입니다.<br>녹화하고 싶은 콘텐츠 위에 이 창을 이동하기만 하면 됩니다.",
       "recorder-use": "십자선 아이콘을 클릭하여 창으로 드래그하면 녹화기가 경계에 맞게 조정됩니다.",
@@ -258,7 +258,7 @@
       "options": " ScreenToGif에는 <b>많은</b> 옵션이 있습니다!"
     }
   },
-  
+
   "contact": {
     "meta-title": "ScreenToGif - 연락처",
     "meta-description": "ScreenToGif 개발자에게 연락하세요.",
@@ -313,7 +313,7 @@
   "features": {
     "meta-title": "ScreenToGif - 기능",
     "meta-description": "모든 ScreenToGif 기능을 확인하세요.",
-    
+
     "title": "기능",
     "subtitle": "ScreenToGif로 무엇을 할 수 있는지 살펴보겠습니다",
 
@@ -325,7 +325,7 @@
         "title": "화면",
         "text1": " <b>녹화</b>, <b>일시정지</b>, <b>폐기</b> 또는 <b>중지</b> 버튼을 사용하여 캡처를 제어합니다.",
         "text2": "캡처 빈도 모드를 선택합니다 (수동, 일반 fps, fpm/fph로 타임랩스).",
-        
+
         "older": {
           "title": "이전 UI",
           "text1": "창을 드래그하거나 크기를 조정하여 캡처하고 싶은 것을 맞춥니다.",
@@ -339,7 +339,7 @@
         }
       },
 
-      "webcam":{
+      "webcam": {
         "title": "웹캠",
         "text1": " <b>녹화</b>, <b>일시정지</b>, <b>폐기</b> 또는 <b>중지</b> 버튼을 사용하여 캡처를 제어합니다.",
         "text2": "캡처의 최대 FPS를 선택합니다.",
