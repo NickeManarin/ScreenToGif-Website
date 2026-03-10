@@ -261,7 +261,7 @@
 
                                     <div class="column is-narrow has-text-centered">
                                         <div class="choco">
-                                            <code><span class="is-unselectable">></span> winget install screentogif</code>
+                                            <code><span class="is-unselectable">></span> winget install NickeManarin.ScreenToGif</code>
                                             <b-button type="is-primary" inverted @click="copyWinget()">{{ $t('home.copy') }}</b-button>
                                         </div>
                                     </div>
@@ -702,7 +702,7 @@
             copyWinget() {
                 this.$gtag.event('Copy', {'event_category': 'Clicks', 'event_label': 'Winget'});
 
-                this.$copyText('winget install screentogif').then(() => {
+                this.$copyText('winget install NickeManarin.ScreenToGif').then(() => {
                     this.$buefy.toast.open({
                         duration: 5000,
                         message: this.$t('home.copied'),
