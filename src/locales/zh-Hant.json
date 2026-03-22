@@ -1,0 +1,559 @@
+{
+  "info": {
+    "code": "zh-Hant",
+    "lang": "中文",
+    "lang-english": "Chinese (Traditional)",
+    "author": "昇",
+    "status": "100"
+  },
+
+  "navigation": {
+    "home": "首頁",
+    "downloads": "下載",
+    "donate": "贊助",
+    "screenshots": "截圖",
+    "contact": "聯繫",
+    "more": "更多",
+    "how-to-use": "使用指南",
+    "features": "特色",
+    "share": "分享",
+    "source": "資源",
+    "privacy-terms": "隱私協議",
+
+    "download": {
+      "download": "下載",
+      "info": "下載最新版本",
+      "by": "源於 {0}",
+      "dates": {
+        "years": "{0} 年前",
+        "year": "一年前",
+        "months": "{0} 月前",
+        "month": "一個月前",
+        "weeks": "{0} 周前",
+        "week": "一週前",
+        "days": "{0} 天前",
+        "day": "一天前",
+        "hours": "{0} 小時前",
+        "hour": "一小時前",
+        "minutes": "{0} 分鐘前",
+        "minute": "一分鐘前",
+        "now": "剛剛"
+      }
+    }
+  },
+
+  "home":{
+    "meta-title": "ScreenToGif - 螢幕錄製，編輯，保存為 GIF 動畫、影片或更多其他格式",
+    "meta-description": "免費螢幕錄製工具，幫你完成螢幕錄製，編輯，保存為 GIF 動畫、影片或更多其他格式。",
+
+    "subtitle": "<strong>螢幕</strong>、<b>網路攝影機</b>和<b>繪圖板</b>錄製器，並有內置<b>編輯器</b>",
+    "version": "版本 {0}",
+    "package" : "Package",
+    "package-info": "下載 Windows 10/11 package 版 (.msix)，其中包含主執行程序。插件可從 選項 > 附加元件 下載。",
+    "installer" : "安裝包",
+    "installer-info": "下載安裝包 (.msi)，其中包含主執行程序和可選插件。",
+    "or": "或",
+    "portable" : "免安裝版",
+    "portable-info": "下載免安裝版，包含主執行程序。插件可從 選項 > 附加元件 下載。",
+    "light": "Light",
+    "light-info": "此版本需要安裝 .NET 8 Desktop Runtime。",
+    "microsoftstore": "微軟應用商店",
+    "downloads" : "{0} 下載",
+    "more-releases" : "更多下載選項",
+    "fewer-releases" : "隱藏下載選項",
+    "copy" : "複製",
+    "copied" : "命令已複製！",
+    "not-copied" : "此命令不可複製。",
+
+    "warning": {
+      "net": "對於免安裝版，需要手動安裝 <strong>.NET 8 Desktop Runtime</strong>。",
+      "download": "點擊此處下載。"
+    },
+
+    "why": {
+      "free": "免費",
+      "free-info": "開源於 <b>GitHub</b>",
+      "compact": "簡約",
+      "compact-info": "僅有 <b>{0}</b>",
+      "powerful": "強大",
+      "powerful-info": "錄製，編輯與<b>匯出！</b>",
+      "customizable": "定製化",
+      "customizable-info": "想怎麼用，<b>就怎麼用</b>",
+      "features": "探索更多功能"
+    },
+
+    "media": {
+      "title": "圖片",
+      "subtitle": "截圖與動圖",
+      "more": "查看更多截圖"
+    },
+
+    "supporters": {
+      "title": "鳴謝",
+      "subtitle": "本專案的支持者們",
+      "become": "成為贊助人"
+    },
+
+    "usage": {
+      "title": "如何使用？",
+      "subtitle": "迅速錄製並編輯你的內容",
+      "capture": "錄製",
+      "capture-info": "<b>螢幕</b>、<b>網路攝影機</b>或<b>繪圖板</b>錄製",
+      "edit": "編輯",
+      "edit-info": "編輯你的<b>錄製內容</b>或<b>其他媒體</b>",
+      "export": "匯出",
+      "export-info": "匯出為 <b>GIF 動畫</b>、<b>APNG</b>、<b>影片</b>、<b>圖片</b>、<b>專案</b>或<b>PSD</b>",
+      "share": "分享",
+      "share-info": "分享至 <b>Imgur</b>、<b>Gfycat</b> 或其他地方",
+      "learn": "學習如何使用"
+    },
+
+    "share": {
+      "title": "用戶們怎麼說",
+      "subtitle": "看 Twitter 上其他用戶的愉快經歷",
+      "share": "分享你的體驗"
+    }
+  },
+
+  "downloads": {
+    "meta-title": "ScreenToGif - 下載",
+    "meta-description": "下載 ScreenToGif 的安裝包，或免安裝版。",
+
+    "latest": "最新版本",
+    "show-release-notes": "顯示發佈資訊",
+    "hide-release-notes": "隱藏發佈資訊",
+
+    "requirements":{
+      "title": "系統需求",
+      "subtitle": "本應用需要的軟硬體最低配置",
+      "windows": "<b>Windows 10 1607</b> 或更新版本",
+      "framework": "<b>.NET 8</b> 或更新版本"
+    },
+
+    "releases":{
+      "title": "所有版本",
+      "subtitle": "展開查看版本詳細資訊",
+      "loading-issue": "由於載入發行版時出現問題，僅顯示最新的前 10 個版本。",
+
+      "table": {
+        "version": "版本",
+        "date": "發佈日期",
+        "days": "有效日期",
+        "days-info": "成為最新版本的時間",
+        "count": "下載次數",
+        "not-possible": "無法載入所有版本資訊",
+        "versions-total": "{0} 已發佈版本",
+        "average-month": "平均 {0} 每月",
+        "active-total": "已經持續 {0}",
+        "downloads-total": "總下載 {0} 次"
+      },
+
+      "dates": {
+        "years": "{0} 年",
+        "year": "{0} 年",
+        "months": "{0} 月",
+        "month": "{0} 月",
+        "days": "{0} 天",
+        "day": "{0} 天"
+      }
+    }
+  },
+
+  "donation": {
+    "meta-title": "ScreenToGif - 捐助",
+    "meta-description": "通過捐助幫助 ScreenToGif 變得更好。",
+
+    "title": "您喜歡用 ScreenToGif 嗎？",
+    "subtitle": "您有在想通過一些途徑對它提供幫助嗎？",
+
+    "why": {
+      "title": "為什麼要幫助 ScreenToGif ？",
+      "subtitle": "有您的支持，這個專案會更好",
+      "free": "免費",
+      "free-info": "開源於 <b>GitHub<b>",
+      "no-ads": "無廣告",
+      "no-ads-info": "包括<b>安裝包</b>內",
+      "committed": "用心投入",
+      "committed-info": "由一位充滿熱忱的開發者用心製作",
+      "for-you": "為你而生",
+      "for-you-info": "<b>回饋導向</b>的開發模式"
+    },
+
+    "how-help": {
+      "title": "我能幫上什麼忙？",
+      "subtitle": "如果你希望幫助這個專案，這裡有一些途徑",
+      "feedback": "回饋",
+      "feedback-info": "回報問題以及提供關於使用體驗的回饋",
+      "share": "分享",
+      "share-info": "與你的朋友分享，或撰寫相關評測",
+      "localization": "本地化",
+      "localization-info": "幫助更新本地化資訊，添加缺失項",
+      "donate": "捐贈",
+      "donate-info": "感謝您的慷慨解囊 😊"
+    },
+
+    "how-donate": {
+      "title": "我該如何捐贈？",
+      "subtitle": "這裡有一些可選的捐贈途徑",
+      "patreon-info": "訂購每月 Patreon 捐贈",
+      "paypal-info": "PayPal 單次捐贈",
+      "stripe-info": "Stripe 單次捐贈",
+      "flattr-info": "訂購每月 Flattr 捐贈",
+      "coffee-info": "為開發者買一杯咖啡",
+      "steam-info": "贈送 Steam 遊戲或點數",
+      "gog-info": "通過 GOG 贈送遊戲",
+      "amazon": "Amazon 願望清單",
+      "amazon-info": "新電腦眾籌",
+      "cripto-info": "點此顯示地址",
+
+      "cripto": {
+        "title": "通過 {0} 捐助",
+        "subtitle": "掃描 QR 碼或複製地址",
+        "address-copied": "地址已複製！",
+        "address-not-copied": "無法複製地址。"
+      },
+
+      "paypal": {
+        "title": "PayPal 捐贈",
+        "subtitle": "選擇您的貨幣",
+        "show-fee": "顯示 PayPal 費用說明",
+        "hide-fee": "隱藏 PayPal 費用說明",
+        "explanation": "PayPal 對捐助收費 (6.4%) + 對應貨幣收取額外 0.1%-0.5%",
+        "becomes": "{0} 變成 {1}",
+        "donate": "捐助"
+      }
+    },
+
+    "list": {
+      "title": "Patron 列表",
+      "subtitle": "這裡有一些支持這個專案的人和公司",
+      "patron": "Patron",
+      "amount": "捐贈金額",
+      "amount-info": "按美金價值排序。",
+      "from": "來自",
+      "not-possible": "無法載入 Patron 列表。",
+      "list-name": "您希望您或您公司的名字被加入到捐贈列表嗎？",
+      "contact": "聯繫我 :)"
+    }
+  },
+
+  "screenshots": {
+    "meta-title": "ScreenToGif - 截圖",
+    "meta-description": "閱覽 ScreenToGif 的截圖。",
+
+    "title": "截圖和用例",
+    "subtitle": "你能用 ScreenToGif 來幹什麼",
+    "add": "你想把你的 GIF 動畫添加到這個頁面嗎？",
+    "send": "傳訊息給我 :)",
+
+    "gallery":{
+      "startup": "這是預設的啟動畫面。<br>你可以設定讓應用程式直接開啟至<b>錄製器和編輯器</b>介面。",
+      "recorder": "這是預設的螢幕錄製器介面。你可以把這個視窗移動到任何你想錄製內容的上方。",
+      "recorder-use": "如果你點擊並拖曳十字圖示到任何一個視窗上，錄製器會自動調整到該視窗的邊界大小。",
+      "recorder-new": "這是<b>新錄製器介面</b>，它讓你能夠點擊並拖曳選取一個螢幕區域。<br>你也可以切換至視窗或螢幕模式。",
+      "editor": "這是編輯器，在此你可以編輯錄製內容，並匯出至<b>GIF</b>、<b>APNG</b>、<b>影片</b>、<b>專案</b>、<b>圖片</b>以及<b>PSD</b>。",
+      "webcam": "這是網路攝影機錄製器。",
+      "board": "繪圖板錄製器可以在你繪畫時自動擷取繪畫過程。",
+      "board-example": "這是一個錄製下來的繪畫過程的範例。",
+      "options": "ScreenToGif 有<b>超多的</b>自訂選項！"
+    }
+  },
+
+  "contact": {
+    "meta-title": "ScreenToGif - 聯繫",
+    "meta-description": "聯繫 ScreenToGif 的開發者。",
+
+    "title": "如何聯繫我",
+    "subtitle": "以及一些關於我和這個應用程式的詳細資訊",
+
+    "who": {
+      "title": "我是誰？",
+      "subtitle": "ScreenToGif 的創作者",
+      "part1": "你好，我是 Nicke Manarin，{0} 歲的巴西開發者。",
+      "part2": "我從 2012 年開始開發軟體，起初是為了練習資訊科學課程的技術。",
+      "part3": "從 2016 年畢業後，我持續學習新技能，並直接應用到我的專案當中。",
+      "part4": "我熱衷於以最高水準開發有意義且易於使用的軟體。"
+    },
+
+    "why":{
+      "title": "為什麼 ScreenToGif 存在？",
+      "subtitle": "應用程式的歷史",
+      "part1": "這個專案誕生於 2013 年 10 月，作為我的學習專案，同時解決我自己的需求。",
+      "part2": "我當時在學習如何開發圖形介面（對我來說有困難），所以我想如果能把介面錄製下來，可以在論壇上得到更有效的回饋。",
+      "part3": "雖然已經有類似的程式存在，但它們缺少一些我特別想要的功能，於是我決定自己做一個（沒想到這麼費工夫）。",
+      "part4": "ScreenToGif 這個名字和我當時預想的功能一樣簡單：將螢幕錄製成 GIF 動畫格式。名字應該要容易記住。",
+      "part5": "但我沒有預知能力：名字中唯一還有效的部分只剩中間的「To」了，現在這個應用程式已不侷限於錄製螢幕，且能匯出到許多其他格式。",
+      "part6": "2016 年這個專案徹底重新開始，因為舊平台讓我卡關好幾個月，我換到了另一個平台。",
+      "part7": "這個轉變讓我得以開發更多新功能，並製作出更直觀易用的介面。",
+      "part8": "雖然我是這個專案的作者和維護者，但還有許多其他用戶貢獻了問題回報、功能請求和翻譯。歡迎留下您的意見 :)"
+    },
+
+    "methods": {
+      "title": "聯繫方式",
+      "subtitle": "一般我在 Twitter 和 Discord 回覆比較迅速",
+      "twitter-info": "請通過 <b>@NickeManarin</b> 聯繫我",
+      "email": "電子郵件",
+      "email-info": "顯示郵件地址",
+      "discord-info": "加入頻道",
+      "reddit-info": "加入 Reddit 子版 <b>r/ScreenToGif</b>",
+      "facebook-info": "按讚",
+      "linkedin-info": "追蹤",
+
+      "reveal": {
+        "title": "這是我的電子郵件",
+        "subtitle": "拜託不要發垃圾郵件 :)",
+        "spam": "<b>垃圾郵件</b>的定義：我認為與本應用程式無關的服務和產品資訊。",
+        "help": "我很樂意為你提供關於本應用程式的協助，一直都是這樣",
+        "copied": "電子郵件地址已複製！",
+        "copied-error": "電子郵件地址複製失敗。"
+      }
+    }
+  },
+
+  "features": {
+    "meta-title": "ScreenToGif - 功能",
+    "meta-description": "探索全部 ScreenToGif 的功能。",
+
+    "title": "功能",
+    "subtitle": "看看你可以用 ScreenToGif 幹什麼",
+
+    "recorders": {
+      "title": "錄製器",
+      "text1": "用 ScreenToGif 錄下你的<b>螢幕</b>、<b>網路攝影機</b>影像或<b>繪圖板</b>塗鴉。",
+
+      "screen": {
+        "title": "螢幕",
+        "text1": "使用<b>錄製</b>、<b>暫停</b>、<b>捨棄</b>或<b>停止</b>按鈕來控制錄製。",
+        "text2": "選擇錄製頻率模式（手動、一般或縮時模式，每分鐘或每小時張數）。",
+
+        "older": {
+          "title": "舊版介面",
+          "text1": "拖曳或縮放視窗來調整錄製區域。",
+          "text2": "輸入精確的錄製區域尺寸。",
+          "text3": "拖曳十字按鈕並放到一個視窗上，來錄製該視窗。"
+        },
+
+        "newer": {
+          "title": "新版介面",
+          "text1": "進入選取模式，選擇一個<b>區域</b>、一個<b>視窗</b>或<b>整個螢幕</b>來錄製。"
+        }
+      },
+
+      "webcam":{
+        "title": "網路攝影機",
+        "text1": "使用<b>錄製</b>、<b>暫停</b>、<b>捨棄</b>或<b>停止</b>按鈕來控制錄製。",
+        "text2": "選擇錄製的最高畫面更新率。",
+        "text3": "縮放視窗以調整錄製尺寸。"
+      },
+
+      "sketchboard": {
+        "title": "繪圖板",
+        "text1": "開啟<b>自動擷取</b>，或按住 <b>Ctrl 切換</b>（<i>暫停</i>或<i>擷取</i>動畫，取決於自動擷取是否開啟）。",
+        "text2": "選擇錄製的最高畫面更新率。",
+        "text3": "縮放視窗以調整錄製尺寸。"
+      }
+    },
+
+    "editor": {
+      "title": "編輯器",
+
+      "file": {
+        "title": "檔案",
+        "text1": "開始一段新的錄製，或開啟媒體檔案（影片或圖片），或專案檔案。",
+        "text2": "插入一段新螢幕錄製，或媒體檔案（影片或圖片）到現有專案。",
+        "text3": "開啟最近的專案。",
+        "text4": "將專案匯出至：",
+        "video": "影片",
+        "image": "圖片",
+        "project": "ScreenToGif 專案"
+      },
+
+      "basic": {
+        "title": "基本操作",
+        "text1": "復原、重做或重設你的修改。",
+        "text2": "複製、剪下、貼上畫格。",
+        "text3": "選取多個畫格，或跳至特定畫格。",
+        "text4": "預覽動畫播放。"
+      },
+
+      "frame": {
+        "title": "畫格操作",
+        "text1": "刪除選取的畫格。",
+        "text2": "移除重複畫格。",
+        "text3": "降低畫面更新率。",
+        "text4": "刪除所有之前或之後的畫格。",
+        "text5": "反轉順序、套用來回播放（先正播再倒播）效果，或移動畫格。",
+        "text6": "更改每一畫格之間的延遲（覆寫、增減，或依比例縮放）。",
+        "text7": "添加標題畫格。",
+        "text8": "添加轉場效果（淡入淡出或滑動效果）。"
+      },
+
+      "image": {
+        "title": "影像操作",
+        "text1": "縮放、裁切或翻轉／旋轉。",
+        "text2": "添加疊加層：",
+        "text3": "標題或文字",
+        "text4": "圖畫或形狀",
+        "text5": "按鍵或滑鼠點擊",
+        "text6": "外框、陰影以及馬賽克",
+        "text7": "浮水印（可以選擇你自己的圖片）",
+        "text8": "電影圖（選取部分畫面保持靜止或移動）"
+      }
+    },
+
+    "options": {
+      "title": "選項",
+
+      "app": {
+        "title": "應用程式",
+        "text1": "選擇程式啟動方式。",
+        "text2": "四種配色主題（亮色到暗色）。",
+        "text3": "更改系統匣圖示的互動方式（點擊以開啟程式的各部分）。",
+        "text4": "決定程式是否自動更新（翻譯更新可以單獨選擇）。"
+      },
+
+      "recorder": {
+        "title": "錄製器",
+        "text1": "可選擇舊版或新版螢幕錄製器介面。",
+        "text2": "選擇錄製模式（BitBlt、DirectX、是否啟用記憶體快取等）。",
+        "text3": "設定錄製頻率模式（手動、一般、縮時模式）。",
+        "text4": "啟用游標跟隨（錄製器在錄製過程中跟隨游標位置）。"
+      },
+
+      "editor": {
+        "title": "編輯器",
+        "text1": "選擇預覽樣式（背景格線的顏色和大小）。",
+        "text2": "啟用根據內容尺寸自動調整編輯器視窗大小，或讓內容配合視窗大小。",
+        "text3": "設定是否在重要操作前顯示確認提示。",
+        "text4": "設定復原／重做的步驟數量上限。"
+      },
+
+      "tasks": {
+        "title": "自動化任務",
+        "text1": "你能建立自動化任務來為錄製內容套用各種效果，免於每次手動添加。"
+      },
+
+      "shortcuts": {
+        "title": "快捷鍵",
+        "text1": "設定鍵盤快捷鍵以方便開啟錄製器和編輯器。",
+        "text2": "你還能用快捷鍵控制錄製過程（錄製、暫停、停止，以及其他操作）。"
+      },
+
+      "language": {
+        "title": "語言",
+        "text1": "{0} 種可選語言。",
+        "text2": "程式會根據系統語言自動選擇語言。"
+      },
+
+      "storage": {
+        "title": "儲存空間",
+        "text1": "控制應用程式如何儲存資料。",
+        "text2": "刪除舊專案以釋放儲存空間。"
+      },
+
+      "extras": {
+        "title": "附加元件",
+        "text1": "可下載多種應用程式插件。"
+      }
+    }
+  },
+
+  "how-to-use": {
+    "meta-title": "ScreenToGif - 使用方法",
+    "meta-description": "學習如何使用 ScreenToGif。",
+
+    "title": "如何使用？",
+    "subtitle": "學習如何使用 ScreenToGif",
+    "more": "點此閱讀更多關於如何使用 ScreenToGif 的資訊",
+
+    "list": {
+      "startup": "當程式啟動後，點擊<b>錄製器</b>按鈕。",
+      "record": "一個帶鏤空的視窗會出現，把它對準你要錄製的區域，點擊<b>錄製</b>。錄製完成時，點擊<b>停止</b>按鈕。",
+      "edit-remove": "<b>Shift 點擊</b>不想要的畫格，按<b>刪除</b>。",
+      "edit-transition": "給最後一個畫格加上轉場效果，使整個動畫能<i>流暢地</i>循環播放。",
+      "edit-save": "修整完畢後，點擊<b>另存新檔</b>可將動畫匯出到你想要的格式。",
+      "final-gif": "這是最終的 GIF 動畫，大約 <b>80.6 KiB</b>。"
+    }
+  },
+
+  "share": {
+    "meta-title": "ScreenToGif - 分享",
+    "meta-description": "看其他人如何評價 ScreenToGif。",
+
+    "title": "分享",
+    "subtitle": "分享你對這個工具的看法",
+    "like": "你喜歡 ScreenToGif 嗎？",
+    "mention": "在 Twitter 提起我 😊",
+    "tweet": "通過 @ScreenToGif 或 @NickeManarin 在 Twitter 上聯繫我",
+    "text": "ScreenToGif 是一個自帶編輯器的螢幕、網路攝影機、繪圖板錄製工具。",
+    "disclaimer": "如您不希望您的推文出現在這個頁面上，請聯繫我"
+  },
+
+  "source": {
+    "meta-title": "ScreenToGif - 原始碼",
+    "meta-description": "查看 ScreenToGif 開源專案的詳細資訊。",
+
+    "title": "原始碼",
+    "subtitle": "ScreenToGif 是開源專案！",
+
+    "links": {
+      "app-info": "ScreenToGif 的原始碼",
+      "website": "網站",
+      "website-info": "網站原始碼"
+    }
+  },
+
+  "privacy-terms": {
+    "meta-title": "ScreenToGif - 隱私協議",
+    "meta-description": "查看隱私協議。",
+
+    "title": "隱私協議",
+    "subtitle": "其他關於 ScreenToGif 的技術細節",
+
+    "privacy": {
+      "title": "隱私",
+      "software": {
+        "title": "軟體",
+        "phrase1": "未經允許，ScreenToGif 不會蒐集或傳送任何個人（或系統相關）資訊。",
+        "phrase2": "實際上，唯一 ScreenToGif 會傳送個人或系統相關資料的時機，是用戶使用回饋工具發送回饋的時候。",
+        "phrase3": "個人資訊（如姓名、電子郵件）由用戶主動提供。",
+        "phrase4": "系統相關資訊是由回饋工具自動蒐集的，以幫助解決各種可能的問題。",
+        "more": "點此閱讀更多關於本軟體可能使用網路連線的資訊。"
+      },
+
+      "website": {
+        "title": "網站",
+        "phrase1": "本網站使用 Google Analytics 服務，它會蒐集用戶的瀏覽記錄。",
+        "phrase2": "蒐集到的資料僅用於更好地了解用戶使用本軟體的行為意向。"
+      }
+    },
+
+    "terms": {
+      "title": "協議",
+      "phrase1": "ScreenToGif 對所有人免費，包括企業環境的用戶。",
+      "more": "更多資訊。"
+    }
+  },
+
+  "footer": {
+    "share": {
+      "title": "<b>分享</b>到社群媒體",
+      "tweet": "Tweet 我",
+      "share": "分享",
+      "like": "為我按讚"
+    },
+
+    "language": "語言",
+    "follow": "<b>追蹤</b>本專案",
+    "watch": "追蹤",
+    "made-by": "由 {0} 製作，來自 <b>巴西</b> 🇧🇷",
+    "icons-by": "圖示來自 {0}",
+    "license-app": "<b>ScreenToGif</b> 使用許可 {0}",
+    "license-web": "<b>本網站</b> 使用許可 {0}"
+  },
+
+  "not-found": {
+    "title": "找不到此頁面……",
+    "subtitle": "點此嘗試回到首頁"
+  }
+}
