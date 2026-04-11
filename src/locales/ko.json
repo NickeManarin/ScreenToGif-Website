@@ -1,0 +1,559 @@
+{
+  "info": {
+    "code": "ko",
+    "lang": "한국어",
+    "lang-english": "Korean",
+    "author": "Haseop Lee ",
+    "status": "100"
+  },
+
+  "navigation": {
+    "home": "홈",
+    "downloads": "다운로드",
+    "donate": "기부하기",
+    "screenshots": "스크린샷",
+    "contact": "연락처",
+    "more": "더보기",
+    "how-to-use": "사용법",
+    "features": "기능",
+    "share": "공유",
+    "source": "소스",
+    "privacy-terms": "개인정보 약관",
+
+    "download": {
+      "download": "다운로드",
+      "info": "최신 릴리스를 다운로드하세요",
+      "by": "{0}에 의해",
+      "dates": {
+        "years": "{0}년 전",
+        "year": "1년 전",
+        "months": "{0}개월 전",
+        "month": "1개월 전",
+        "weeks": "{0}주 전",
+        "week": "1주 전",
+        "days": "{0}일 전",
+        "day": "1일 전",
+        "hours": "{0}시간 전",
+        "hour": "1시간 전",
+        "minutes": "{0}분 전",
+        "minute": "1분 전",
+        "now": "방금 전"
+      }
+    }
+  },
+
+  "home": {
+    "meta-title": "ScreenToGif - 화면을 녹화하고 편집하여 GIF, 비디오 또는 기타 형식으로 저장합니다.",
+    "meta-description": "GIF, 비디오 및 기타 형식으로 녹화, 편집, 저장할 수 있는 무료 화면 녹화 도구입니다.",
+
+    "subtitle": "<strong>화면</strong>, <b>웹캠</b> 그리고 <b>스케치보드</b> 레코더가 통합된 <b>편집기</b>",
+    "version": "버전 {0}",
+    "package": "패키지",
+    "package-info": "메인 실행 파일이 포함된 Windows 10/11 패키지 버전(.msix)을 다운로드합니다. 애드온은 옵션 > 추가 기능에서 다운로드해야 합니다.",
+    "installer": "설치 프로그램",
+    "installer-info": "메인 실행 파일과 선택적 애드온이 포함된 설치 프로그램 버전(.msi)을 다운로드합니다.",
+    "or": "또는",
+    "portable": "포터블",
+    "portable-info": "메인 실행 파일만 포함된 포터블 버전을 다운로드합니다. 애드온은 옵션 > 추가 기능에서 다운로드해야 합니다.",
+    "light": "경량",
+    "light-info": "이 버전을 사용하려면 .NET 8 데스크톱 런타임을 설치해야 합니다.",
+    "microsoftstore": "Microsoft Store",
+    "downloads": "{0}회 다운로드",
+    "more-releases": "더 많은 다운로드 옵션",
+    "fewer-releases": "더 적은 다운로드 옵션",
+    "copy": "복사",
+    "copied": "명령이 복사되었습니다!",
+    "not-copied": "명령을 복사할 수 없습니다.",
+
+    "warning": {
+      "net": "포터블 버전의 경우 <strong>.NET 8 데스크톱 런타임</strong>을 수동으로 설치해야 합니다.",
+      "download": "여기를 클릭하여 다운로드하세요."
+    },
+
+    "why": {
+      "free": "무료",
+      "free-info": " <b>GitHub</b>에서 소스 공개",
+      "compact": "컴팩트",
+      "compact-info": "단 <b>{0}</b>만 ",
+      "powerful": "강력함",
+      "powerful-info": "녹화, 편집, <b>내보내기</b>!",
+      "customizable": "사용자 정의 가능",
+      "customizable-info": "<b>원하는 대로</b> 사용하세요",
+      "features": "모든 기능 보기"
+    },
+
+    "media": {
+      "title": "미디어",
+      "subtitle": "스크린샷과 GIF",
+      "more": "더 많은 스크린샷 보기"
+    },
+
+    "supporters": {
+      "title": "특별한 감사",
+      "subtitle": "이 프로젝트를 후원해주신 분들입니다",
+      "become": "후원자가 되기"
+    },
+
+    "usage": {
+      "title": "어떻게 사용하나요?",
+      "subtitle": "빠르게 녹화하고 편집하세요",
+      "capture": "캡처",
+      "capture-info": "<b>화면</b>, <b>웹캠</b> 또는 <b>스케치보드</b> 캡처",
+      "edit": "편집",
+      "edit-info": "<b>캡처한 내용</b>이나 <b>다른 미디어</b>를 편집",
+      "export": "내보내기",
+      "export-info": "<b>GIF</b>, <b>APNG</b>, <b>동영상</b>, <b>이미지</b>, <b>프로젝트</b><br>또는 <b>PSD</b>로 내보내기",
+      "share": "공유",
+      "share-info": "<b>Imgur</b>, <b>Gfycat</b> 등으로 공유",
+      "learn": "사용 방법 알아보기"
+    },
+
+    "share": {
+      "title": "사용자 의견",
+      "subtitle": "트위터에서 사람들의 즐거운 반응을 확인하세요",
+      "share": "당신의 경험을 공유하세요"
+    }
+  },
+
+  "downloads": {
+    "meta-title": "ScreenToGif - 다운로드",
+    "meta-description": "지금 ScreenToGif의 설치 프로그램 또는 포터블 버전을 다운로드하세요.",
+
+    "latest": "최신 버전",
+    "show-release-notes": "릴리스 노트 보기",
+    "hide-release-notes": "릴리스 노트 숨기기",
+
+    "requirements": {
+      "title": "요구사항",
+      "subtitle": "이 앱을 실행하려면 몇 가지 소프트웨어 및 하드웨어 최소 구성이 필요합니다",
+      "windows": " <b>Windows 10 1607</b> 이상",
+      "framework": " <b>.NET 8</b> 이상"
+    },
+
+    "releases": {
+      "title": "모든 릴리스",
+      "subtitle": "확장하여 릴리스 세부 정보 보기",
+      "loading-issue": "릴리스를 로드하는 데 문제가 있어 최신 10개만 표시됩니다.",
+
+      "table": {
+        "version": "버전",
+        "date": "릴리스 날짜",
+        "days": "활성 일수",
+        "days-info": "최신 릴리스로부터의 일수",
+        "count": "다운로드 수",
+        "not-possible": "모든 릴리스를 로드할 수 없습니다",
+        "versions-total": "{0}개 버전이 릴리스됨",
+        "average-month": "월 평균 {0}",
+        "active-total": " {0}에서 활성",
+        "downloads-total": " {0}회 다운로드"
+      },
+
+      "dates": {
+        "years": "{0}년간",
+        "year": "{0}년",
+        "months": "{0}개월간",
+        "month": "{0}개월",
+        "days": "{0}일간",
+        "day": "{0}일"
+      }
+    }
+  },
+
+  "donation": {
+    "meta-title": "ScreenToGif - 기부",
+    "meta-description": "이 프로젝트에 기부하여 ScreenToGif의 개선에 도움을 주세요.",
+
+    "title": " ScreenToGif가 마음에 드시나요? ",
+    "subtitle": "그리고 도움을 생각하고 계시나요?",
+
+    "why": {
+      "title": "왜 ScreenToGif를 도와야 할까요?",
+      "subtitle": "여러분의 지원이 프로젝트에 큰 도움이 됩니다",
+      "free": "무료",
+      "free-info": "<b>GitHub</b>에서 오픈소스로 공개",
+      "no-ads": "광고 없음",
+      "no-ads-info": "<b>설치 프로그램</b>에도 광고 없음",
+      "committed": "헌신적 개발",
+      "committed-info": "열정적인 개발자가 애정을 담아 제작",
+      "for-you": "사용자를 위한 개발",
+      "for-you-info": "<b>피드백 중심</b>의 개발 방식"
+    },
+
+    "how-help": {
+      "title": "어떻게 도울 수 있나요?",
+      "subtitle": "프로젝트를 도우고 싶으시다면 이런 방법들이 있습니다",
+      "feedback": "피드백",
+      "feedback-info": "버그를 신고하고 사용자 경험에 대한 피드백을 제공해주세요",
+      "share": "공유",
+      "share-info": "친구들과 공유하거나 리뷰를 작성해주세요",
+      "localization": "현지화",
+      "localization-info": "번역을 최신 상태로 유지하거나 누락된 언어를 추가해주세요",
+      "donate": "후원",
+      "donate-info": "후원도 언제나 환영합니다 😊"
+    },
+
+    "how-donate": {
+      "title": "어떻게 후원할 수 있나요?",
+      "subtitle": "다양한 후원 방법을 안내드립니다",
+      "patreon-info": "Patreon을 통해 월정액 후원하기",
+      "paypal-info": "PayPal을 통해 일시 후원하기",
+      "stripe-info": "Stripe를 통해 일시 후원하기",
+      "flattr-info": "Flattr를 통해 월정액 후원하기",
+      "coffee-info": "개발자에게 커피 한 잔 사주기",
+      "steam-info": "Steam을 통해 게임이나 크레딧 선물하기",
+      "gog-info": "GOG를 통해 게임 선물하기",
+      "amazon": "Amazon 위시리스트",
+      "amazon-info": "개발자의 컴퓨터 부품 구매 도움",
+      "cripto-info": "주소 보기",
+
+      "cripto": {
+        "title": "{0}로 후원하기",
+        "subtitle": "QR 코드를 스캔하거나 주소를 복사하세요",
+        "address-copied": "주소가 복사되었습니다!",
+        "address-not-copied": "주소를 복사할 수 없습니다."
+      },
+
+      "paypal": {
+        "title": "PayPal로 후원하기",
+        "subtitle": "계속하기 전에 통화를 선택하세요",
+        "show-fee": "PayPal 수수료 설명 보기",
+        "hide-fee": "PayPal 수수료 설명 숨기기",
+        "explanation": "PayPal은 후원 금액에 따른 수수료(6.4%)와 선택한 통화에 따른 고정 수수료(달러 기준 0.1~0.5센트)가 있습니다.",
+        "becomes": "{0}이(가) {1}이(가) 됩니다",
+        "donate": "후원하기"
+      }
+    },
+
+    "list": {
+      "title": "후원자 목록",
+      "subtitle": "프로젝트를 지원해주시는 개인 및 기업 분들입니다",
+      "patron": "후원자",
+      "amount": "후원 금액",
+      "amount-info": "미국 달러 기준으로 정렬되었습니다.",
+      "from": "출신",
+      "not-possible": "후원자 목록을 불러올 수 없습니다.",
+      "list-name": "후원 후 이곳에 이름이나 회사명을 등록하고 싶으신가요?",
+      "contact": "저에게 연락주세요 :)"
+    }
+  },
+
+  "screenshots": {
+    "meta-title": "ScreenToGif - 스크린샷",
+    "meta-description": "ScreenToGif의 스크린샷을 확인하세요.",
+
+    "title": "스크린샷과 예제",
+    "subtitle": "ScreenToGif로 할 수 있는 일들을 확인하세요",
+    "add": "이 페이지에 당신의 GIF를 추가하시겠습니까?",
+    "send": "메시지를 보내주세요 :)",
+
+    "gallery": {
+      "startup": "이것은 앱의 기본 진입점입니다.<br>대신 <b>녹화기와 편집기</b>를 직접 열도록 앱을 설정할 수 있습니다.",
+      "recorder": "이것은 기본 화면 녹화기 UI입니다.<br>녹화하고 싶은 콘텐츠 위에 이 창을 이동하기만 하면 됩니다.",
+      "recorder-use": "십자선 아이콘을 클릭하여 창으로 드래그하면 녹화기가 경계에 맞게 조정됩니다.",
+      "recorder-new": "이것은 <b>새로운 녹화기 UI</b>로, 클릭 앤 드래그하여 화면 영역을 선택할 수 있습니다.<br>창 모드와 화면 모드 사이를 전환할 수도 있습니다.",
+      "editor": "이것은 편집기로, 녹화를 편집하여 <b>gif</b>, <b>apng</b>, <b>비디오</b>, <b>이미지</b>, <b>psd</b>, <b>프로젝트</b>로 내보낼 수 있습니다",
+      "webcam": "이것은 웹캠 녹화기입니다.",
+      "board": "보드 녹화기를 사용하면 그린 그림을 자동으로 캡처할 수 있습니다.",
+      "board-example": "이것은 녹화된 그림의 예입니다.",
+      "options": " ScreenToGif에는 <b>많은</b> 옵션이 있습니다!"
+    }
+  },
+
+  "contact": {
+    "meta-title": "ScreenToGif - 연락처",
+    "meta-description": "ScreenToGif 개발자에게 연락하세요.",
+
+    "title": "저에게 연락하는 방법",
+    "subtitle": "저와 앱에 대한 간단한 소개도 함께",
+
+    "who": {
+      "title": "저는 누구인가요?",
+      "subtitle": "ScreenToGif의 개발자",
+      "part1": "안녕하세요, 저는 {0}세 브라질 개발자 Nicke Manarin입니다.",
+      "part2": "2012년부터 소프트웨어 개발을 시작했으며, 컴퓨터 과학 수업에서 배운 기술을 연습하는 방법으로 시작했습니다.",
+      "part3": "2016년 졸업 후에도 계속해서 새로운 기술을 배우며, 이를 제 프로젝트에 직접 적용하고 있습니다.",
+      "part4": "목적이 분명하고 사용하기 쉬운 소프트웨어를 개발하기 위해 최선을 다하고 있습니다."
+    },
+
+    "why": {
+      "title": "왜 ScreenToGif를 만들었나요?",
+      "subtitle": "앱 탄생 배경",
+      "part1": "이 프로젝트는 2013년 10월에 코딩을 배우면서 동시에 제 필요에도 도움이 되는 방법으로 시작되었습니다.",
+      "part2": "GUI 디자인을 배우고 있었는데 어려움을 겪고 있어서, 포럼에서 도움을 요청할 때 사용할 화면 녹화가 있으면 좋겠다고 생각했습니다.",
+      "part3": "이미 몇 가지 앱이 존재했지만, 제가 필요로 하는 특정 기능을 제공하지 않아서 직접 해결책을 만들기로 했습니다 (얼마나 많은 작업이 필요할지 몰랐지만요).",
+      "part4": "'ScreenToGif'라는 이름은 제가 생각한 도구만큼이나 단순합니다: GIF로 내보내는 화면 녹화기. 기억하기 쉬운 이름으로 만들려고 했어요.",
+      "part5": "하지만 미래를 예측할 수는 없었죠: 이제 앱이 화면 이상을 캡처하고 다른 형식으로도 내보낼 수 있게 되어, 이름에서 관련성이 남은 부분은 가운데의 'To'뿐입니다.",
+      "part6": "이 프로젝트는 2016년에 완전히 새로 시작했습니다. 기존 플랫폼에서 몇 달간 문제를 겪은 후 새로운 플랫폼으로 전환했습니다.",
+      "part7": "이 전환을 통해 더 이해하기 쉬운 사용자 인터페이스로 더 많은 기능을 개발할 수 있게 되었습니다.",
+      "part8": "제가 이 프로젝트의 개발자이자 관리자이지만, 다른 사용자들도 버그 신고, 기능 요청, 번역으로 기여하고 있습니다. 언제든 의견을 남겨주세요. :)"
+    },
+
+    "methods": {
+      "title": "연락 방법",
+      "subtitle": "보통 트위터와 디스코드를 통해 더 빠르게 답변드립니다",
+      "twitter-info": "<b>@NickeManarin</b> 팔로우하기",
+      "email": "이메일",
+      "email-info": "클릭하여 보기",
+      "discord-info": "채널 참여하기",
+      "reddit-info": "<b>r/ScreenToGif</b> 서브레딧 참여하기",
+      "facebook-info": "페이지 좋아요",
+      "linkedin-info": "페이지 팔로우하기",
+
+      "reveal": {
+        "title": "제 이메일 주소입니다",
+        "subtitle": "스팸은 보내지 말아주세요 :)",
+        "spam": "<b>스팸</b>은 앱과 관련 없는 서비스나 제품 제안 같은 것들을 의미합니다.",
+        "help": "항상 그래왔듯이 앱 관련해서 도움을 드릴 수 있어 기쁩니다.",
+        "copied": "이메일이 복사되었습니다!",
+        "copied-error": "이메일을 복사할 수 없습니다."
+      }
+    }
+  },
+
+  "features": {
+    "meta-title": "ScreenToGif - 기능",
+    "meta-description": "모든 ScreenToGif 기능을 확인하세요.",
+
+    "title": "기능",
+    "subtitle": "ScreenToGif로 무엇을 할 수 있는지 살펴보겠습니다",
+
+    "recorders": {
+      "title": "녹화기",
+      "text1": "ScreenToGif를 사용하여 <b>화면</b>, <b>웹캠</b> 피드 또는 <b>스케치 보드</b> 그림을 녹화하세요.",
+
+      "screen": {
+        "title": "화면",
+        "text1": " <b>녹화</b>, <b>일시정지</b>, <b>폐기</b> 또는 <b>중지</b> 버튼을 사용하여 캡처를 제어합니다.",
+        "text2": "캡처 빈도 모드를 선택합니다 (수동, 일반 fps, fpm/fph로 타임랩스).",
+
+        "older": {
+          "title": "이전 UI",
+          "text1": "창을 드래그하거나 크기를 조정하여 캡처하고 싶은 것을 맞춥니다.",
+          "text2": "캡처 영역의 정확한 크기를 입력하세요.",
+          "text3": "십자선 버튼을 창 위로 드래그하여 놓으면 녹화기가 이동하여 캡처합니다."
+        },
+
+        "newer": {
+          "title": "새로운 UI",
+          "text1": " <b>영역</b>, <b>창</b> 또는 <b>전체 화면</b>을 선택하여 캡처할 선택 모드에 들어갑니다."
+        }
+      },
+
+      "webcam": {
+        "title": "웹캠",
+        "text1": " <b>녹화</b>, <b>일시정지</b>, <b>폐기</b> 또는 <b>중지</b> 버튼을 사용하여 캡처를 제어합니다.",
+        "text2": "캡처의 최대 FPS를 선택합니다.",
+        "text3": "창 크기를 조정하여 캡처 크기를 조정합니다."
+      },
+
+      "sketchboard": {
+        "title": "스케치보드",
+        "text1": " <b>자동 캡처</b>를 활성화하거나 <b>Ctrl을 눌러 전환</b>합니다 (자동 캡처가 활성화 또는 비활성화에 따라 <i>일시정지</i> 또는 <i>캡처</i>합니다.) ",
+        "text2": "캡처의 최대 FPS를 선택합니다.",
+        "text3": "창 크기를 조정하여 캡처 크기를 조정합니다."
+      }
+    },
+
+    "editor": {
+      "title": "편집기",
+
+      "file": {
+        "title": "파일",
+        "text1": "새 녹화를 시작하거나 미디어(비디오 또는 이미지) 또는 프로젝트 파일을 엽니다.",
+        "text2": "기존 프로젝트에 새 녹화 또는 미디어 파일(비디오 또는 이미지)을 삽입합니다.",
+        "text3": "최근 프로젝트를 엽니다.",
+        "text4": "프로젝트를 다음으로 내보내기:",
+        "video": "비디오",
+        "image": "이미지",
+        "project": "ScreenToGif 프로젝트"
+      },
+
+      "basic": {
+        "title": "기본 작업",
+        "text1": "편집을 실행 취소, 다시 실행 또는 재설정합니다.",
+        "text2": "프레임 복사, 잘라내기, 붙여넣기.",
+        "text3": "여러 프레임을 선택하거나 특정 프레임으로 이동합니다.",
+        "text4": "애니메이션 재생을 미리 봅니다."
+      },
+
+      "frame": {
+        "title": "프레임 조작",
+        "text1": "선택한 프레임을 삭제합니다.",
+        "text2": "중복 제거.",
+        "text3": "프레임 속도 감소.",
+        "text4": "이전 또는 다음의 모든 프레임을 삭제합니다.",
+        "text5": "역방향, 요요(앞뒤) 적용 또는 프레임 이동.",
+        "text6": "프레임 지연 변경 (덮어쓰기, 증가/감소 또는 크기 조정).",
+        "text7": "제목 프레임 추가.",
+        "text8": "전환(페이드 또는 슬라이드 효과) 추가."
+      },
+
+      "image": {
+        "title": "이미지 조작",
+        "text1": "크기 조정, 자르기, 뒤집기/회전.",
+        "text2": "오버레이 추가:",
+        "text3": "캡션/텍스트.",
+        "text4": "그림이나 도형.",
+        "text5": "키 입력 또는 마우스 클릭.",
+        "text6": "테두리, 그림자 및 난독화(픽셀화).",
+        "text7": "워터마크(자신의 이미지 선택).",
+        "text8": "시네마그래프(애니메이션의 일부를 선택하여 정지 또는 이동)."
+      }
+    },
+
+    "options": {
+      "title": "옵션",
+
+      "app": {
+        "title": "애플리케이션",
+        "text1": "앱 시작 방법을 선택하세요.",
+        "text2": "4가지 컬러 테마(밝은 색부터 매우 어두운 색까지) 중에서 선택합니다.",
+        "text3": "시스템 트레이 아이콘 동작 변경 (클릭하여 앱의 일부 열기).",
+        "text4": "앱을 자동으로 업데이트할지 결정합니다 (번역 업데이트도 전환할 수 있습니다)."
+      },
+
+      "recorder": {
+        "title": "녹화기",
+        "text1": "화면 녹화기 UI의 신구 버전을 선택합니다.",
+        "text2": "사용할 캡처 모드를 선택합니다 (BitBlt, DirectX, 메모리 캐시 사용 여부)",
+        "text3": "캡처 빈도 모드 (수동, 일반, 타임랩스)",
+        "text4": "커서 추적을 활성화하세요 (녹화 중 커서가 따라옵니다)."
+      },
+
+      "editor": {
+        "title": "편집기",
+        "text1": "미리보기 스타일을 선택하세요 (배경 그리드의 색상 및 크기).",
+        "text2": "내용 크기에 따라 편집기 창의 자동 크기 조정을 활성화하세요.",
+        "text3": "중요 작업 전에 확인 대화 상자를 활성화하는 옵션.",
+        "text4": "실행 취소/다시 실행 스택을 제한하는 옵션."
+      },
+
+      "tasks": {
+        "title": "작업",
+        "text1": "녹화에 효과를 적용하기 위해 작업을 생성할 수 있습니다. 매번 수동으로 적용할 필요가 없습니다."
+      },
+
+      "shortcuts": {
+        "title": "단축키",
+        "text1": "녹화기 및 편집기를 열기 위한 키보드 단축키를 설정하세요.",
+        "text2": "녹화를 제어하기 위한 단축키(녹화, 일시 정지, 정지 등)를 설정할 수 있습니다."
+      },
+
+      "language": {
+        "title": "언어",
+        "text1": "{0}개 언어 중에서 선택하세요.",
+        "text2": "앱은 현재 OS 설정에 따라 자동으로 언어를 선택합니다."
+      },
+
+      "storage": {
+        "title": "저장소",
+        "text1": "앱이 데이터를 저장하는 방법을 제어하세요.",
+        "text2": "오래된 프로젝트를 삭제하여 사용된 공간을 복구하세요."
+      },
+
+      "extras": {
+        "title": "추가 기능",
+        "text1": "앱용 플러그인을 다운로드하세요."
+      }
+    }
+  },
+
+  "how-to-use": {
+    "meta-title": "ScreenToGif - 사용 방법",
+    "meta-description": "ScreenToGif 사용 방법을 알아보세요.",
+
+    "title": "사용 방법",
+    "subtitle": "ScreenToGif 사용 방법 알아보기",
+    "more": "ScreenToGif 사용 방법에 대해 더 자세히 읽으려면 여기를 클릭하세요",
+
+    "list": {
+      "startup": "앱이 시작되면 <b>녹화기</b> 버튼을 클릭하세요.",
+      "record": "구멍이 뚫린 창이 나타나면 녹화하고 싶은 부분에 맞춰 <b>녹화</b>를 클릭하세요. 완료되면 <b>정지</b> 버튼을 클릭하세요.",
+      "edit-remove": "<b>Shift-클릭</b>으로 선택한 후 <b>Delete</b>를 눌러 원하지 않는 프레임을 제거하세요.",
+      "edit-transition": "마지막 프레임에 전환 효과를 추가하여 애니메이션이 더 <i>부드럽게</i> 반복되도록 하세요.",
+      "edit-save": "편집을 완료한 후 <b>다른 이름으로 저장</b>을 클릭하여 원하는 형식으로 애니메이션을 내보내세요.",
+      "final-gif": "결과 GIF입니다. 약 <b>80.6 KiB</b> 크기입니다."
+    }
+  },
+
+  "share": {
+    "meta-title": "ScreenToGif - 공유",
+    "meta-description": "사람들이 ScreenToGif에 대해 어떻게 말하는지 확인하세요.",
+
+    "title": "공유",
+    "subtitle": "이 도구에 대한 생각을 공유하세요",
+    "like": "ScreenToGif를 즐겁게 사용하고 계신가요?",
+    "mention": "트위터에서 언급해주세요 😊",
+    "tweet": "@ScreenToGif 또는 @NickeManarin에게 트윗하세요",
+    "text": "ScreenToGif는 통합 편집기가 있는 화면, 웹캠 및 스케치보드 녹화기입니다.",
+    "disclaimer": "이 페이지에 트윗이 링크되지 않게 하시겠습니까? 저에게 연락하세요"
+  },
+
+  "source": {
+    "meta-title": "ScreenToGif - 소스",
+    "meta-description": "오픈 소스 프로젝트 ScreenToGif의 세부 정보를 확인하세요.",
+
+    "title": "소스 코드",
+    "subtitle": "ScreenToGif는 오픈 소스입니다!",
+
+    "links": {
+      "app-info": "ScreenToGif의 소스 코드",
+      "website": "웹사이트",
+      "website-info": "이 웹사이트의 소스 코드"
+    }
+  },
+
+  "privacy-terms": {
+    "meta-title": "ScreenToGif - 개인정보 및 약관",
+    "meta-description": "개인정보 보호정책과 약관을 확인하세요.",
+
+    "title": "개인정보 보호 및 약관",
+    "subtitle": "ScreenToGif에 대한 기타 기술적 세부사항",
+
+    "privacy": {
+      "title": "개인정보 보호",
+      "software": {
+        "title": "소프트웨어",
+        "phrase1": "ScreenToGif는 사용자의 동의 없이 개인정보나 시스템 관련 정보를 수집하거나 전송하지 않습니다.",
+        "phrase2": "실제로 ScreenToGif가 개인정보나 시스템 관련 데이터를 전송하는 유일한 경우는 사용자가 피드백 도구를 통해 피드백을 보낼 때입니다.",
+        "phrase3": "개인정보는 사용자가 제공할 수 있습니다 (이름과 이메일 등).",
+        "phrase4": "시스템 관련 정보는 가능한 문제 해결을 용이하게 하기 위해 피드백 도구에 의해 자동으로 수집됩니다.",
+        "more": "소프트웨어에서 열리는 다른 가능한 네트워크 연결에 대해 더 자세히 읽으려면 여기를 클릭하세요."
+      },
+
+      "website": {
+        "title": "이 웹사이트",
+        "phrase1": "이 웹사이트는 모든 페이지뷰에 대한 세션 데이터를 수집하는 Google Analytics 서비스를 사용합니다.",
+        "phrase2": "데이터는 이 도구에 대한 대중의 행동을 더 잘 이해하기 위해서만 사용됩니다."
+      }
+    },
+
+    "terms": {
+      "title": "약관",
+      "phrase1": "ScreenToGif는 기업 환경에서도 모든 사람이 무료로 사용할 수 있습니다.",
+      "more": "자세한 내용은 여기에서 읽을 수 있습니다."
+    }
+  },
+
+  "footer": {
+    "share": {
+      "title": "소셜 미디어에서 <b>공유</b>",
+      "tweet": "트윗",
+      "share": "공유",
+      "like": "좋아요"
+    },
+
+    "language": "언어",
+    "follow": "프로젝트 <b>팔로우</b>",
+    "watch": "보기",
+    "made-by": "<b>브라질</b> 🇧🇷의 {0}가 제작",
+    "icons-by": "{0}의 아이콘",
+    "license-app": "<b>ScreenToGif</b>는 {0} 라이선스입니다",
+    "license-web": "<b>이 웹사이트</b>는 {0} 라이선스입니다"
+  },
+
+  "not-found": {
+    "title": "페이지를 찾을 수 없습니다...",
+    "subtitle": "홈페이지로 돌아가세요"
+  }
+}
