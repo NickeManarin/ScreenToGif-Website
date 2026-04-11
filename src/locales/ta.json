@@ -70,6 +70,13 @@
       "download": "அதை பதிவிறக்க இங்கே சொடுக்கு."
     },
 
+    "next": {
+      "title": "N-Studio, புதிய திரை பதிவேற்ற அனுபவம், இப்போது கிடைக்கிறது!",
+      "line1": "அதே டெவலப்பர் உருவாக்கிய புதிய செயலி N-Studio, இப்போது <a href=\"https://nicke.tech/n-studio\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a> இல் கிடைக்கிறது.",
+      "line2": "ScreenToGif விரைவில் புதிய வீட்டிற்கு <a href=\"https://nicke.tech/screentogif\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a> மாறுகிறது.",
+      "button": "N-Studio ஐப் பார்க்க"
+    },
+
     "why": {
       "free": "கட்டற்ற",
       "free-info": "<b>அறிவிலிமையத்தில்</b> திறந்த முலம்",

@@ -69,6 +69,13 @@
       "download": "Clique aqui para baixar."
     },
 
+    "next": {
+      "title": "N-Studio, a nova experiência de gravação de tela, já está no ar!",
+      "line1": "N-Studio, um novo app do mesmo desenvolvedor, já está disponível em <a href=\"https://nicke.tech/n-studio?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a>.",
+      "line2": "O ScreenToGif também mudará em breve para um novo lar em <a href=\"https://nicke.tech/screentogif?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a>.",
+      "button": "Conheça o N-Studio"
+    },
+
     "why": {
       "free": "Gratuito",
       "free-info": "Código aberto no <b>GitHub</b>",

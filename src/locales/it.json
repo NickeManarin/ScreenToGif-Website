@@ -60,6 +60,13 @@
     "copied" : "Comando copiato!",
     "not-copied" : "Non è stato possibile copiare il messaggio.",
 
+    "next": {
+      "title": "N-Studio, la nuova esperienza di registrazione dello schermo, è ora disponibile!",
+      "line1": "N-Studio, una nuova app dello stesso sviluppatore, è disponibile su <a href=\"https://nicke.tech/n-studio?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a>.",
+      "line2": "ScreenToGif si sta trasferendo presto in una nuova casa su <a href=\"https://nicke.tech/screentogif?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a>.",
+      "button": "Scopri N-Studio"
+    },
+
     "why": {
       "free": "Gratis",
       "free-info": "Open source in <b>GitHub</b>",

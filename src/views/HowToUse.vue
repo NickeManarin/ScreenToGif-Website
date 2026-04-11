@@ -62,7 +62,7 @@
 </script>
 
 <style lang="scss">
-    @import "@/mixins/colors.scss";
+    @use "@/mixins/colors.scss" as *;
 
     //Background of the hero panel.
     // .hero.is-screenshots {

@@ -51,12 +51,12 @@
 </script>
 
 <style lang="scss">
+    //Custom styles
+    @use "@/mixins/colors.scss" as *;
+    @use "@/mixins/customIcons.scss" as *;
+
     //Import Bulma's core
     @import "~bulma/sass/utilities/_all";
-
-    //Custom styles
-    @import "@/mixins/colors.scss";
-    @import "@/mixins/customIcons.scss";
 
     $table-row-hover-background-color: hsl(0, 0%, 96%);
 

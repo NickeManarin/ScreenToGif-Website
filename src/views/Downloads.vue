@@ -646,7 +646,7 @@
 </script>
 
 <style lang="scss" scoped>
-    @import "@/mixins/colors.scss";
+    @use "@/mixins/colors.scss" as *;
 
     //Background of the hero panel.
     .hero.is-download {
@@ -710,7 +710,7 @@
 <style lang="scss">
     //Removes the hover effect on the detail of the row.
     .table.is-hoverable tbody tr.detail:not(.is-selected):hover {
-        background-color: hsl(0, 0, 98%);
+        background-color: hsl(0, 0%, 98%);
     }
 
     @media screen and (max-width: 1023px)

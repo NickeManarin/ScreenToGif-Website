@@ -61,6 +61,13 @@
     "copied" : "Skopiowano polecenie!",
     "not-copied" : "Skopiowanie polecenia nie było możliwe.",
 
+    "next": {
+      "title": "N-Studio, nowe doświadczenie nagrywania ekranu, jest już dostępne!",
+      "line1": "N-Studio, nowa aplikacja tego samego twórcy, jest już dostępna pod adresem <a href=\"https://nicke.tech/n-studio?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a>.",
+      "line2": "ScreenToGif również wkrótce przeniesie się pod nowy adres na <a href=\"https://nicke.tech/screentogif?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a>.",
+      "button": "Odkryj N-Studio"
+    },
+
     "why": {
       "free": "Darmowy",
       "free-info": "Otwarty kod źródłowy na <b>GitHub</b>",

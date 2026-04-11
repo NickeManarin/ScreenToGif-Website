@@ -69,7 +69,14 @@
         "net": "ポータブル バージョンの場合、<strong>.NET 8 デスクトップ ランタイム</strong> を手動でインストールする必要があります。",
         "download": "ここをクリックしてダウンロードしてください。."
       },
-  
+
+      "next": {
+        "title": "N-Studio、画面録画の新しい体験がついに公開されました！",
+        "line1": "同じ開発者による新しいアプリ N-Studio は、<a href=\"https://nicke.tech/n-studio\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a> で利用できます。",
+        "line2": "ScreenToGif もまもなく新しいホームページ <a href=\"https://nicke.tech/screentogif\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a> に移行します。",
+        "button": "N-Studio を見る"
+      },
+
       "why": {
         "free": "無料",
         "free-info": " <b>GitHub</b> でソースを公開",

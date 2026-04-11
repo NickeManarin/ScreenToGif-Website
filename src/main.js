@@ -11,7 +11,7 @@ import VueScrollTo from 'vue-scrollto';
 import VueHeadful from 'vue-headful';
 import Vuex from 'vuex'
 
-import CustomColors from "./mixins/colors.scss";
+import "./mixins/colors.scss";
 
 Vue.use(VueResource);
 Vue.use(Vuex);
@@ -27,7 +27,6 @@ Vue.use(VueShowdown, {
     }
 });
 Vue.use(VueClipboard);
-Vue.use(CustomColors);
 Vue.use(VueGtag, {
     config: { id: "G-S0NVBX2F5J" },
     enabled: process.env.NODE_ENV === 'production'

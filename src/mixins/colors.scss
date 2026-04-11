@@ -1,5 +1,15 @@
 //Override default colors.
 //$primary: #3396c7; //5cadd5;
+@use "sass:color";
+
+@function findColorInvert($color) {
+  $r: color.channel($color, "red", $space: rgb);
+  $g: color.channel($color, "green", $space: rgb);
+  $b: color.channel($color, "blue", $space: rgb);
+  $luma: (0.299 * $r + 0.587 * $g + 0.114 * $b);
+  @return if(sass($luma > 186): #000000; else: #ffffff);
+}
+
 $primary: #427a8a;
 $primary-invert: findColorInvert($primary);
 $white: #f8f9fa;

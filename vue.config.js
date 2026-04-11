@@ -12,6 +12,21 @@ module.exports = {
     },
   },
 
+  css: {
+    loaderOptions: {
+      scss: {
+        sassOptions: {
+          quietDeps: true,
+        },
+      },
+      sass: {
+        sassOptions: {
+          quietDeps: true,
+        },
+      },
+    },
+  },
+
   configureWebpack: {
     devtool: "source-map"
   }

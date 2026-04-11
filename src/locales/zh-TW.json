@@ -70,6 +70,13 @@
       "download": "點擊此處下載。"
     },
 
+    "next": {
+      "title": "N-Studio，全新的螢幕錄製體驗，現已上線！",
+      "line1": "N-Studio 是同一開發者推出的新應用，現已於 <a href=\"https://nicke.tech/n-studio?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a> 提供。",
+      "line2": "ScreenToGif 也將很快搬到新的首頁：<a href=\"https://nicke.tech/screentogif?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a>。",
+      "button": "了解 N-Studio"
+    },
+
     "why": {
       "free": "免費",
       "free-info": "開源於 <b>GitHub</b>",

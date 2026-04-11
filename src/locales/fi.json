@@ -70,6 +70,13 @@
       "download": "Lataa se klikkaamalla tästä."
     },
 
+    "next": {
+      "title": "N-Studio, uusi näytön tallennuskokemus, on nyt julkaistu!",
+      "line1": "N-Studio, samaan kehittäjään kuuluva uusi sovellus, on nyt käytettävissä osoitteessa <a href=\"https://nicke.tech/n-studio\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a>.",
+      "line2": "ScreenToGif siirtyy pian uudelle kodille osoitteessa <a href=\"https://nicke.tech/screentogif\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a>.",
+      "button": "Tutustu N-Studioon"
+    },
+
     "why": {
       "free": "Ilmainen",
       "free-info": "Avoin lähdekoodi <b>GitHub</b>",

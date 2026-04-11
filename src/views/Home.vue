@@ -20,6 +20,24 @@
                 </div>
             </div>
 
+            <div class="info-banner">
+                <div class="container has-text-centered">
+                    <p class="info-banner-title">
+                        <b-icon class="left-icon" icon="lightbulb"/>
+                        <strong>{{ $t('home.next.title') }}</strong>
+                    </p>
+
+                    <p class="info-banner-subtitle" v-html="$t('home.next.line1')"></p>
+                    <p class="info-banner-subtitle" v-html="$t('home.next.line2')"></p>
+
+                    <div class="banner-actions">
+                        <b-button tag="a" href="https://nicke.tech/n-studio?migrated=true" target="_blank" type="is-link" class="has-top-margin is-medium">
+                            {{ $t('home.next.button') }}
+                        </b-button>
+                    </div>
+                </div>
+            </div>
+
             <div class="hero-foot">
                 <div class="section has-smaller-padding">
                     <div class="container">
@@ -727,6 +745,8 @@
 </script>
 
 <style lang="scss" scoped>
+    @use "@/mixins/colors.scss" as *;
+
     //Keyframes used in the animations bellow.
     @keyframes slideDown {
         0% { opacity: 0; transform: translateY(-1rem); }
@@ -789,8 +809,6 @@
         transform: scale(1);
     }
 
-    @import "@/mixins/colors.scss";
-
     //Background of the hero panel.
     section.hero.is-primary {
         //background-image: url('../assets/BackgroundHome.svg'), linear-gradient($home, $home-light);
@@ -814,6 +832,68 @@
     .image.is-144x144 {
         height: 144px;
         width: 144px;
+    }
+
+    .info-banner {
+        background: #ffffff;
+        border: 1px solid rgba(0,0,0,0.08);
+        border-radius: 14px;
+        padding: 1.4rem 1.5rem;
+        margin: 0 auto 1.5rem;
+        max-width: 1140px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+    .info-banner .container {
+        max-width: 100%;
+    }
+
+    .info-banner-title {
+        color: #1f2937;
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 0.35rem;
+        line-height: 1.4;
+    }
+
+    .info-banner-subtitle {
+        color: #4b5563;
+        margin-bottom: 0.55rem;
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+
+    .info-banner-subtitle + .info-banner-subtitle {
+        margin-top: 0.25rem;
+    }
+
+    .info-banner-subtitle a {
+        color: #3273dc;
+        text-decoration: underline;
+    }
+
+    .info-banner-subtitle a:hover {
+        color: #1c60ad;
+    }
+
+    .banner-actions {
+        margin-top: 0.65rem;
+    }
+
+    .banner-actions .button {
+        min-width: 190px;
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
+
+    .info-banner .button.is-link {
+        background-color: #3273dc;
+        border-color: transparent;
+    }
+
+    .info-banner .button.is-link:hover {
+        background-color: #2764b8;
+        color: #ffffff !important;
     }
 
     //Chocolatey code and button to copy.

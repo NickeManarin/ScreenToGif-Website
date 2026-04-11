@@ -60,6 +60,13 @@
     "copied" : "Commanda gekopieerd!",
     "not-copied" : "Het was niet mogelijk om commando te kopiëren.",
 
+    "next": {
+      "title": "N-Studio, de nieuwe schermopname-ervaring, is nu live!",
+      "line1": "N-Studio, een nieuwe app van dezelfde ontwikkelaar, is nu beschikbaar op <a href=\"https://nicke.tech/n-studio?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a>.",
+      "line2": "ScreenToGif verhuist binnenkort naar een nieuw thuis op <a href=\"https://nicke.tech/screentogif?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a>.",
+      "button": "Ontdek N-Studio"
+    },
+
     "why": {
       "free": "Gratis",
       "free-info": "Open source op <b>GitHub</b>",

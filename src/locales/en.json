@@ -70,6 +70,13 @@
       "download": "Click here to download it."
     },
 
+    "next": {
+      "title": "N-Studio, the new screen recording experience, is now live!",
+      "line1": "N-Studio, a new app from the same developer, is now available at <a href=\"https://nicke.tech/n-studio?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/n-studio</a>.",
+      "line2": "ScreenToGif is also moving to a new home soon at <a href=\"https://nicke.tech/screentogif?migrated=true\" target=\"_blank\" rel=\"noopener\">nicke.tech/screentogif</a>.",
+      "button": "Explore N-Studio"
+    },
+
     "why": {
       "free": "Free",
       "free-info": "Open source on <b>GitHub</b>",
